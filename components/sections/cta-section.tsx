@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { Calendar, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function CTASection() {
@@ -17,11 +17,10 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Ready to Transform Your Business?
+            Stop Guessing About AI Readiness
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Let's discuss your AI readiness and create a roadmap for intelligent
-            transformation.
+            Get a clear, actionable roadmap for your AI transformation. Discover exactly where you stand and the specific steps to move forward with confidence.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -31,9 +30,9 @@ export function CTASection() {
               variant="secondary"
               className="group"
             >
-              <Link href="/contact">
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Consultation
+              <Link href="/assessment">
+                <CheckCircle className="mr-2 h-5 w-5" />
+                Take Free Assessment (5 min)
               </Link>
             </Button>
             <Button
@@ -42,7 +41,10 @@ export function CTASection() {
               variant="outline"
               className="border-white/20 bg-white/10 text-white hover:bg-white/20 hover:text-white"
             >
-              <Link href="/about">Learn About Us</Link>
+              <Link href="/contact">
+                <Calendar className="mr-2 h-5 w-5" />
+                Schedule Strategy Call
+              </Link>
             </Button>
           </div>
 

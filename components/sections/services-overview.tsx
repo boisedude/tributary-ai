@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export function ServicesOverview() {
   return (
     <article>
-      <section className="py-24">
+      <section className="py-24 section-divider-top">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -41,39 +41,77 @@ export function ServicesOverview() {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{
+                  delay: index * 0.15,
+                  duration: 0.6,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 15,
+                }}
               >
-                <Card className="h-full transition-all hover:shadow-lg card-glow-teal">
-                  <CardHeader>
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10">
-                      <Icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <CardTitle className="text-2xl">{service.title}</CardTitle>
-                    <p className="text-sm font-medium text-accent">
-                      {service.tagline}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p className="text-muted-foreground">{service.description}</p>
+                <motion.div
+                  whileHover={{
+                    y: -8,
+                    transition: { duration: 0.3, ease: "easeOut" },
+                  }}
+                  className="h-full"
+                >
+                  <Card className="h-full transition-all hover:shadow-2xl card-glow-teal group relative overflow-hidden">
+                    {/* Animated gradient overlay */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                      initial={false}
+                    />
 
-                    <div className="space-y-2">
-                      <p className="text-sm font-semibold">Ideal for:</p>
-                      <p className="text-sm text-muted-foreground">
-                        {service.idealFor}
+                    <CardHeader className="relative z-10">
+                      <motion.div
+                        className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10"
+                        whileHover={{
+                          scale: 1.15,
+                          rotate: [0, -10, 10, 0],
+                          backgroundColor: "oklch(0.70 0.14 180 / 0.2)",
+                        }}
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 10,
+                        }}
+                      >
+                        <Icon className="h-6 w-6 text-accent transition-transform group-hover:scale-110" />
+                      </motion.div>
+                      <CardTitle className="text-2xl">{service.title}</CardTitle>
+                      <p className="text-sm font-medium text-accent">
+                        {service.tagline}
                       </p>
-                    </div>
+                    </CardHeader>
+                    <CardContent className="space-y-4 relative z-10">
+                      <p className="text-muted-foreground">{service.description}</p>
 
-                    <Button asChild variant="outline" className="w-full group">
-                      <Link href={service.href}>
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <div className="space-y-2">
+                        <p className="text-sm font-semibold">Ideal for:</p>
+                        <p className="text-sm text-muted-foreground">
+                          {service.idealFor}
+                        </p>
+                      </div>
+
+                      <Button asChild variant="outline" className="w-full group/button">
+                        <Link href={service.href}>
+                          Learn More
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/button:translate-x-1" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+
+                    {/* Shimmer effect on hover */}
+                    <motion.div
+                      className="absolute inset-0 -translate-x-full group-hover:translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-1000"
+                      initial={false}
+                    />
+                  </Card>
+                </motion.div>
               </motion.div>
             );
           })}

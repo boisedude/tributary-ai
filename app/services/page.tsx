@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data/services";
 import { ArrowRight, Check } from "lucide-react";
+import { EngagementModels } from "@/components/sections/engagement-models";
 
 export const metadata: Metadata = {
   title: "Our Services",
@@ -94,6 +95,9 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      {/* Engagement Models */}
+      <EngagementModels />
 
       {/* CTA Section */}
       <section className="bg-gradient-tributary py-16 text-white">

@@ -279,7 +279,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Let's Discuss Your AI Readiness
+              Let's Build Your AI Strategy
             </h2>
             <p className="mt-4 text-lg text-white/90">
               Whether you're just beginning to explore AI capabilities or ready
@@ -289,7 +289,7 @@ export default function AboutPage() {
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Schedule a Consultation
+                  Let's Build Your AI Strategy
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
