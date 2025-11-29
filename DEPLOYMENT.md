@@ -13,12 +13,20 @@
 ## Pre-Deployment Checklist
 
 ### Required Items
-- [ ] Tributary AI logo (`/public/logo.png`)
-- [ ] OpenGraph social image (`/public/og-image.png` - 1200x630px)
-- [ ] Favicon files (`/public/favicon.ico`)
+- [x] Tributary AI logo (`/public/logos/logo-header.png`, `/public/logos/logo-footer.png`)
+- [x] OpenGraph social image (`/public/og-image.png` - 1200x630px)
+- [x] Favicon files (`/public/favicon.png`, `/public/icon-192.png`, `/public/icon-512.png`, `/public/apple-touch-icon.png`)
+- [x] Blog images optimized (`/public/blog/*.webp` - 30 images)
 - [ ] Calendly URL updated in `/app/contact/page.tsx`
-- [ ] Content review complete
-- [ ] All services information verified
+- [x] Content review complete
+- [x] All services information verified
+
+### SEO Items
+- [x] robots.txt configured (`/public/robots.txt`)
+- [x] Sitemap auto-generated (`/app/sitemap.ts`)
+- [x] Structured data schemas (Organization, LocalBusiness, BlogPosting, FAQ)
+- [ ] Google Search Console verification (update code in `/app/layout.tsx` line 87)
+- [ ] Google Business Profile claimed
 
 ### Optional Items
 - [ ] Google Analytics tracking ID
@@ -372,6 +380,18 @@ If something goes wrong:
 ---
 
 ## Version History
+
+**v1.2.0** - November 28, 2025
+- Added optimized blog images (30 WebP files, 91% size reduction: 41MB → 3.6MB)
+- Added new jellyfish logo to header and footer navigation
+- Added comprehensive favicon set (32px, 48px, 192px, 512px, apple-touch-icon)
+- Added robots.txt and dynamic sitemap.ts (41 URLs)
+- Added SEO enhancements: canonical URLs, enhanced metadata, Twitter cards
+- Added structured data: BlogPostSchema, FAQSchema, BreadcrumbListSchema
+- Fixed memory leak in stats-counter.tsx (event listener cleanup)
+- Fixed React useEffect cascading render warning in navigation.tsx
+- Removed unused imports and cleaned up ESLint configuration
+- Removed duplicate parent lockfile causing build warnings
 
 **v1.1.0** - November 2025
 - Added 30 blog posts covering AI strategy, implementation, and industry topics
