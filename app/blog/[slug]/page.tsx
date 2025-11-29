@@ -12,6 +12,7 @@ import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import remarkGfm from "remark-gfm"
 import "highlight.js/styles/github-dark.css"
+import { BlogPostSchema } from "@/components/structured-data/schemas"
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -80,6 +81,14 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   return (
     <article className="container mx-auto px-4 py-20">
+      <BlogPostSchema
+        title={post.title}
+        description={post.excerpt}
+        datePublished={post.date}
+        author={post.author || "Tributary AI Systems"}
+        image={post.image}
+        url={`https://www.thetributary.ai/blog/${post.slug}`}
+      />
       <div className="mx-auto max-w-3xl">
         <Breadcrumb
           className="mb-8"

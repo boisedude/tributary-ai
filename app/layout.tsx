@@ -42,11 +42,16 @@ export const metadata: Metadata = {
     "business transformation",
     "AI implementation",
     "technology modernization",
+    "Idaho AI consulting",
+    "Boise AI consultant",
   ],
   authors: [{ name: "Tributary AI Systems" }],
   creator: "Tributary AI Systems",
   publisher: "Tributary AI Systems",
   metadataBase: new URL("https://www.thetributary.ai"),
+  alternates: {
+    canonical: "https://www.thetributary.ai",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -70,6 +75,7 @@ export const metadata: Metadata = {
     description:
       "Expert consulting in AI readiness, cloud marketplace GTM, and agentic systems strategy.",
     images: ["/og-image.png"],
+    creator: "@tributaryai",
   },
   robots: {
     index: true,
@@ -81,6 +87,9 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 

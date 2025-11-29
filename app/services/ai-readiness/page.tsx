@@ -3,14 +3,29 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { getServiceById } from "@/data/services";
-import { Check, Brain, ArrowRight } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
 
 const service = getServiceById("ai-readiness");
 
 export const metadata: Metadata = {
   title: "AI Readiness Assessment | Tributary AI",
   description:
-    "Comprehensive evaluation of your organization's technology, processes, and culture to identify opportunities and readiness for AI adoption. Get a clear roadmap for intelligent transformation.",
+    "Comprehensive evaluation of your organization&apos;s technology, processes, and culture to identify opportunities and readiness for AI adoption. Get a clear roadmap for intelligent transformation with data integration assessment, process analysis, and strategic planning.",
+  keywords: [
+    "AI readiness assessment",
+    "AI maturity evaluation",
+    "AI adoption readiness",
+    "enterprise AI assessment",
+    "AI transformation roadmap",
+    "AI capability assessment",
+    "organizational AI readiness",
+  ],
+  openGraph: {
+    title: "AI Readiness Assessment Services - Tributary AI",
+    description:
+      "Comprehensive evaluation of your technology, processes, and culture for AI adoption. Get your clear roadmap to AI transformation.",
+    type: "website",
+  },
 };
 
 export default function AIReadinessPage() {
@@ -117,7 +132,7 @@ export default function AIReadinessPage() {
               Ready to Assess Your AI Readiness?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let's evaluate your organization's readiness for AI and create a
+              Let&apos;s evaluate your organization&apos;s readiness for AI and create a
               clear roadmap for transformation.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">

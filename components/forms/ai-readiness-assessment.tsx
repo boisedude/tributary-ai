@@ -55,7 +55,7 @@ const questions: QuestionType[] = [
   {
     id: "tech-infrastructure",
     question: "Technology Infrastructure",
-    description: "What's the current state of your technology infrastructure?",
+    description: "What&apos;s the current state of your technology infrastructure?",
     options: [
       { value: 1, label: "Legacy", description: "Primarily legacy systems with significant technical debt" },
       { value: 2, label: "Mixed", description: "Mix of legacy and modern systems" },
@@ -243,7 +243,7 @@ export function AIReadinessAssessment() {
               {readinessScore >= 70 && readinessScore < 85 && (
                 <div className="space-y-2">
                   <p className="text-muted-foreground">
-                    Great progress! You have a solid foundation for AI adoption. With some focused preparation, you'll be ready for successful AI implementation.
+                    Great progress! You have a solid foundation for AI adoption. With some focused preparation, you&apos;ll be ready for successful AI implementation.
                   </p>
                   <p className="font-medium">Recommended Next Steps:</p>
                   <ul className="list-inside list-disc space-y-1 text-muted-foreground">
@@ -257,7 +257,7 @@ export function AIReadinessAssessment() {
               {readinessScore >= 50 && readinessScore < 70 && (
                 <div className="space-y-2">
                   <p className="text-muted-foreground">
-                    You're on the right track! While there are areas to strengthen, you're building momentum toward AI readiness.
+                    You&apos;re on the right track! While there are areas to strengthen, you&apos;re building momentum toward AI readiness.
                   </p>
                   <p className="font-medium">Recommended Next Steps:</p>
                   <ul className="list-inside list-disc space-y-1 text-muted-foreground">
@@ -272,7 +272,7 @@ export function AIReadinessAssessment() {
               {readinessScore < 50 && (
                 <div className="space-y-2">
                   <p className="text-muted-foreground">
-                    You're at the beginning of your AI journey, which is a great place to start! Focus on building foundational capabilities first.
+                    You&apos;re at the beginning of your AI journey, which is a great place to start! Focus on building foundational capabilities first.
                   </p>
                   <p className="font-medium">Recommended Next Steps:</p>
                   <ul className="list-inside list-disc space-y-1 text-muted-foreground">
@@ -286,9 +286,9 @@ export function AIReadinessAssessment() {
             </div>
 
             <div className="rounded-lg border bg-muted/30 p-6">
-              <p className="mb-4 font-medium">What's Next?</p>
+              <p className="mb-4 font-medium">What&apos;s Next?</p>
               <p className="mb-4 text-sm text-muted-foreground">
-                We've sent your detailed assessment results to <span className="font-medium text-foreground">{email}</span>.
+                We&apos;ve sent your detailed assessment results to <span className="font-medium text-foreground">{email}</span>.
                 Our team will review your responses and reach out within 1-2 business days with personalized recommendations.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
@@ -431,7 +431,7 @@ export function AIReadinessAssessment() {
                     />
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    We'll send your detailed assessment results to this email and follow up with personalized recommendations.
+                    We&apos;ll send your detailed assessment results to this email and follow up with personalized recommendations.
                   </p>
                 </form>
               </CardContent>

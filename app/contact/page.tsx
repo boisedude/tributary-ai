@@ -1,36 +1,51 @@
 import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Mail, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
+import { FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Us - Schedule Your AI Consultation",
   description:
-    "Schedule a consultation with Tributary AI Systems. Based in Boise, Idaho, serving clients nationally. Let's discuss your AI transformation journey.",
+    "Schedule a consultation with Tributary AI Systems. Based in Boise, Idaho, serving clients nationally. Get expert guidance on your AI transformation journey. Free initial consultation.",
+  keywords: [
+    "AI consulting contact",
+    "schedule AI consultation",
+    "Boise AI consultant",
+    "AI strategy consultation",
+    "business AI advisor",
+    "contact Tributary AI",
+  ],
+  openGraph: {
+    title: "Contact Tributary AI Systems - Schedule Your Consultation",
+    description:
+      "Schedule a free consultation to discuss your AI transformation journey. Expert guidance for mid-market companies and startups.",
+    type: "website",
+  },
 };
 
 const faqs = [
   {
     question: "Do you work with companies outside Idaho?",
-    answer: "Yes, we serve clients nationally. While we're based in Boise, Idaho, we work with mid-market companies and startups across the United States.",
+    answer: "Yes, we serve clients nationally. While we&apos;re based in Boise, Idaho, we work with mid-market companies and startups across the United States.",
   },
   {
     question: "What size companies do you work with?",
-    answer: "We work with mid-market companies and startups from seed stage to growth. Our services are designed to scale with your needs, whether you're just exploring AI or ready to implement comprehensive solutions.",
+    answer: "We work with mid-market companies and startups from seed stage to growth. Our services are designed to scale with your needs, whether you&apos;re just exploring AI or ready to implement comprehensive solutions.",
   },
   {
     question: "Do you offer fractional/part-time engagements?",
-    answer: "Yes, we offer flexible engagement models including fractional and part-time arrangements. We understand that not every company needs full-time support, and we're happy to work with you to find the right fit.",
+    answer: "Yes, we offer flexible engagement models including fractional and part-time arrangements. We understand that not every company needs full-time support, and we&apos;re happy to work with you to find the right fit.",
   },
   {
     question: "How do I know if my business is ready for AI?",
-    answer: "That's exactly what we help determine. Our initial consultation and readiness assessment are designed to give you an honest evaluation of where you are and what steps make sense for your business.",
+    answer: "That&apos;s exactly what we help determine. Our initial consultation and readiness assessment are designed to give you an honest evaluation of where you are and what steps make sense for your business.",
   },
 ];
 
 const expectations = [
   {
     title: "No Obligation Consultation",
-    description: "Our initial conversation is completely free with no strings attached. We're here to help you understand your options.",
+    description: "Our initial conversation is completely free with no strings attached. We&apos;re here to help you understand your options.",
   },
   {
     title: "30-Minute Discovery Call",
@@ -42,19 +57,20 @@ const expectations = [
   },
   {
     title: "Clear Next Steps",
-    description: "Whether you're ready to move forward or not, you'll leave with actionable insights and a clear path forward.",
+    description: "Whether you&apos;re ready to move forward or not, you'll leave with actionable insights and a clear path forward.",
   },
 ];
 
 export default function ContactPage() {
   return (
     <article className="bg-gradient-subtle">
+      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Let's Start a Conversation
+              Let&apos;s Start a Conversation
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
               Schedule a consultation to discuss how AI can transform your business.
@@ -169,7 +185,7 @@ export default function ContactPage() {
                 <CardHeader>
                   <CardTitle>What to Expect</CardTitle>
                   <CardDescription>
-                    Here's what happens when you schedule a consultation
+                    Here&apos;s what happens when you schedule a consultation
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -230,7 +246,7 @@ export default function ContactPage() {
               Ready to Explore AI for Your Business?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let's have a conversation about where you are and where you want to go.
+              Let&apos;s have a conversation about where you are and where you want to go.
               No commitment required.
             </p>
             <div className="mt-8">

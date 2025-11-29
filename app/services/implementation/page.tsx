@@ -9,7 +9,23 @@ const service = getServiceById("implementation");
 
 export const metadata: Metadata = {
   title: "AI Implementation & Integration | Tributary AI",
-  description: "Turn your AI vision into working solutions with practical, measurable outcomes.",
+  description:
+    "Turn your AI vision into working solutions with practical implementation and seamless integration. Expert guidance for AI deployment with measurable outcomes. From proof of concept to production deployment.",
+  keywords: [
+    "AI implementation",
+    "AI integration",
+    "AI deployment",
+    "AI proof of concept",
+    "AI production deployment",
+    "enterprise AI integration",
+    "AI project implementation",
+  ],
+  openGraph: {
+    title: "AI Implementation & Integration Services",
+    description:
+      "Turn your AI vision into working solutions. Expert implementation and integration services with practical, measurable outcomes.",
+    type: "website",
+  },
 };
 
 export default function ServicePage() {
@@ -20,7 +36,7 @@ export default function ServicePage() {
   const Icon = service.icon;
 
   return (
-    <div className="bg-gradient-subtle">
+    <article className="bg-gradient-subtle">
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -116,7 +132,7 @@ export default function ServicePage() {
               Ready to Get Started?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let's discuss how we can help transform your business with this service.
+              Let&apos;s discuss how we can help transform your business with this service.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" variant="secondary">
@@ -129,6 +145,6 @@ export default function ServicePage() {
               </div>
             </div>
       </section>
-        </div>
+    </article>
   );
 }

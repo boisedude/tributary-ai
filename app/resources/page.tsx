@@ -5,9 +5,24 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free AI Resources & Guides",
+  title: "Free AI Resources & Guides | Tributary AI",
   description:
-    "Download free guides and resources for AI adoption, agentic systems, and cloud marketplace strategies. Expert insights from Tributary AI Systems.",
+    "Download free guides and resources for AI adoption, agentic systems, and cloud marketplace strategies. Expert insights from Tributary AI Systems. AI readiness checklists, implementation guides, and strategic frameworks.",
+  keywords: [
+    "free AI resources",
+    "AI adoption guides",
+    "AI readiness checklist",
+    "agentic systems guide",
+    "cloud marketplace guide",
+    "AI strategy resources",
+    "AI implementation resources",
+  ],
+  openGraph: {
+    title: "Free AI Resources & Implementation Guides",
+    description:
+      "Download expert guides for AI adoption, agentic systems, and cloud marketplace strategies. Practical resources for your AI journey.",
+    type: "website",
+  },
 };
 
 const guides = [
@@ -91,7 +106,7 @@ export default function ResourcesPage() {
             </h2>
             <p className="mt-4 text-lg text-white/90">
               Get a custom AI readiness assessment tailored to your business.
-              We'll analyze your specific situation and provide actionable
+              We&apos;ll analyze your specific situation and provide actionable
               recommendations.
             </p>
             <div className="mt-8">

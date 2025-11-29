@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Award, BookOpen, Building2, Radio } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Tributary AI Systems",
+  title: "About Tributary AI Systems - Meet Mike Cooper",
   description:
     "Meet Mike Cooper, founder of Tributary AI Systems. 25+ years of enterprise technology experience, Microsoft and Google Partner of the Year awards, and deep expertise in cloud marketplaces and AI readiness. Based in Boise, Idaho, serving clients nationally.",
   keywords: [
@@ -17,7 +17,15 @@ export const metadata: Metadata = {
     "Google Partner of the Year",
     "enterprise technology",
     "Boise Idaho consulting",
+    "AI strategy consultant",
+    "agentic SaaS podcast",
   ],
+  openGraph: {
+    title: "About Tributary AI Systems - Meet Mike Cooper",
+    description:
+      "25+ years of enterprise technology experience. Microsoft and Google Partner of the Year awards. Expert in AI readiness, cloud marketplaces, and agentic systems.",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
@@ -55,7 +63,7 @@ export default function AboutPage() {
                     business experience.
                   </p>
                   <p>
-                    We're not just consultants. We're experienced operators who
+                    We&apos;re not just consultants. We&apos;re experienced operators who
                     have built teams, scaled businesses, and navigated the
                     complexities of enterprise technology transformation. We bring
                     that practical perspective to every engagement.
@@ -79,14 +87,14 @@ export default function AboutPage() {
                 security, cloud infrastructure, and platform partnerships.
               </p>
               <p>
-                Mike's career began in Idaho, where he founded MDC IT and worked
+                Mike&apos;s career began in Idaho, where he founded MDC IT and worked
                 with regional powerhouses like JR Simplot, Albertsons, and
                 Primary Health. That foundation in understanding real business
                 needs has remained central to his approach ever since.
               </p>
               <p>
                 From those Idaho roots, Mike scaled to global roles at some of
-                technology's most influential companies. At Microsoft and Citrix,
+                technology&apos;s most influential companies. At Microsoft and Citrix,
                 he led teams that earned Partner of the Year recognition from
                 both Microsoft and Google. At Confluent and Astronomer, he built
                 go-to-market strategies and cloud marketplace programs that drove
@@ -94,7 +102,7 @@ export default function AboutPage() {
               </p>
               <p>
                 Throughout his career, Mike has been at the forefront of platform
-                ecosystems and partner strategy. He's navigated the complexities
+                ecosystems and partner strategy. He&apos;s navigated the complexities
                 of AWS, Azure, and GCP marketplaces, built co-sell programs with
                 major cloud providers, and helped numerous companies successfully
                 bring their solutions to market through strategic partnerships.
@@ -102,8 +110,8 @@ export default function AboutPage() {
               <p>
                 As a published author on Windows Server, Exchange, and Active
                 Directory, Mike has contributed to the broader technology
-                community's understanding of enterprise systems. Today, he hosts
-                the "Agentic SaaS Talks" podcast, exploring the intersection of
+                community&apos;s understanding of enterprise systems. Today, he hosts
+                the &quot;Agentic SaaS Talks&quot; podcast, exploring the intersection of
                 AI, platforms, and business transformation.
               </p>
             </div>
@@ -279,17 +287,17 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Let's Build Your AI Strategy
+              Let&apos;s Build Your AI Strategy
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Whether you're just beginning to explore AI capabilities or ready
+              Whether you&apos;re just beginning to explore AI capabilities or ready
               to transform your operations, we bring the experience to guide you
               through the journey.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Let's Build Your AI Strategy
+                  Let&apos;s Build Your AI Strategy
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

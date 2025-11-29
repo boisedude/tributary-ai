@@ -9,7 +9,23 @@ const service = getServiceById("cloud-marketplace");
 
 export const metadata: Metadata = {
   title: "Cloud Marketplace Acceleration | Tributary AI",
-  description: "Unlock new revenue channels through AWS, Azure, and GCP marketplaces.",
+  description:
+    "Navigate AWS, Azure, and GCP marketplace listings, co-sell programs, and partner ecosystems. Expert guidance from Partner of the Year award winner. Unlock new revenue channels through strategic cloud marketplace acceleration.",
+  keywords: [
+    "cloud marketplace acceleration",
+    "AWS marketplace",
+    "Azure marketplace",
+    "GCP marketplace",
+    "cloud co-sell programs",
+    "marketplace GTM strategy",
+    "cloud partner programs",
+  ],
+  openGraph: {
+    title: "Cloud Marketplace Acceleration Services",
+    description:
+      "Navigate AWS, Azure, and GCP marketplace listings and co-sell programs. Expert guidance from Partner of the Year award winner.",
+    type: "website",
+  },
 };
 
 export default function ServicePage() {
@@ -20,7 +36,7 @@ export default function ServicePage() {
   const Icon = service.icon;
 
   return (
-    <div className="bg-gradient-subtle">
+    <article className="bg-gradient-subtle">
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -116,7 +132,7 @@ export default function ServicePage() {
               Ready to Get Started?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let's discuss how we can help transform your business with this service.
+              Let&apos;s discuss how we can help transform your business with this service.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" variant="secondary">
@@ -129,6 +145,6 @@ export default function ServicePage() {
               </div>
             </div>
       </section>
-        </div>
+    </article>
   );
 }

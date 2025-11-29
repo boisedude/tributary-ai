@@ -9,7 +9,23 @@ const service = getServiceById("agentic-systems");
 
 export const metadata: Metadata = {
   title: "Agentic Systems Strategy | Tributary AI",
-  description: "Navigate the shift from seat-based to outcome-based business models. The future of SaaS and business software is agentic.",
+  description:
+    "Navigate the shift from seat-based to outcome-based business models with expert agentic systems strategy. The future of SaaS and business software is agentic. Prepare your organization for autonomous AI agents and outcome-based pricing models.",
+  keywords: [
+    "agentic systems strategy",
+    "agentic AI",
+    "autonomous AI agents",
+    "outcome-based business models",
+    "agentic SaaS",
+    "AI agent strategy",
+    "seat-based to outcome-based transition",
+  ],
+  openGraph: {
+    title: "Agentic Systems Strategy Services - Tributary AI",
+    description:
+      "Navigate the shift to outcome-based business models. Expert strategy for the agentic era of AI and autonomous systems.",
+    type: "website",
+  },
 };
 
 export default function AgenticSystemsPage() {
@@ -116,7 +132,7 @@ export default function AgenticSystemsPage() {
               Ready to Navigate the Agentic Shift?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let's discuss how to position your business for the agentic era.
+              Let&apos;s discuss how to position your business for the agentic era.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" variant="secondary">

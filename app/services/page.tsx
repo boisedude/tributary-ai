@@ -7,9 +7,24 @@ import { ArrowRight, Check } from "lucide-react";
 import { EngagementModels } from "@/components/sections/engagement-models";
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "AI Consulting Services | Tributary AI",
   description:
-    "Comprehensive AI consulting services including readiness assessment, agentic systems strategy, implementation, and cloud marketplace acceleration. Expert guidance for your AI transformation.",
+    "Comprehensive AI consulting services including readiness assessment, agentic systems strategy, AI implementation & integration, and cloud marketplace acceleration. Expert guidance for your AI transformation journey from assessment to deployment.",
+  keywords: [
+    "AI consulting services",
+    "AI readiness assessment",
+    "agentic systems strategy",
+    "AI implementation services",
+    "cloud marketplace acceleration",
+    "AI transformation services",
+    "enterprise AI consulting",
+  ],
+  openGraph: {
+    title: "AI Consulting Services - Tributary AI",
+    description:
+      "From assessment to implementation - comprehensive AI consulting services for mid-market companies and startups.",
+    type: "website",
+  },
 };
 
 export default function ServicesPage() {
@@ -107,7 +122,7 @@ export default function ServicesPage() {
               Not Sure Where to Start?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Schedule a consultation and we'll help you determine the right
+              Schedule a consultation and we&apos;ll help you determine the right
               approach for your business.
             </p>
             <div className="mt-8">

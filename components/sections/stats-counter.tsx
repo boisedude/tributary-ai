@@ -49,11 +49,15 @@ function Counter({ value, suffix, prefix = "" }: { value: number; suffix: string
   }, [isInView, motionValue, value]);
 
   useEffect(() => {
-    springValue.on("change", (latest) => {
+    const unsubscribe = springValue.on("change", (latest) => {
       if (ref.current) {
         ref.current.textContent = `${prefix}${Math.floor(latest)}${suffix}`;
       }
     });
+
+    return () => {
+      unsubscribe();
+    };
   }, [springValue, suffix, prefix]);
 
   return <span ref={ref}>{prefix}0{suffix}</span>;

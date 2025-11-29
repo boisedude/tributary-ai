@@ -117,7 +117,7 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
             <div className="space-y-2">
               <p className="font-semibold">Download Started!</p>
               <p className="text-sm text-muted-foreground">
-                Your guide should download automatically. If it doesn't,{" "}
+                Your guide should download automatically. If it doesn&apos;t,{" "}
                 <a
                   href={pdfUrl}
                   download

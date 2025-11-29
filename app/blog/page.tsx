@@ -2,8 +2,24 @@ import { getAllPosts } from "@/lib/blog"
 import { BlogList } from "@/components/blog/blog-list"
 
 export const metadata = {
-  title: "Blog | Tributary AI Systems",
-  description: "Insights on AI strategy, systems thinking, and business transformation from Tributary AI Systems",
+  title: "AI Strategy & Business Transformation Blog | Tributary AI",
+  description:
+    "Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces. Practical guidance for mid-market companies adopting AI. Latest trends in enterprise AI adoption and implementation.",
+  keywords: [
+    "AI strategy blog",
+    "AI transformation insights",
+    "agentic systems blog",
+    "enterprise AI adoption",
+    "AI implementation guide",
+    "business AI strategy",
+    "cloud marketplace insights",
+  ],
+  openGraph: {
+    title: "AI Strategy & Transformation Blog - Tributary AI Systems",
+    description:
+      "Expert insights on AI strategy, agentic systems, and business transformation. Practical guidance for companies adopting AI.",
+    type: "website",
+  },
 }
 
 export default function BlogPage() {

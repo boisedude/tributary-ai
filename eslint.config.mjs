@@ -12,7 +12,17 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Scripts are Node.js files, not Next.js/React
+    "scripts/*.js",
+    "deploy-ftp.js",
+    "deploy-ftp.sh",
   ]),
+  {
+    rules: {
+      // Allow apostrophes in JSX - they render fine
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

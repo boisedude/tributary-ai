@@ -4,9 +4,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, TrendingUp, Target, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Assessment - Free Evaluation",
+  title: "Free AI Readiness Assessment - Get Your Score",
   description:
-    "Take our free AI Readiness Assessment to discover how prepared your organization is for AI transformation. Get personalized insights and recommendations in minutes.",
+    "Take our free AI Readiness Assessment to discover how prepared your organization is for AI transformation. Get personalized insights and recommendations in just 5 minutes. Evaluate your data infrastructure, team capabilities, and strategic alignment.",
+  keywords: [
+    "free AI assessment",
+    "AI readiness test",
+    "AI maturity assessment",
+    "organizational AI readiness",
+    "AI transformation assessment",
+    "AI capability evaluation",
+    "free AI evaluation",
+  ],
+  openGraph: {
+    title: "Free AI Readiness Assessment - Tributary AI",
+    description:
+      "Discover how prepared your organization is for AI transformation. Get personalized insights and recommendations in 5 minutes.",
+    type: "website",
+  },
 };
 
 const benefits = [
@@ -23,7 +38,7 @@ const benefits = [
   {
     icon: Users,
     title: "Assess Team Readiness",
-    description: "Evaluate your organization's culture and capabilities for AI adoption",
+    description: "Evaluate your organization&apos;s culture and capabilities for AI adoption",
   },
   {
     icon: CheckCircle,
@@ -104,7 +119,7 @@ export default function AssessmentPage() {
                     <div>
                       <h3 className="mb-2 font-semibold">Objective Evaluation</h3>
                       <p className="text-muted-foreground">
-                        Get an unbiased assessment of your organization's readiness across critical dimensions: data integration, processes, team culture, infrastructure, and strategic vision.
+                        Get an unbiased assessment of your organization&apos;s readiness across critical dimensions: data integration, processes, team culture, infrastructure, and strategic vision.
                       </p>
                     </div>
                   </div>
