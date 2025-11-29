@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -40,6 +41,13 @@ export function Navigation() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" aria-label="Tributary AI - Home">
+            <Image
+              src="/logos/logo-header.png"
+              alt="Tributary AI"
+              width={40}
+              height={40}
+              className="h-10 w-10"
+            />
             <span className="text-xl font-bold text-gradient">
               Tributary AI
             </span>

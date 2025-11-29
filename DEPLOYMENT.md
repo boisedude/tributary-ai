@@ -82,17 +82,50 @@ Check the `out/` directory contains:
 
 ## Hostinger Deployment
 
-### Method 1: FTP Upload (Recommended)
+### Method 1: Automated FTP Deploy Script (Recommended)
 
-#### Step 1: Gather FTP Credentials
+The project includes an automated deployment script that handles everything.
 
-From Hostinger control panel:
-- **FTP Hostname:** Usually `ftp.yourdomain.com`
-- **FTP Username:** Provided by Hostinger
-- **FTP Password:** Your FTP password
-- **Port:** 21 (or 22 for SFTP)
+#### One-Command Deployment
 
-#### Step 2: Connect via FTP Client
+```bash
+npm run deploy
+```
+
+This will:
+1. Build the static site (`npm run build`)
+2. Upload all files via FTP to Hostinger
+
+#### Manual FTP Script
+
+```bash
+# Build first
+npm run build
+
+# Then deploy
+node deploy-ftp.js
+```
+
+#### FTP Configuration
+
+The deployment script (`deploy-ftp.js`) is pre-configured:
+- **Host:** `ftp.thetributary.ai`
+- **User:** `u951885034.tribFTPuser`
+- **Remote Directory:** `/` (FTP root = web root)
+
+**IMPORTANT:** The FTP account automatically starts in `public_html`, so upload to `/` NOT `/public_html/`. Uploading to `/public_html/` would create a nested folder.
+
+---
+
+### Method 2: Manual FTP Upload
+
+#### FTP Credentials
+
+- **FTP Hostname:** `ftp.thetributary.ai`
+- **FTP Username:** `u951885034.tribFTPuser`
+- **Port:** 21
+
+#### Connect via FTP Client
 
 **Recommended FTP Clients:**
 - FileZilla (Windows/Mac/Linux)
@@ -102,45 +135,37 @@ From Hostinger control panel:
 **FileZilla Example:**
 1. Open FileZilla
 2. Enter Host: `ftp.thetributary.ai`
-3. Enter Username: [your FTP username]
+3. Enter Username: `u951885034.tribFTPuser`
 4. Enter Password: [your FTP password]
 5. Port: 21
 6. Click "Quickconnect"
 
-#### Step 3: Navigate to Web Root
+#### Upload Files
 
-On the remote server (right panel), navigate to:
-```
-/public_html/
-```
+**IMPORTANT:** Upload to `/` (root), NOT `/public_html/`
 
-If www.thetributary.ai has a separate directory:
-```
-/domains/thetributary.ai/public_html/
-```
-
-#### Step 4: Upload Files
+The FTP account automatically lands in the web root. If you see folders like `app/`, `components/`, `package.json` at `/`, that's from a previous Git deployment - upload your files alongside them.
 
 1. On local side (left panel), navigate to:
    ```
    /mnt/c/Projects/Tributary.ai/tributary-site/out/
    ```
 
-2. Select ALL files and folders in the `out/` directory
+2. On remote side, stay at `/` (root)
 
-3. Drag to the remote server's public_html
+3. Select ALL files and folders in the `out/` directory
 
-4. Wait for upload to complete (may take 5-15 minutes depending on connection)
+4. Drag to the remote server root
 
-#### Step 5: Verify File Permissions
+5. Wait for upload to complete (may take 5-15 minutes)
 
-Ensure proper permissions:
+#### File Permissions
+
+Permissions are set automatically:
 - **Directories:** 755 (rwxr-xr-x)
 - **Files:** 644 (rw-r--r--)
 
-Most FTP clients set these automatically. If not, right-click → File Permissions.
-
-### Method 2: Hostinger File Manager
+### Method 3: Hostinger File Manager
 
 1. Log into Hostinger control panel
 2. Go to "Files" → "File Manager"
@@ -348,6 +373,15 @@ If something goes wrong:
 
 ## Version History
 
+**v1.1.0** - November 2025
+- Added 30 blog posts covering AI strategy, implementation, and industry topics
+- Added AI Readiness Assessment page with Web3Forms integration
+- Added Resources page with downloadable guides
+- Added Differentiators and Engagement Models sections
+- Enhanced UX with animations, parallax, and 3D effects
+- Fixed FTP deployment (upload to `/` not `/public_html/`)
+- Added automated `npm run deploy` command
+
 **v1.0.0** - January 2025
 - Initial build and deployment
 - 14 pages including blog
@@ -357,4 +391,4 @@ If something goes wrong:
 
 ---
 
-**Last Updated:** January 27, 2025
+**Last Updated:** November 28, 2025
