@@ -288,7 +288,7 @@ See `app/globals.css` for custom classes:
 
 ## 📞 Contact & Support
 
-- **Email:** mcooper@mcooper.com
+- **Email:** michael@thetributary.ai
 - **LinkedIn:** https://www.linkedin.com/company/tributaryai
 - **Location:** Boise, Idaho (serving clients nationally)
 

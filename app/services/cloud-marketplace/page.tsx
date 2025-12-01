@@ -8,22 +8,23 @@ import { Check, ArrowRight } from "lucide-react";
 const service = getServiceById("cloud-marketplace");
 
 export const metadata: Metadata = {
-  title: "Cloud Marketplace Acceleration | Tributary AI",
+  title: "Cloud Marketplace GTM | Tributary AI",
   description:
-    "Navigate AWS, Azure, and GCP marketplace listings, co-sell programs, and partner ecosystems. Expert guidance from Partner of the Year award winner. Unlock new revenue channels through strategic cloud marketplace acceleration.",
+    "Get listed, transact, and co-sell on AWS, Azure, and GCP marketplaces. Expert GTM strategy from Partner of the Year award winners. Marketplace listings, co-sell programs, and private offers for SaaS companies.",
   keywords: [
-    "cloud marketplace acceleration",
-    "AWS marketplace",
-    "Azure marketplace",
+    "cloud marketplace GTM",
+    "AWS marketplace listing",
+    "Azure marketplace strategy",
     "GCP marketplace",
     "cloud co-sell programs",
-    "marketplace GTM strategy",
-    "cloud partner programs",
+    "ISV Accelerate",
+    "marketplace private offers",
+    "SaaS marketplace strategy",
   ],
   openGraph: {
-    title: "Cloud Marketplace Acceleration Services",
+    title: "Cloud Marketplace GTM Services - Tributary AI",
     description:
-      "Navigate AWS, Azure, and GCP marketplace listings and co-sell programs. Expert guidance from Partner of the Year award winner.",
+      "Get listed, transact, and co-sell on AWS, Azure, and GCP. Expert GTM strategy from Partner of the Year award winners.",
     type: "website",
   },
 };

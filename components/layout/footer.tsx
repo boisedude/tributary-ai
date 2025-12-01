@@ -22,8 +22,8 @@ export function Footer() {
               <h3 className="text-lg font-semibold">Tributary AI Systems</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Preparing businesses for the agentic era through strategic
-              technology transformation and AI readiness.
+              SaaS GTM acceleration for the agentic era. Cloud marketplace
+              strategy, fractional leadership, and strategic advisory.
             </p>
           </div>
 
@@ -71,6 +71,22 @@ export function Footer() {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy"
+                  className="text-muted-foreground transition-colors hover:text-accent"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms"
+                  className="text-muted-foreground transition-colors hover:text-accent"
+                >
+                  Terms of Service
+                </Link>
+              </li>
             </ul>
           </nav>
 
@@ -88,7 +104,7 @@ export function Footer() {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="mailto:mcooper@mcooper.com"
+                href="mailto:sales@thetributary.ai"
                 className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-muted-foreground transition-colors hover:text-accent"
                 aria-label="Email"
               >
@@ -96,7 +112,7 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              <p>mcooper@mcooper.com</p>
+              <p>sales@thetributary.ai</p>
               <p className="mt-1">Boise, Idaho</p>
               <p className="mt-1">Serving clients nationally</p>
             </div>

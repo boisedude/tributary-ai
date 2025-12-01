@@ -9,7 +9,7 @@ export function OrganizationSchema() {
     url: "https://www.thetributary.ai",
     logo: "https://www.thetributary.ai/logo.png",
     description:
-      "AI consulting and business transformation services helping companies prepare for the agentic era.",
+      "SaaS GTM consulting for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory.",
     founder: {
       "@type": "Person",
       name: "Mike Cooper",
@@ -23,7 +23,7 @@ export function OrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "mcooper@mcooper.com",
+      email: "sales@thetributary.ai",
       contactType: "sales",
     },
     sameAs: ["https://www.linkedin.com/company/tributaryai"],
@@ -46,7 +46,7 @@ export function LocalBusinessSchema() {
     name: "Tributary AI Systems",
     image: "https://www.thetributary.ai/logo.png",
     description:
-      "Boutique AI consulting firm specializing in AI readiness assessment, agentic systems strategy, and cloud marketplace acceleration.",
+      "SaaS GTM consulting firm specializing in cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Boise",
@@ -60,7 +60,7 @@ export function LocalBusinessSchema() {
       longitude: -116.2023,
     },
     url: "https://www.thetributary.ai",
-    email: "mcooper@mcooper.com",
+    email: "sales@thetributary.ai",
     priceRange: "$$$$",
     areaServed: {
       "@type": "Country",
@@ -85,7 +85,7 @@ export function ServicesSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "AI Consulting",
+    serviceType: "SaaS GTM Consulting",
     provider: {
       "@type": "Organization",
       name: "Tributary AI Systems",
@@ -96,42 +96,33 @@ export function ServicesSchema() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "AI Consulting Services",
+      name: "SaaS GTM Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "AI Readiness Assessment",
+            name: "Cloud Marketplace GTM",
             description:
-              "Comprehensive evaluation of your organization's technology, processes, and culture to identify opportunities and readiness for AI adoption.",
+              "Get listed, transact, and co-sell on AWS, Azure, and GCP marketplaces. Marketplace listings, co-sell programs, and partner ecosystem development.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Agentic Systems Strategy",
+            name: "Fractional GTM Leadership",
             description:
-              "Navigate the shift from seat-based to outcome-based business models with strategic guidance for the agentic era.",
+              "Part-time strategic GTM leadership for SaaS companies. Fractional CRO, VP Sales, and VP Partnerships services.",
           },
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "AI Implementation & Integration",
+            name: "Agentic SaaS Advisory",
             description:
-              "Turn your AI vision into working solutions with practical implementation and seamless integration.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Cloud Marketplace Acceleration",
-            description:
-              "Navigate AWS, Azure, and GCP marketplace listings, co-sell programs, and partner ecosystems.",
+              "Navigate the shift from seat-based to outcome-based business models. Strategic advisory for SaaS companies in the agentic era.",
           },
         },
       ],

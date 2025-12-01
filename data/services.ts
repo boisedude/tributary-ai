@@ -1,4 +1,4 @@
-import { LucideIcon, Brain, Cloud, Sparkles, TrendingUp } from "lucide-react";
+import { LucideIcon, Cloud, Users, Sparkles } from "lucide-react";
 
 export interface Service {
   id: string;
@@ -14,109 +14,82 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "ai-readiness",
-    title: "AI Readiness Assessment",
-    tagline: "Is your business ready for AI? We'll show you the path.",
-    description:
-      "Comprehensive evaluation of your organization's technology, processes, and culture to identify opportunities and readiness for AI adoption. We assess your current systems, identify gaps, and create a clear roadmap for intelligent transformation.",
-    icon: Brain,
-    features: [
-      "System architecture and infrastructure review",
-      "Process modernization assessment",
-      "Technology stack evaluation",
-      "Data readiness analysis",
-      "Change management planning",
-      "ROI modeling and business case development",
-    ],
-    idealFor:
-      "Mid-market companies and startups ready to explore AI but uncertain where to begin.",
-    deliverables: [
-      "Comprehensive readiness scorecard",
-      "Prioritized opportunity roadmap",
-      "Technology stack recommendations",
-      "Implementation timeline and budget",
-      "Quick wins identification",
-    ],
-    href: "/services/ai-readiness",
-  },
-  {
-    id: "agentic-systems",
-    title: "Agentic Systems Strategy",
-    tagline:
-      "Navigate the shift from seat-based to outcome-based business models.",
-    description:
-      "The future of SaaS and business software is agentic—AI systems that work autonomously to achieve outcomes rather than requiring human operators for each task. We help you understand this shift and position your business to thrive in the agentic era.",
-    icon: Sparkles,
-    features: [
-      "Agentic SaaS advisory and positioning",
-      "Business model evolution planning",
-      "Pricing strategy for outcome-based models",
-      "Product roadmap adaptation",
-      "Go-to-market strategy for AI-native offerings",
-      "Competitive positioning in the agentic landscape",
-    ],
-    idealFor:
-      "SaaS companies, software vendors, and service providers adapting to AI-driven competition.",
-    deliverables: [
-      "Agentic transformation strategy",
-      "Updated business model canvas",
-      "Pricing and packaging recommendations",
-      "GTM playbook for agentic offerings",
-      "Competitive differentiation framework",
-    ],
-    href: "/services/agentic-systems",
-  },
-  {
-    id: "implementation",
-    title: "AI Implementation & Integration",
-    tagline: "From strategy to reality—measurable results.",
-    description:
-      "Turn your AI vision into working solutions. We implement AI tools, custom systems, and intelligent workflows that integrate seamlessly with your existing operations. Our focus is on practical, measurable outcomes that scale with your business.",
-    icon: TrendingUp,
-    features: [
-      "AI tools and services implementation",
-      "Custom AI system development",
-      "Integration with existing systems",
-      "Workflow automation design",
-      "Vendor selection and management",
-      "Performance monitoring and optimization",
-    ],
-    idealFor:
-      "Organizations ready to move from planning to execution with clear business objectives.",
-    deliverables: [
-      "Implemented AI solutions",
-      "Integration documentation",
-      "Team training and enablement",
-      "Success metrics and dashboards",
-      "Ongoing optimization recommendations",
-    ],
-    href: "/services/implementation",
-  },
-  {
     id: "cloud-marketplace",
-    title: "Cloud Marketplace Acceleration",
-    tagline: "Unlock new revenue channels through AWS, Azure, and GCP.",
+    title: "Cloud Marketplace GTM",
+    tagline: "Get listed, transact, and co-sell on AWS, Azure, and GCP.",
     description:
-      "Navigate the complexities of cloud marketplace listings, co-sell programs, and partner ecosystems. With decades of experience in platform partnerships and marketplace GTM, we help you get listed, transact, and scale through AWS, Azure, and GCP marketplaces.",
+      "Navigate the complexities of cloud marketplace listings, co-sell programs, and partner ecosystems. With decades of experience in platform partnerships and marketplace GTM—including leading teams to Microsoft and Google Partner of the Year—we help SaaS companies unlock new revenue channels through strategic cloud marketplace acceleration.",
     icon: Cloud,
     features: [
-      "Marketplace listing strategy and execution",
-      "Co-sell program enablement (AWS, Azure, GCP)",
-      "Partner ecosystem development",
-      "Marketplace operations optimization",
-      "Deal registration and pipeline management",
-      "Seller success program navigation",
+      "Marketplace listing strategy and execution (AWS, Azure, GCP)",
+      "Co-sell program qualification and enablement",
+      "Private offer structuring and negotiation",
+      "Partner ecosystem development and ISV programs",
+      "Deal registration and pipeline coordination",
+      "Marketplace operations and performance optimization",
     ],
     idealFor:
-      "B2B SaaS companies from Series A to growth stage looking to scale through cloud channels.",
+      "Series A-C SaaS companies looking to accelerate revenue through cloud marketplace channels and co-sell motions.",
     deliverables: [
-      "Live marketplace listings",
-      "Co-sell program activation",
-      "Partner engagement playbook",
-      "Deal flow processes",
-      "Marketplace performance analytics",
+      "Live marketplace listings on target platforms",
+      "Co-sell program activation (ISV Accelerate, Co-sell Ready, etc.)",
+      "Private offer playbook and templates",
+      "Cloud provider relationship roadmap",
+      "Marketplace performance dashboards and KPIs",
     ],
     href: "/services/cloud-marketplace",
+  },
+  {
+    id: "fractional-gtm",
+    title: "Fractional GTM Leadership",
+    tagline: "Part-time strategic leadership, full-time impact.",
+    description:
+      "Not every company needs—or can afford—a full-time CRO or VP of Partnerships. Get senior GTM leadership on a fractional basis: strategic sales leadership, partnerships strategy, revenue operations, and go-to-market execution from someone who's built and scaled GTM functions at Microsoft, Citrix, Confluent, and Astronomer.",
+    icon: Users,
+    features: [
+      "Fractional CRO / VP Sales / VP Partnerships",
+      "Go-to-market strategy development and execution",
+      "Sales process design and optimization",
+      "Partnership and channel strategy",
+      "Revenue operations and metrics frameworks",
+      "Team hiring, coaching, and enablement",
+    ],
+    idealFor:
+      "Seed to Series B SaaS companies needing senior GTM expertise without full-time executive overhead.",
+    deliverables: [
+      "GTM strategy and execution roadmap",
+      "Sales playbooks and process documentation",
+      "Partnership program design",
+      "Revenue metrics and reporting frameworks",
+      "Hiring plans and interview frameworks",
+    ],
+    href: "/services/fractional-gtm",
+  },
+  {
+    id: "agentic-advisory",
+    title: "Agentic SaaS Advisory",
+    tagline: "Navigate the shift from seat-based to outcome-based models.",
+    description:
+      "The SaaS industry is undergoing its biggest transformation since the shift to cloud. Agentic AI is changing how software creates and captures value—from per-seat licensing to outcome-based pricing. We help SaaS companies understand this shift, adapt their business models, and position for the agentic era.",
+    icon: Sparkles,
+    features: [
+      "Agentic business model assessment",
+      "Pricing strategy for outcome-based models",
+      "Product roadmap adaptation for AI-native features",
+      "Competitive positioning in the agentic landscape",
+      "Go-to-market strategy for AI-enhanced offerings",
+      "Board and investor narrative development",
+    ],
+    idealFor:
+      "SaaS companies building or integrating agentic AI capabilities and rethinking their business models.",
+    deliverables: [
+      "Agentic transformation strategy document",
+      "Updated business model and pricing framework",
+      "Competitive landscape analysis",
+      "GTM playbook for agentic offerings",
+      "Investor/board presentation materials",
+    ],
+    href: "/services/agentic-advisory",
   },
 ];
 

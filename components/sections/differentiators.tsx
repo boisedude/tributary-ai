@@ -17,34 +17,34 @@ const differentiators: Differentiator[] = [
   {
     icon: Users,
     statNumber: "100%",
-    statLabel: "senior team involvement",
-    title: "Senior-Level Attention",
+    statLabel: "senior-led engagements",
+    title: "Operator Experience",
     description:
-      "No junior consultants or account managers. Every engagement is led by experienced practitioners with 25+ years of hands-on expertise in business operations and technology.",
+      "Not just consultants—we've built GTM teams at Microsoft, Citrix, Confluent, and Astronomer. You get advice from someone who's done the job, not just studied it.",
   },
   {
     icon: Zap,
-    statNumber: "2-4",
-    statLabel: "weeks to first deliverables",
-    title: "Speed to Value",
+    statNumber: "3",
+    statLabel: "cloud marketplaces",
+    title: "Multi-Cloud Expertise",
     description:
-      "We move fast without sacrificing quality. Our lean approach and deep expertise mean you get actionable insights and working solutions in weeks, not months.",
+      "Deep experience across AWS, Azure, and GCP marketplaces. We know the programs, the people, and the pitfalls—so you don't have to learn the hard way.",
   },
   {
     icon: Award,
-    statNumber: "25+",
-    statLabel: "years experience",
+    statNumber: "2x",
+    statLabel: "Partner of the Year",
     title: "Proven Track Record",
     description:
-      "Microsoft Partner of the Year, Google Partner of the Year, and decades of successful engagements with mid-market companies and high-growth startups.",
+      "Led teams to both Microsoft and Google Partner of the Year recognition. We know what it takes to build successful cloud partnerships.",
   },
   {
     icon: Clock,
     statNumber: "3",
-    statLabel: "models available",
+    statLabel: "engagement models",
     title: "Flexible Engagement",
     description:
-      "Choose the engagement model that fits your needs and budget—from quick assessments to full implementations to ongoing advisory retainers.",
+      "From focused sprints to full marketplace launches to ongoing fractional leadership—choose the model that fits your stage and budget.",
   },
 ];
 
@@ -109,7 +109,7 @@ export function Differentiators() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Why Choose Boutique Over Big Consulting?
+              Why Work With Us?
             </motion.h2>
             <motion.p
               className="mt-4 text-lg text-muted-foreground"
@@ -118,7 +118,7 @@ export function Differentiators() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Mid-market companies deserve senior expertise without enterprise overhead
+              Senior GTM expertise without big-firm overhead or long ramp-up times
             </motion.p>
           </div>
 

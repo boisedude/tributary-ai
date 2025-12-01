@@ -4,21 +4,21 @@ import { Mail, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
 import { FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Schedule Your AI Consultation",
+  title: "Contact Us - Schedule Your GTM Strategy Call",
   description:
-    "Schedule a consultation with Tributary AI Systems. Based in Boise, Idaho, serving clients nationally. Get expert guidance on your AI transformation journey. Free initial consultation.",
+    "Schedule a strategy call with Tributary AI Systems. Cloud marketplace GTM, fractional GTM leadership, and agentic SaaS advisory. Based in Boise, Idaho, serving SaaS companies nationally.",
   keywords: [
-    "AI consulting contact",
-    "schedule AI consultation",
-    "Boise AI consultant",
-    "AI strategy consultation",
-    "business AI advisor",
+    "SaaS GTM consulting contact",
+    "cloud marketplace consultation",
+    "fractional GTM consultation",
+    "schedule strategy call",
+    "SaaS go-to-market advisor",
     "contact Tributary AI",
   ],
   openGraph: {
-    title: "Contact Tributary AI Systems - Schedule Your Consultation",
+    title: "Contact Tributary AI Systems - Schedule Your Strategy Call",
     description:
-      "Schedule a free consultation to discuss your AI transformation journey. Expert guidance for mid-market companies and startups.",
+      "Schedule a free strategy call to discuss cloud marketplace GTM, fractional leadership, or agentic SaaS advisory.",
     type: "website",
   },
 };
@@ -26,19 +26,19 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Do you work with companies outside Idaho?",
-    answer: "Yes, we serve clients nationally. While we&apos;re based in Boise, Idaho, we work with mid-market companies and startups across the United States.",
+    answer: "Yes, we serve SaaS companies nationally. While we&apos;re based in Boise, Idaho, our clients are Series A-C SaaS companies across the United States.",
   },
   {
     question: "What size companies do you work with?",
-    answer: "We work with mid-market companies and startups from seed stage to growth. Our services are designed to scale with your needs, whether you&apos;re just exploring AI or ready to implement comprehensive solutions.",
+    answer: "We specialize in Series A-C SaaS companies—typically post-product-market-fit and looking to accelerate GTM through cloud marketplaces or bring in senior GTM leadership on a fractional basis.",
   },
   {
-    question: "Do you offer fractional/part-time engagements?",
-    answer: "Yes, we offer flexible engagement models including fractional and part-time arrangements. We understand that not every company needs full-time support, and we&apos;re happy to work with you to find the right fit.",
+    question: "What&apos;s your experience with cloud marketplaces?",
+    answer: "We&apos;ve led teams to Microsoft and Google Partner of the Year recognition, built marketplace programs at Confluent and Astronomer, and have deep experience with AWS, Azure, and GCP co-sell programs.",
   },
   {
-    question: "How do I know if my business is ready for AI?",
-    answer: "That&apos;s exactly what we help determine. Our initial consultation and readiness assessment are designed to give you an honest evaluation of where you are and what steps make sense for your business.",
+    question: "How does fractional GTM leadership work?",
+    answer: "We embed as a part-time member of your team—typically 10-20 hours per week—providing the strategic leadership of a CRO or VP without the full-time cost. Engagements are typically 3+ months.",
   },
 ];
 
@@ -99,22 +99,13 @@ export default function ContactPage() {
                 <CardContent>
                   <div className="relative w-full overflow-hidden rounded-lg border bg-muted/30" style={{ height: "600px" }}>
                     <iframe
-                      src="https://calendly.com/your-calendly-link"
+                      src="https://calendly.com/tributary-ai/30min"
                       width="100%"
                       height="100%"
                       frameBorder="0"
-                      title="Schedule a consultation"
+                      title="Schedule a consultation with Tributary AI"
                       className="rounded-lg"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center bg-muted/80 backdrop-blur-sm">
-                      <div className="text-center p-6">
-                        <Calendar className="h-12 w-12 mx-auto mb-4 text-accent" />
-                        <p className="text-lg font-semibold mb-2">Calendly Integration Placeholder</p>
-                        <p className="text-sm text-muted-foreground">
-                          Replace the iframe src with your actual Calendly link
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -138,11 +129,20 @@ export default function ContactPage() {
                     <div>
                       <p className="font-semibold">Email</p>
                       <a
-                        href="mailto:mcooper@mcooper.com"
+                        href="mailto:sales@thetributary.ai"
                         className="text-accent hover:underline"
                       >
-                        mcooper@mcooper.com
+                        sales@thetributary.ai
                       </a>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        Or reach Michael directly:{" "}
+                        <a
+                          href="mailto:michael@thetributary.ai"
+                          className="text-accent hover:underline"
+                        >
+                          michael@thetributary.ai
+                        </a>
+                      </p>
                     </div>
                   </div>
 
@@ -251,7 +251,7 @@ export default function ContactPage() {
             </p>
             <div className="mt-8">
               <a
-                href="mailto:mcooper@mcooper.com"
+                href="mailto:sales@thetributary.ai"
                 className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-lg font-medium text-primary shadow-sm transition-all hover:bg-white/90"
               >
                 <Mail className="h-5 w-5" />

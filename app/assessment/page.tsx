@@ -4,22 +4,22 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle, TrendingUp, Target, Users } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free AI Readiness Assessment - Get Your Score",
+  title: "Free GTM Readiness Assessment - Get Your Score",
   description:
-    "Take our free AI Readiness Assessment to discover how prepared your organization is for AI transformation. Get personalized insights and recommendations in just 5 minutes. Evaluate your data infrastructure, team capabilities, and strategic alignment.",
+    "Take our free GTM Readiness Assessment to discover how prepared your SaaS company is for cloud marketplace acceleration and GTM optimization. Get personalized insights in just 5 minutes.",
   keywords: [
-    "free AI assessment",
-    "AI readiness test",
-    "AI maturity assessment",
-    "organizational AI readiness",
-    "AI transformation assessment",
-    "AI capability evaluation",
-    "free AI evaluation",
+    "free GTM assessment",
+    "cloud marketplace readiness",
+    "SaaS GTM assessment",
+    "marketplace readiness test",
+    "GTM maturity assessment",
+    "SaaS go-to-market evaluation",
+    "free SaaS assessment",
   ],
   openGraph: {
-    title: "Free AI Readiness Assessment - Tributary AI",
+    title: "Free GTM Readiness Assessment - Tributary AI",
     description:
-      "Discover how prepared your organization is for AI transformation. Get personalized insights and recommendations in 5 minutes.",
+      "Discover how prepared your SaaS company is for cloud marketplace GTM. Get personalized insights and recommendations in 5 minutes.",
     type: "website",
   },
 };
@@ -28,22 +28,22 @@ const benefits = [
   {
     icon: TrendingUp,
     title: "Identify Opportunities",
-    description: "Discover where AI can have the biggest impact on your business",
+    description: "Discover which cloud marketplaces offer the best fit for your solution",
   },
   {
     icon: Target,
     title: "Set Clear Goals",
-    description: "Understand your current state and define your AI transformation roadmap",
+    description: "Understand your GTM maturity and define your marketplace acceleration roadmap",
   },
   {
     icon: Users,
     title: "Assess Team Readiness",
-    description: "Evaluate your organization&apos;s culture and capabilities for AI adoption",
+    description: "Evaluate your organization&apos;s readiness for marketplace and co-sell motions",
   },
   {
     icon: CheckCircle,
     title: "Get Expert Insights",
-    description: "Receive personalized recommendations from our AI transformation specialists",
+    description: "Receive personalized recommendations from marketplace GTM specialists",
   },
 ];
 
@@ -55,10 +55,10 @@ export default function AssessmentPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              AI Readiness Assessment
+              GTM Readiness Assessment
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Discover where your business stands on the AI maturity curve.
+              Discover how prepared your SaaS company is for cloud marketplace acceleration.
               Get your free readiness score and personalized recommendations in just 5 minutes.
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function AssessmentPage() {
                 Why Take This Assessment?
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Understanding your AI readiness is the first step toward successful transformation
+                Understanding your GTM readiness is the first step toward marketplace success
               </p>
             </div>
 
@@ -119,7 +119,7 @@ export default function AssessmentPage() {
                     <div>
                       <h3 className="mb-2 font-semibold">Objective Evaluation</h3>
                       <p className="text-muted-foreground">
-                        Get an unbiased assessment of your organization&apos;s readiness across critical dimensions: data integration, processes, team culture, infrastructure, and strategic vision.
+                        Get an unbiased assessment of your GTM readiness across critical dimensions: marketplace fit, pricing strategy, partner readiness, and sales motion alignment.
                       </p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function AssessmentPage() {
                     <div>
                       <h3 className="mb-2 font-semibold">Strategic Roadmap</h3>
                       <p className="text-muted-foreground">
-                        Understand the gaps between your current state and your AI goals. Our assessment helps you build a realistic roadmap aligned with your business objectives.
+                        Understand the gaps between your current state and marketplace success. Our assessment helps you build a realistic roadmap for cloud GTM acceleration.
                       </p>
                     </div>
                   </div>

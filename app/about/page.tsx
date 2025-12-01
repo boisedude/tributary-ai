@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Award, BookOpen, Building2, Radio } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Tributary AI Systems - Meet Mike Cooper",
+  title: "About Tributary AI Systems - Meet Michael Cooper",
   description:
-    "Meet Mike Cooper, founder of Tributary AI Systems. 25+ years of enterprise technology experience, Microsoft and Google Partner of the Year awards, and deep expertise in cloud marketplaces and AI readiness. Based in Boise, Idaho, serving clients nationally.",
+    "Meet Michael Cooper, founder of Tributary AI Systems. 25+ years of GTM and enterprise technology experience, Microsoft and Google Partner of the Year awards, and deep expertise in cloud marketplaces and SaaS go-to-market. Based in Boise, Idaho, serving clients nationally.",
   keywords: [
-    "Mike Cooper",
+    "Michael Cooper",
     "Tributary AI founder",
     "AI consulting expert",
     "cloud marketplace consultant",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     "agentic SaaS podcast",
   ],
   openGraph: {
-    title: "About Tributary AI Systems - Meet Mike Cooper",
+    title: "About Tributary AI Systems - Meet Michael Cooper",
     description:
-      "25+ years of enterprise technology experience. Microsoft and Google Partner of the Year awards. Expert in AI readiness, cloud marketplaces, and agentic systems.",
+      "25+ years of GTM experience. Microsoft and Google Partner of the Year awards. Expert in cloud marketplaces, SaaS GTM, and agentic systems.",
     type: "website",
   },
 };
@@ -82,18 +82,18 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold">The Journey</h2>
             <div className="mt-8 space-y-6 text-lg text-muted-foreground">
               <p>
-                Tributary AI Systems is founded by Mike Cooper, who brings over
-                25 years of enterprise technology experience spanning networking,
-                security, cloud infrastructure, and platform partnerships.
+                Tributary AI Systems is founded by Michael Cooper, who brings over
+                25 years of go-to-market and enterprise technology experience spanning
+                cloud marketplaces, partner ecosystems, and platform partnerships.
               </p>
               <p>
-                Mike&apos;s career began in Idaho, where he founded MDC IT and worked
+                Michael&apos;s career began in Idaho, where he founded MDC IT and worked
                 with regional powerhouses like JR Simplot, Albertsons, and
                 Primary Health. That foundation in understanding real business
                 needs has remained central to his approach ever since.
               </p>
               <p>
-                From those Idaho roots, Mike scaled to global roles at some of
+                From those Idaho roots, Michael scaled to global roles at some of
                 technology&apos;s most influential companies. At Microsoft and Citrix,
                 he led teams that earned Partner of the Year recognition from
                 both Microsoft and Google. At Confluent and Astronomer, he built
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 significant business growth.
               </p>
               <p>
-                Throughout his career, Mike has been at the forefront of platform
+                Throughout his career, Michael has been at the forefront of platform
                 ecosystems and partner strategy. He&apos;s navigated the complexities
                 of AWS, Azure, and GCP marketplaces, built co-sell programs with
                 major cloud providers, and helped numerous companies successfully
@@ -109,10 +109,8 @@ export default function AboutPage() {
               </p>
               <p>
                 As a published author on Windows Server, Exchange, and Active
-                Directory, Mike has contributed to the broader technology
-                community&apos;s understanding of enterprise systems. Today, he hosts
-                the &quot;Agentic SaaS Talks&quot; podcast, exploring the intersection of
-                AI, platforms, and business transformation.
+                Directory, Michael has contributed to the broader technology
+                community&apos;s understanding of enterprise systems.
               </p>
             </div>
           </div>
@@ -128,16 +126,17 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold">Why Tributary</h2>
                 <div className="mt-6 space-y-4 text-lg text-muted-foreground">
                   <p>
-                    After years at major technology companies, Mike recognized an
-                    opportunity to return to what he does best: helping businesses
-                    directly navigate complex technology transformations.
+                    After years at major technology companies, Michael recognized an
+                    opportunity to return to what he does best: helping SaaS companies
+                    accelerate their go-to-market through cloud marketplaces and
+                    strategic partnerships.
                   </p>
                   <p>
                     The agentic era demands more than theoretical knowledge. It
-                    requires practical experience in systems integration, partner
-                    ecosystems, and the reality of enterprise operations. Tributary
-                    AI Systems brings that experience to companies preparing for
-                    AI-driven business.
+                    requires practical experience in cloud partnerships, marketplace
+                    GTM, and the reality of scaling SaaS businesses. Tributary
+                    AI Systems brings that experience to companies navigating
+                    cloud marketplaces and the shift to outcome-based models.
                   </p>
                   <p>
                     Based in Boise but serving clients nationally, we combine the
@@ -218,10 +217,10 @@ export default function AboutPage() {
                       <Radio className="h-6 w-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Agentic SaaS Talks</h3>
+                      <h3 className="font-semibold">Cloud Marketplace Expert</h3>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Host of podcast exploring AI, platforms, and business
-                        transformation
+                        Deep expertise in AWS, Azure, and GCP marketplace GTM,
+                        co-sell programs, and partner strategy
                       </p>
                     </div>
                   </div>
@@ -287,17 +286,16 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Let&apos;s Build Your AI Strategy
+              Let&apos;s Accelerate Your GTM
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Whether you&apos;re just beginning to explore AI capabilities or ready
-              to transform your operations, we bring the experience to guide you
-              through the journey.
+              Whether you&apos;re launching on cloud marketplaces or need fractional GTM
+              leadership, we bring the experience to accelerate your go-to-market.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Let&apos;s Build Your AI Strategy
+                  Book a Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

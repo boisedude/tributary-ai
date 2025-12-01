@@ -17,10 +17,10 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Stop Guessing About AI Readiness
+            Ready to Accelerate Your GTM?
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Get a clear, actionable roadmap for your AI transformation. Discover exactly where you stand and the specific steps to move forward with confidence.
+            Whether you&apos;re launching on cloud marketplaces, need fractional GTM leadership, or navigating the agentic shift—let&apos;s talk about how we can help.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -30,9 +30,9 @@ export function CTASection() {
               variant="secondary"
               className="group"
             >
-              <Link href="/assessment">
-                <CheckCircle className="mr-2 h-5 w-5" />
-                Take Free Assessment (5 min)
+              <Link href="/contact">
+                <Calendar className="mr-2 h-5 w-5" />
+                Book a Strategy Call
               </Link>
             </Button>
             <Button
@@ -41,16 +41,16 @@ export function CTASection() {
               variant="outline"
               className="border-white/20 bg-white/10 text-white hover:bg-white/20 hover:text-white"
             >
-              <Link href="/contact">
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule Strategy Call
+              <Link href="/services">
+                <CheckCircle className="mr-2 h-5 w-5" />
+                Explore Services
               </Link>
             </Button>
           </div>
 
           <p className="mt-8 text-sm text-white/70">
             No obligation, no sales pressure. Just an honest conversation about your
-            business and where AI can help.
+            GTM challenges and how we might help.
           </p>
         </motion.div>
       </div>

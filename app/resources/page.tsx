@@ -5,44 +5,44 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free AI Resources & Guides | Tributary AI",
+  title: "Free SaaS GTM Resources & Guides | Tributary AI",
   description:
-    "Download free guides and resources for AI adoption, agentic systems, and cloud marketplace strategies. Expert insights from Tributary AI Systems. AI readiness checklists, implementation guides, and strategic frameworks.",
+    "Download free guides for cloud marketplace GTM, SaaS go-to-market strategy, and agentic SaaS business models. Expert insights from Partner of the Year award winners.",
   keywords: [
-    "free AI resources",
-    "AI adoption guides",
-    "AI readiness checklist",
-    "agentic systems guide",
+    "free SaaS GTM resources",
     "cloud marketplace guide",
-    "AI strategy resources",
-    "AI implementation resources",
+    "SaaS go-to-market checklist",
+    "agentic SaaS guide",
+    "marketplace launch guide",
+    "SaaS GTM strategy resources",
+    "co-sell program guide",
   ],
   openGraph: {
-    title: "Free AI Resources & Implementation Guides",
+    title: "Free SaaS GTM Resources & Guides",
     description:
-      "Download expert guides for AI adoption, agentic systems, and cloud marketplace strategies. Practical resources for your AI journey.",
+      "Download expert guides for cloud marketplace GTM, SaaS strategy, and agentic business models. Practical resources from marketplace experts.",
     type: "website",
   },
 };
 
 const guides = [
   {
-    title: "AI Readiness Checklist",
+    title: "Cloud Marketplace GTM Playbook",
     description:
-      "A comprehensive checklist to assess your organization's readiness for AI adoption. Evaluate your data infrastructure, team capabilities, and strategic alignment.",
-    pdfUrl: "/guides/ai-readiness-checklist.pdf",
+      "Step-by-step guide for launching and scaling on AWS, Azure, and GCP marketplaces. Navigate listings, co-sell programs, private offers, and partner relationships.",
+    pdfUrl: "/guides/cloud-marketplace-gtm-playbook.pdf",
   },
   {
-    title: "Agentic Systems Primer",
+    title: "Fractional GTM Leadership Guide",
     description:
-      "Understand the fundamentals of outcome-based AI systems. Learn how autonomous agents differ from traditional automation and when to implement them.",
-    pdfUrl: "/guides/agentic-systems-primer.pdf",
+      "When to hire fractional vs. full-time GTM leadership. Understand engagement models, success metrics, and how to maximize value from part-time executives.",
+    pdfUrl: "/guides/fractional-gtm-leadership-guide.pdf",
   },
   {
-    title: "Cloud Marketplace Launch Guide",
+    title: "Agentic SaaS Business Model Guide",
     description:
-      "Step-by-step guide for launching your SaaS product on AWS, Azure, and GCP marketplaces. Navigate technical requirements, pricing strategies, and go-to-market approaches.",
-    pdfUrl: "/guides/cloud-marketplace-launch-guide.pdf",
+      "Navigate the shift from seat-based to outcome-based pricing. Understand how agentic AI changes SaaS economics and how to position your company.",
+    pdfUrl: "/guides/agentic-saas-business-model-guide.pdf",
   },
 ];
 
@@ -54,11 +54,11 @@ export default function ResourcesPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Free AI Resources & Guides
+              Free GTM Resources & Guides
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Download expert guides to accelerate your AI journey. No fluff, just
-              practical insights from real-world implementations.
+              Download expert guides to accelerate your SaaS go-to-market. No fluff, just
+              practical insights from marketplace and GTM veterans.
             </p>
           </div>
         </div>
@@ -88,9 +88,9 @@ export default function ResourcesPage() {
               Why We Share These Resources
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              We believe AI adoption should be accessible to every business. These
+              We believe SaaS GTM best practices should be accessible to every company. These
               guides represent real frameworks we use with clients every day. Our
-              goal is to help you make informed decisions about AI, whether you work
+              goal is to help you make informed decisions, whether you work
               with us or not.
             </p>
           </div>
@@ -105,14 +105,14 @@ export default function ResourcesPage() {
               Ready for Personalized Guidance?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Get a custom AI readiness assessment tailored to your business.
+              Get a custom GTM strategy session tailored to your SaaS company.
               We&apos;ll analyze your specific situation and provide actionable
               recommendations.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
-                <Link href="/assessment">
-                  Start Your Assessment
+                <Link href="/contact">
+                  Book a Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

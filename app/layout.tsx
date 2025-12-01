@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tributary AI | AI Business Consulting for Idaho",
+    default: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
     template: "%s | Tributary AI",
   },
   icons: {
@@ -32,18 +32,20 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "Where Business Experience Meets Intelligent Innovation. We help companies modernize systems, processes, and strategy for AI-driven operations. Expert consulting in AI readiness, cloud marketplace GTM, and agentic systems strategy.",
+    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 25+ years of enterprise technology experience.",
   keywords: [
-    "AI consulting",
-    "AI readiness",
-    "agentic systems",
-    "cloud marketplace",
-    "GTM strategy",
-    "business transformation",
-    "AI implementation",
-    "technology modernization",
-    "Idaho AI consulting",
-    "Boise AI consultant",
+    "SaaS GTM consulting",
+    "cloud marketplace GTM",
+    "AWS marketplace consulting",
+    "Azure marketplace strategy",
+    "GCP marketplace",
+    "fractional GTM leadership",
+    "fractional CRO",
+    "agentic SaaS",
+    "agentic AI strategy",
+    "co-sell programs",
+    "cloud co-sell",
+    "SaaS go-to-market",
   ],
   authors: [{ name: "Tributary AI Systems" }],
   creator: "Tributary AI Systems",
@@ -57,23 +59,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.thetributary.ai",
     siteName: "Tributary AI",
-    title: "Tributary AI | AI Business Consulting for Idaho",
+    title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
     description:
-      "Expert consulting in AI readiness, cloud marketplace GTM, and agentic systems strategy. Where Business Experience Meets Intelligent Innovation.",
+      "Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Partner of the Year expertise for Series A-C SaaS companies.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Tributary AI - AI Business Consulting for Idaho",
+        alt: "Tributary AI - SaaS GTM Consulting for the Agentic Era",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tributary AI | AI Business Consulting for Idaho",
+    title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
     description:
-      "Expert consulting in AI readiness, cloud marketplace GTM, and agentic systems strategy.",
+      "Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory for SaaS companies.",
     images: ["/og-image.png"],
     creator: "@tributaryai",
   },
@@ -88,9 +90,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
-  },
+  // Add Google Search Console verification code when available
+  // verification: {
+  //   google: "your-google-verification-code",
+  // },
 };
 
 export default function RootLayout({

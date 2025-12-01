@@ -7,22 +7,24 @@ import { ArrowRight, Check } from "lucide-react";
 import { EngagementModels } from "@/components/sections/engagement-models";
 
 export const metadata: Metadata = {
-  title: "AI Consulting Services | Tributary AI",
+  title: "SaaS GTM Services | Tributary AI",
   description:
-    "Comprehensive AI consulting services including readiness assessment, agentic systems strategy, AI implementation & integration, and cloud marketplace acceleration. Expert guidance for your AI transformation journey from assessment to deployment.",
+    "SaaS go-to-market services: Cloud marketplace GTM for AWS, Azure, and GCP. Fractional GTM leadership for Series A-C companies. Agentic SaaS advisory for the outcome-based future.",
   keywords: [
-    "AI consulting services",
-    "AI readiness assessment",
-    "agentic systems strategy",
-    "AI implementation services",
-    "cloud marketplace acceleration",
-    "AI transformation services",
-    "enterprise AI consulting",
+    "SaaS GTM services",
+    "cloud marketplace GTM",
+    "AWS marketplace consulting",
+    "Azure marketplace strategy",
+    "fractional GTM leadership",
+    "fractional CRO",
+    "agentic SaaS advisory",
+    "SaaS go-to-market",
+    "co-sell programs",
   ],
   openGraph: {
-    title: "AI Consulting Services - Tributary AI",
+    title: "SaaS GTM Services - Tributary AI",
     description:
-      "From assessment to implementation - comprehensive AI consulting services for mid-market companies and startups.",
+      "Cloud marketplace GTM, fractional leadership, and agentic SaaS advisory for Series A-C SaaS companies.",
     type: "website",
   },
 };
@@ -35,11 +37,11 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Services for Your AI Journey
+              GTM Services for SaaS Companies
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              From assessment to implementation, we provide comprehensive support
-              for businesses embracing intelligent transformation.
+              Cloud marketplace acceleration, fractional GTM leadership, and strategic
+              advisory for SaaS companies navigating the agentic era.
             </p>
           </div>
         </div>

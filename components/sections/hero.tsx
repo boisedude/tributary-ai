@@ -32,7 +32,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Where Business Experience
+              SaaS GTM Acceleration
             </motion.span>
             <motion.span
               className="block mt-2 text-gradient"
@@ -40,7 +40,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Meets Intelligent Innovation
+              for the Agentic Era
             </motion.span>
           </h1>
 
@@ -51,7 +51,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Preparing Your Business for the Agentic Era
+            Cloud Marketplace Strategy • Fractional GTM Leadership • Agentic SaaS Advisory
           </motion.p>
 
           {/* Description */}
@@ -61,9 +61,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            We help companies modernize systems, processes, and strategy for
-            AI-driven operations. From readiness assessment to implementation,
-            we guide you through the transformation to intelligent business.
+            We help SaaS companies accelerate revenue through cloud marketplace GTM, provide senior go-to-market leadership on a fractional basis, and navigate the shift to outcome-based business models.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -74,13 +72,13 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <Button asChild size="lg" className="group">
-              <Link href="/assessment">
-                Get Your Free AI Readiness Score
+              <Link href="/contact">
+                Book a Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/contact">Book a 30-Min Strategy Call</Link>
+              <Link href="/services">Explore Our Services</Link>
             </Button>
           </motion.div>
 
@@ -95,16 +93,13 @@ export function Hero() {
               Trusted Expertise
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div>
-                <span className="font-semibold text-foreground">25+</span> Years
-                Experience
-              </div>
+              <div>25+ Years GTM Experience</div>
               <div className="hidden sm:block">•</div>
               <div>Microsoft Partner of the Year</div>
               <div className="hidden sm:block">•</div>
               <div>Google Partner of the Year</div>
               <div className="hidden sm:block">•</div>
-              <div>Cloud Marketplace Expert</div>
+              <div>AWS/Azure/GCP Expert</div>
             </div>
           </motion.div>
         </motion.div>

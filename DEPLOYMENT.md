@@ -375,7 +375,7 @@ If something goes wrong:
 
 ### Contact
 - **Developer:** Claude AI (via Claude Code)
-- **Site Owner:** Mike Cooper (mcooper@mcooper.com)
+- **Site Owner:** Mike Cooper (michael@thetributary.ai)
 
 ---
 
