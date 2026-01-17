@@ -4,7 +4,9 @@
 
 ## 🌐 Live Site
 - **Production URL:** https://www.thetributary.ai
-- **Current Status:** Ready for deployment
+- **Current Status:** ⚠️ **NEEDS RETHINK** - See NEXT-STEPS.md
+
+> **January 2026 Note:** The website has an identity crisis - it's split between SaaS GTM consulting and general business/agentic transformation consulting. The theme and messaging need to be completely rethought before further development. See `NEXT-STEPS.md` for details.
 
 ## 🎨 Brand Identity
 
