@@ -83,9 +83,9 @@ export const services: Service[] = [
   {
     id: "agentic-advisory",
     title: "Agentic SaaS Advisory",
-    tagline: "Navigate the shift from seat-based to outcome-based models.",
+    tagline: "The business model shift is happening now. Get ahead of it.",
     description:
-      "The SaaS industry is undergoing its biggest transformation since the shift to cloud. Agentic AI is changing how software creates and captures value—from per-seat licensing to outcome-based pricing. We help SaaS companies understand this shift, adapt their business models, and position for the agentic era.",
+      "Per-seat pricing is under pressure. Outcome-based models are gaining traction. Companies that figure this out in 2026 will gain significant market share. Those that don't will struggle to compete as AI reshapes software economics. I help SaaS companies see where this is going and position themselves to win.",
     icon: Sparkles,
     features: [
       "Agentic business model assessment",
@@ -96,7 +96,7 @@ export const services: Service[] = [
       "Board and investor narrative development",
     ],
     idealFor:
-      "SaaS companies building or integrating agentic AI capabilities and rethinking their business models.",
+      "SaaS companies that recognize the shift happening and want to lead rather than follow.",
     deliverables: [
       "Agentic transformation strategy document",
       "Updated business model and pricing framework",
@@ -109,9 +109,9 @@ export const services: Service[] = [
   {
     id: "ai-readiness",
     title: "AI-Ready Operating Model",
-    tagline: "Prepare your organization for the age of abundant cognition.",
+    tagline: "The gap between winners and losers is about to get very wide.",
     description:
-      "2026 marks a structural break: AI has removed thinking as the primary constraint on organizational performance. Most organizations are not ready for this shift. Our AI-Ready Operating Model assessment helps you understand where you are on the maturity curve, identify bottlenecks, and build a transformation roadmap to become leverage-optimized.",
+      "2026 marks a structural break: thinking is no longer the constraint. Execution is. Companies that adapt will cut costs, move faster, and take market share. Those that don't will stall—watching competitors pull ahead while they struggle to keep up. This assessment shows you exactly where you stand, what's holding you back, and what it will take to be on the winning side.",
     icon: Brain,
     features: [
       "Four functional layers analysis (Cognition, Judgment, Commitment, Execution)",
@@ -122,7 +122,7 @@ export const services: Service[] = [
       "AI leverage opportunity mapping",
     ],
     idealFor:
-      "Organizations at Level 1 (Fragmented) or Level 2 (Digitized) seeking to become AI-ready and leverage-optimized.",
+      "Leadership teams ready for honest assessment of where they actually stand—not where they think they are.",
     deliverables: [
       "Comprehensive AI readiness scorecard",
       "Current-state maturity assessment report",

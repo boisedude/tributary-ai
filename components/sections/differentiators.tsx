@@ -16,35 +16,35 @@ interface Differentiator {
 const differentiators: Differentiator[] = [
   {
     icon: Users,
-    statNumber: "100%",
-    statLabel: "senior-led engagements",
-    title: "Operator Experience",
+    statNumber: "30+",
+    statLabel: "years in the arena",
+    title: "I've Been Here Before",
     description:
-      "Not just consultants—we've built GTM teams at Microsoft, Citrix, Confluent, and Astronomer. You get advice from someone who's done the job, not just studied it.",
+      "Client-server to web. On-prem to cloud. Now cloud to agentic. I've navigated every major platform shift at Microsoft, Citrix, Confluent, and Astronomer. This pattern is familiar—and the opportunity for competitive advantage is massive.",
   },
   {
     icon: Zap,
     statNumber: "3",
     statLabel: "cloud marketplaces",
-    title: "Multi-Cloud Expertise",
+    title: "Marketplace Reality",
     description:
-      "Deep experience across AWS, Azure, and GCP marketplaces. We know the programs, the people, and the pitfalls—so you don't have to learn the hard way.",
+      "AWS, Azure, GCP—I know the programs, the people, and the political dynamics. No theoretical frameworks. Just hard-won knowledge from years inside these ecosystems.",
   },
   {
     icon: Award,
     statNumber: "2x",
     statLabel: "Partner of the Year",
-    title: "Proven Track Record",
+    title: "Results, Not Promises",
     description:
-      "Led teams to both Microsoft and Google Partner of the Year recognition. We know what it takes to build successful cloud partnerships.",
+      "Led teams to Microsoft Partner of the Year and Google Partner of the Year. I don't just advise on partnerships—I've built the programs that win.",
   },
   {
     icon: Clock,
-    statNumber: "3",
-    statLabel: "engagement models",
-    title: "Flexible Engagement",
+    statNumber: "Now",
+    statLabel: "is the time to act",
+    title: "Speed Matters in 2026",
     description:
-      "From focused sprints to full marketplace launches to ongoing fractional leadership—choose the model that fits your stage and budget.",
+      "The competitive window is open now. Companies that move first will capture market share. Those that wait will find themselves playing catch-up. I help you move—fast.",
   },
 ];
 
@@ -109,7 +109,7 @@ export function Differentiators() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              Why Work With Us?
+              Why Me? Why Now?
             </motion.h2>
             <motion.p
               className="mt-4 text-lg text-muted-foreground"
@@ -118,7 +118,7 @@ export function Differentiators() {
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              Senior GTM expertise without big-firm overhead or long ramp-up times
+              The transformation is happening whether you&apos;re ready or not. I can help you navigate it.
             </motion.p>
           </div>
 

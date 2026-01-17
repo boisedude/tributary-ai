@@ -99,7 +99,7 @@ export const COMPANY = {
 export const SITE_METADATA = {
   TITLE: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
   DESCRIPTION:
-    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 25+ years of enterprise technology experience.",
+    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 30+ years of enterprise technology experience.",
   URL: "https://thetributary.ai",
   OG_IMAGE: "/og-image.png",
   TWITTER_HANDLE: "@tributaryai",
@@ -204,7 +204,7 @@ export const FORM_CONFIG = {
  * Company credentials and awards for display.
  */
 export const CREDENTIALS = [
-  "25+ Years GTM Experience",
+  "30+ Years GTM Experience",
   "Microsoft Partner of the Year",
   "Google Partner of the Year",
   "AWS/Azure/GCP Expert",

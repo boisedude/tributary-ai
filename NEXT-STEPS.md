@@ -128,10 +128,10 @@ Create these 3 PDF documents and place them in `/public/guides/`:
 - Text reveal animations
 
 ### Stats Counter Section (NEW)
-- 25+ Years Experience
-- 100+ Projects Completed
+- 30+ Years Experience
+- 200+ Projects Completed
 - 50+ Clients Served
-- 98% Client Satisfaction
+- 100% Client Satisfaction
 - Animated counting on scroll
 
 ### Differentiators Section

@@ -49,11 +49,11 @@ const expectations = [
   },
   {
     title: "30-Minute Discovery Call",
-    description: "We'll take time to understand your business, challenges, and goals to determine if AI can add value.",
+    description: "We'll take time to understand your business, GTM challenges, and goals to see if we can help.",
   },
   {
     title: "Honest Assessment",
-    description: "We'll give you a straightforward evaluation of your AI readiness and potential opportunities.",
+    description: "We'll give you a straightforward evaluation of your situation and potential opportunities.",
   },
   {
     title: "Clear Next Steps",
@@ -73,8 +73,8 @@ export default function ContactPage() {
               Let&apos;s Start a Conversation
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Schedule a consultation to discuss how AI can transform your business.
-              No pressure, no obligation—just an honest conversation about your needs.
+              Schedule a consultation to discuss your GTM challenges and opportunities.
+              No pressure, no obligation—just an honest conversation about where you are and where you want to go.
             </p>
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Ready to Explore AI for Your Business?
+              Ready to Accelerate Your GTM?
             </h2>
             <p className="mt-4 text-lg text-white/90">
               Let&apos;s have a conversation about where you are and where you want to go.

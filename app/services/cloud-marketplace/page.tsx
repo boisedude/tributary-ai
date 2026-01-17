@@ -141,7 +141,7 @@ export default function ServicePage() {
               Ready to Get Started?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let&apos;s discuss how we can help transform your business with this service.
+              Let&apos;s discuss your marketplace goals and how to get there.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" variant="secondary">

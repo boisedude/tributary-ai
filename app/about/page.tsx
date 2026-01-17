@@ -18,7 +18,7 @@ import {
 export const metadata: Metadata = {
   title: "About Tributary AI Systems - Meet Michael Cooper",
   description:
-    "Meet Michael Cooper, founder of Tributary AI Systems. 25+ years of GTM and enterprise technology experience, Microsoft and Google Partner of the Year awards, and deep expertise in cloud marketplaces and SaaS go-to-market. Based in Boise, Idaho, serving clients nationally.",
+    "Meet Michael Cooper, founder of Tributary AI Systems. 30+ years of GTM and enterprise technology experience, Microsoft and Google Partner of the Year awards, and deep expertise in cloud marketplaces and SaaS go-to-market. Based in Boise, Idaho, serving clients nationally.",
   keywords: [
     "Michael Cooper",
     "Tributary AI founder",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Tributary AI Systems - Meet Michael Cooper",
     description:
-      "25+ years of GTM experience. Microsoft and Google Partner of the Year awards. Expert in cloud marketplaces, SaaS GTM, and agentic systems.",
+      "30+ years of GTM experience. Microsoft and Google Partner of the Year awards. Expert in cloud marketplaces, SaaS GTM, and agentic systems.",
     type: "website",
   },
 };
@@ -50,8 +50,7 @@ export default function AboutPage() {
               About Tributary AI Systems
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Where decades of enterprise experience meet the future of
-              intelligent business
+              30+ years navigating platform shifts. Now helping companies survive the biggest one yet.
             </p>
           </div>
         </div>
@@ -64,20 +63,14 @@ export default function AboutPage() {
             <Card className="card-glow-teal">
               <CardContent className="p-8 md:p-12">
                 <h2 className="text-3xl font-bold">
-                  Where Business Experience Meets Intelligent Innovation
+                  The Agentic Shift Won&apos;t Wait
                 </h2>
                 <div className="mt-6 space-y-4 text-lg text-muted-foreground">
                   <p>
-                    We help companies prepare for the agentic era by modernizing
-                    systems, processes, and strategy for AI-driven operations.
-                    Our approach combines deep technical expertise with real-world
-                    business experience.
+                    2026 marks a major inflection point in technology. The transition to agentic systems will reward companies that adapt with lower costs, faster execution, and market share gains. I&apos;ve seen this pattern before: client-server to web, on-prem to cloud. Each transition created winners and losers. This one will be no different, just faster.
                   </p>
                   <p>
-                    We&apos;re not just consultants. We&apos;re experienced operators who
-                    have built teams, scaled businesses, and navigated the
-                    complexities of enterprise technology transformation. We bring
-                    that practical perspective to every engagement.
+                    I&apos;m not a typical consultant. I&apos;ve built GTM teams, scaled businesses through platform transitions, and earned Partner of the Year recognition from both Microsoft and Google. I bring that operator perspective to every engagement—no theoretical frameworks, just practical advice from someone who&apos;s been in the arena.
                   </p>
                 </div>
               </CardContent>
@@ -94,7 +87,7 @@ export default function AboutPage() {
             <div className="mt-8 space-y-6 text-lg text-muted-foreground">
               <p>
                 Tributary AI Systems is founded by Michael Cooper, who brings over
-                25 years of go-to-market and enterprise technology experience spanning
+                30 years of go-to-market and enterprise technology experience spanning
                 cloud marketplaces, partner ecosystems, and platform partnerships.
               </p>
               <p>
@@ -134,26 +127,16 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl">
             <Card className="card-glow-coral">
               <CardContent className="p-8 md:p-12">
-                <h2 className="text-3xl font-bold">Why Tributary</h2>
+                <h2 className="text-3xl font-bold">Why I Started Tributary</h2>
                 <div className="mt-6 space-y-4 text-lg text-muted-foreground">
                   <p>
-                    After years at major technology companies, Michael recognized an
-                    opportunity to return to what he does best: helping SaaS companies
-                    accelerate their go-to-market through cloud marketplaces and
-                    strategic partnerships.
+                    After years inside Microsoft, Citrix, Confluent, and Astronomer, I saw the agentic wave coming. Most companies aren&apos;t ready. The big consulting firms will take your money and deliver frameworks and slide decks. I&apos;d rather help you actually move.
                   </p>
                   <p>
-                    The agentic era demands more than theoretical knowledge. It
-                    requires practical experience in cloud partnerships, marketplace
-                    GTM, and the reality of scaling SaaS businesses. Tributary
-                    AI Systems brings that experience to companies navigating
-                    cloud marketplaces and the shift to outcome-based models.
+                    This is a new company, but I&apos;m not new to this work. 30+ years of GTM, cloud partnerships, and platform transitions. Partner of the Year from both Microsoft and Google. I know what it takes to navigate major shifts because I&apos;ve done it—repeatedly.
                   </p>
                   <p>
-                    Based in Boise but serving clients nationally, we combine the
-                    accessibility and pragmatism of our Idaho roots with the
-                    expertise gained from working at the highest levels of
-                    enterprise technology.
+                    Based in Boise, serving clients nationally. No big-firm overhead. No junior consultants learning on your dime. Just direct access to someone who&apos;s been in the arena and can help you move fast.
                   </p>
                 </div>
               </CardContent>
@@ -296,16 +279,15 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Let&apos;s Accelerate Your GTM
+              Ready to Have an Honest Conversation?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Whether you&apos;re launching on cloud marketplaces or need fractional GTM
-              leadership, we bring the experience to accelerate your go-to-market.
+              No sales pitch. No 47-slide deck. Just a direct conversation about where you are, where you need to be, and whether I can help you get there.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Book a Strategy Call
+                  Let&apos;s Talk
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

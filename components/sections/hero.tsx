@@ -45,7 +45,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              SaaS GTM Acceleration
+              2026 Changes Everything.
             </motion.span>
             <motion.span
               className="block mt-2 text-gradient"
@@ -53,7 +53,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              for the Agentic Era
+              Are You Ready?
             </motion.span>
           </h1>
 
@@ -64,7 +64,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Cloud Marketplace Strategy • Fractional GTM Leadership • Agentic SaaS Advisory
+            The winners will cut costs, move faster, and take market share. The losers will watch.
           </motion.p>
 
           {/* Description */}
@@ -74,7 +74,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            We help SaaS companies accelerate revenue through cloud marketplace GTM, provide senior go-to-market leadership on a fractional basis, and navigate the shift to outcome-based business models.
+            I&apos;ve navigated major platform shifts at Microsoft, Citrix, Confluent, and Astronomer. The agentic transformation happening now is bigger than all of them combined. Cloud marketplace strategy, fractional GTM leadership, agentic advisory&mdash;I help SaaS companies move before they get left behind.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -86,12 +86,12 @@ export function Hero() {
           >
             <Button asChild size="lg" className="group">
               <Link href="/contact">
-                Book a Strategy Call
+                Let&apos;s Talk
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/services">Explore Our Services</Link>
+              <Link href="/services">See How I Can Help</Link>
             </Button>
           </motion.div>
 
@@ -103,7 +103,7 @@ export function Hero() {
             transition={{ delay: 0.8, duration: 0.6 }}
           >
             <p className="text-sm font-medium text-muted-foreground">
-              Trusted Expertise
+              30+ Years Through Platform Shifts
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
               {CREDENTIALS.map((credential, index) => (

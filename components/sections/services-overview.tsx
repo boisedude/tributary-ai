@@ -34,7 +34,7 @@ export function ServicesOverview() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            How We Help
+            What I Actually Do
           </motion.h2>
           <motion.p
             className="mt-4 text-lg text-muted-foreground"
@@ -43,7 +43,7 @@ export function ServicesOverview() {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            GTM acceleration for SaaS companies at every stage
+            Practical GTM work for SaaS companies navigating the agentic shift
           </motion.p>
         </div>
 

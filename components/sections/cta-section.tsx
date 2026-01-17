@@ -27,10 +27,10 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Ready to Accelerate Your GTM?
+            The Clock Is Ticking
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Whether you&apos;re launching on cloud marketplaces, need fractional GTM leadership, or navigating the agentic shift—let&apos;s talk about how we can help.
+            Every week you wait, your competitors get further ahead. The agentic transition won&apos;t wait for your next planning cycle. Let&apos;s have a direct conversation about where you are and what it will take to move.
           </p>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -42,7 +42,7 @@ export function CTASection() {
             >
               <Link href="/contact">
                 <Calendar className="mr-2 h-5 w-5" />
-                Book a Strategy Call
+                Start the Conversation
               </Link>
             </Button>
             <Button
@@ -53,14 +53,13 @@ export function CTASection() {
             >
               <Link href="/services">
                 <CheckCircle className="mr-2 h-5 w-5" />
-                Explore Services
+                See How I Work
               </Link>
             </Button>
           </div>
 
           <p className="mt-8 text-sm text-white/70">
-            No obligation, no sales pressure. Just an honest conversation about your
-            GTM challenges and how we might help.
+            No sales theater. No 47-slide decks. Just honest assessment and real talk about what you&apos;re facing.
           </p>
         </motion.div>
       </div>

@@ -140,7 +140,7 @@ export default function ServicePage() {
               Ready for Senior GTM Leadership?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let&apos;s discuss how we can help transform your business with this service.
+              Let&apos;s discuss your GTM needs and how fractional leadership can help.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg" variant="secondary">
