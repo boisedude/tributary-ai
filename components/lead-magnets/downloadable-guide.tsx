@@ -5,12 +5,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { submitToWeb3Forms, Web3FormsError } from "@/lib/web3forms";
-import { Download, FileText, CheckCircle, Loader2 } from "lucide-react";
+import { ExternalLink, FileText, CheckCircle, Loader2 } from "lucide-react";
 
 interface DownloadableGuideProps {
   title: string;
   description: string;
-  pdfUrl: string;
+  pdfUrl: string; // Kept for backwards compatibility, now supports HTML guides too
 }
 
 export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGuideProps) {
@@ -19,6 +19,8 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState("");
 
+  const isHtmlGuide = pdfUrl.endsWith('.html');
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
@@ -26,20 +28,24 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
 
     try {
       await submitToWeb3Forms({
-        subject: `Download Request: ${title}`,
+        subject: `Guide Access: ${title}`,
         email: email,
         from_name: "Tributary AI Resources",
-        message: `User requested download of: ${title}`,
+        message: `User requested access to: ${title}`,
       });
 
       setIsSuccess(true);
-      // Trigger PDF download
-      const link = document.createElement("a");
-      link.href = pdfUrl;
-      link.download = pdfUrl.split("/").pop() || "guide.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      // Open guide - HTML in new tab, PDF as download
+      if (isHtmlGuide) {
+        window.open(pdfUrl, '_blank', 'noopener,noreferrer');
+      } else {
+        const link = document.createElement("a");
+        link.href = pdfUrl;
+        link.download = pdfUrl.split("/").pop() || "guide.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
     } catch (err) {
       const message =
         err instanceof Web3FormsError
@@ -95,8 +101,8 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
                 </>
               ) : (
                 <>
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Guide
+                  <ExternalLink className="mr-2 h-4 w-4" />
+                  Access Guide
                 </>
               )}
             </Button>
@@ -107,12 +113,13 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
               <CheckCircle className="h-8 w-8 text-accent" />
             </div>
             <div className="space-y-2">
-              <p className="font-semibold">Download Started!</p>
+              <p className="font-semibold">Guide Opened!</p>
               <p className="text-sm text-muted-foreground">
-                Your guide should download automatically. If it doesn&apos;t,{" "}
+                Your guide should open in a new tab. If it doesn&apos;t,{" "}
                 <a
                   href={pdfUrl}
-                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-accent underline hover:no-underline"
                 >
                   click here

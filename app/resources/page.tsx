@@ -30,19 +30,19 @@ const guides = [
     title: "Cloud Marketplace GTM Playbook",
     description:
       "Step-by-step guide for launching and scaling on AWS, Azure, and GCP marketplaces. Navigate listings, co-sell programs, private offers, and partner relationships.",
-    pdfUrl: "/guides/cloud-marketplace-gtm-playbook.pdf",
+    pdfUrl: "/guides/cloud-marketplace-gtm-playbook.html",
   },
   {
     title: "Fractional GTM Leadership Guide",
     description:
       "When to hire fractional vs. full-time GTM leadership. Understand engagement models, success metrics, and how to maximize value from part-time executives.",
-    pdfUrl: "/guides/fractional-gtm-leadership-guide.pdf",
+    pdfUrl: "/guides/fractional-gtm-leadership-guide.html",
   },
   {
     title: "Agentic SaaS Business Model Guide",
     description:
       "Navigate the shift from seat-based to outcome-based pricing. Understand how agentic AI changes SaaS economics and how to position your company.",
-    pdfUrl: "/guides/agentic-saas-business-model-guide.pdf",
+    pdfUrl: "/guides/agentic-saas-business-model-guide.html",
   },
 ];
 
