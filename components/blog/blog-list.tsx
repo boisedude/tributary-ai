@@ -10,10 +10,30 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import type { BlogPost } from "@/lib/blog"
 
+/**
+ * Props for the BlogList component.
+ */
 interface BlogListProps {
+  /** Array of blog posts to display */
   posts: BlogPost[]
 }
 
+/**
+ * Blog list component with search functionality and animated cards.
+ * Displays blog posts in a responsive grid with filtering by title, excerpt, and tags.
+ *
+ * @param {BlogListProps} props - Component props
+ * @param {BlogPost[]} props.posts - Array of blog posts to display
+ * @returns {JSX.Element} Searchable blog post grid
+ *
+ * @example
+ * // Used in app/blog/page.tsx
+ * const posts = await getAllBlogPosts();
+ * <BlogList posts={posts} />
+ *
+ * @see {@link BlogPost} from lib/blog.ts for the post type definition
+ * @see {@link BLOG_CONFIG} from lib/constants.ts for blog configuration
+ */
 export function BlogList({ posts }: BlogListProps) {
   const [searchTerm, setSearchTerm] = useState("")
 

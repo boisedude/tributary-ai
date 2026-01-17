@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { submitToWeb3Forms, Web3FormsError } from "@/lib/web3forms";
 import { Download, FileText, CheckCircle, Loader2 } from "lucide-react";
 
 interface DownloadableGuideProps {
@@ -24,36 +25,27 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
     setIsSubmitting(true);
 
     try {
-      // Submit to Web3Forms
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE",
-          subject: `Download Request: ${title}`,
-          email: email,
-          message: `User requested download of: ${title}`,
-          from_name: "Tributary AI Resources",
-        }),
+      await submitToWeb3Forms({
+        subject: `Download Request: ${title}`,
+        email: email,
+        from_name: "Tributary AI Resources",
+        message: `User requested download of: ${title}`,
       });
 
-      if (response.ok) {
-        setIsSuccess(true);
-        // Trigger PDF download
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = pdfUrl.split("/").pop() || "guide.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-      } else {
-        setError("Failed to submit. Please try again.");
-      }
+      setIsSuccess(true);
+      // Trigger PDF download
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = pdfUrl.split("/").pop() || "guide.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } catch (err) {
-      setError("An error occurred. Please try again.");
-      console.error(err);
+      const message =
+        err instanceof Web3FormsError
+          ? err.message
+          : "An error occurred. Please try again.";
+      setError(message);
     } finally {
       setIsSubmitting(false);
     }

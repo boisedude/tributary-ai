@@ -7,6 +7,19 @@ import { services } from "@/data/services";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+/**
+ * Services overview section displaying all available services in a card grid.
+ * Renders service data from the centralized services data file with animated cards.
+ *
+ * @returns {JSX.Element} Grid of service cards with hover animations
+ *
+ * @example
+ * // Used in app/page.tsx
+ * <ServicesOverview />
+ *
+ * @see {@link services} from data/services.ts for service definitions
+ * @see {@link SERVICE_IDS} from lib/constants.ts for service identifiers
+ */
 export function ServicesOverview() {
   return (
     <article>

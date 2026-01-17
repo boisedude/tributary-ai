@@ -1,5 +1,20 @@
-import { LucideIcon, Cloud, Users, Sparkles } from "lucide-react";
+/**
+ * @fileoverview Service definitions for Tributary AI consulting offerings.
+ * This is the single source of truth for all service data displayed on the website.
+ *
+ * To add a new service:
+ * 1. Add a new entry to the `services` array below
+ * 2. Create a new page at app/services/[service-id]/page.tsx
+ * 3. Add the service ID to SERVICE_IDS in lib/constants.ts
+ *
+ * @see {@link SERVICE_IDS} from lib/constants.ts for type-safe service references
+ */
 
+import { LucideIcon, Cloud, Users, Sparkles, Brain } from "lucide-react";
+
+/**
+ * Service data structure for consulting offerings.
+ */
 export interface Service {
   id: string;
   title: string;
@@ -90,6 +105,33 @@ export const services: Service[] = [
       "Investor/board presentation materials",
     ],
     href: "/services/agentic-advisory",
+  },
+  {
+    id: "ai-readiness",
+    title: "AI-Ready Operating Model",
+    tagline: "Prepare your organization for the age of abundant cognition.",
+    description:
+      "2026 marks a structural break: AI has removed thinking as the primary constraint on organizational performance. Most organizations are not ready for this shift. Our AI-Ready Operating Model assessment helps you understand where you are on the maturity curve, identify bottlenecks, and build a transformation roadmap to become leverage-optimized.",
+    icon: Brain,
+    features: [
+      "Four functional layers analysis (Cognition, Judgment, Commitment, Execution)",
+      "5-level maturity assessment across your organization",
+      "Bottleneck identification and prioritization",
+      "Transformation phase planning (Phases 0-4)",
+      "Operating model redesign recommendations",
+      "AI leverage opportunity mapping",
+    ],
+    idealFor:
+      "Organizations at Level 1 (Fragmented) or Level 2 (Digitized) seeking to become AI-ready and leverage-optimized.",
+    deliverables: [
+      "Comprehensive AI readiness scorecard",
+      "Current-state maturity assessment report",
+      "Transformation roadmap with prioritized phases",
+      "Bottleneck analysis with top 5 constraints identified",
+      "Operating model recommendations document",
+      "90-day quick wins action plan",
+    ],
+    href: "/services/ai-readiness",
   },
 ];
 

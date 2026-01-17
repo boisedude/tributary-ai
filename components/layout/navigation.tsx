@@ -7,7 +7,18 @@ import { Moon, Sun, Menu } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import { NAV_ITEMS, ASSETS, COMPANY } from "@/lib/constants";
 
+/**
+ * Main navigation component for the site header.
+ * Includes responsive design with mobile menu, theme toggle, and active state indicators.
+ *
+ * @returns {JSX.Element} The navigation header component
+ *
+ * @example
+ * // Used in app/layout.tsx
+ * <Navigation />
+ */
 export function Navigation() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
@@ -20,15 +31,6 @@ export function Navigation() {
     return () => clearTimeout(timer);
   }, []);
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/resources", label: "Resources" },
-    { href: "/about", label: "About" },
-    { href: "/blog", label: "Blog" },
-    { href: "/contact", label: "Contact" },
-  ];
-
   const isActive = (href: string) => {
     if (href === "/") {
       return pathname === "/";
@@ -37,27 +39,28 @@ export function Navigation() {
   };
 
   return (
-    <header>
-      <nav className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" aria-label="Main navigation">
+    <header className="sticky top-0 z-50">
+      <nav className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60" aria-label="Main navigation">
         <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2" aria-label="Tributary AI - Home">
+          <Link href="/" className="flex items-center space-x-2" aria-label={`${COMPANY.NAME} - Home`}>
             <Image
-              src="/logos/logo-header.png"
-              alt="Tributary AI"
+              src={ASSETS.LOGO_HEADER}
+              alt={COMPANY.NAME}
               width={40}
               height={40}
               className="h-10 w-10"
+              priority
             />
             <span className="text-xl font-bold text-gradient">
-              Tributary AI
+              {COMPANY.NAME}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-1">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -109,7 +112,7 @@ export function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden pb-4 animate-fade-in">
             <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

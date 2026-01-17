@@ -7,7 +7,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { EngagementModels } from "@/components/sections/engagement-models";
 
 export const metadata: Metadata = {
-  title: "SaaS GTM Services | Tributary AI",
+  title: "SaaS GTM Services",
   description:
     "SaaS go-to-market services: Cloud marketplace GTM for AWS, Azure, and GCP. Fractional GTM leadership for Series A-C companies. Agentic SaaS advisory for the outcome-based future.",
   keywords: [

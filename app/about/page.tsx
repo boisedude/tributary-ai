@@ -2,7 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Award, BookOpen, Building2, Radio } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  BookOpen,
+  Building2,
+  Radio,
+  Briefcase,
+} from "lucide-react";
+import {
+  careerPositions,
+  formatYearRange,
+} from "@/data/career";
 
 export const metadata: Metadata = {
   title: "About Tributary AI Systems - Meet Michael Cooper",
@@ -152,7 +163,7 @@ export default function AboutPage() {
       </section>
 
       {/* Credentials Grid */}
-      <section className="pb-24">
+      <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold text-center mb-12">
@@ -217,61 +228,20 @@ export default function AboutPage() {
                       <Radio className="h-6 w-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">Cloud Marketplace Expert</h3>
+                      <h3 className="font-semibold">Agentic SaaS Talks Podcast</h3>
                       <p className="mt-2 text-sm text-muted-foreground">
-                        Deep expertise in AWS, Azure, and GCP marketplace GTM,
-                        co-sell programs, and partner strategy
+                        Host of Agentic SaaS Talks in partnership with AWS, exploring
+                        SaaS, cloud platforms, and agentic system architectures
                       </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Career Timeline */}
-            <div className="mt-12">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="font-semibold text-lg mb-4">Career Highlights</h3>
-                  <div className="space-y-3 text-sm text-muted-foreground">
-                    <div className="flex items-start gap-3">
-                      <div className="h-2 w-2 mt-2 shrink-0 rounded-full bg-accent"></div>
-                      <div>
-                        <span className="font-medium text-foreground">
-                          Current:
-                        </span>{" "}
-                        GTM Leader at Omnistrate, building Tributary AI Systems
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-2 w-2 mt-2 shrink-0 rounded-full bg-accent"></div>
-                      <div>
-                        <span className="font-medium text-foreground">
-                          Previously:
-                        </span>{" "}
-                        Senior leadership roles at Microsoft, Citrix, Confluent, and
-                        Astronomer
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-2 w-2 mt-2 shrink-0 rounded-full bg-accent"></div>
-                      <div>
-                        <span className="font-medium text-foreground">
-                          Founded:
-                        </span>{" "}
-                        MDC IT in Idaho, serving JR Simplot, Albertsons, and Primary
-                        Health
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="h-2 w-2 mt-2 shrink-0 rounded-full bg-accent"></div>
-                      <div>
-                        <span className="font-medium text-foreground">
-                          Expertise:
-                        </span>{" "}
-                        Cloud marketplaces, partner ecosystems, go-to-market strategy,
-                        enterprise systems
-                      </div>
+                      <Link
+                        href="https://www.agentic-saas-talks.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center text-sm font-medium text-accent hover:underline"
+                      >
+                        Listen Now
+                        <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
                     </div>
                   </div>
                 </CardContent>
@@ -280,6 +250,46 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Detailed Career Timeline */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <div className="flex items-center gap-3 mb-8">
+              <Briefcase className="h-8 w-8 text-accent" />
+              <h2 className="text-3xl font-bold">Career Timeline</h2>
+            </div>
+            <div className="space-y-6">
+              {careerPositions.map((position, index) => (
+                <Card key={position.id} className={index === 0 ? "border-accent" : ""}>
+                  <CardContent className="p-6">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                      <div>
+                        <h3 className="font-semibold text-lg">{position.company}</h3>
+                        <p className="text-muted-foreground">{position.title}</p>
+                      </div>
+                      <span className="text-sm font-medium text-accent whitespace-nowrap">
+                        {formatYearRange(position.startYear, position.endYear)}
+                      </span>
+                    </div>
+                    {position.highlights.length > 0 && (
+                      <ul className="mt-4 space-y-2">
+                        {position.highlights.map((highlight, hIndex) => (
+                          <li key={hIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <div className="h-1.5 w-1.5 mt-2 shrink-0 rounded-full bg-accent"></div>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA Section */}
       <section className="bg-gradient-tributary py-16 text-white">

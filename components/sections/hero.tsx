@@ -5,7 +5,20 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { CREDENTIALS } from "@/lib/constants";
 
+/**
+ * Hero section component displayed at the top of the homepage.
+ * Features animated headline, value proposition, CTA buttons, and credentials bar.
+ *
+ * @returns {JSX.Element} The hero section with parallax scroll effects
+ *
+ * @example
+ * // Used in app/page.tsx
+ * <Hero />
+ *
+ * @see {@link CREDENTIALS} for the credentials displayed in the trust bar
+ */
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({
@@ -93,13 +106,12 @@ export function Hero() {
               Trusted Expertise
             </p>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-              <div>25+ Years GTM Experience</div>
-              <div className="hidden sm:block">•</div>
-              <div>Microsoft Partner of the Year</div>
-              <div className="hidden sm:block">•</div>
-              <div>Google Partner of the Year</div>
-              <div className="hidden sm:block">•</div>
-              <div>AWS/Azure/GCP Expert</div>
+              {CREDENTIALS.map((credential, index) => (
+                <div key={credential} className="flex items-center gap-6">
+                  {index > 0 && <span className="hidden sm:block">•</span>}
+                  <span>{credential}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
         </motion.div>

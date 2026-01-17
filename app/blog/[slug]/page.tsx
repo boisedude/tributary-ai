@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: `${post.title} | Tributary AI Systems`,
+    title: post.title,
     description: post.excerpt,
     keywords: post.tags?.join(", "),
     authors: [{ name: post.author || "Tributary AI Systems" }],

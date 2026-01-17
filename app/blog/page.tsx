@@ -1,8 +1,9 @@
-import { getAllPosts } from "@/lib/blog"
-import { BlogList } from "@/components/blog/blog-list"
+import type { Metadata } from "next";
+import { getAllPosts } from "@/lib/blog";
+import { BlogList } from "@/components/blog/blog-list";
 
-export const metadata = {
-  title: "AI Strategy & Business Transformation Blog | Tributary AI",
+export const metadata: Metadata = {
+  title: "AI Strategy & Business Transformation Blog",
   description:
     "Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces. Practical guidance for mid-market companies adopting AI. Latest trends in enterprise AI adoption and implementation.",
   keywords: [

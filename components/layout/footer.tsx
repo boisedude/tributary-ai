@@ -1,10 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Radio } from "lucide-react";
+import { FOOTER_NAV_ITEMS, COMPANY, EMAILS, EXTERNAL_LINKS } from "@/lib/constants";
 
+/**
+ * Site footer component with company info, navigation links, and social links.
+ * Uses centralized constants for all URLs, emails, and company information.
+ *
+ * @returns {JSX.Element} The footer component
+ *
+ * @example
+ * // Used in app/layout.tsx
+ * <Footer />
+ */
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-12">
@@ -14,16 +23,15 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <Image
                 src="/logos/logo-footer.png"
-                alt="Tributary AI Systems"
+                alt={COMPANY.LEGAL_NAME}
                 width={48}
                 height={48}
                 className="h-12 w-12"
               />
-              <h3 className="text-lg font-semibold">Tributary AI Systems</h3>
+              <h3 className="text-lg font-semibold">{COMPANY.LEGAL_NAME}</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              SaaS GTM acceleration for the agentic era. Cloud marketplace
-              strategy, fractional leadership, and strategic advisory.
+              {COMPANY.DESCRIPTION}
             </p>
           </div>
 
@@ -31,62 +39,16 @@ export function Footer() {
           <nav aria-label="Footer navigation">
             <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/services"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resources"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/blog"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/terms"
-                  className="text-muted-foreground transition-colors hover:text-accent"
-                >
-                  Terms of Service
-                </Link>
-              </li>
+              {FOOTER_NAV_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-muted-foreground transition-colors hover:text-accent"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
 
@@ -95,7 +57,7 @@ export function Footer() {
             <h3 className="mb-4 text-lg font-semibold">Connect</h3>
             <div className="flex space-x-4">
               <a
-                href="https://www.linkedin.com/company/tributaryai"
+                href={EXTERNAL_LINKS.LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-muted-foreground transition-colors hover:text-accent"
@@ -104,7 +66,16 @@ export function Footer() {
                 <Linkedin className="h-6 w-6" />
               </a>
               <a
-                href="mailto:sales@thetributary.ai"
+                href={EXTERNAL_LINKS.PODCAST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-muted-foreground transition-colors hover:text-accent"
+                aria-label="Agentic SaaS Talks Podcast"
+              >
+                <Radio className="h-6 w-6" />
+              </a>
+              <a
+                href={`mailto:${EMAILS.SALES}`}
                 className="inline-flex items-center justify-center min-w-[44px] min-h-[44px] text-muted-foreground transition-colors hover:text-accent"
                 aria-label="Email"
               >
@@ -112,15 +83,15 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              <p>sales@thetributary.ai</p>
-              <p className="mt-1">Boise, Idaho</p>
+              <p>{EMAILS.SALES}</p>
+              <p className="mt-1">{COMPANY.LOCATION}</p>
               <p className="mt-1">Serving clients nationally</p>
             </div>
           </div>
         </div>
 
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground leading-relaxed">
-          <p>© {currentYear} Tributary AI Systems. All rights reserved.</p>
+          <p>&copy; {COMPANY.COPYRIGHT_YEAR} {COMPANY.LEGAL_NAME}. All rights reserved.</p>
         </div>
       </div>
     </footer>

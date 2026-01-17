@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { getServiceById } from "@/data/services";
 import { Check, ArrowRight } from "lucide-react";
 
 const service = getServiceById("agentic-advisory");
 
 export const metadata: Metadata = {
-  title: "Agentic SaaS Advisory | Tributary AI",
+  title: "Agentic SaaS Advisory",
   description:
     "Navigate the shift from seat-based to outcome-based business models. Expert advisory for SaaS companies adapting to the agentic AI era. Pricing strategy, product roadmap, and GTM for AI-native offerings.",
   keywords: [
@@ -41,6 +42,13 @@ export default function AgenticAdvisoryPage() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
+            <Breadcrumb
+              className="mb-8"
+              items={[
+                { label: "Services", href: "/services" },
+                { label: service.title }
+              ]}
+            />
             <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-lg bg-accent/10">
               <Icon className="h-8 w-8 text-accent" />
             </div>

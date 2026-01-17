@@ -5,6 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useToast } from "@/components/ui/toast";
+import { submitToWeb3Forms, Web3FormsError } from "@/lib/web3forms";
 import { ArrowRight, ArrowLeft, CheckCircle, Loader2 } from "lucide-react";
 
 type QuestionType = {
@@ -96,6 +98,7 @@ export function AIReadinessAssessment() {
   const [isComplete, setIsComplete] = useState(false);
   const [readinessScore, setReadinessScore] = useState(0);
   const [readinessLevel, setReadinessLevel] = useState("");
+  const { addToast } = useToast();
 
   const isQuestionStep = currentStep < questions.length;
   const isEmailStep = currentStep === questions.length;
@@ -147,39 +150,24 @@ export function AIReadinessAssessment() {
     setReadinessScore(score);
     setReadinessLevel(level);
 
-    // Prepare form data for Web3Forms
-    const formData = {
-      access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_ACCESS_KEY",
-      subject: "New AI Readiness Assessment Submission",
-      email: email,
-      company_name: companyName,
-      readiness_score: score,
-      readiness_level: level,
-      answers: JSON.stringify(answers, null, 2),
-      from_name: "Tributary AI Assessment",
-    };
-
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(formData),
+      await submitToWeb3Forms({
+        subject: "New AI Readiness Assessment Submission",
+        email: email,
+        from_name: "Tributary AI Assessment",
+        company_name: companyName,
+        readiness_score: score,
+        readiness_level: level,
+        answers: JSON.stringify(answers, null, 2),
       });
 
-      const result = await response.json();
-
-      if (result.success) {
-        setIsComplete(true);
-      } else {
-        console.error("Form submission failed:", result);
-        alert("There was an error submitting your assessment. Please try again.");
-      }
+      setIsComplete(true);
     } catch (error) {
-      console.error("Form submission error:", error);
-      alert("There was an error submitting your assessment. Please try again.");
+      const message =
+        error instanceof Web3FormsError
+          ? error.message
+          : "There was an error submitting your assessment. Please try again.";
+      addToast(message, "error");
     } finally {
       setIsSubmitting(false);
     }
@@ -347,11 +335,14 @@ export function AIReadinessAssessment() {
                   {currentQuestion.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="space-y-3">
+              <CardContent className="space-y-3" role="radiogroup" aria-label={currentQuestion.question}>
                 {currentQuestion.options.map((option) => (
                   <motion.button
                     key={option.value}
                     type="button"
+                    role="radio"
+                    aria-checked={answers[currentQuestion.id] === option.value}
+                    aria-label={`${option.label}: ${option.description}`}
                     onClick={() => handleAnswer(option.value)}
                     className={`w-full rounded-lg border-2 p-4 text-left transition-all hover:border-accent hover:bg-accent/5 ${
                       answers[currentQuestion.id] === option.value

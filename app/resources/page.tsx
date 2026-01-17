@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Free SaaS GTM Resources & Guides | Tributary AI",
+  title: "Free SaaS GTM Resources & Guides",
   description:
     "Download free guides for cloud marketplace GTM, SaaS go-to-market strategy, and agentic SaaS business models. Expert insights from Partner of the Year award winners.",
   keywords: [

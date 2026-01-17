@@ -5,6 +5,16 @@ import { Button } from "@/components/ui/button";
 import { Calendar, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
+/**
+ * Call-to-action section component with gradient background.
+ * Used at the bottom of pages to encourage user engagement (booking calls, exploring services).
+ *
+ * @returns {JSX.Element} CTA section with animated content and action buttons
+ *
+ * @example
+ * // Used at the bottom of homepage and service pages
+ * <CTASection />
+ */
 export function CTASection() {
   return (
     <section className="bg-gradient-tributary py-24 text-white">

@@ -42,13 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/agentic-systems/`,
+      url: `${baseUrl}/services/agentic-advisory/`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/services/implementation/`,
+      url: `${baseUrl}/services/fractional-gtm/`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
