@@ -15,42 +15,13 @@
  */
 export const ROUTES = {
   HOME: "/",
-  SERVICES: "/services",
-  RESOURCES: "/resources",
+  ASSESSMENT: "/assessment",
   ABOUT: "/about",
   BLOG: "/blog",
   CONTACT: "/contact",
   PRIVACY: "/privacy",
   TERMS: "/terms",
-  ASSESSMENT: "/assessment",
 } as const;
-
-/**
- * Service-specific route paths.
- */
-export const SERVICE_ROUTES = {
-  CLOUD_MARKETPLACE: "/services/cloud-marketplace",
-  FRACTIONAL_GTM: "/services/fractional-gtm",
-  AGENTIC_ADVISORY: "/services/agentic-advisory",
-  AI_READINESS: "/services/ai-readiness",
-} as const;
-
-// =============================================================================
-// SERVICE IDS
-// =============================================================================
-
-/**
- * Service identifier constants.
- * Use these when calling getServiceById() or referencing services programmatically.
- */
-export const SERVICE_IDS = {
-  CLOUD_MARKETPLACE: "cloud-marketplace",
-  FRACTIONAL_GTM: "fractional-gtm",
-  AGENTIC_ADVISORY: "agentic-advisory",
-  AI_READINESS: "ai-readiness",
-} as const;
-
-export type ServiceId = (typeof SERVICE_IDS)[keyof typeof SERVICE_IDS];
 
 // =============================================================================
 // CONTACT INFORMATION
@@ -85,9 +56,9 @@ export const EXTERNAL_LINKS = {
 export const COMPANY = {
   NAME: "Tributary AI",
   LEGAL_NAME: "Tributary AI Systems",
-  TAGLINE: "SaaS GTM Acceleration for the Agentic Era",
+  TAGLINE: "AI should reduce your tech spend. Not increase it.",
   DESCRIPTION:
-    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory.",
+    "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
   LOCATION: "Boise, Idaho",
   FOUNDED_YEAR: 2024,
   COPYRIGHT_YEAR: new Date().getFullYear(),
@@ -97,9 +68,9 @@ export const COMPANY = {
  * Website metadata for SEO and social sharing.
  */
 export const SITE_METADATA = {
-  TITLE: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+  TITLE: "Tributary AI | Technology Consulting for the AI Era",
   DESCRIPTION:
-    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 30+ years of enterprise technology experience.",
+    "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
   URL: "https://thetributary.ai",
   OG_IMAGE: "/og-image.png",
   TWITTER_HANDLE: "@tributaryai",
@@ -127,8 +98,7 @@ export interface NavItem {
  */
 export const NAV_ITEMS: NavItem[] = [
   { href: ROUTES.HOME, label: "Home" },
-  { href: ROUTES.SERVICES, label: "Services" },
-  { href: ROUTES.RESOURCES, label: "Resources" },
+  { href: ROUTES.ASSESSMENT, label: "The Assessment" },
   { href: ROUTES.ABOUT, label: "About" },
   { href: ROUTES.BLOG, label: "Blog" },
   { href: ROUTES.CONTACT, label: "Contact" },
@@ -138,9 +108,8 @@ export const NAV_ITEMS: NavItem[] = [
  * Footer navigation items (may include additional links like Privacy, Terms).
  */
 export const FOOTER_NAV_ITEMS: NavItem[] = [
-  { href: ROUTES.SERVICES, label: "Services" },
-  { href: ROUTES.RESOURCES, label: "Resources" },
-  { href: ROUTES.ABOUT, label: "About Us" },
+  { href: ROUTES.ASSESSMENT, label: "The Assessment" },
+  { href: ROUTES.ABOUT, label: "About" },
   { href: ROUTES.BLOG, label: "Blog" },
   { href: ROUTES.CONTACT, label: "Contact" },
   { href: ROUTES.PRIVACY, label: "Privacy Policy" },
@@ -204,8 +173,9 @@ export const FORM_CONFIG = {
  * Company credentials and awards for display.
  */
 export const CREDENTIALS = [
-  "30+ Years GTM Experience",
-  "Microsoft Partner of the Year",
-  "Google Partner of the Year",
-  "AWS/Azure/GCP Expert",
+  "30 Years Enterprise Technology",
+  "Microsoft",
+  "Citrix",
+  "Micron",
+  "Simplot",
 ] as const;

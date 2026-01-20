@@ -8,7 +8,6 @@ import { Footer } from "@/components/layout/footer";
 import {
   OrganizationSchema,
   LocalBusinessSchema,
-  ServicesSchema,
 } from "@/components/structured-data/schemas";
 
 const inter = Inter({
@@ -18,35 +17,32 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+    default: "Tributary AI | Technology Consulting for the AI Era",
     template: "%s | Tributary AI",
   },
   icons: {
     icon: [
       { url: "/favicon.png", sizes: "32x32", type: "image/png" },
       { url: "/favicon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+      { url: "/logos/favicon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/logos/favicon-512.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
     ],
   },
   description:
-    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 30+ years of enterprise technology experience.",
+    "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
   keywords: [
-    "SaaS GTM consulting",
-    "cloud marketplace GTM",
-    "AWS marketplace consulting",
-    "Azure marketplace strategy",
-    "GCP marketplace",
-    "fractional GTM leadership",
-    "fractional CRO",
-    "agentic SaaS",
-    "agentic AI strategy",
-    "co-sell programs",
-    "cloud co-sell",
-    "SaaS go-to-market",
+    "AI consulting",
+    "technology consulting",
+    "digital transformation",
+    "AI strategy",
+    "mid-market consulting",
+    "simplify operations",
+    "reduce tech spend",
+    "technology assessment",
+    "Boise Idaho consulting",
   ],
   authors: [{ name: "Tributary AI Systems" }],
   creator: "Tributary AI Systems",
@@ -60,23 +56,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://www.thetributary.ai",
     siteName: "Tributary AI",
-    title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+    title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Partner of the Year expertise for Series A-C SaaS companies.",
+      "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Tributary AI - SaaS GTM Consulting for the Agentic Era",
+        alt: "Tributary AI - Technology Consulting for the AI Era",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+    title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory for SaaS companies.",
+      "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.",
     images: ["/og-image.png"],
     creator: "@tributaryai",
   },
@@ -91,10 +87,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  // Add Google Search Console verification code when available
-  // verification: {
-  //   google: "your-google-verification-code",
-  // },
 };
 
 export default function RootLayout({
@@ -114,7 +106,6 @@ export default function RootLayout({
           <ToastProvider>
             <OrganizationSchema />
             <LocalBusinessSchema />
-            <ServicesSchema />
             {/* Skip to main content link for accessibility */}
             <a
               href="#main-content"

@@ -2,18 +2,12 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Calendar, CheckCircle } from "lucide-react";
+import { Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 
 /**
  * Call-to-action section component with gradient background.
- * Used at the bottom of pages to encourage user engagement (booking calls, exploring services).
- *
- * @returns {JSX.Element} CTA section with animated content and action buttons
- *
- * @example
- * // Used at the bottom of homepage and service pages
- * <CTASection />
+ * Used at the bottom of pages to encourage user engagement.
  */
 export function CTASection() {
   return (
@@ -27,13 +21,13 @@ export function CTASection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            The Clock Is Ticking
+            Ready to Simplify?
           </h2>
           <p className="mt-4 text-lg text-white/90">
-            Every week you wait, your competitors get further ahead. The agentic transition won&apos;t wait for your next planning cycle. Let&apos;s have a direct conversation about where you are and what it will take to move.
+            Stop adding. Start simplifying. Let&apos;s have a direct conversation about where you are and what it will take to move faster.
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-8">
             <Button
               asChild
               size="lg"
@@ -42,24 +36,13 @@ export function CTASection() {
             >
               <Link href="/contact">
                 <Calendar className="mr-2 h-5 w-5" />
-                Start the Conversation
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/20 bg-white/10 text-white hover:bg-white/20 hover:text-white"
-            >
-              <Link href="/services">
-                <CheckCircle className="mr-2 h-5 w-5" />
-                See How I Work
+                Book a Call
               </Link>
             </Button>
           </div>
 
           <p className="mt-8 text-sm text-white/70">
-            No sales theater. No 47-slide decks. Just honest assessment and real talk about what you&apos;re facing.
+            No sales pitch. No 47-slide deck. Just a direct conversation about your situation.
           </p>
         </motion.div>
       </div>

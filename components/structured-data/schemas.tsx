@@ -9,10 +9,10 @@ export function OrganizationSchema() {
     url: "https://www.thetributary.ai",
     logo: "https://www.thetributary.ai/logo.png",
     description:
-      "SaaS GTM consulting for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory.",
+      "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
     founder: {
       "@type": "Person",
-      name: "Mike Cooper",
+      name: "Michael Cooper",
       jobTitle: "Founder",
     },
     address: {
@@ -46,7 +46,7 @@ export function LocalBusinessSchema() {
     name: "Tributary AI Systems",
     image: "https://www.thetributary.ai/logo.png",
     description:
-      "SaaS GTM consulting firm specializing in cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory.",
+      "Technology consulting firm helping mid-market companies simplify operations, cut complexity, and move faster with AI.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Boise",
@@ -75,63 +75,6 @@ export function LocalBusinessSchema() {
   return (
     <Script
       id="local-business-schema"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
-}
-
-export function ServicesSchema() {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "SaaS GTM Consulting",
-    provider: {
-      "@type": "Organization",
-      name: "Tributary AI Systems",
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "United States",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "SaaS GTM Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Cloud Marketplace GTM",
-            description:
-              "Get listed, transact, and co-sell on AWS, Azure, and GCP marketplaces. Marketplace listings, co-sell programs, and partner ecosystem development.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Fractional GTM Leadership",
-            description:
-              "Part-time strategic GTM leadership for SaaS companies. Fractional CRO, VP Sales, and VP Partnerships services.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Agentic SaaS Advisory",
-            description:
-              "Navigate the shift from seat-based to outcome-based business models. Strategic advisory for SaaS companies in the agentic era.",
-          },
-        },
-      ],
-    },
-  };
-
-  return (
-    <Script
-      id="services-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

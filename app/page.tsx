@@ -1,28 +1,29 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
-import { PodcastBanner } from "@/components/sections/podcast-banner";
-import { Differentiators } from "@/components/sections/differentiators";
-import { ServicesOverview } from "@/components/sections/services-overview";
+import { ProblemSection } from "@/components/sections/problem-section";
+import { AssessmentOverview } from "@/components/sections/assessment-overview";
+import { WhatHappensNext } from "@/components/sections/what-happens-next";
+import { AboutSnippet } from "@/components/sections/about-snippet";
 import { CTASection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
-  title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+  title: "Tributary AI | Technology Consulting for the AI Era",
   description:
-    "SaaS GTM acceleration for the agentic era. Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory. Expert consulting from Partner of the Year award winners with 30+ years of enterprise technology experience.",
+    "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
   keywords: [
-    "SaaS GTM consulting",
-    "cloud marketplace strategy",
-    "AWS marketplace consulting",
-    "Azure marketplace strategy",
-    "fractional GTM leadership",
-    "agentic SaaS advisory",
     "AI consulting",
+    "technology consulting",
+    "digital transformation",
+    "AI strategy",
+    "mid-market consulting",
+    "simplify operations",
+    "reduce tech spend",
     "Boise Idaho consulting",
   ],
   openGraph: {
-    title: "Tributary AI | SaaS GTM Consulting for the Agentic Era",
+    title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "Cloud marketplace strategy, fractional GTM leadership, and agentic SaaS advisory from Partner of the Year award winners.",
+      "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.",
     type: "website",
   },
 };
@@ -31,9 +32,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <PodcastBanner />
-      <Differentiators />
-      <ServicesOverview />
+      <ProblemSection />
+      <AssessmentOverview />
+      <WhatHappensNext />
+      <AboutSnippet />
       <CTASection />
     </>
   );

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home, Search } from "lucide-react";
+import { Home, FileText } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 
 /**
@@ -26,9 +26,9 @@ export default function NotFound() {
           </Link>
         </Button>
         <Button asChild variant="outline" size="lg">
-          <Link href={ROUTES.SERVICES}>
-            <Search className="mr-2 h-5 w-5" />
-            Explore Services
+          <Link href={ROUTES.ASSESSMENT}>
+            <FileText className="mr-2 h-5 w-5" />
+            The Assessment
           </Link>
         </Button>
       </div>
@@ -39,10 +39,10 @@ export default function NotFound() {
         </p>
         <nav className="flex flex-wrap justify-center gap-4 text-sm">
           <Link
-            href={ROUTES.SERVICES}
+            href={ROUTES.ASSESSMENT}
             className="text-muted-foreground hover:text-accent transition-colors"
           >
-            Services
+            The Assessment
           </Link>
           <Link
             href={ROUTES.BLOG}
@@ -61,12 +61,6 @@ export default function NotFound() {
             className="text-muted-foreground hover:text-accent transition-colors"
           >
             Contact
-          </Link>
-          <Link
-            href={ROUTES.RESOURCES}
-            className="text-muted-foreground hover:text-accent transition-colors"
-          >
-            Resources
           </Link>
         </nav>
       </div>

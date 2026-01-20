@@ -9,15 +9,7 @@ import { CREDENTIALS } from "@/lib/constants";
 
 /**
  * Hero section component displayed at the top of the homepage.
- * Features animated headline, value proposition, CTA buttons, and credentials bar.
- *
- * @returns {JSX.Element} The hero section with parallax scroll effects
- *
- * @example
- * // Used in app/page.tsx
- * <Hero />
- *
- * @see {@link CREDENTIALS} for the credentials displayed in the trust bar
+ * Features animated headline, value proposition, and CTA.
  */
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -45,7 +37,15 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              2026 Changes Everything.
+              Fewer systems. Fewer handoffs.
+            </motion.span>
+            <motion.span
+              className="block mt-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              Faster decisions.
             </motion.span>
             <motion.span
               className="block mt-2 text-gradient"
@@ -53,31 +53,21 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              Are You Ready?
+              We help you get there.
             </motion.span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subheadline */}
           <motion.p
-            className="mt-6 text-xl text-muted-foreground sm:text-2xl"
+            className="mt-8 text-xl text-muted-foreground sm:text-2xl max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
           >
-            The winners will cut costs, move faster, and take market share. The losers will watch.
+            AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.
           </motion.p>
 
-          {/* Description */}
-          <motion.p
-            className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-          >
-            I&apos;ve navigated major platform shifts at Microsoft, Citrix, Confluent, and Astronomer. The agentic transformation happening now is bigger than all of them combined. Cloud marketplace strategy, fractional GTM leadership, agentic advisory&mdash;I help SaaS companies move before they get left behind.
-          </motion.p>
-
-          {/* CTA Buttons */}
+          {/* CTA Button */}
           <motion.div
             className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
             initial={{ opacity: 0 }}
@@ -85,13 +75,10 @@ export function Hero() {
             transition={{ delay: 0.6, duration: 0.6 }}
           >
             <Button asChild size="lg" className="group">
-              <Link href="/contact">
-                Let&apos;s Talk
+              <Link href="/assessment">
+                Start with The Assessment
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/services">See How I Can Help</Link>
             </Button>
           </motion.div>
 
@@ -102,13 +89,10 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            <p className="text-sm font-medium text-muted-foreground">
-              30+ Years Through Platform Shifts
-            </p>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-sm text-muted-foreground">
               {CREDENTIALS.map((credential, index) => (
-                <div key={credential} className="flex items-center gap-6">
-                  {index > 0 && <span className="hidden sm:block">•</span>}
+                <div key={credential} className="flex items-center gap-4 sm:gap-6">
+                  {index > 0 && <span className="hidden sm:block text-muted-foreground/50">•</span>}
                   <span>{credential}</span>
                 </div>
               ))}
