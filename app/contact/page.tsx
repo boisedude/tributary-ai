@@ -4,21 +4,21 @@ import { Mail, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
 import { FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Schedule Your GTM Strategy Call",
+  title: "Contact Us - Schedule a Conversation",
   description:
-    "Schedule a strategy call with Tributary AI Systems. Cloud marketplace GTM, fractional GTM leadership, and agentic SaaS advisory. Based in Boise, Idaho, serving SaaS companies nationally.",
+    "Schedule a conversation with Tributary AI. AI consulting and technology strategy for mid-market companies. Based in Boise, Idaho, serving clients nationally.",
   keywords: [
-    "SaaS GTM consulting contact",
-    "cloud marketplace consultation",
-    "fractional GTM consultation",
-    "schedule strategy call",
-    "SaaS go-to-market advisor",
+    "AI consulting contact",
+    "technology consulting",
+    "AI assessment consultation",
+    "schedule consultation",
+    "mid-market consulting",
     "contact Tributary AI",
   ],
   openGraph: {
-    title: "Contact Tributary AI Systems - Schedule Your Strategy Call",
+    title: "Contact Tributary AI - Schedule a Conversation",
     description:
-      "Schedule a free strategy call to discuss cloud marketplace GTM, fractional leadership, or agentic SaaS advisory.",
+      "Schedule a conversation about AI strategy, technology simplification, and The Assessment.",
     type: "website",
   },
 };
@@ -26,38 +26,38 @@ export const metadata: Metadata = {
 const faqs = [
   {
     question: "Do you work with companies outside Idaho?",
-    answer: "Yes, we serve SaaS companies nationally. While we&apos;re based in Boise, Idaho, our clients are Series A-C SaaS companies across the United States.",
+    answer: "Yes, we serve clients nationally. While we're based in Boise, Idaho, we work with mid-market companies across the United States.",
   },
   {
     question: "What size companies do you work with?",
-    answer: "We specialize in Series A-C SaaS companies—typically post-product-market-fit and looking to accelerate GTM through cloud marketplaces or bring in senior GTM leadership on a fractional basis.",
+    answer: "We specialize in mid-market companies—typically $10M-$500M in revenue—that are looking to simplify their technology stack and leverage AI to reduce costs and move faster.",
   },
   {
-    question: "What&apos;s your experience with cloud marketplaces?",
-    answer: "We&apos;ve led teams to Microsoft and Google Partner of the Year recognition, built marketplace programs at Confluent and Astronomer, and have deep experience with AWS, Azure, and GCP co-sell programs.",
+    question: "What is The Assessment?",
+    answer: "The Assessment is a two-week diagnostic that evaluates your organization across four dimensions: People, Process, Technology, and Politics. You get a detailed findings document, leadership presentation, and prioritized roadmap. Investment is $25K-$35K with a satisfaction guarantee.",
   },
   {
-    question: "How does fractional GTM leadership work?",
-    answer: "We embed as a part-time member of your team—typically 10-20 hours per week—providing the strategic leadership of a CRO or VP without the full-time cost. Engagements are typically 3+ months.",
+    question: "What happens after The Assessment?",
+    answer: "You'll have a clear picture of where you stand and a prioritized roadmap for moving forward. Some clients implement on their own, others engage us for implementation support. There's no pressure either way—you'll have what you need to decide.",
   },
 ];
 
 const expectations = [
   {
-    title: "No Obligation Consultation",
-    description: "Our initial conversation is completely free with no strings attached. We&apos;re here to help you understand your options.",
+    title: "No Obligation",
+    description: "Our initial conversation is completely free with no strings attached. No sales pitch, no pressure.",
   },
   {
     title: "30-Minute Discovery Call",
-    description: "We'll take time to understand your business, GTM challenges, and goals to see if we can help.",
+    description: "We'll take time to understand your business, technology challenges, and where AI might help.",
   },
   {
     title: "Honest Assessment",
-    description: "We'll give you a straightforward evaluation of your situation and potential opportunities.",
+    description: "We'll give you a straightforward take on your situation—including whether we're the right fit.",
   },
   {
     title: "Clear Next Steps",
-    description: "Whether you&apos;re ready to move forward or not, you'll leave with actionable insights and a clear path forward.",
+    description: "You'll leave with clarity on your options and a path forward, whether that includes us or not.",
   },
 ];
 
@@ -73,8 +73,7 @@ export default function ContactPage() {
               Let&apos;s Start a Conversation
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              Schedule a consultation to discuss your GTM challenges and opportunities.
-              No pressure, no obligation—just an honest conversation about where you are and where you want to go.
+              No 47-slide deck. No sales pitch. Just a direct conversation about where you are and whether we can help.
             </p>
           </div>
         </div>
@@ -218,7 +217,7 @@ export default function ContactPage() {
                 Frequently Asked Questions
               </h2>
               <p className="mt-4 text-lg text-muted-foreground">
-                Common questions about working with Tributary AI Systems
+                Common questions about working with Tributary AI
               </p>
             </div>
 
@@ -243,11 +242,10 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Ready to Accelerate Your GTM?
+              Prefer Email?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let&apos;s have a conversation about where you are and where you want to go.
-              No commitment required.
+              If scheduling doesn&apos;t work, reach out directly. We&apos;ll get back to you within one business day.
             </p>
             <div className="mt-8">
               <a

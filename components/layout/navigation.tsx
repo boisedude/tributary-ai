@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Moon, Sun, Menu } from "lucide-react";
+import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
@@ -64,7 +64,7 @@ export function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors hover:text-accent ${
+                className={`relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-accent hover:bg-accent/5 ${
                   isActive(item.href)
                     ? "text-accent"
                     : "text-muted-foreground"
@@ -101,9 +101,14 @@ export function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-expanded={mobileMenuOpen}
             >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+              <span className="sr-only">{mobileMenuOpen ? "Close menu" : "Open menu"}</span>
             </Button>
           </div>
         </div>

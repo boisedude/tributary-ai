@@ -142,7 +142,7 @@ export default function AssessmentPage() {
               {dimensions.map((dimension) => {
                 const Icon = dimension.icon;
                 return (
-                  <Card key={dimension.title}>
+                  <Card key={dimension.title} className="card-glow-teal">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4 mb-4">
                         <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/10">

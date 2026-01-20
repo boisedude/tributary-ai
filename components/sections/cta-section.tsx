@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 /**
@@ -37,6 +37,7 @@ export function CTASection() {
               <Link href="/contact">
                 <Calendar className="mr-2 h-5 w-5" />
                 Book a Call
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

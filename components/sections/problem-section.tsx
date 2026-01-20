@@ -1,5 +1,8 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
-import { AlertTriangle, Clock, Eye, Target } from "lucide-react";
+import { Clock, Eye, Target } from "lucide-react";
+import { motion } from "framer-motion";
 
 /**
  * Problem section explaining why companies need external help.
@@ -11,16 +14,28 @@ export function ProblemSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           {/* Section Header */}
-          <div className="text-center mb-12">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <h2 className="text-3xl font-bold sm:text-4xl">
               Your roadmap is already outdated.
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               Most organizations are treating AI as another initiative on the to-do list. That misses the point.
             </p>
-          </div>
+          </motion.div>
 
           {/* Main Message */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
           <Card className="mb-12">
             <CardContent className="p-8 md:p-12">
               <p className="text-xl text-muted-foreground leading-relaxed">
@@ -34,19 +49,32 @@ export function ProblemSection() {
               </p>
             </CardContent>
           </Card>
+          </motion.div>
 
           {/* Why They Can't Do It Themselves */}
-          <div className="text-center mb-8">
+          <motion.div
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <h3 className="text-2xl font-bold">
               Why your team can&apos;t do this assessment
             </h3>
             <p className="mt-2 text-muted-foreground">
               Not because they lack talent—because they&apos;re running the business.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <Card>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+            <Card className="card-glow-teal h-full">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
@@ -61,8 +89,15 @@ export function ProblemSection() {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
 
-            <Card>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+            <Card className="card-glow-teal h-full">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
@@ -77,8 +112,15 @@ export function ProblemSection() {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
 
-            <Card>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+            >
+            <Card className="card-glow-teal h-full">
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
@@ -93,6 +135,7 @@ export function ProblemSection() {
                 </div>
               </CardContent>
             </Card>
+            </motion.div>
           </div>
         </div>
       </div>
