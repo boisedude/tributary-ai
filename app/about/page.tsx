@@ -111,52 +111,42 @@ export default function AboutPage() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="font-semibold text-lg mb-6">Companies</h3>
-                  <div className="grid grid-cols-2 gap-6 items-center">
-                    <div className="flex items-center justify-center h-12">
-                      <Image
-                        src="/logos/companies/microsoft.png"
-                        alt="Microsoft"
-                        width={140}
-                        height={30}
-                        className="h-7 w-auto object-contain"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center h-12">
-                      <Image
-                        src="/logos/companies/citrix.png"
-                        alt="Citrix"
-                        width={100}
-                        height={30}
-                        className="h-7 w-auto object-contain"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center h-12">
-                      <Image
-                        src="/logos/companies/confluent.png"
-                        alt="Confluent"
-                        width={140}
-                        height={30}
-                        className="h-7 w-auto object-contain"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center h-12">
-                      <Image
-                        src="/logos/companies/micron.png"
-                        alt="Micron"
-                        width={120}
-                        height={30}
-                        className="h-7 w-auto object-contain brightness-0 invert"
-                      />
-                    </div>
-                    <div className="flex items-center justify-center h-12 col-span-2">
-                      <Image
-                        src="/logos/companies/simplot.png"
-                        alt="J.R. Simplot Company"
-                        width={120}
-                        height={30}
-                        className="h-7 w-auto object-contain"
-                      />
-                    </div>
+                  <div className="flex flex-wrap items-center justify-center gap-8">
+                    <Image
+                      src="/logos/companies/microsoft.png"
+                      alt="Microsoft"
+                      width={120}
+                      height={26}
+                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                    />
+                    <Image
+                      src="/logos/companies/citrix.png"
+                      alt="Citrix"
+                      width={80}
+                      height={26}
+                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                    />
+                    <Image
+                      src="/logos/companies/confluent.png"
+                      alt="Confluent"
+                      width={120}
+                      height={26}
+                      className="h-6 w-auto object-contain opacity-80"
+                    />
+                    <Image
+                      src="/logos/companies/micron.png"
+                      alt="Micron"
+                      width={100}
+                      height={26}
+                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                    />
+                    <Image
+                      src="/logos/companies/simplot-white.png"
+                      alt="J.R. Simplot Company"
+                      width={100}
+                      height={26}
+                      className="h-6 w-auto object-contain opacity-80"
+                    />
                   </div>
                 </CardContent>
               </Card>
