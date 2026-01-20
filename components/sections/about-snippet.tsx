@@ -24,20 +24,22 @@ export function AboutSnippet() {
                 </p>
 
                 {/* Company Logo Row */}
-                <div className="mt-8 flex flex-wrap items-center justify-center gap-8 opacity-60">
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-8">
                   <Image
                     src="/logos/companies/microsoft.png"
                     alt="Microsoft"
                     width={120}
                     height={26}
-                    className="h-5 w-auto object-contain brightness-0 invert"
+                    className="h-5 w-auto object-contain"
+                    style={{ opacity: 0.6 }}
                   />
                   <Image
                     src="/logos/companies/citrix.png"
                     alt="Citrix"
                     width={80}
                     height={26}
-                    className="h-5 w-auto object-contain brightness-0 invert"
+                    className="h-5 w-auto object-contain"
+                    style={{ opacity: 0.6 }}
                   />
                   <Image
                     src="/logos/companies/confluent.png"
@@ -45,20 +47,23 @@ export function AboutSnippet() {
                     width={120}
                     height={26}
                     className="h-5 w-auto object-contain"
+                    style={{ opacity: 0.6 }}
                   />
                   <Image
                     src="/logos/companies/micron.png"
                     alt="Micron"
                     width={100}
                     height={26}
-                    className="h-5 w-auto object-contain brightness-0 invert"
+                    className="h-5 w-auto object-contain"
+                    style={{ opacity: 0.6 }}
                   />
                   <Image
-                    src="/logos/companies/simplot-white.png"
+                    src="/logos/companies/simplot.png"
                     alt="Simplot"
                     width={100}
                     height={26}
                     className="h-5 w-auto object-contain"
+                    style={{ opacity: 0.6 }}
                   />
                 </div>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">

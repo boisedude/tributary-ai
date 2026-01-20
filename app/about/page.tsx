@@ -117,35 +117,40 @@ export default function AboutPage() {
                       alt="Microsoft"
                       width={120}
                       height={26}
-                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                      className="h-6 w-auto object-contain"
+                      style={{ opacity: 0.7 }}
                     />
                     <Image
                       src="/logos/companies/citrix.png"
                       alt="Citrix"
                       width={80}
                       height={26}
-                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                      className="h-6 w-auto object-contain"
+                      style={{ opacity: 0.7 }}
                     />
                     <Image
                       src="/logos/companies/confluent.png"
                       alt="Confluent"
                       width={120}
                       height={26}
-                      className="h-6 w-auto object-contain opacity-80"
+                      className="h-6 w-auto object-contain"
+                      style={{ opacity: 0.7 }}
                     />
                     <Image
                       src="/logos/companies/micron.png"
                       alt="Micron"
                       width={100}
                       height={26}
-                      className="h-6 w-auto object-contain opacity-80 brightness-0 invert"
+                      className="h-6 w-auto object-contain"
+                      style={{ opacity: 0.7 }}
                     />
                     <Image
-                      src="/logos/companies/simplot-white.png"
+                      src="/logos/companies/simplot.png"
                       alt="J.R. Simplot Company"
                       width={100}
                       height={26}
-                      className="h-6 w-auto object-contain opacity-80"
+                      className="h-6 w-auto object-contain"
+                      style={{ opacity: 0.7 }}
                     />
                   </div>
                 </CardContent>
