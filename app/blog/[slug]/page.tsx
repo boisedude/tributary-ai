@@ -35,12 +35,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: post.title,
     description: post.excerpt,
     keywords: post.tags?.join(", "),
-    authors: [{ name: post.author || "Tributary AI Systems" }],
+    authors: [{ name: post.author || "Tributary AI" }],
     openGraph: {
       type: 'article',
       title: post.title,
       description: post.excerpt,
-      siteName: 'Tributary AI Systems',
+      siteName: 'Tributary AI',
       images: post.image ? [
         {
           url: post.image,
@@ -50,7 +50,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         }
       ] : [],
       publishedTime: post.date,
-      authors: [post.author || 'Tributary AI Systems'],
+      authors: [post.author || 'Tributary AI'],
       tags: post.tags,
     },
     twitter: {
@@ -85,7 +85,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         title={post.title}
         description={post.excerpt}
         datePublished={post.date}
-        author={post.author || "Tributary AI Systems"}
+        author={post.author || "Tributary AI"}
         image={post.image}
         url={`https://www.thetributary.ai/blog/${post.slug}`}
       />

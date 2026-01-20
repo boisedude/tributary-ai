@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
@@ -19,8 +20,47 @@ export function AboutSnippet() {
                   Why Tributary
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  30 years leading technology transformations at Microsoft, Citrix, Micron, and Simplot. I&apos;ve seen what works, what fails, and why most initiatives stall. Now I help companies see clearly and move faster.
+                  30 years leading technology transformations. I&apos;ve seen what works, what fails, and why most initiatives stall. Now I help companies see clearly and move faster.
                 </p>
+
+                {/* Company Logo Row */}
+                <div className="mt-8 flex flex-wrap items-center justify-center gap-8 opacity-70">
+                  <Image
+                    src="/logos/companies/microsoft.png"
+                    alt="Microsoft"
+                    width={120}
+                    height={26}
+                    className="h-6 w-auto object-contain"
+                  />
+                  <Image
+                    src="/logos/companies/citrix.png"
+                    alt="Citrix"
+                    width={80}
+                    height={26}
+                    className="h-6 w-auto object-contain"
+                  />
+                  <Image
+                    src="/logos/companies/confluent.png"
+                    alt="Confluent"
+                    width={120}
+                    height={26}
+                    className="h-6 w-auto object-contain"
+                  />
+                  <Image
+                    src="/logos/companies/micron.png"
+                    alt="Micron"
+                    width={100}
+                    height={26}
+                    className="h-6 w-auto object-contain brightness-0 invert"
+                  />
+                  <Image
+                    src="/logos/companies/simplot.png"
+                    alt="Simplot"
+                    width={100}
+                    height={26}
+                    className="h-6 w-auto object-contain"
+                  />
+                </div>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                   I know change is hard. I know the difference between complexity that should be eliminated and institutional knowledge that has to be protected. The goal isn&apos;t disruption—it&apos;s making sure AI simplifies your operation instead of adding another layer to it.
                 </p>

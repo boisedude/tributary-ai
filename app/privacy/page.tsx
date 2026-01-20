@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Tributary AI Systems. Learn how we collect, use, and protect your information.",
+    "Privacy Policy for Tributary AI. Learn how we collect, use, and protect your information.",
 };
 
 export default function PrivacyPage() {
@@ -22,7 +22,7 @@ export default function PrivacyPage() {
               <CardContent className="prose prose-gray dark:prose-invert max-w-none p-8">
                 <h2>Introduction</h2>
                 <p>
-                  Tributary AI Systems (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy
+                  Tributary AI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy
                   and is committed to protecting your personal information. This
                   Privacy Policy explains how we collect, use, and safeguard your
                   information when you visit our website at thetributary.ai or
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
                   practices, please contact us at:
                 </p>
                 <p>
-                  <strong>Tributary AI Systems</strong>
+                  <strong>Tributary AI</strong>
                   <br />
                   Email:{" "}
                   <a href="mailto:sales@thetributary.ai" className="text-accent">

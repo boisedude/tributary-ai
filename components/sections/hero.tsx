@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -30,7 +31,7 @@ export function Hero() {
           style={{ y, opacity }}
         >
           {/* Main Headline */}
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl leading-tight">
             <motion.span
               className="block"
               initial={{ opacity: 0, y: 20 }}
@@ -40,7 +41,7 @@ export function Hero() {
               Fewer systems. Fewer handoffs.
             </motion.span>
             <motion.span
-              className="block mt-2"
+              className="block mt-3 md:mt-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -48,7 +49,7 @@ export function Hero() {
               Faster decisions.
             </motion.span>
             <motion.span
-              className="block mt-2 text-gradient"
+              className="block mt-3 md:mt-4 text-gradient"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -64,7 +65,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
           >
-            AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.
+            AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster.
           </motion.p>
 
           {/* CTA Button */}
@@ -101,70 +102,23 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Background Gradient Orbs with Animation */}
+      {/* Background Illustration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-accent/10 blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <Image
+          src="/images/hero-illustration.webp"
+          alt=""
+          fill
+          className="object-cover object-center opacity-20"
+          priority
         />
-        <motion.div
-          className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-secondary/10 blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            x: [0, -30, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl"
-          animate={{
-            scale: [1, 1.1, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
+        {/* Gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/90" />
       </div>
 
-      {/* Floating Geometric Shapes */}
+      {/* Subtle accent glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute h-2 w-2 rounded-full bg-accent/20"
-            style={{
-              left: `${15 + i * 15}%`,
-              top: `${20 + (i % 3) * 25}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.2, 0.5, 0.2],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: i * 0.3,
-            }}
-          />
-        ))}
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-accent/5 blur-3xl" />
       </div>
     </section>
     </article>

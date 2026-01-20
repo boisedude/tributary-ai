@@ -4,8 +4,8 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Tributary AI Systems",
-    alternateName: "Tributary AI",
+    name: "Tributary AI",
+    alternateName: "Tributary",
     url: "https://www.thetributary.ai",
     logo: "https://www.thetributary.ai/logo.png",
     description:
@@ -43,7 +43,7 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://www.thetributary.ai/#localbusiness",
-    name: "Tributary AI Systems",
+    name: "Tributary AI",
     image: "https://www.thetributary.ai/logo.png",
     description:
       "Technology consulting firm helping mid-market companies simplify operations, cut complexity, and move faster with AI.",
@@ -110,7 +110,7 @@ export function BlogPostSchema({
     },
     publisher: {
       "@type": "Organization",
-      name: "Tributary AI Systems",
+      name: "Tributary AI",
       logo: {
         "@type": "ImageObject",
         url: "https://www.thetributary.ai/logo.png",

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     "cloud marketplace insights",
   ],
   openGraph: {
-    title: "AI Strategy & Transformation Blog - Tributary AI Systems",
+    title: "AI Strategy & Transformation Blog - Tributary AI",
     description:
       "Expert insights on AI strategy, agentic systems, and business transformation. Practical guidance for companies adopting AI.",
     type: "website",

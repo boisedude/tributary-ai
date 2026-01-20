@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -135,9 +136,22 @@ export default function AssessmentPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-12">
+            <h2 className="text-3xl font-bold text-center mb-8">
               Four Dimensions
             </h2>
+
+            {/* Assessment Process Diagram */}
+            <div className="mb-12 overflow-hidden rounded-2xl">
+              <Image
+                src="/images/assessment-process.webp"
+                alt="Assessment framework: People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
+                width={1200}
+                height={600}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+
             <div className="grid gap-6 md:grid-cols-2">
               {dimensions.map((dimension) => {
                 const Icon = dimension.icon;
@@ -175,7 +189,7 @@ export default function AssessmentPage() {
               <CardContent className="p-8 md:p-12">
                 <h2 className="text-2xl font-bold mb-4">Why Politics?</h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Most consultants ignore it. We don&apos;t. Politics kills more transformations than bad technology. If your executives aren&apos;t aligned, or your last initiative left scars, we need to know that before we recommend anything.
+                  Politics kills more transformations than bad technology. If your executives aren&apos;t aligned, or your last initiative left scars, it will have a direct impact on your project&apos;s chance of success.
                 </p>
               </CardContent>
             </Card>
@@ -187,9 +201,21 @@ export default function AssessmentPage() {
       <section className="pb-16 bg-muted/30 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-12">
+            <h2 className="text-3xl font-bold text-center mb-8">
               What You Get
             </h2>
+
+            {/* Deliverables Preview Image */}
+            <div className="mb-12 overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src="/images/assessment-deliverables.webp"
+                alt="Assessment deliverables: AI Readiness Assessment Report and Executive Summary presentation"
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+              />
+            </div>
+
             <div className="grid gap-6 md:grid-cols-3">
               {deliverables.map((deliverable) => {
                 const Icon = deliverable.icon;
@@ -224,7 +250,7 @@ export default function AssessmentPage() {
                 <div className="border-t pt-6">
                   <h3 className="font-semibold mb-2">The Guarantee</h3>
                   <p className="text-muted-foreground">
-                    If you&apos;re not satisfied, you don&apos;t pay. We want long-term clients, not arguments over invoices.
+                    If you&apos;re not satisfied, you don&apos;t pay.
                   </p>
                 </div>
               </CardContent>

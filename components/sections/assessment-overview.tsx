@@ -74,10 +74,51 @@ export function AssessmentOverview() {
             <CardContent className="p-8">
               <h3 className="text-xl font-bold mb-4">Why Politics?</h3>
               <p className="text-muted-foreground">
-                Most consultants ignore it. We don&apos;t. Politics kills more transformations than bad technology. If your executives aren&apos;t aligned, or your last initiative left scars, we need to know that before we recommend anything.
+                Politics kills more transformations than bad technology. If your executives aren&apos;t aligned, or your last initiative left scars, it will have a direct impact on your project&apos;s chance of success.
               </p>
             </CardContent>
           </Card>
+
+          {/* AI Technology Decision Matrix */}
+          <div className="mb-12">
+            <h3 className="text-xl font-bold mb-6 text-center">When to use what</h3>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b">
+                    <th className="text-left py-3 px-4 font-semibold">If your problem is...</th>
+                    <th className="text-left py-3 px-4 font-semibold text-accent">Start here</th>
+                    <th className="text-left py-3 px-4 font-semibold text-destructive">Avoid</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr className="border-b">
+                    <td className="py-3 px-4">High-volume, rule-based tasks</td>
+                    <td className="py-3 px-4 text-accent">RPA</td>
+                    <td className="py-3 px-4 text-destructive">LLMs (expensive overkill)</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="py-3 px-4">Predicting outcomes from historical data</td>
+                    <td className="py-3 px-4 text-accent">ML</td>
+                    <td className="py-3 px-4 text-destructive">LLMs (wrong tool)</td>
+                  </tr>
+                  <tr className="border-b">
+                    <td className="py-3 px-4">Processing unstructured documents</td>
+                    <td className="py-3 px-4 text-accent">LLMs</td>
+                    <td className="py-3 px-4 text-destructive">RPA (can&apos;t handle it)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-3 px-4">Mission-critical, audit-required</td>
+                    <td className="py-3 px-4 text-accent">RPA or ML</td>
+                    <td className="py-3 px-4 text-destructive">Autonomous LLMs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground text-center">
+              For most mid-market companies, the right order is: automation first, ML for prediction problems second, LLMs for unstructured reasoning third.
+            </p>
+          </div>
 
           {/* CTA */}
           <div className="text-center">

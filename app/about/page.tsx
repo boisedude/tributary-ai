@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
@@ -33,28 +34,35 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              About
-            </h1>
-            <p className="mt-6 text-xl text-muted-foreground">
-              30 years leading technology transformations at Microsoft, Citrix, Micron, and Simplot.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Short Version */}
-      <section className="pb-16">
-        <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <Card>
-              <CardContent className="p-8 md:p-12">
-                <p className="text-xl text-muted-foreground leading-relaxed">
+            <div className="grid gap-8 md:grid-cols-[280px_1fr] items-center">
+              {/* Photo */}
+              <div className="mx-auto md:mx-0">
+                <div className="overflow-hidden rounded-2xl shadow-lg">
+                  <Image
+                    src="/images/michael-cooper-about.jpg"
+                    alt="Michael Cooper - Founder of Tributary AI"
+                    width={280}
+                    height={350}
+                    className="w-full h-auto"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Text */}
+              <div className="text-center md:text-left">
+                <h1 className="text-4xl font-bold sm:text-5xl">
+                  Michael Cooper
+                </h1>
+                <p className="mt-4 text-xl text-muted-foreground">
+                  30 years leading technology transformations at Microsoft, Citrix, Micron, and Simplot.
+                </p>
+                <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
                   I&apos;ve seen what works, what fails, and why most initiatives stall. Now I help companies see clearly and move faster.
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -102,13 +110,54 @@ export default function AboutPage() {
 
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-4">Companies</h3>
-                  <ul className="space-y-3 text-muted-foreground">
-                    <li>Microsoft</li>
-                    <li>Citrix</li>
-                    <li>Micron</li>
-                    <li>Simplot</li>
-                  </ul>
+                  <h3 className="font-semibold text-lg mb-6">Companies</h3>
+                  <div className="grid grid-cols-2 gap-6 items-center">
+                    <div className="flex items-center justify-center h-12">
+                      <Image
+                        src="/logos/companies/microsoft.png"
+                        alt="Microsoft"
+                        width={140}
+                        height={30}
+                        className="h-7 w-auto object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center h-12">
+                      <Image
+                        src="/logos/companies/citrix.png"
+                        alt="Citrix"
+                        width={100}
+                        height={30}
+                        className="h-7 w-auto object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center h-12">
+                      <Image
+                        src="/logos/companies/confluent.png"
+                        alt="Confluent"
+                        width={140}
+                        height={30}
+                        className="h-7 w-auto object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center h-12">
+                      <Image
+                        src="/logos/companies/micron.png"
+                        alt="Micron"
+                        width={120}
+                        height={30}
+                        className="h-7 w-auto object-contain brightness-0 invert"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center h-12 col-span-2">
+                      <Image
+                        src="/logos/companies/simplot.png"
+                        alt="J.R. Simplot Company"
+                        width={120}
+                        height={30}
+                        className="h-7 w-auto object-contain"
+                      />
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>

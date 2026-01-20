@@ -78,7 +78,7 @@ export function getAllPosts(): BlogPost[] {
         content,
         readingTime: readingTime(content).text,
         tags: data.tags || [],
-        author: data.author || "Tributary AI Systems",
+        author: data.author || "Tributary AI",
         image: data.image,
       } as BlogPost
     })
@@ -112,7 +112,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       content,
       readingTime: readingTime(content).text,
       tags: data.tags || [],
-      author: data.author || "Tributary AI Systems",
+      author: data.author || "Tributary AI",
       image: data.image,
     }
   } catch (error) {

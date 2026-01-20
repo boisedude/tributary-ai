@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Tributary AI Systems. Review the terms governing use of our website and services.",
+    "Terms of Service for Tributary AI. Review the terms governing use of our website and services.",
 };
 
 export default function TermsPage() {
@@ -22,7 +22,7 @@ export default function TermsPage() {
               <CardContent className="prose prose-gray dark:prose-invert max-w-none p-8">
                 <h2>Agreement to Terms</h2>
                 <p>
-                  By accessing or using the Tributary AI Systems website
+                  By accessing or using the Tributary AI website
                   (thetributary.ai) or engaging our consulting services, you agree
                   to be bound by these Terms of Service. If you do not agree to
                   these terms, please do not use our website or services.
@@ -30,7 +30,7 @@ export default function TermsPage() {
 
                 <h2>Services Description</h2>
                 <p>
-                  Tributary AI Systems provides SaaS go-to-market consulting
+                  Tributary AI provides SaaS go-to-market consulting
                   services, including:
                 </p>
                 <ul>
@@ -40,7 +40,7 @@ export default function TermsPage() {
                 </ul>
                 <p>
                   Specific services, deliverables, timelines, and fees are defined
-                  in separate engagement agreements between Tributary AI Systems
+                  in separate engagement agreements between Tributary AI
                   and clients.
                 </p>
 
@@ -56,7 +56,7 @@ export default function TermsPage() {
                 <h2>Intellectual Property</h2>
                 <p>
                   All content on this website, including text, graphics, logos,
-                  and software, is the property of Tributary AI Systems or its
+                  and software, is the property of Tributary AI or its
                   content suppliers and is protected by intellectual property laws.
                 </p>
                 <p>
@@ -82,7 +82,7 @@ export default function TermsPage() {
 
                 <h2>Limitation of Liability</h2>
                 <p>
-                  To the fullest extent permitted by law, Tributary AI Systems
+                  To the fullest extent permitted by law, Tributary AI
                   shall not be liable for any indirect, incidental, special,
                   consequential, or punitive damages arising from your use of our
                   website or services.
@@ -108,7 +108,7 @@ export default function TermsPage() {
 
                 <h2>Indemnification</h2>
                 <p>
-                  You agree to indemnify and hold harmless Tributary AI Systems
+                  You agree to indemnify and hold harmless Tributary AI
                   and its officers, directors, employees, and agents from any
                   claims, damages, losses, or expenses arising from your violation
                   of these Terms or misuse of our website or services.
@@ -141,7 +141,7 @@ export default function TermsPage() {
                   For questions about these Terms of Service, please contact us at:
                 </p>
                 <p>
-                  <strong>Tributary AI Systems</strong>
+                  <strong>Tributary AI</strong>
                   <br />
                   Email:{" "}
                   <a href="mailto:sales@thetributary.ai" className="text-accent">

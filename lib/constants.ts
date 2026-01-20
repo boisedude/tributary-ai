@@ -54,8 +54,8 @@ export const EXTERNAL_LINKS = {
  * Company branding and identity constants.
  */
 export const COMPANY = {
-  NAME: "Tributary AI",
-  LEGAL_NAME: "Tributary AI Systems",
+  NAME: "Tributary",
+  LEGAL_NAME: "Tributary AI",
   TAGLINE: "AI should reduce your tech spend. Not increase it.",
   DESCRIPTION:
     "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
@@ -70,7 +70,7 @@ export const COMPANY = {
 export const SITE_METADATA = {
   TITLE: "Tributary AI | Technology Consulting for the AI Era",
   DESCRIPTION:
-    "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
+    "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
   URL: "https://thetributary.ai",
   OG_IMAGE: "/og-image.png",
   TWITTER_HANDLE: "@tributaryai",
@@ -176,6 +176,7 @@ export const CREDENTIALS = [
   "30 Years Enterprise Technology",
   "Microsoft",
   "Citrix",
+  "Confluent",
   "Micron",
   "Simplot",
 ] as const;

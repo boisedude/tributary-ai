@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     ],
   },
   description:
-    "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
+    "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
   keywords: [
     "AI consulting",
     "technology consulting",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     "technology assessment",
     "Boise Idaho consulting",
   ],
-  authors: [{ name: "Tributary AI Systems" }],
-  creator: "Tributary AI Systems",
-  publisher: "Tributary AI Systems",
+  authors: [{ name: "Tributary AI" }],
+  creator: "Tributary AI",
+  publisher: "Tributary AI",
   metadataBase: new URL("https://www.thetributary.ai"),
   alternates: {
     canonical: "https://www.thetributary.ai",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     siteName: "Tributary AI",
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.",
+      "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster.",
     images: [
       {
         url: "/og-image.png",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "AI should reduce your tech spend—not increase it. We help mid-market companies simplify operations, cut complexity, and move faster.",
+      "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster.",
     images: ["/og-image.png"],
     creator: "@tributaryai",
   },
