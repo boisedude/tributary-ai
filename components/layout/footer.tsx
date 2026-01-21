@@ -91,6 +91,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground leading-relaxed">
+          <p className="mb-2 font-medium">{COMPANY.TAGLINE}</p>
           <p>&copy; {COMPANY.COPYRIGHT_YEAR} {COMPANY.LEGAL_NAME}. All rights reserved.</p>
         </div>
       </div>

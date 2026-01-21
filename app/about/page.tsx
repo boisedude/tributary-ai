@@ -6,9 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About - Michael Cooper",
+  title: "Our Founder | Tributary AI",
   description:
-    "30 years leading technology transformations at Microsoft, Citrix, Micron, and Simplot. Based in Boise, Idaho, serving clients nationally.",
+    "30+ years leading technology transformations at Microsoft, Citrix, Confluent, and more. Tributary is built on 25 years of enterprise experience, founded in Idaho in 1999.",
   keywords: [
     "Michael Cooper",
     "Tributary AI founder",
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
     "enterprise technology",
     "Microsoft",
     "Citrix",
-    "Micron",
-    "Simplot",
+    "Confluent",
+    "MDC IT",
     "Boise Idaho",
   ],
   openGraph: {
-    title: "About - Michael Cooper | Tributary AI",
+    title: "Our Founder | Tributary AI",
     description:
-      "30 years leading technology transformations. Now helping companies see clearly and move faster.",
+      "30+ years leading technology transformations. Now helping companies see clearly and move faster.",
     type: "website",
   },
 };
@@ -166,6 +166,49 @@ export default function AboutPage() {
                     <p className="font-semibold">Based in Boise, Idaho</p>
                     <p className="text-muted-foreground">Serving clients nationally</p>
                   </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our History Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-8">
+              Our History
+            </h2>
+            <Card>
+              <CardContent className="p-8">
+                <h3 className="text-xl font-semibold mb-4">
+                  Built on 25 Years of Enterprise Experience
+                </h3>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    Tributary is the evolution of Managed Data Communications (MDC IT), founded in Idaho in 1999. MDC IT delivered infrastructure and transformation projects for some of Idaho&apos;s largest organizations — systems that still run today.
+                  </p>
+                  <div>
+                    <p className="font-semibold text-foreground mb-3">Past engagements include:</p>
+                    <ul className="grid gap-2 md:grid-cols-2">
+                      <li>• Boise Cascade</li>
+                      <li>• Albertson&apos;s</li>
+                      <li>• Global Travel</li>
+                      <li>• Primary Health</li>
+                      <li>• College of Idaho</li>
+                      <li>• Cooper Norman</li>
+                      <li>• Idaho State Tax Commission</li>
+                      <li>• Idaho State Liquor Dispensary</li>
+                      <li>• Idaho State Parks &amp; Recreation</li>
+                    </ul>
+                  </div>
+                  <p>
+                    That experience — building systems designed to last, navigating enterprise complexity, working across industries — is the foundation Tributary brings to every engagement.
+                  </p>
+                  <p>
+                    Now the focus is singular: helping mid-market companies use AI to simplify operations and reduce costs.
+                  </p>
                 </div>
               </CardContent>
             </Card>

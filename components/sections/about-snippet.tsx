@@ -20,7 +20,7 @@ export function AboutSnippet() {
                   Why Tributary
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  30 years leading technology transformations. I&apos;ve seen what works, what fails, and why most initiatives stall. Now I help companies see clearly and move faster.
+                  25 years serving enterprises. We&apos;ve seen what works, what fails, and why most initiatives stall. Now we help companies see clearly and move faster.
                 </p>
 
                 {/* Company Logo Row */}
@@ -67,7 +67,7 @@ export function AboutSnippet() {
                   />
                 </div>
                 <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                  I know change is hard. I know the difference between complexity that should be eliminated and institutional knowledge that has to be protected. The goal isn&apos;t disruption—it&apos;s making sure AI simplifies your operation instead of adding another layer to it.
+                  We know change is hard. We know the difference between complexity that should be eliminated and institutional knowledge that has to be protected. The goal isn&apos;t disruption—it&apos;s making sure AI simplifies your operation instead of adding another layer to it.
                 </p>
                 <div className="mt-8">
                   <Button asChild variant="outline" size="lg" className="group">

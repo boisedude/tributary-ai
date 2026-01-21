@@ -19,6 +19,8 @@ export const ROUTES = {
   ABOUT: "/about",
   BLOG: "/blog",
   CONTACT: "/contact",
+  PARTNERS: "/partners",
+  CAREERS: "/careers",
   PRIVACY: "/privacy",
   TERMS: "/terms",
 } as const;
@@ -31,9 +33,11 @@ export const ROUTES = {
  * Email addresses used throughout the site.
  */
 export const EMAILS = {
+  INFO: "info@thetributary.ai",
   SALES: "sales@thetributary.ai",
+  PARTNER: "partner@thetributary.ai",
+  CAREERS: "careers@thetributary.ai",
   MICHAEL: "michael@thetributary.ai",
-  SUPPORT: "support@thetributary.ai",
 } as const;
 
 /**
@@ -41,7 +45,7 @@ export const EMAILS = {
  */
 export const EXTERNAL_LINKS = {
   CALENDLY: "https://calendly.com/tributary-ai/30min",
-  LINKEDIN: "https://www.linkedin.com/company/tributary-ai",
+  LINKEDIN: "https://www.linkedin.com/company/tributaryai",
   TWITTER: "https://twitter.com/tributaryai",
   PODCAST_URL: "https://www.agentic-saas-talks.com/",
 } as const;
@@ -55,12 +59,13 @@ export const EXTERNAL_LINKS = {
  */
 export const COMPANY = {
   NAME: "Tributary",
-  LEGAL_NAME: "Tributary AI",
-  TAGLINE: "AI should reduce your tech spend. Not increase it.",
+  LEGAL_NAME: "MDC IT, dba Tributary AI",
+  TAGLINE: "Serving enterprises since 1999",
+  TAGLINE_SECONDARY: "AI should reduce your tech spend. Not increase it.",
   DESCRIPTION:
     "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
-  LOCATION: "Boise, Idaho",
-  FOUNDED_YEAR: 2024,
+  LOCATION: "723 W Headwaters Dr, Eagle, Idaho",
+  FOUNDED_YEAR: 1999,
   COPYRIGHT_YEAR: new Date().getFullYear(),
 } as const;
 
@@ -109,7 +114,9 @@ export const NAV_ITEMS: NavItem[] = [
  */
 export const FOOTER_NAV_ITEMS: NavItem[] = [
   { href: ROUTES.ASSESSMENT, label: "The Assessment" },
-  { href: ROUTES.ABOUT, label: "About" },
+  { href: ROUTES.ABOUT, label: "Our Founder" },
+  { href: ROUTES.PARTNERS, label: "Partners" },
+  { href: ROUTES.CAREERS, label: "Careers" },
   { href: ROUTES.BLOG, label: "Blog" },
   { href: ROUTES.CONTACT, label: "Contact" },
   { href: ROUTES.PRIVACY, label: "Privacy Policy" },
