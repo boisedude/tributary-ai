@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Mail, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
+import { COMPANY } from "@/lib/constants";
 import { FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
@@ -120,6 +121,22 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
+                  {/* Phone */}
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
+                      <Phone className="h-5 w-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Phone</p>
+                      <a
+                        href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
+                        className="text-accent hover:underline"
+                      >
+                        {COMPANY.PHONE}
+                      </a>
+                    </div>
+                  </div>
+
                   {/* Email */}
                   <div className="flex items-start gap-4">
                     <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">

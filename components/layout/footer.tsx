@@ -83,7 +83,12 @@ export function Footer() {
               </a>
             </div>
             <div className="mt-4 text-sm text-muted-foreground leading-relaxed">
-              <p>{EMAILS.SALES}</p>
+              <p>
+                <a href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`} className="hover:text-accent transition-colors">
+                  {COMPANY.PHONE}
+                </a>
+              </p>
+              <p className="mt-1">{EMAILS.SALES}</p>
               <p className="mt-1">{COMPANY.LOCATION}</p>
               <p className="mt-1">Serving clients nationally</p>
             </div>

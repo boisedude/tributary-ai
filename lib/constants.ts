@@ -65,6 +65,7 @@ export const COMPANY = {
   DESCRIPTION:
     "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
   LOCATION: "723 W Headwaters Dr, Eagle, Idaho",
+  PHONE: "(208) 330-5534",
   FOUNDED_YEAR: 1999,
   COPYRIGHT_YEAR: new Date().getFullYear(),
 } as const;
