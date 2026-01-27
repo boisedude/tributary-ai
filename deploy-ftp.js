@@ -25,6 +25,16 @@ const config = {
 };
 // ============================================
 
+// ============================================
+// OTHER FTP ACCOUNTS (for reference)
+// ============================================
+// MTA-STS Subdomains (for email security policy files):
+//   mta-sts.thetributary.ai: u951885034.mta-sts.thetributary.ai
+//   mta-sts.thetributary.io: u951885034.mta-sts.thetributary.io
+//   Host: 191.101.13.61
+//   See hPanel → Files → FTP Accounts for passwords
+// ============================================
+
 async function deploy() {
     const client = new ftp.Client();
     client.ftp.verbose = true; // Show FTP commands

@@ -198,6 +198,95 @@ CNAME: www → thetributary.ai
 
 DNS propagation can take 24-48 hours.
 
+---
+
+## Email Configuration (Microsoft 365)
+
+Both domains use Microsoft 365 for email. DNS records are managed via Hostinger.
+
+### Email Addresses (thetributary.ai)
+
+| Address | Purpose |
+|---------|---------|
+| michael@thetributary.ai | Primary mailbox |
+| sales@thetributary.ai | Sales inquiries (alias) |
+| info@thetributary.ai | General inquiries (alias) |
+| careers@thetributary.ai | Job applications (alias) |
+| partner@thetributary.ai | Partner inquiries (alias) |
+| dmarc@thetributary.ai | DMARC/TLS reports |
+
+### DNS Records - thetributary.ai
+
+| Type | Host | Value |
+|------|------|-------|
+| MX | @ | `0 thetributary-ai.mail.protection.outlook.com` |
+| TXT | @ | `v=spf1 include:spf.protection.outlook.com -all` |
+| TXT | _dmarc | `v=DMARC1; p=reject; rua=mailto:dmarc@thetributary.ai; pct=100` |
+| TXT | _mta-sts | `v=STSv1; id=20260127` |
+| TXT | _smtp._tls | `v=TLSRPTv1; rua=mailto:dmarc@thetributary.ai` |
+| CNAME | autodiscover | `autodiscover.outlook.com` |
+| CNAME | selector1._domainkey | `selector1-thetributary-ai._domainkey.DAVECOOPER.r-v1.dkim.mail.microsoft` |
+| CNAME | selector2._domainkey | `selector2-thetributary-ai._domainkey.DAVECOOPER.r-v1.dkim.mail.microsoft` |
+
+### DNS Records - thetributary.io
+
+| Type | Host | Value |
+|------|------|-------|
+| MX | @ | `0 thetributary-io.mail.protection.outlook.com` |
+| TXT | @ | `v=spf1 include:spf.protection.outlook.com -all` |
+| TXT | _dmarc | `v=DMARC1; p=reject; rua=mailto:dmarc@thetributary.io; pct=100` |
+| TXT | _mta-sts | `v=STSv1; id=20260127` |
+| TXT | _smtp._tls | `v=TLSRPTv1; rua=mailto:dmarc@thetributary.io` |
+| CNAME | autodiscover | `autodiscover.outlook.com` |
+| CNAME | selector1._domainkey | `selector1-thetributary-io._domainkey.DAVECOOPER.d-v1.dkim.mail.microsoft` |
+| CNAME | selector2._domainkey | `selector2-thetributary-io._domainkey.DAVECOOPER.d-v1.dkim.mail.microsoft` |
+
+### MTA-STS Policy Files
+
+MTA-STS requires a policy file hosted at `https://mta-sts.<domain>/.well-known/mta-sts.txt`
+
+**thetributary.ai policy:**
+```
+version: STSv1
+mode: testing
+mx: thetributary-ai.mail.protection.outlook.com
+max_age: 86400
+```
+
+**thetributary.io policy:**
+```
+version: STSv1
+mode: testing
+mx: thetributary-io.mail.protection.outlook.com
+max_age: 86400
+```
+
+### MTA-STS FTP Credentials
+
+| Domain | Host | Username |
+|--------|------|----------|
+| mta-sts.thetributary.ai | 191.101.13.61 | u951885034.mta-sts.thetributary.ai |
+| mta-sts.thetributary.io | 191.101.13.61 | u951885034.mta-sts.thetributary.io |
+
+*Passwords stored in hPanel → Files → FTP Accounts*
+
+### Domain Forwarding
+
+thetributary.io redirects (301) to https://www.thetributary.ai
+
+### Adding Marketing Tools (Future)
+
+When adding email marketing services (Mailchimp, ConvertKit, etc.):
+
+1. **Update SPF** - Add their include (e.g., `include:servers.mcsv.net`)
+2. **Add DKIM** - Add CNAME records they provide
+3. **Test** - Use mail-tester.com to verify
+
+### Email Testing
+
+- **Mail-Tester:** https://www.mail-tester.com (target: 10/10)
+- **MX Toolbox:** https://mxtoolbox.com/SuperTool.aspx
+
 ### 2. SSL Certificate
 
 In Hostinger control panel:
@@ -381,6 +470,15 @@ If something goes wrong:
 
 ## Version History
 
+**v1.3.0** - January 27, 2026
+- Configured Microsoft 365 email for both domains
+- Added email DNS records: MX, SPF, DKIM, DMARC
+- Configured MTA-STS with policy files for both domains
+- Added TLS-RPT for TLS failure reporting
+- Set up thetributary.io → thetributary.ai redirect
+- Added phone number to contact page and footer
+- DMARC policy set to `p=reject` for maximum protection
+
 **v1.2.0** - November 28, 2025
 - Added optimized blog images (30 WebP files, 91% size reduction: 41MB → 3.6MB)
 - Added new jellyfish logo to header and footer navigation
@@ -411,4 +509,4 @@ If something goes wrong:
 
 ---
 
-**Last Updated:** November 28, 2025
+**Last Updated:** January 27, 2026
