@@ -15,7 +15,11 @@
  */
 export const ROUTES = {
   HOME: "/",
+  SERVICES: "/services",
   ASSESSMENT: "/assessment",
+  AI_AUTOMATION: "/services/ai-automation",
+  AI_DEVELOPMENT: "/services/ai-development",
+  MANAGED_SERVICES: "/services/managed-services",
   ABOUT: "/about",
   BLOG: "/blog",
   CONTACT: "/contact",
@@ -104,6 +108,7 @@ export interface NavItem {
  */
 export const NAV_ITEMS: NavItem[] = [
   { href: ROUTES.HOME, label: "Home" },
+  { href: ROUTES.SERVICES, label: "Services" },
   { href: ROUTES.ASSESSMENT, label: "The Assessment" },
   { href: ROUTES.ABOUT, label: "About" },
   { href: ROUTES.BLOG, label: "Blog" },
@@ -114,7 +119,11 @@ export const NAV_ITEMS: NavItem[] = [
  * Footer navigation items (may include additional links like Privacy, Terms).
  */
 export const FOOTER_NAV_ITEMS: NavItem[] = [
+  { href: ROUTES.SERVICES, label: "Services" },
   { href: ROUTES.ASSESSMENT, label: "The Assessment" },
+  { href: ROUTES.AI_AUTOMATION, label: "AI Automation" },
+  { href: ROUTES.AI_DEVELOPMENT, label: "AI Development" },
+  { href: ROUTES.MANAGED_SERVICES, label: "Managed Services" },
   { href: ROUTES.ABOUT, label: "Our Founder" },
   { href: ROUTES.PARTNERS, label: "Partners" },
   { href: ROUTES.CAREERS, label: "Careers" },

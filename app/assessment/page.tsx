@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
   Calendar,
+  Cog,
+  Code,
+  Headphones,
 } from "lucide-react";
 import { ServiceSchema } from "@/components/structured-data/schemas";
+import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "The Assessment - Two-Week Diagnostic",
@@ -225,6 +229,71 @@ export default function AssessmentPage() {
                   If you&apos;re not satisfied, you don&apos;t pay.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What Happens Next */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold mb-4">What Happens Next?</h2>
+            <p className="text-lg text-muted-foreground mb-8">
+              After The Assessment, you&apos;ll have a clear roadmap. Many clients choose to continue with implementation—but there&apos;s no obligation. Here are the paths we can help with:
+            </p>
+            <div className="grid gap-4">
+              <Link
+                href={ROUTES.AI_AUTOMATION}
+                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+              >
+                <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
+                  <Cog className="h-5 w-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold group-hover:text-accent transition-colors">
+                    AI Automation & Deployment
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Implement AI into existing workflows. RPA, process automation, AI agent deployment.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+              </Link>
+              <Link
+                href={ROUTES.AI_DEVELOPMENT}
+                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+              >
+                <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
+                  <Code className="h-5 w-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold group-hover:text-accent transition-colors">
+                    AI Application Development
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Custom AI-powered applications. Internal tools, customer-facing products.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+              </Link>
+              <Link
+                href={ROUTES.MANAGED_SERVICES}
+                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+              >
+                <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
+                  <Headphones className="h-5 w-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold group-hover:text-accent transition-colors">
+                    Managed Services
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Ongoing IT management, cloud administration, fractional CTO/CIO advisory.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+              </Link>
             </div>
           </div>
         </div>
