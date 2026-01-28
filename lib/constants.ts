@@ -120,6 +120,7 @@ export const NAV_ITEMS: NavItem[] = [
 
 /**
  * Footer navigation items (may include additional links like Privacy, Terms).
+ * @deprecated Use FOOTER_NAV_GROUPS instead for organized footer layout
  */
 export const FOOTER_NAV_ITEMS: NavItem[] = [
   { href: ROUTES.SERVICES, label: "Services" },
@@ -137,6 +138,40 @@ export const FOOTER_NAV_ITEMS: NavItem[] = [
   { href: ROUTES.PRIVACY, label: "Privacy Policy" },
   { href: ROUTES.TERMS, label: "Terms of Service" },
 ];
+
+/**
+ * Grouped footer navigation for organized multi-column layout.
+ */
+export const FOOTER_NAV_GROUPS = {
+  services: {
+    title: "Services",
+    items: [
+      { href: ROUTES.ASSESSMENT, label: "The Assessment" },
+      { href: ROUTES.AI_AUTOMATION, label: "AI Automation" },
+      { href: ROUTES.AI_DEVELOPMENT, label: "AI Development" },
+      { href: ROUTES.DATA_READINESS, label: "Data Readiness" },
+      { href: ROUTES.MANAGED_SERVICES, label: "Managed Services" },
+    ],
+  },
+  company: {
+    title: "Company",
+    items: [
+      { href: ROUTES.ABOUT, label: "About" },
+      { href: ROUTES.BLOG, label: "Blog" },
+      { href: ROUTES.CAREERS, label: "Careers" },
+      { href: ROUTES.PARTNERS, label: "Partners" },
+      { href: ROUTES.BRAND, label: "Brand Assets" },
+      { href: ROUTES.CONTACT, label: "Contact" },
+    ],
+  },
+  legal: {
+    title: "Legal",
+    items: [
+      { href: ROUTES.PRIVACY, label: "Privacy" },
+      { href: ROUTES.TERMS, label: "Terms" },
+    ],
+  },
+} as const;
 
 // =============================================================================
 // ASSETS
