@@ -94,15 +94,15 @@ const dimensions = [
 const deliverables = [
   {
     title: "Findings Document",
-    description: "Detailed assessment across all five dimensions",
+    description: "Detailed assessment with 1-5 maturity scores per dimension and industry benchmarks",
   },
   {
     title: "Leadership Presentation",
-    description: "For your executive team",
+    description: "Executive-ready deck with key findings and strategic implications",
   },
   {
-    title: "Scorecard + Roadmap",
-    description: "Prioritized recommendations you can act on",
+    title: "Prioritized Roadmap",
+    description: "30/60/90-day action plan with quick wins and long-term initiatives",
   },
 ];
 
@@ -124,10 +124,22 @@ export default function AssessmentPage() {
         </div>
       </section>
 
-      {/* Why External Assessment */}
+      {/* The Problem */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
+            <div className="grid gap-4 md:grid-cols-2 mb-8">
+              <div className="p-6 border rounded-lg bg-destructive/5 border-destructive/20">
+                <p className="text-4xl font-bold text-destructive mb-2">95%</p>
+                <p className="text-muted-foreground">of enterprise AI initiatives show no measurable P&L impact</p>
+                <p className="text-xs text-muted-foreground/70 mt-2">MIT Research, 2025</p>
+              </div>
+              <div className="p-6 border rounded-lg bg-amber-500/5 border-amber-500/20">
+                <p className="text-4xl font-bold text-amber-600 dark:text-amber-400 mb-2">70%</p>
+                <p className="text-muted-foreground">of AI failures are people and process issues, not technology</p>
+                <p className="text-xs text-muted-foreground/70 mt-2">BCG Research</p>
+              </div>
+            </div>
             <div className="p-8 bg-muted/30 rounded-lg">
               <h2 className="text-2xl font-bold mb-6">
                 Why you need an outside perspective
@@ -183,11 +195,18 @@ export default function AssessmentPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="p-8 border rounded-lg">
+            <div className="p-8 border rounded-lg border-amber-500/30 bg-amber-500/5">
               <h2 className="text-2xl font-bold mb-4">Why Politics?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Politics kills more transformations than bad technology. If your executives aren&apos;t aligned, or your last initiative left scars, it will have a direct impact on your project&apos;s chance of success.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                This is the dimension other assessments ignore—and it&apos;s why their clients fail. Political problems can veto technical success.
               </p>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                You can have excellent data, modern technology, skilled people, and documented processes. If your executives aren&apos;t aligned, if your departments won&apos;t collaborate, if your organization is still nursing wounds from past failures—none of the technical excellence matters.
+              </p>
+              <div className="flex items-center gap-4 pt-4 border-t border-amber-500/20">
+                <p className="text-2xl font-bold text-amber-600 dark:text-amber-400">70%</p>
+                <p className="text-sm text-muted-foreground">of change initiatives fail due to employee pushback and organizational resistance</p>
+              </div>
             </div>
           </div>
         </div>

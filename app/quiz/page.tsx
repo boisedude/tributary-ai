@@ -46,8 +46,8 @@ const benefits = [
   },
   {
     icon: Target,
-    title: "15 Questions",
-    description: "Covering 6 dimensions including Data Readiness",
+    title: "18 Questions",
+    description: "Covering 6 dimensions including Data Lineage & MLOps",
   },
   {
     icon: Lightbulb,

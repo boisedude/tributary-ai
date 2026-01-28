@@ -254,6 +254,19 @@ const QUESTIONS: QuizQuestion[] = [
       { text: "High-quality, well-governed data with clear ownership and documented lineage", score: 4 },
     ],
   },
+  // 9b. Data - Data lineage and traceability (NEW - from research)
+  {
+    id: "data-4",
+    dimension: "data",
+    question: "Can you trace where your critical business data comes from and how it's transformed?",
+    learnMoreUrl: "/blog/why-ai-projects-fail-data-architecture",
+    options: [
+      { text: "No idea - data appears in reports but we don't know its origin", score: 1 },
+      { text: "We have a general sense, but couldn't document the full chain", score: 2 },
+      { text: "Key data flows are understood by certain people, but not formally documented", score: 3 },
+      { text: "We have documented data lineage with clear transformation logic and audit trails", score: 4 },
+    ],
+  },
   // 10. Technology - Infrastructure (NEW implied by expert)
   {
     id: "tech-2",
@@ -265,6 +278,19 @@ const QUESTIONS: QuizQuestion[] = [
       { text: "Someone would spend hours pulling data from multiple sources", score: 2 },
       { text: "We could get an answer fairly quickly, but might need to reconcile sources", score: 3 },
       { text: "We'd have a single source of truth that provides instant, reliable answers", score: 4 },
+    ],
+  },
+  // 10b. Technology - MLOps maturity (NEW - from research)
+  {
+    id: "tech-3",
+    dimension: "technology",
+    question: "Has your organization successfully deployed and maintained an AI or ML model in production?",
+    learnMoreUrl: "/blog/why-ai-pilots-fail-to-scale",
+    options: [
+      { text: "No - we haven't attempted AI/ML deployment", score: 1 },
+      { text: "We've tried pilots but they never made it to production", score: 2 },
+      { text: "We have one or two models in production, but maintenance is challenging", score: 3 },
+      { text: "We have established MLOps practices with versioning, monitoring, and regular updates", score: 4 },
     ],
   },
   // 11. Governance - AI ethics (NEW - Important)
@@ -304,6 +330,19 @@ const QUESTIONS: QuizQuestion[] = [
       { text: "Surface agreement but hidden disagreements emerge during execution", score: 2 },
       { text: "Generally aligned but some leaders are more bought-in than others", score: 3 },
       { text: "Unified vision with clear sponsorship and accountability", score: 4 },
+    ],
+  },
+  // 13b. Politics - Cross-functional collaboration (NEW - from research)
+  {
+    id: "politics-3",
+    dimension: "politics",
+    question: "When initiatives require collaboration across departments, how smoothly does it work?",
+    learnMoreUrl: "/blog/ai-implementation-mistakes-avoid",
+    options: [
+      { text: "Departments actively protect their turf - cross-functional work is a battle", score: 1 },
+      { text: "Collaboration happens but requires constant negotiation and escalation", score: 2 },
+      { text: "Most departments cooperate, though some friction exists", score: 3 },
+      { text: "Cross-functional collaboration is the norm with shared goals and mutual support", score: 4 },
     ],
   },
   // 14. Governance - Strategy (NEW - combines strategy into governance)
