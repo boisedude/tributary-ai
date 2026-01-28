@@ -142,8 +142,12 @@ export const FOOTER_NAV_ITEMS: NavItem[] = [
  */
 export const ASSETS = {
   LOGO_HEADER: "/logos/logo-header.png",
+  LOGO_HEADER_DARK: "/logos/logo-header-dark.png",
+  LOGO_FOOTER: "/logos/logo-footer.png",
+  LOGO_FOOTER_DARK: "/logos/logo-footer-dark.png",
   LOGO_FULL: "/logos/logo-full.png",
   LOGO_ICON: "/logos/logo-icon.png",
+  LOGO_HORIZONTAL: "/logos/logo-horizontal.png",
   OG_IMAGE: "/og-image.png",
   FAVICON: "/favicon.ico",
 } as const;

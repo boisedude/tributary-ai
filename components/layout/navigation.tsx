@@ -68,7 +68,7 @@ export function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2" aria-label={`${COMPANY.NAME} - Home`}>
             <Image
-              src={ASSETS.LOGO_HEADER}
+              src={mounted && theme === "dark" ? ASSETS.LOGO_HEADER_DARK : ASSETS.LOGO_HEADER}
               alt={COMPANY.NAME}
               width={40}
               height={40}

@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Mail, Radio } from "lucide-react";
-import { FOOTER_NAV_ITEMS, COMPANY, EMAILS, EXTERNAL_LINKS } from "@/lib/constants";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
+import { FOOTER_NAV_ITEMS, COMPANY, EMAILS, EXTERNAL_LINKS, ASSETS } from "@/lib/constants";
 
 /**
  * Site footer component with company info, navigation links, and social links.
@@ -14,6 +18,13 @@ import { FOOTER_NAV_ITEMS, COMPANY, EMAILS, EXTERNAL_LINKS } from "@/lib/constan
  * <Footer />
  */
 export function Footer() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <footer className="border-t bg-muted/30">
       <div className="container mx-auto px-4 py-12">
@@ -22,7 +33,7 @@ export function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <Image
-                src="/logos/logo-footer.png"
+                src={mounted && theme === "dark" ? ASSETS.LOGO_FOOTER_DARK : ASSETS.LOGO_FOOTER}
                 alt={COMPANY.NAME}
                 width={48}
                 height={48}
