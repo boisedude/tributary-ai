@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Linkedin, Calendar } from "lucide-react";
-import { COMPANY } from "@/lib/constants";
-import { FAQSchema } from "@/components/structured-data/schemas";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, Linkedin, Calendar, ArrowRight, CheckCircle, User } from "lucide-react";
+import { COMPANY, ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Schedule a Conversation",
+  title: "Contact Us - Schedule a Conversation | Tributary AI",
   description:
-    "Schedule a conversation with Tributary AI. AI consulting and technology strategy for mid-market companies. Based in Boise, Idaho, serving clients nationally.",
+    "Schedule a 30-minute strategy conversation with Tributary AI. AI consulting and technology strategy for mid-market companies. Based in Boise, Idaho, serving clients nationally.",
   keywords: [
     "AI consulting contact",
     "technology consulting",
@@ -27,53 +28,50 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Do you work with companies outside Idaho?",
-    answer: "Yes, we serve clients nationally. While we're based in Boise, Idaho, we work with mid-market companies across the United States.",
-  },
-  {
-    question: "What size companies do you work with?",
-    answer: "We specialize in mid-market companies—typically $10M-$500M in revenue—that are looking to simplify their technology stack and leverage AI to reduce costs and move faster.",
-  },
-  {
-    question: "What is The Assessment?",
-    answer: "The Assessment is a two-week diagnostic that evaluates your organization across four dimensions: People, Process, Technology, and Politics. You get a detailed findings document, leadership presentation, and prioritized roadmap. Investment is $25K-$35K with a satisfaction guarantee.",
-  },
-  {
-    question: "What happens after The Assessment?",
-    answer: "You'll have a clear picture of where you stand and a prioritized roadmap for moving forward. Some clients implement on their own, others engage us for implementation support. There's no pressure either way—you'll have what you need to decide.",
-  },
+const callExpectations = [
+  "Understand your business, technology challenges, and timeline",
+  "Honest assessment of whether we're the right fit",
+  "Clear recommendations on your options—no pressure",
 ];
 
-const expectations = [
+const idealFor = [
+  "C-level executives exploring AI strategy",
+  "Operations leaders looking at process automation",
+  "Tech leads managing platform decisions",
+  "Companies between $10M-$500M in revenue",
+];
+
+const commonQuestions = [
   {
-    title: "30-Minute Conversation",
-    description: "We'll take time to understand your business, technology challenges, and where AI might help.",
+    q: "Is The Assessment right for us?",
+    a: "We evaluate Data, People, Process, Technology, and Politics. Most mid-market companies start here—the call determines if it's right for you.",
   },
   {
-    title: "Honest Assessment",
-    description: "A straightforward take on your situation—including whether we're the right fit.",
+    q: "How much does implementation cost?",
+    a: "It depends on scope. Our heavy use of AI tooling means we deliver at 30-50% of traditional consulting costs. We'll discuss ranges on the call.",
   },
   {
-    title: "Clear Next Steps",
-    description: "You'll leave with clarity on your options and a path forward.",
+    q: "How much time from our team?",
+    a: "The Assessment requires about 5-10 hours from key stakeholders over two weeks. Implementation varies by service.",
+  },
+  {
+    q: "What if we're not ready for AI?",
+    a: "That's exactly what The Assessment reveals. We help you build the foundation first. Rushed AI fails—prepared AI succeeds.",
   },
 ];
 
 export default function ContactPage() {
   return (
     <article className="bg-gradient-subtle">
-      <FAQSchema faqs={faqs} />
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            <h1 className="text-4xl font-bold sm:text-5xl">
               Let&apos;s Start a Conversation
             </h1>
-            <p className="mt-6 text-xl text-muted-foreground">
-              A direct conversation about where you are and whether we can help.
+            <p className="mt-4 text-lg text-muted-foreground">
+              30 minutes to understand your situation and determine if we can help.
             </p>
           </div>
         </div>
@@ -82,21 +80,18 @@ export default function ContactPage() {
       {/* Main Contact Section */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Left Column - Microsoft Bookings Embed */}
-            <div>
-              <Card className="h-full">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
+          <div className="grid gap-8 lg:grid-cols-5 lg:gap-10">
+            {/* Left Column - Calendar (3 cols) */}
+            <div className="lg:col-span-3">
+              <Card>
+                <CardHeader className="pb-4">
+                  <CardTitle className="flex items-center gap-2 text-lg">
                     <Calendar className="h-5 w-5 text-accent" />
-                    Schedule a Meeting
+                    Pick a Time
                   </CardTitle>
-                  <CardDescription>
-                    Choose a time that works best for you
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative w-full overflow-hidden rounded-lg border bg-muted/30" style={{ height: "600px" }}>
+                  <div className="relative w-full overflow-hidden rounded-lg border bg-muted/30" style={{ height: "420px" }}>
                     <iframe
                       src="https://outlook.office.com/book/TributaryTime@davecooper.com/?ismsaljsauthenabled"
                       width="100%"
@@ -108,106 +103,87 @@ export default function ContactPage() {
                       style={{ border: 0 }}
                     />
                   </div>
+                  <p className="mt-3 text-sm text-muted-foreground text-center">
+                    All times in Pacific. You&apos;ll receive a calendar invite immediately.
+                  </p>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Right Column - Contact Information */}
-            <div className="space-y-8">
+            {/* Right Column - Info (2 cols) */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* What Happens */}
               <Card>
-                <CardHeader>
-                  <CardTitle>Get in Touch</CardTitle>
-                  <CardDescription>
-                    Reach out directly or connect with us on LinkedIn
-                  </CardDescription>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">What Happens in the Call</CardTitle>
                 </CardHeader>
-                <CardContent className="space-y-6">
-                  {/* Phone */}
-                  <div className="flex items-center gap-3">
-                    <Phone className="h-5 w-5 shrink-0 text-accent" />
-                    <div>
-                      <span className="font-semibold">Phone: </span>
-                      <a
-                        href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
-                        className="text-accent hover:underline"
-                      >
-                        {COMPANY.PHONE}
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Email */}
-                  <div className="flex items-center gap-3">
-                    <Mail className="h-5 w-5 shrink-0 text-accent" />
-                    <div>
-                      <span className="font-semibold">Email: </span>
-                      <a
-                        href="mailto:sales@thetributary.ai"
-                        className="text-accent hover:underline"
-                      >
-                        sales@thetributary.ai
-                      </a>
-                      <span className="text-muted-foreground"> or </span>
-                      <a
-                        href="mailto:michael@thetributary.ai"
-                        className="text-accent hover:underline"
-                      >
-                        michael@thetributary.ai
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Location */}
-                  <div className="flex items-center gap-3">
-                    <MapPin className="h-5 w-5 shrink-0 text-accent" />
-                    <div>
-                      <span className="font-semibold">Location: </span>
-                      <span className="text-muted-foreground">Boise, Idaho (serving clients nationally)</span>
-                    </div>
-                  </div>
-
-                  {/* LinkedIn */}
-                  <div className="flex items-center gap-3">
-                    <Linkedin className="h-5 w-5 shrink-0 text-accent" />
-                    <div>
-                      <span className="font-semibold">LinkedIn: </span>
-                      <a
-                        href="https://www.linkedin.com/company/tributaryai"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-accent hover:underline"
-                      >
-                        Follow us on LinkedIn
-                      </a>
-                    </div>
-                  </div>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {callExpectations.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <CheckCircle className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
 
-              {/* What to Expect Card */}
+              {/* Who Should Book */}
               <Card>
-                <CardHeader>
-                  <CardTitle>What to Expect</CardTitle>
-                  <CardDescription>
-                    Here&apos;s what happens when you schedule a consultation
-                  </CardDescription>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">This Call is For</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ol className="space-y-4">
-                    {expectations.map((item, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white">
-                          {index + 1}
-                        </span>
-                        <div>
-                          <p className="font-semibold">{item.title}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {item.description}
-                          </p>
-                        </div>
+                  <ul className="space-y-2">
+                    {idealFor.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <User className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{item}</span>
                       </li>
                     ))}
-                  </ol>
+                  </ul>
+                  <p className="mt-4 text-sm text-muted-foreground italic">
+                    Not sure if you fit? That&apos;s what the call is for.
+                  </p>
+                </CardContent>
+              </Card>
+
+              {/* Direct Contact */}
+              <Card>
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-lg">Reach Out Directly</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4 text-accent" />
+                    <a
+                      href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
+                      className="text-accent hover:underline"
+                    >
+                      {COMPANY.PHONE}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Mail className="h-4 w-4 text-accent" />
+                    <a
+                      href="mailto:michael@thetributary.ai"
+                      className="text-accent hover:underline"
+                    >
+                      michael@thetributary.ai
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Linkedin className="h-4 w-4 text-accent" />
+                    <a
+                      href="https://www.linkedin.com/company/tributaryai"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent hover:underline"
+                    >
+                      LinkedIn
+                    </a>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -215,24 +191,16 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="pb-24">
+      {/* Common Questions - Compact */}
+      <section className="pb-16">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl">
-            <div className="mb-8">
-              <h2 className="text-3xl font-bold sm:text-4xl">
-                Frequently Asked Questions
-              </h2>
-              <p className="mt-4 text-lg text-muted-foreground">
-                Common questions about working with Tributary AI
-              </p>
-            </div>
-
-            <div className="divide-y divide-border">
-              {faqs.map((faq, index) => (
-                <div key={index} className="py-6 first:pt-0 last:pb-0">
-                  <p className="font-bold">{faq.question}</p>
-                  <p className="mt-2 text-muted-foreground">{faq.answer}</p>
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold mb-6">Common Questions</h2>
+            <div className="grid gap-4 md:grid-cols-2">
+              {commonQuestions.map((item, i) => (
+                <div key={i} className="p-4 border rounded-lg">
+                  <p className="font-semibold text-sm">{item.q}</p>
+                  <p className="mt-2 text-sm text-muted-foreground">{item.a}</p>
                 </div>
               ))}
             </div>
@@ -240,24 +208,29 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-tributary py-16 text-white">
+      {/* Alternative CTA */}
+      <section className="bg-gradient-tributary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              Prefer Email?
+            <h2 className="text-2xl font-bold">
+              Not Ready to Schedule?
             </h2>
-            <p className="mt-4 text-lg text-white/90">
-              If scheduling doesn&apos;t work, reach out directly. We&apos;ll get back to you within one business day.
+            <p className="mt-3 text-white/90">
+              Take our 5-minute quiz to see where you stand, or email us with questions first.
             </p>
-            <div className="mt-8">
-              <a
-                href="mailto:sales@thetributary.ai"
-                className="inline-flex items-center gap-2 rounded-md bg-white px-6 py-3 text-lg font-medium text-primary shadow-sm transition-all hover:bg-white/90"
-              >
-                <Mail className="h-5 w-5" />
-                Email Us Directly
-              </a>
+            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Link href={ROUTES.QUIZ}>
+                  Get Your AI Readiness Score
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <a href="mailto:sales@thetributary.ai">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Email Us First
+                </a>
+              </Button>
             </div>
           </div>
         </div>
