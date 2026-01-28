@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -114,6 +115,17 @@ export default function DataReadinessPage() {
             <p className="mt-6 text-xl text-muted-foreground">
               AI built on bad data fails. We help you consolidate, clean, and govern your data—creating the foundation that makes AI actually work.
             </p>
+          </div>
+          {/* Hero Image */}
+          <div className="mx-auto max-w-4xl mt-12">
+            <Image
+              src="/images/data-readiness-hero.webp"
+              alt="Data transformation: scattered data sources consolidated into unified, structured data"
+              width={1200}
+              height={675}
+              className="rounded-lg"
+              priority
+            />
           </div>
         </div>
       </section>
