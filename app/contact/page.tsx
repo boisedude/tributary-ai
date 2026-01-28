@@ -48,20 +48,16 @@ const faqs = [
 
 const expectations = [
   {
-    title: "No Obligation",
-    description: "Our initial conversation is completely free with no strings attached. No sales pitch, no pressure.",
-  },
-  {
-    title: "30-Minute Discovery Call",
+    title: "30-Minute Conversation",
     description: "We'll take time to understand your business, technology challenges, and where AI might help.",
   },
   {
     title: "Honest Assessment",
-    description: "We'll give you a straightforward take on your situation—including whether we're the right fit.",
+    description: "A straightforward take on your situation—including whether we're the right fit.",
   },
   {
     title: "Clear Next Steps",
-    description: "You'll leave with clarity on your options and a path forward, whether that includes us or not.",
+    description: "You'll leave with clarity on your options and a path forward.",
   },
 ];
 
@@ -77,7 +73,7 @@ export default function ContactPage() {
               Let&apos;s Start a Conversation
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              No 47-slide deck. No sales pitch. Just a direct conversation about where you are and whether we can help.
+              A direct conversation about where you are and whether we can help.
             </p>
           </div>
         </div>

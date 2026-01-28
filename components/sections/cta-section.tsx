@@ -15,7 +15,7 @@ export function CTASection() {
             Ready to move?
           </h2>
           <p className="mt-4 text-lg opacity-90">
-            AI is the moment where business begins its next great evolution. Let&apos;s talk about where you are and whether we can help you navigate it.
+            A direct conversation about where you are and whether we can help.
           </p>
 
           <div className="mt-8">
@@ -26,10 +26,6 @@ export function CTASection() {
               </Link>
             </Button>
           </div>
-
-          <p className="mt-8 text-sm opacity-70">
-            No sales pitch. No 47-slide deck. Just a direct conversation.
-          </p>
         </div>
       </div>
     </section>
