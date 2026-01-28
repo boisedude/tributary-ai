@@ -1,11 +1,18 @@
 /**
  * Tributary.ai FTP Deployment Script
  *
+ * Features:
+ *   - Only uploads changed files (compares by size)
+ *   - Shows progress and statistics
+ *   - Much faster for incremental deploys
+ *
  * Usage:
  *   1. npm install basic-ftp
- *   2. Update the config below with your Hostinger FTP credentials
- *   3. npm run build
- *   4. node deploy-ftp.js
+ *   2. npm run build
+ *   3. node deploy-ftp.js
+ *
+ * Options:
+ *   --full    Force full upload (ignore change detection)
  */
 
 const ftp = require('basic-ftp');
@@ -13,35 +20,110 @@ const fs = require('fs');
 const path = require('path');
 
 // ============================================
-// CONFIGURATION - UPDATE THESE VALUES
+// CONFIGURATION
 // ============================================
 const config = {
     host: process.env.FTP_HOST || 'ftp.thetributary.ai',
     user: process.env.FTP_USER || 'u951885034.tribFTPuser',
     password: process.env.FTP_PASS || 'e&fEBrHO+tSU0:eV',
-    secure: false, // Set to true if using FTPS
+    secure: false,
     remoteDir: '/',
     localDir: './out'
 };
-// ============================================
 
-// ============================================
-// OTHER FTP ACCOUNTS (for reference)
-// ============================================
-// MTA-STS Subdomains (for email security policy files):
-//   mta-sts.thetributary.ai: u951885034.mta-sts.thetributary.ai
-//   mta-sts.thetributary.io: u951885034.mta-sts.thetributary.io
-//   Host: 191.101.13.61
-//   See hPanel → Files → FTP Accounts for passwords
-// ============================================
+// Check for --full flag
+const forceFullUpload = process.argv.includes('--full');
+
+// Stats tracking
+const stats = {
+    uploaded: 0,
+    skipped: 0,
+    errors: 0,
+    totalBytes: 0
+};
+
+/**
+ * Get all files recursively from a directory
+ */
+function getLocalFiles(dir, baseDir = dir) {
+    const files = [];
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+    for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        const relativePath = path.relative(baseDir, fullPath).replace(/\\/g, '/');
+
+        if (entry.isDirectory()) {
+            files.push(...getLocalFiles(fullPath, baseDir));
+        } else {
+            const stat = fs.statSync(fullPath);
+            files.push({
+                localPath: fullPath,
+                remotePath: relativePath,
+                size: stat.size,
+                mtime: stat.mtime
+            });
+        }
+    }
+    return files;
+}
+
+/**
+ * Get remote file listing recursively
+ */
+async function getRemoteFiles(client, remoteDir = '/') {
+    const files = new Map();
+
+    async function listDir(dir) {
+        try {
+            await client.cd(dir);
+            const list = await client.list();
+
+            for (const item of list) {
+                const remotePath = path.posix.join(dir, item.name);
+
+                if (item.isDirectory) {
+                    await listDir(remotePath);
+                } else {
+                    // Store with path relative to root
+                    const relativePath = remotePath.startsWith('/') ? remotePath.slice(1) : remotePath;
+                    files.set(relativePath, {
+                        size: item.size,
+                        mtime: item.modifiedAt
+                    });
+                }
+            }
+        } catch (err) {
+            // Directory might not exist yet
+        }
+    }
+
+    await listDir(remoteDir);
+    return files;
+}
+
+/**
+ * Ensure remote directory exists
+ */
+async function ensureRemoteDir(client, remotePath) {
+    const dir = path.posix.dirname(remotePath);
+    if (dir && dir !== '.' && dir !== '/') {
+        try {
+            await client.ensureDir('/' + dir);
+        } catch (err) {
+            // Ignore errors - directory might already exist
+        }
+    }
+}
 
 async function deploy() {
     const client = new ftp.Client();
-    client.ftp.verbose = true; // Show FTP commands
+    client.ftp.verbose = false; // Quiet mode for cleaner output
 
     try {
         console.log('==========================================');
         console.log('Tributary.ai FTP Deployment');
+        console.log(forceFullUpload ? '(Full upload mode)' : '(Smart upload - changed files only)');
         console.log('==========================================\n');
 
         // Check if build exists
@@ -59,23 +141,65 @@ async function deploy() {
             password: config.password,
             secure: config.secure
         });
-
         console.log('Connected!\n');
 
-        // Navigate to remote directory
-        console.log(`Changing to remote directory: ${config.remoteDir}`);
-        await client.cd(config.remoteDir);
+        // Get local files
+        console.log('Scanning local files...');
+        const localFiles = getLocalFiles(config.localDir);
+        console.log(`Found ${localFiles.length} local files\n`);
 
-        // Upload all files to current directory (.)
-        console.log(`\nUploading files from ${config.localDir}...`);
-        console.log('This may take a few minutes...\n');
+        // Get remote files (for comparison)
+        let remoteFiles = new Map();
+        if (!forceFullUpload) {
+            console.log('Scanning remote files for comparison...');
+            remoteFiles = await getRemoteFiles(client, config.remoteDir);
+            console.log(`Found ${remoteFiles.size} remote files\n`);
+        }
 
-        await client.uploadFromDir(config.localDir);
+        // Compare and upload
+        console.log('Uploading changed files...\n');
 
+        for (const file of localFiles) {
+            const remoteFile = remoteFiles.get(file.remotePath);
+
+            // Check if file needs uploading
+            const needsUpload = forceFullUpload ||
+                !remoteFile ||
+                remoteFile.size !== file.size;
+
+            if (needsUpload) {
+                try {
+                    // Ensure directory exists
+                    await ensureRemoteDir(client, file.remotePath);
+
+                    // Upload file
+                    await client.cd('/');
+                    await client.uploadFrom(file.localPath, file.remotePath);
+
+                    stats.uploaded++;
+                    stats.totalBytes += file.size;
+
+                    const sizeKB = (file.size / 1024).toFixed(1);
+                    console.log(`  ✓ ${file.remotePath} (${sizeKB} KB)`);
+                } catch (err) {
+                    stats.errors++;
+                    console.log(`  ✗ ${file.remotePath} - ${err.message}`);
+                }
+            } else {
+                stats.skipped++;
+            }
+        }
+
+        // Summary
         console.log('\n==========================================');
         console.log('Deployment complete!');
         console.log('==========================================');
-        console.log('Site: https://www.thetributary.ai');
+        console.log(`  Uploaded: ${stats.uploaded} files (${(stats.totalBytes / 1024 / 1024).toFixed(2)} MB)`);
+        console.log(`  Skipped:  ${stats.skipped} files (unchanged)`);
+        if (stats.errors > 0) {
+            console.log(`  Errors:   ${stats.errors} files`);
+        }
+        console.log('\nSite: https://www.thetributary.ai');
 
     } catch (err) {
         console.error('\nERROR:', err.message);
