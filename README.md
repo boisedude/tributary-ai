@@ -23,7 +23,7 @@ Preparing businesses for the agentic era through strategic technology transforma
 
 ## 🚀 Tech Stack
 
-- **Framework:** Next.js 16.0.5 (App Router)
+- **Framework:** Next.js 16.1.6 (App Router)
 - **Language:** TypeScript 5
 - **Styling:** Tailwind CSS v4
 - **Components:** shadcn/ui (Radix UI primitives)

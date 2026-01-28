@@ -6,8 +6,6 @@ import {
   ArrowRight,
   Layers,
   Rocket,
-  Shield,
-  Code,
   Database,
   Cpu,
 } from "lucide-react";
