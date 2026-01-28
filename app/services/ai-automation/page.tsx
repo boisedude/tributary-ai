@@ -11,11 +11,12 @@ import {
   Users,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
+import { BreadcrumbListSchema, AIAutomationServiceSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "AI Automation & Deployment | Tributary AI",
+  title: "AI Automation & Process Automation Services | Tributary AI",
   description:
-    "Implementing AI into existing workflows. RPA, process automation, AI agent deployment. Turn your assessment findings into working automation.",
+    "AI automation and RPA services for mid-market companies. Process automation, AI agent deployment, and workflow optimization.",
   keywords: [
     "AI automation",
     "RPA",
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
     "AI deployment",
   ],
   openGraph: {
-    title: "AI Automation & Deployment | Tributary AI",
+    title: "AI Automation & Process Automation Services | Tributary AI",
     description:
-      "Implementing AI into existing workflows. RPA, process automation, AI agent deployment.",
+      "AI automation and RPA services. Process automation and AI agent deployment for mid-market companies.",
     type: "website",
   },
   alternates: {
@@ -89,6 +90,14 @@ const useCases = [
 export default function AIAutomationPage() {
   return (
     <article className="bg-gradient-subtle">
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", url: "https://www.thetributary.ai" },
+          { name: "Services", url: "https://www.thetributary.ai/services" },
+          { name: "AI Automation", url: "https://www.thetributary.ai/services/ai-automation" },
+        ]}
+      />
+      <AIAutomationServiceSchema />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

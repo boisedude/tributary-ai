@@ -9,11 +9,12 @@ import {
   ClipboardCheck,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
+import { BreadcrumbListSchema, FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Services | Tributary AI",
+  title: "AI Consulting & Technology Services | Tributary AI",
   description:
-    "AI-powered consulting services: Assessment, Automation & Deployment, Application Development, and Managed Services. Our heavy use of AI tooling allows us to deliver at a fraction of the usual cost.",
+    "AI consulting and managed IT services for mid-market companies. Assessment, automation, custom development, and fractional CTO support.",
   keywords: [
     "AI consulting services",
     "AI automation",
@@ -23,15 +24,34 @@ export const metadata: Metadata = {
     "technology consulting",
   ],
   openGraph: {
-    title: "Services | Tributary AI",
+    title: "AI Consulting & Technology Services | Tributary AI",
     description:
-      "AI-powered consulting services delivered at a fraction of the usual cost.",
+      "AI consulting and managed IT services for mid-market companies.",
     type: "website",
   },
   alternates: {
     canonical: "https://www.thetributary.ai/services/",
   },
 };
+
+const serviceFAQs = [
+  {
+    question: "What service is right if we need to automate specific processes?",
+    answer: "AI Automation & Deployment is designed for automating specific workflows using RPA, process automation, and AI agents. If you know what's broken, we implement the fix.",
+  },
+  {
+    question: "What if we want to build an AI-powered product or tool?",
+    answer: "AI Application Development provides custom software from prototype to production, including internal tools and customer-facing products that give you a competitive edge.",
+  },
+  {
+    question: "What service covers ongoing tech leadership or IT support?",
+    answer: "Managed Services offers fractional CTO/CIO advisory, IT management, and cloud administration on a monthly retainer with no long-term contracts required.",
+  },
+  {
+    question: "Where should we start if we're not sure what we need?",
+    answer: "The Assessment is a two-week diagnostic that evaluates People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
+  },
+];
 
 const services = [
   {
@@ -80,15 +100,22 @@ const services = [
 export default function ServicesPage() {
   return (
     <article className="bg-gradient-subtle">
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", url: "https://www.thetributary.ai" },
+          { name: "Services", url: "https://www.thetributary.ai/services" },
+        ]}
+      />
+      <FAQSchema faqs={serviceFAQs} />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Services
+              AI Consulting & Technology Services
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              AI-native consulting. Our heavy use of AI tooling allows us to deliver these services at a fraction of the usual cost.
+              Technology consulting and managed IT services powered by AI. We help mid-market companies deliver enterprise-quality outcomes at a fraction of the usual cost.
             </p>
           </div>
         </div>

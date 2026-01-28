@@ -23,12 +23,12 @@ export function Footer() {
             <div className="flex items-center space-x-3 mb-4">
               <Image
                 src="/logos/logo-footer.png"
-                alt={COMPANY.LEGAL_NAME}
+                alt={COMPANY.NAME}
                 width={48}
                 height={48}
                 className="h-12 w-12"
               />
-              <h3 className="text-lg font-semibold">{COMPANY.LEGAL_NAME}</h3>
+              <h3 className="text-lg font-semibold">{COMPANY.NAME}</h3>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
               {COMPANY.DESCRIPTION}

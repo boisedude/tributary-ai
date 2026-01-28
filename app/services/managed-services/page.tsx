@@ -11,11 +11,12 @@ import {
   Brain,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
+import { BreadcrumbListSchema, ManagedServicesSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Managed Services | Tributary AI",
+  title: "Managed IT Services & Fractional CTO | Tributary AI",
   description:
-    "Ongoing IT management, cloud administration, and fractional CTO/CIO advisory. AI-powered operations at a fraction of traditional MSP costs.",
+    "Managed IT services, cloud administration, and fractional CTO/CIO advisory for mid-market companies. AI-powered operations, lower costs.",
   keywords: [
     "managed IT services",
     "fractional CTO",
@@ -26,9 +27,9 @@ export const metadata: Metadata = {
     "MSP",
   ],
   openGraph: {
-    title: "Managed Services | Tributary AI",
+    title: "Managed IT Services & Fractional CTO | Tributary AI",
     description:
-      "AI-powered IT management and fractional executive advisory.",
+      "Managed IT services and fractional CTO/CIO advisory for mid-market companies.",
     type: "website",
   },
   alternates: {
@@ -95,6 +96,14 @@ const includedServices = [
 export default function ManagedServicesPage() {
   return (
     <article className="bg-gradient-subtle">
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", url: "https://www.thetributary.ai" },
+          { name: "Services", url: "https://www.thetributary.ai/services" },
+          { name: "Managed Services", url: "https://www.thetributary.ai/services/managed-services" },
+        ]}
+      />
+      <ManagedServicesSchema />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -103,7 +112,7 @@ export default function ManagedServicesPage() {
               Ongoing Support
             </p>
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
-              Managed Services
+              Managed IT Services & Fractional CTO
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
               Ongoing IT management, cloud administration, and fractional CTO/CIO advisory. AI-powered operations at a fraction of traditional MSP costs.

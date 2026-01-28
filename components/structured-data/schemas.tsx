@@ -225,3 +225,87 @@ export function ServiceSchema() {
     />
   );
 }
+
+export function AIAutomationServiceSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Automation & Deployment",
+    description:
+      "Implementing AI into existing workflows. RPA, process automation, AI agent deployment for mid-market companies.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Tributary AI",
+      url: "https://www.thetributary.ai",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "Process Automation",
+  };
+
+  return (
+    <Script
+      id="ai-automation-service-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function AIDevelopmentServiceSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "AI Application Development",
+    description:
+      "Custom AI-powered applications. Internal tools, customer-facing products. From prototype to production.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Tributary AI",
+      url: "https://www.thetributary.ai",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "Software Development",
+  };
+
+  return (
+    <Script
+      id="ai-development-service-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function ManagedServicesSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Managed IT Services & Fractional CTO",
+    description:
+      "Ongoing IT management, cloud administration, and fractional CTO/CIO advisory. AI-powered operations at a fraction of traditional MSP costs.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Tributary AI",
+      url: "https://www.thetributary.ai",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "Managed IT Services",
+  };
+
+  return (
+    <Script
+      id="managed-services-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

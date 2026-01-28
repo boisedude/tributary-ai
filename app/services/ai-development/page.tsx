@@ -11,11 +11,12 @@ import {
   Cpu,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
+import { BreadcrumbListSchema, AIDevelopmentServiceSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "AI Application Development | Tributary AI",
+  title: "Custom AI Application Development | Tributary AI",
   description:
-    "Custom AI-powered applications. Internal tools, customer-facing products. From prototype to production. Built with modern AI tooling for faster delivery.",
+    "Custom AI-powered applications for mid-market companies. Internal tools, customer-facing products, LLM integration. Prototype to production.",
   keywords: [
     "AI application development",
     "custom AI software",
@@ -25,9 +26,9 @@ export const metadata: Metadata = {
     "LLM applications",
   ],
   openGraph: {
-    title: "AI Application Development | Tributary AI",
+    title: "Custom AI Application Development | Tributary AI",
     description:
-      "Custom AI-powered applications. From prototype to production.",
+      "Custom AI-powered applications for mid-market companies. From prototype to production.",
     type: "website",
   },
   alternates: {
@@ -97,6 +98,14 @@ const processSteps = [
 export default function AIDevelopmentPage() {
   return (
     <article className="bg-gradient-subtle">
+      <BreadcrumbListSchema
+        items={[
+          { name: "Home", url: "https://www.thetributary.ai" },
+          { name: "Services", url: "https://www.thetributary.ai/services" },
+          { name: "AI Development", url: "https://www.thetributary.ai/services/ai-development" },
+        ]}
+      />
+      <AIDevelopmentServiceSchema />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

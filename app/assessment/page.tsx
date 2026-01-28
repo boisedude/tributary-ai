@@ -13,11 +13,12 @@ import { ServiceSchema } from "@/components/structured-data/schemas";
 import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "The Assessment - Two-Week Diagnostic",
+  title: "AI Readiness Assessment | Technology Diagnostic | Tributary AI",
   description:
-    "A two-week diagnostic that shows you exactly where you stand, what's holding you back, and what to change. Evaluates People, Process, Technology, and Politics. $25K-$35K with satisfaction guarantee.",
+    "Two-week AI readiness diagnostic for mid-market companies. Evaluate People, Process, Technology, and Politics. $25K-$35K. Satisfaction guaranteed.",
   keywords: [
     "AI assessment",
+    "AI readiness assessment",
     "technology assessment",
     "digital transformation assessment",
     "organizational assessment",
@@ -25,15 +26,15 @@ export const metadata: Metadata = {
     "mid-market consulting",
   ],
   openGraph: {
-    title: "The Assessment - Tributary AI",
+    title: "AI Readiness Assessment | Tributary AI",
     description:
-      "A two-week diagnostic that shows you exactly where you stand, what's holding you back, and what to change.",
+      "Two-week diagnostic that shows you where you stand and what to change. Evaluates People, Process, Technology, and Politics.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Assessment | Tributary AI",
-    description: "A two-week diagnostic evaluating your organization's AI readiness across People, Process, Technology, and Politics.",
+    title: "AI Readiness Assessment | Tributary AI",
+    description: "Two-week diagnostic evaluating your organization's AI readiness across People, Process, Technology, and Politics.",
     images: ["/og-image.png"],
   },
   alternates: {
