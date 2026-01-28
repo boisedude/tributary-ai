@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for Tributary AI. Learn how we collect, use, and protect your information.",
+  keywords: ["privacy policy", "data protection", "AI consulting privacy"],
 };
 
 export default function PrivacyPage() {
@@ -15,128 +16,229 @@ export default function PrivacyPage() {
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold sm:text-5xl">Privacy Policy</h1>
             <p className="mt-4 text-muted-foreground">
-              Last updated: January 2025
+              Last updated: January 2026
             </p>
 
             <Card className="mt-12">
               <CardContent className="prose prose-gray dark:prose-invert max-w-none p-8">
                 <h2>Introduction</h2>
                 <p>
-                  Tributary AI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) respects your privacy
-                  and is committed to protecting your personal information. This
-                  Privacy Policy explains how we collect, use, and safeguard your
-                  information when you visit our website at thetributary.ai or
-                  engage with our consulting services.
+                  Tributary AI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the
+                  website at thetributary.ai. This Privacy Policy describes how we
+                  collect, use, and share information when you use our website or
+                  engage with our consulting services. By using our website, you
+                  agree to the collection and use of information as described in
+                  this policy.
                 </p>
 
                 <h2>Information We Collect</h2>
                 <h3>Information You Provide</h3>
-                <p>We collect information you voluntarily provide, including:</p>
+                <p>We collect information you voluntarily submit, including:</p>
                 <ul>
                   <li>
                     <strong>Contact Information:</strong> Name, email address,
-                    company name, and phone number when you fill out contact forms
-                    or schedule consultations
+                    company name, and phone number when you fill out forms,
+                    download resources, or schedule consultations
+                  </li>
+                  <li>
+                    <strong>Resource Downloads:</strong> Email address when you
+                    request access to guides, whitepapers, or other downloadable
+                    content
                   </li>
                   <li>
                     <strong>Assessment Responses:</strong> Information you provide
-                    through our AI Readiness Assessment tool
+                    through our AI Readiness Assessment or similar tools
                   </li>
                   <li>
-                    <strong>Communications:</strong> Content of emails or messages
-                    you send us
+                    <strong>Communications:</strong> Content of emails, messages,
+                    or other correspondence you send us
                   </li>
                 </ul>
 
                 <h3>Automatically Collected Information</h3>
                 <p>
-                  When you visit our website, we may automatically collect certain
-                  information, including:
+                  When you visit our website, we automatically collect:
                 </p>
                 <ul>
-                  <li>Browser type and version</li>
-                  <li>Operating system</li>
-                  <li>Pages visited and time spent on pages</li>
-                  <li>Referring website addresses</li>
-                  <li>IP address (anonymized where possible)</li>
+                  <li>Browser type, version, and settings</li>
+                  <li>Operating system and device information</li>
+                  <li>Pages visited, time spent, and navigation paths</li>
+                  <li>Referring URLs and exit pages</li>
+                  <li>IP address and approximate geographic location</li>
+                  <li>Date and time of visits</li>
                 </ul>
 
                 <h2>How We Use Your Information</h2>
-                <p>We use the information we collect to:</p>
+                <p>We use collected information for business purposes including:</p>
                 <ul>
-                  <li>Respond to your inquiries and provide requested services</li>
-                  <li>Schedule and conduct consultations</li>
-                  <li>Provide personalized assessment results and recommendations</li>
-                  <li>Send relevant information about our services (with your consent)</li>
-                  <li>Improve our website and services</li>
-                  <li>Comply with legal obligations</li>
+                  <li>Providing requested services and responding to inquiries</li>
+                  <li>Scheduling and conducting consultations</li>
+                  <li>Delivering requested resources and content</li>
+                  <li>Sending information about our services, insights, and offerings</li>
+                  <li>Analyzing website usage and improving our services</li>
+                  <li>Marketing and promotional communications</li>
+                  <li>Protecting our legal rights and complying with legal obligations</li>
+                  <li>Any other purpose disclosed at the time of collection</li>
                 </ul>
 
-                <h2>Cookies and Tracking</h2>
+                <h2>Cookies and Tracking Technologies</h2>
                 <p>
-                  Our website uses essential cookies to ensure proper functionality.
-                  We may also use analytics tools to understand how visitors use our
-                  site. You can control cookie preferences through your browser
-                  settings.
+                  Our website uses cookies and similar technologies:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Functional Storage:</strong> We use browser local storage
+                    for site functionality such as theme preferences (light/dark mode)
+                  </li>
+                  <li>
+                    <strong>Analytics:</strong> We use Google Analytics to collect
+                    information about website usage including pages visited, session
+                    duration, and general location. Google may use this data as
+                    described in{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent"
+                    >
+                      Google&apos;s Privacy Policy
+                    </a>
+                  </li>
+                </ul>
+                <p>
+                  You may disable cookies through your browser settings, though
+                  this may affect site functionality. To opt out of Google Analytics,
+                  install the{" "}
+                  <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent"
+                  >
+                    Google Analytics Opt-out Browser Add-on
+                  </a>
+                  .
                 </p>
 
                 <h2>Third-Party Services</h2>
-                <p>We may use third-party services that collect information, including:</p>
+                <p>
+                  We use third-party services to operate our business. These services
+                  may collect and process your information according to their own
+                  privacy policies:
+                </p>
                 <ul>
                   <li>
-                    <strong>Calendly:</strong> For scheduling consultations
+                    <strong>Web3Forms:</strong> Processes form submissions including
+                    resource download requests. Subject to{" "}
+                    <a
+                      href="https://web3forms.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent"
+                    >
+                      Web3Forms Privacy Policy
+                    </a>
                   </li>
                   <li>
-                    <strong>Analytics providers:</strong> To understand website usage
+                    <strong>Microsoft Bookings:</strong> Handles consultation scheduling.
+                    Subject to{" "}
+                    <a
+                      href="https://privacy.microsoft.com/en-us/privacystatement"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent"
+                    >
+                      Microsoft&apos;s Privacy Statement
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Google Analytics:</strong> Provides website analytics.
+                    Subject to{" "}
+                    <a
+                      href="https://policies.google.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent"
+                    >
+                      Google&apos;s Privacy Policy
+                    </a>
                   </li>
                 </ul>
                 <p>
-                  These services have their own privacy policies governing how they
-                  handle your data.
+                  We are not responsible for the privacy practices of third-party
+                  services. We encourage you to review their privacy policies.
+                </p>
+
+                <h2>External Links</h2>
+                <p>
+                  Our website contains links to external sites including LinkedIn
+                  and other third-party websites. We are not responsible for the
+                  privacy practices or content of external sites. Clicking external
+                  links may subject you to those sites&apos; tracking and data collection.
+                </p>
+
+                <h2>Information Sharing</h2>
+                <p>We may share your information:</p>
+                <ul>
+                  <li>With service providers who assist our business operations</li>
+                  <li>To comply with legal obligations or respond to lawful requests</li>
+                  <li>To protect our rights, property, or safety</li>
+                  <li>In connection with a merger, acquisition, or sale of assets</li>
+                  <li>With your consent or at your direction</li>
+                </ul>
+
+                <h2>Data Retention</h2>
+                <p>
+                  We retain personal information for as long as we have a legitimate
+                  business need, to provide services, to comply with legal obligations,
+                  resolve disputes, and enforce agreements. Retention periods vary
+                  based on the type of information and business requirements.
                 </p>
 
                 <h2>Data Security</h2>
                 <p>
-                  We implement appropriate technical and organizational measures to
-                  protect your personal information against unauthorized access,
-                  alteration, disclosure, or destruction. However, no method of
-                  transmission over the Internet is 100% secure.
+                  We use reasonable measures to protect information from unauthorized
+                  access, alteration, or destruction. However, no internet transmission
+                  or electronic storage is completely secure, and we cannot guarantee
+                  absolute security.
                 </p>
 
-                <h2>Data Retention</h2>
+                <h2>Your Choices</h2>
+                <h3>Marketing Communications</h3>
                 <p>
-                  We retain your personal information only as long as necessary to
-                  fulfill the purposes for which it was collected, provide our
-                  services, and comply with legal obligations.
+                  You may opt out of marketing emails by clicking the unsubscribe
+                  link in any marketing message or contacting us directly. Note that
+                  you may still receive transactional or service-related communications.
                 </p>
 
-                <h2>Your Rights</h2>
-                <p>Depending on your location, you may have the right to:</p>
-                <ul>
-                  <li>Access the personal information we hold about you</li>
-                  <li>Request correction of inaccurate information</li>
-                  <li>Request deletion of your information</li>
-                  <li>Opt out of marketing communications</li>
-                  <li>Withdraw consent where processing is based on consent</li>
-                </ul>
+                <h3>California Residents</h3>
+                <p>
+                  California residents may have additional rights under the California
+                  Consumer Privacy Act (CCPA), including the right to know what personal
+                  information we collect, request deletion of personal information,
+                  and opt out of the sale of personal information. We do not sell
+                  personal information as defined by the CCPA. To exercise your rights,
+                  contact us using the information below.
+                </p>
 
                 <h2>Children&apos;s Privacy</h2>
                 <p>
-                  Our services are not directed to individuals under 18. We do not
-                  knowingly collect personal information from children.
+                  Our services are intended for business professionals and are not
+                  directed to individuals under 18. We do not knowingly collect
+                  personal information from children under 18.
                 </p>
 
                 <h2>Changes to This Policy</h2>
                 <p>
-                  We may update this Privacy Policy from time to time. We will
-                  notify you of any material changes by posting the new policy on
-                  this page with an updated revision date.
+                  We may update this Privacy Policy at any time. Changes are effective
+                  when posted to this page. Your continued use of the website after
+                  changes constitutes acceptance of the updated policy.
                 </p>
 
                 <h2>Contact Us</h2>
                 <p>
-                  If you have questions about this Privacy Policy or our privacy
-                  practices, please contact us at:
+                  For questions about this Privacy Policy or to exercise your rights,
+                  contact us at:
                 </p>
                 <p>
                   <strong>Tributary AI</strong>

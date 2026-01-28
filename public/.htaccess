@@ -1,0 +1,46 @@
+# Redirect old resources page to blog
+RedirectMatch 301 ^/resources/?$ /blog/
+
+# Redirect old services subpages
+RedirectMatch 301 ^/services/agentic-advisory/?$ /assessment/
+
+# Redirect old blog posts to blog section or homepage
+RedirectMatch 301 ^/spec-engineering-the-missing-discipline-in-ai-development/?$ /blog/
+RedirectMatch 301 ^/the-ai-advantage-is-realand-growing/?$ /blog/
+RedirectMatch 301 ^/what-is-an-ai-agent-and-how-is-it-different-from-an-llm/?$ /blog/what-agentic-really-means-for-your-business/
+RedirectMatch 301 ^/is-your-business-ready-for-ai/?$ /blog/5-signs-your-business-isnt-ready-for-ai/
+RedirectMatch 301 ^/emerging-ai-trends-shaping-2025-what-businesses-need-to-know/?$ /blog/
+RedirectMatch 301 ^/why-mcps-are-the-secret-weapon-for-scalable-high-impact-ai-applications/?$ /blog/
+
+# Redirect old services page to assessment
+RedirectMatch 301 ^/services/?$ /assessment/
+
+# Redirect PDF requests to HTML versions
+RedirectMatch 301 ^/guides/cloud-marketplace-gtm-playbook\.pdf$ /guides/cloud-marketplace-gtm-playbook.html
+RedirectMatch 301 ^/guides/fractional-gtm-leadership-guide\.pdf$ /guides/fractional-gtm-leadership-guide.html
+RedirectMatch 301 ^/guides/agentic-saas-business-model-guide\.pdf$ /guides/agentic-saas-business-model-guide.html
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json application/xml
+</IfModule>
+
+# Cache static assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/font-woff2 "access plus 1 month"
+</IfModule>

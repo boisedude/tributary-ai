@@ -1,51 +1,36 @@
-"use client";
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Calendar, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 /**
- * Call-to-action section component with gradient background.
- * Used at the bottom of pages to encourage user engagement.
+ * Call-to-action section.
+ * Clean, editorial design with solid background.
  */
 export function CTASection() {
   return (
-    <section className="bg-gradient-tributary py-24 text-white">
+    <section className="bg-primary py-20 text-primary-foreground">
       <div className="container mx-auto px-4">
-        <motion.div
-          className="mx-auto max-w-3xl text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
-            Ready to Simplify?
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            Ready to move?
           </h2>
-          <p className="mt-4 text-lg text-white/90">
-            Stop adding. Start simplifying. Let&apos;s have a direct conversation about where you are and what it will take to move faster.
+          <p className="mt-4 text-lg opacity-90">
+            AI is the moment where business begins its next great evolution. Let&apos;s talk about where you are and whether we can help you navigate it.
           </p>
 
           <div className="mt-8">
-            <Button
-              asChild
-              size="lg"
-              variant="secondary"
-              className="group"
-            >
+            <Button asChild size="lg" variant="secondary" className="group">
               <Link href="/contact">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book a Call
+                Book a Conversation
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>
 
-          <p className="mt-8 text-sm text-white/70">
-            No sales pitch. No 47-slide deck. Just a direct conversation about your situation.
+          <p className="mt-8 text-sm opacity-70">
+            No sales pitch. No 47-slide deck. Just a direct conversation.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

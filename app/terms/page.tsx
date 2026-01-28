@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for Tributary AI. Review the terms governing use of our website and services.",
+  keywords: ["terms of service", "consulting agreement", "service terms"],
 };
 
 export default function TermsPage() {

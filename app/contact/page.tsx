@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Linkedin, Calendar, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Calendar } from "lucide-react";
 import { COMPANY } from "@/lib/constants";
 import { FAQSchema } from "@/components/structured-data/schemas";
 
@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     description:
       "Schedule a conversation about AI strategy, technology simplification, and The Assessment.",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://www.thetributary.ai/contact/",
   },
 };
 
@@ -84,7 +87,7 @@ export default function ContactPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-            {/* Left Column - Calendly Embed */}
+            {/* Left Column - Microsoft Bookings Embed */}
             <div>
               <Card className="h-full">
                 <CardHeader>
@@ -99,12 +102,14 @@ export default function ContactPage() {
                 <CardContent>
                   <div className="relative w-full overflow-hidden rounded-lg border bg-muted/30" style={{ height: "600px" }}>
                     <iframe
-                      src="https://calendly.com/tributary-ai/30min"
+                      src="https://outlook.office.com/book/TributaryTime@davecooper.com/?ismsaljsauthenabled"
                       width="100%"
                       height="100%"
                       frameBorder="0"
+                      scrolling="yes"
                       title="Schedule a consultation with Tributary AI"
                       className="rounded-lg"
+                      style={{ border: 0 }}
                     />
                   </div>
                 </CardContent>
@@ -113,7 +118,7 @@ export default function ContactPage() {
 
             {/* Right Column - Contact Information */}
             <div className="space-y-8">
-              <Card className="card-glow-teal">
+              <Card>
                 <CardHeader>
                   <CardTitle>Get in Touch</CardTitle>
                   <CardDescription>
@@ -122,12 +127,10 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   {/* Phone */}
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Phone className="h-5 w-5 text-accent" />
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 shrink-0 text-accent" />
                     <div>
-                      <p className="font-semibold">Phone</p>
+                      <span className="font-semibold">Phone: </span>
                       <a
                         href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
                         className="text-accent hover:underline"
@@ -138,51 +141,40 @@ export default function ContactPage() {
                   </div>
 
                   {/* Email */}
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Mail className="h-5 w-5 text-accent" />
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 shrink-0 text-accent" />
                     <div>
-                      <p className="font-semibold">Email</p>
+                      <span className="font-semibold">Email: </span>
                       <a
                         href="mailto:sales@thetributary.ai"
                         className="text-accent hover:underline"
                       >
                         sales@thetributary.ai
                       </a>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        Or reach Michael directly:{" "}
-                        <a
-                          href="mailto:michael@thetributary.ai"
-                          className="text-accent hover:underline"
-                        >
-                          michael@thetributary.ai
-                        </a>
-                      </p>
+                      <span className="text-muted-foreground"> or </span>
+                      <a
+                        href="mailto:michael@thetributary.ai"
+                        className="text-accent hover:underline"
+                      >
+                        michael@thetributary.ai
+                      </a>
                     </div>
                   </div>
 
                   {/* Location */}
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <MapPin className="h-5 w-5 text-accent" />
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-5 w-5 shrink-0 text-accent" />
                     <div>
-                      <p className="font-semibold">Location</p>
-                      <p className="text-muted-foreground">Boise, Idaho</p>
-                      <p className="mt-1 text-sm text-muted-foreground">
-                        Serving clients nationally
-                      </p>
+                      <span className="font-semibold">Location: </span>
+                      <span className="text-muted-foreground">Boise, Idaho (serving clients nationally)</span>
                     </div>
                   </div>
 
                   {/* LinkedIn */}
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent/10">
-                      <Linkedin className="h-5 w-5 text-accent" />
-                    </div>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="h-5 w-5 shrink-0 text-accent" />
                     <div>
-                      <p className="font-semibold">LinkedIn</p>
+                      <span className="font-semibold">LinkedIn: </span>
                       <a
                         href="https://www.linkedin.com/company/tributaryai"
                         target="_blank"
@@ -205,10 +197,12 @@ export default function ContactPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-4">
+                  <ol className="space-y-4">
                     {expectations.map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold text-white">
+                          {index + 1}
+                        </span>
                         <div>
                           <p className="font-semibold">{item.title}</p>
                           <p className="text-sm text-muted-foreground">
@@ -217,7 +211,7 @@ export default function ContactPage() {
                         </div>
                       </li>
                     ))}
-                  </ul>
+                  </ol>
                 </CardContent>
               </Card>
             </div>
@@ -229,7 +223,7 @@ export default function ContactPage() {
       <section className="pb-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="mb-12 text-center">
+            <div className="mb-8">
               <h2 className="text-3xl font-bold sm:text-4xl">
                 Frequently Asked Questions
               </h2>
@@ -238,16 +232,12 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="grid gap-6">
+            <div className="divide-y divide-border">
               {faqs.map((faq, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <CardTitle className="text-lg">{faq.question}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">{faq.answer}</p>
-                  </CardContent>
-                </Card>
+                <div key={index} className="py-6 first:pt-0 last:pb-0">
+                  <p className="font-bold">{faq.question}</p>
+                  <p className="mt-2 text-muted-foreground">{faq.answer}</p>
+                </div>
               ))}
             </div>
           </div>

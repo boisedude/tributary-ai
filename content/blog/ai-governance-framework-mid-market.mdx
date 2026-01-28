@@ -19,7 +19,7 @@ Let's be clear about what we're preventing:
 
 **Reputational Damage**: An AI system that makes biased decisions, mishandles customer data, or produces embarrassing outputs can destroy trust you spent years building.
 
-**Legal Exposure**: Regulations like GDPR, CCPA, and industry-specific requirements apply regardless of company size. AI systems that violate these create liability.
+**Legal Exposure**: Regulations like GDPR, CCPA, and industry-specific requirements apply regardless of company size. AI systems that violate these create liability. Organizations should consider frameworks like the [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework) for guidance on managing AI-related risks.
 
 **Operational Risk**: Poorly governed AI can make decisions that cascade into business disruptions—think automated systems that cancel valid transactions, misallocate inventory, or make incorrect predictions that drive bad strategies.
 
@@ -41,7 +41,7 @@ AI is only as good as its data. Data governance ensures you're building on a sol
 - **Data Inventory**: Document what data your AI systems access. Include data sources, types, sensitivity levels, and refresh frequencies.
 - **Access Controls**: Ensure AI systems can only access data they legitimately need. No "just give it access to everything" shortcuts.
 - **Data Quality Standards**: Establish minimum thresholds for completeness, accuracy, and freshness. AI trained on garbage data produces garbage results.
-- **Privacy Safeguards**: Identify and protect PII. Ensure compliance with relevant privacy regulations. Implement data minimization—collect only what you need.
+- **Privacy Safeguards**: Identify and protect PII. Ensure compliance with relevant privacy regulations such as [GDPR](https://gdpr.eu/) and [CCPA](https://oag.ca.gov/privacy/ccpa). Implement data minimization—collect only what you need.
 
 **What This Looks Like in Practice**:
 - A simple spreadsheet documenting data sources for each AI use case
@@ -53,7 +53,7 @@ AI is only as good as its data. Data governance ensures you're building on a sol
 
 ### 2. Ethics and Fairness: Prevent Biased Outcomes
 
-AI systems can embed and amplify biases in ways that create real harm and legal liability.
+AI systems can embed and amplify biases in ways that create real harm and legal liability. The [NIST AI RMF Playbook](https://airc.nist.gov/AI_RMF_Knowledge_Base/Playbook) provides practical guidance on identifying and mitigating these risks.
 
 **Start Here**:
 - **Bias Assessment**: Evaluate training data and outcomes for potential bias across protected categories (race, gender, age, etc.).
@@ -118,6 +118,7 @@ Don't try to implement everything at once. Here's a practical rollout path:
 - Document data sources and access controls
 - Establish basic security requirements
 - Create simple decision-logging mechanisms
+- Assess [organizational readiness](/blog/5-signs-your-business-isnt-ready-for-ai) for AI governance
 
 ### Phase 2: Risk Assessment (Weeks 5-8)
 - Evaluate each use case for risk level (consider impact, automation level, stakeholder sensitivity)

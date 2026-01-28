@@ -181,10 +181,10 @@ export const FORM_CONFIG = {
  * Company credentials and awards for display.
  */
 export const CREDENTIALS = [
-  "30 Years Enterprise Technology",
+  "30 Years Transformation Experience",
   "Microsoft",
   "Citrix",
   "Confluent",
+  "Astronomer",
   "Micron",
-  "Simplot",
 ] as const;

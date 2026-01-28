@@ -61,6 +61,7 @@ export function LocalBusinessSchema() {
     },
     url: "https://www.thetributary.ai",
     email: "sales@thetributary.ai",
+    telephone: "(208) 330-5534",
     priceRange: "$$$$",
     areaServed: {
       "@type": "Country",
@@ -85,6 +86,7 @@ interface BlogPostSchemaProps {
   title: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
   author: string;
   image?: string;
   url: string;
@@ -94,6 +96,7 @@ export function BlogPostSchema({
   title,
   description,
   datePublished,
+  dateModified,
   author,
   image,
   url,
@@ -104,6 +107,7 @@ export function BlogPostSchema({
     headline: title,
     description: description,
     datePublished: datePublished,
+    dateModified: dateModified || datePublished,
     author: {
       "@type": "Organization",
       name: author,
@@ -188,6 +192,34 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   return (
     <Script
       id="faq-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function ServiceSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "The Assessment - AI Readiness Diagnostic",
+    description:
+      "A two-week diagnostic evaluating People, Process, Technology, and Politics to identify AI transformation opportunities",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Tributary AI",
+      url: "https://www.thetributary.ai",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "AI Consulting",
+  };
+
+  return (
+    <Script
+      id="service-schema"
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

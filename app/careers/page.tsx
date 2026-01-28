@@ -8,11 +8,21 @@ export const metadata: Metadata = {
   title: "Careers | Tributary AI",
   description:
     "Join Tributary. We're building a firm of architects and operators — people who've led transformations, not just advised on them.",
+  keywords: ["careers", "AI consulting jobs", "technology careers", "Boise Idaho jobs"],
   openGraph: {
     title: "Careers | Tributary AI",
     description:
       "Join Tributary. We're building a firm of architects and operators.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Careers | Tributary AI",
+    description: "Join Tributary. We're building a firm of architects and operators - people who've led transformations, not just advised on them.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.thetributary.ai/careers/",
   },
 };
 
@@ -124,40 +134,32 @@ export default function CareersPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold mb-8">What We Look For</h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">Technical Excellence</h3>
-                  <p className="text-muted-foreground">
-                    Deep enterprise technology experience. You&apos;ve built and maintained systems that matter.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">Simplification Mindset</h3>
-                  <p className="text-muted-foreground">
-                    Bias toward simplification over complexity. You solve problems, not add tools.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">Client Focus</h3>
-                  <p className="text-muted-foreground">
-                    Comfort with ambiguity and client-facing work. You communicate clearly and build trust.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-3">Idaho-Based</h3>
-                  <p className="text-muted-foreground">
-                    For MSP roles: based in or willing to relocate to the Boise area.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <ul className="grid gap-4 md:grid-cols-2">
+              <li className="border rounded-lg p-6">
+                <h3 className="font-semibold text-lg mb-2">Technical Excellence</h3>
+                <p className="text-muted-foreground">
+                  Deep enterprise technology experience. You&apos;ve built and maintained systems that matter.
+                </p>
+              </li>
+              <li className="border rounded-lg p-6">
+                <h3 className="font-semibold text-lg mb-2">Simplification Mindset</h3>
+                <p className="text-muted-foreground">
+                  Bias toward simplification over complexity. You solve problems, not add tools.
+                </p>
+              </li>
+              <li className="border rounded-lg p-6">
+                <h3 className="font-semibold text-lg mb-2">Client Focus</h3>
+                <p className="text-muted-foreground">
+                  Comfort with ambiguity and client-facing work. You communicate clearly and build trust.
+                </p>
+              </li>
+              <li className="border rounded-lg p-6">
+                <h3 className="font-semibold text-lg mb-2">Idaho-Based</h3>
+                <p className="text-muted-foreground">
+                  For MSP roles: based in or willing to relocate to the Boise area.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

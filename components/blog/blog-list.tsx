@@ -6,7 +6,6 @@ import { Input } from "@/components/ui/input"
 import Link from "next/link"
 import Image from "next/image"
 import { Calendar, Clock, Search } from "lucide-react"
-import { motion } from "framer-motion"
 import { useState } from "react"
 import type { BlogPost } from "@/lib/blog"
 
@@ -45,11 +44,7 @@ export function BlogList({ posts }: BlogListProps) {
 
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-12 text-center"
-      >
+      <div className="mb-12 text-center">
         <h1 className="mb-4 text-5xl font-bold">Insights & Analysis</h1>
         <p className="text-xl text-muted-foreground">
           AI strategy, systems thinking, and business transformation
@@ -68,7 +63,7 @@ export function BlogList({ posts }: BlogListProps) {
             />
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {filteredPosts.length === 0 ? (
         <div className="text-center">
@@ -78,24 +73,18 @@ export function BlogList({ posts }: BlogListProps) {
         </div>
       ) : (
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {filteredPosts.map((post, index) => (
-            <motion.div
-              key={post.slug}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-            >
+          {filteredPosts.map((post) => (
+            <div key={post.slug}>
               <Link href={`/blog/${post.slug}`} className="group h-full">
-                <Card className="h-full overflow-hidden border-2 transition-all duration-300 hover:border-primary hover:shadow-xl hover:shadow-primary/30">
+                <Card className="h-full overflow-hidden border-2 hover:border-accent transition-colors">
                   {post.image && (
-                    <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-teal-500/20">
+                    <div className="aspect-video w-full overflow-hidden">
                       <Image
                         src={post.image}
                         alt={post.title}
                         width={600}
                         height={338}
-                        className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                        className="h-full w-full object-cover"
                         loading="lazy"
                       />
                     </div>
@@ -129,7 +118,7 @@ export function BlogList({ posts }: BlogListProps) {
                   </CardContent>
                 </Card>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/hero";
-import { ProblemSection } from "@/components/sections/problem-section";
-import { TwoPathsSection } from "@/components/sections/two-paths-section";
-import { AssessmentOverview } from "@/components/sections/assessment-overview";
-import { WhatHappensNext } from "@/components/sections/what-happens-next";
-import { AboutSnippet } from "@/components/sections/about-snippet";
+import { ShiftSection } from "@/components/sections/shift-section";
+import { ApproachSection } from "@/components/sections/approach-section";
+import { CredentialsSection } from "@/components/sections/credentials-section";
 import { CTASection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
   title: "Tributary AI | Technology Consulting for the AI Era",
   description:
-    "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster. 30 years of transformation experience.",
+    "AI changes everything—that's the opportunity. We help companies navigate the next evolution of business by simplifying operations, not adding complexity. 30 years of transformation experience.",
   keywords: [
     "AI consulting",
     "technology consulting",
@@ -19,12 +17,14 @@ export const metadata: Metadata = {
     "mid-market consulting",
     "simplify operations",
     "reduce tech spend",
+    "AI transformation",
+    "technology simplification",
     "Boise Idaho consulting",
   ],
   openGraph: {
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "AI should reduce your tech spend—not increase it. We help companies simplify operations, cut complexity, and move faster.",
+      "AI changes everything—that's the opportunity. We help companies navigate the next evolution of business by simplifying operations, not adding complexity.",
     type: "website",
   },
 };
@@ -33,11 +33,9 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <ProblemSection />
-      <TwoPathsSection />
-      <AssessmentOverview />
-      <WhatHappensNext />
-      <AboutSnippet />
+      <ShiftSection />
+      <ApproachSection />
+      <CredentialsSection />
       <CTASection />
     </>
   );

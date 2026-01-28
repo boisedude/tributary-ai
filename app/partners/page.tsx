@@ -2,18 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Calendar, Building2, Users, Scale } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Partners & Alliances | Tributary AI",
   description:
     "Strategic partnerships with AWS and Microsoft. Implementation partners for execution. Scaling Tributary's advisory capacity to mid-market.",
+  keywords: ["AWS partner", "Microsoft partner", "implementation partners", "technology partners"],
   openGraph: {
     title: "Partners & Alliances | Tributary AI",
     description:
       "Strategic partnerships with AWS and Microsoft. Implementation partners for execution.",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Partners & Alliances | Tributary AI",
+    description: "Strategic partnerships with AWS and Microsoft. Implementation partners for execution. Scaling Tributary's advisory capacity to mid-market.",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.thetributary.ai/partners/",
   },
 };
 
@@ -68,51 +77,47 @@ export default function PartnersPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-center mb-12">Cloud Platform Partnerships</h2>
+            <h2 className="text-3xl font-bold mb-12">Cloud Platform Partnerships</h2>
             <div className="grid gap-8 md:grid-cols-2">
               {/* AWS */}
-              <Card>
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center mb-6 h-16">
-                    <Image
-                      src="/logos/partners/aws.png"
-                      alt="Amazon Web Services"
-                      width={120}
-                      height={72}
-                      className="h-12 w-auto object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Amazon Web Services</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Our Assessment evaluates your AWS readiness and identifies optimization opportunities across compute, storage, data services, and networking. If your roadmap includes AWS—whether it&apos;s migrating workloads, consolidating systems, or taking advantage of AI services—our SI partners have the AWS certifications, architectural expertise, and hands-on experience to execute efficiently.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Savings opportunities often emerge from AWS platform features companies don&apos;t know they have. Our partners know where to look.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="border rounded-lg p-8">
+                <div className="flex items-center justify-center mb-6 h-16">
+                  <Image
+                    src="/logos/partners/aws.png"
+                    alt="Amazon Web Services"
+                    width={120}
+                    height={72}
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Amazon Web Services</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Our Assessment evaluates your AWS readiness and identifies optimization opportunities across compute, storage, data services, and networking. If your roadmap includes AWS—whether it&apos;s migrating workloads, consolidating systems, or taking advantage of AI services—our SI partners have the AWS certifications, architectural expertise, and hands-on experience to execute efficiently.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Savings opportunities often emerge from AWS platform features companies don&apos;t know they have. Our partners know where to look.
+                </p>
+              </div>
 
               {/* Microsoft */}
-              <Card>
-                <CardContent className="p-8">
-                  <div className="flex items-center justify-center mb-6 h-16">
-                    <Image
-                      src="/logos/partners/microsoft.png"
-                      alt="Microsoft"
-                      width={150}
-                      height={72}
-                      className="h-8 w-auto object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">Microsoft</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Most mid-market companies have significant Microsoft investments — Azure infrastructure, M365 licensing, and SQL Server databases are starting points for simplification. Our Assessment addresses Microsoft architecture directly, identifying consolidation opportunities, licensing optimization, and paths to cloud-native models.
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Michael&apos;s 25 years with Microsoft and track record of 1st-party Azure integrations at Confluent and Astronomer inform architecture recommendations that actually move the needle.
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="border rounded-lg p-8">
+                <div className="flex items-center justify-center mb-6 h-16">
+                  <Image
+                    src="/logos/partners/microsoft.png"
+                    alt="Microsoft"
+                    width={150}
+                    height={72}
+                    className="h-8 w-auto object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold mb-4">Microsoft</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Most mid-market companies have significant Microsoft investments — Azure infrastructure, M365 licensing, and SQL Server databases are starting points for simplification. Our Assessment addresses Microsoft architecture directly, identifying consolidation opportunities, licensing optimization, and paths to cloud-native models.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  Michael&apos;s 25 years with Microsoft and track record of 1st-party Azure integrations at Confluent and Astronomer inform architecture recommendations that actually move the needle.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -146,37 +151,37 @@ export default function PartnersPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <div className="grid gap-6 md:grid-cols-3">
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Building2 className="h-12 w-12 mx-auto mb-4 text-accent" />
-                  <h3 className="font-semibold text-lg mb-2">Architect-Led</h3>
-                  <p className="text-muted-foreground">
-                    All recommendations and oversight come from people with deep technical strategy experience. We don&apos;t hand over architecture to vendor sales teams.
-                  </p>
-                </CardContent>
-              </Card>
+            <ul className="grid gap-6 md:grid-cols-3">
+              <li className="border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Building2 className="h-5 w-5 text-accent" />
+                  <h3 className="font-semibold text-lg">Architect-Led</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  All recommendations and oversight come from people with deep technical strategy experience. We don&apos;t hand over architecture to vendor sales teams.
+                </p>
+              </li>
 
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Users className="h-12 w-12 mx-auto mb-4 text-accent" />
-                  <h3 className="font-semibold text-lg mb-2">Committed to Your Success</h3>
-                  <p className="text-muted-foreground">
-                    Tributary stays involved through implementation. We&apos;re not trying to maximize SI partner hours. We&apos;re trying to move your business forward.
-                  </p>
-                </CardContent>
-              </Card>
+              <li className="border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Users className="h-5 w-5 text-accent" />
+                  <h3 className="font-semibold text-lg">Committed to Your Success</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  Tributary stays involved through implementation. We&apos;re not trying to maximize SI partner hours. We&apos;re trying to move your business forward.
+                </p>
+              </li>
 
-              <Card>
-                <CardContent className="p-6 text-center">
-                  <Scale className="h-12 w-12 mx-auto mb-4 text-accent" />
-                  <h3 className="font-semibold text-lg mb-2">Vendor-Agnostic</h3>
-                  <p className="text-muted-foreground">
-                    We recommend AWS or Microsoft based on your needs, not partnership margins. Same philosophy extends to all tooling recommendations.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+              <li className="border rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <Scale className="h-5 w-5 text-accent" />
+                  <h3 className="font-semibold text-lg">Vendor-Agnostic</h3>
+                </div>
+                <p className="text-muted-foreground">
+                  We recommend AWS or Microsoft based on your needs, not partnership margins. Same philosophy extends to all tooling recommendations.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -185,26 +190,24 @@ export default function PartnersPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <Card>
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold mb-4">Interested in Partnering With Tributary?</h2>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  We&apos;re selective about who we work with. If your firm has experience with mid-market companies ($100M-$1B revenue), practices architectural discipline, and shares our philosophy about simplification first then automation, we&apos;d like to hear from you.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  <strong>What we look for:</strong>
-                </p>
-                <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
-                  <li>Proven track record with mid-market (not enterprise-only or startup-only)</li>
-                  <li>Deep expertise in cloud platforms, systems integration, or process automation</li>
-                  <li>Willingness to follow architectural recommendations</li>
-                  <li>Communication that keeps customers informed without overwhelming them</li>
-                </ul>
-                <p className="text-muted-foreground">
-                  Contact us at <a href="mailto:partner@thetributary.ai" className="text-accent hover:underline">partner@thetributary.ai</a> to discuss potential partnership.
-                </p>
-              </CardContent>
-            </Card>
+            <div className="border rounded-lg p-8">
+              <h2 className="text-2xl font-bold mb-4">Interested in Partnering With Tributary?</h2>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                We&apos;re selective about who we work with. If your firm has experience with mid-market companies ($100M-$1B revenue), practices architectural discipline, and shares our philosophy about simplification first then automation, we&apos;d like to hear from you.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                <strong>What we look for:</strong>
+              </p>
+              <ul className="list-disc list-inside text-muted-foreground space-y-1 mb-4">
+                <li>Proven track record with mid-market (not enterprise-only or startup-only)</li>
+                <li>Deep expertise in cloud platforms, systems integration, or process automation</li>
+                <li>Willingness to follow architectural recommendations</li>
+                <li>Communication that keeps customers informed without overwhelming them</li>
+              </ul>
+              <p className="text-muted-foreground">
+                Contact us at <a href="mailto:partner@thetributary.ai" className="text-accent hover:underline">partner@thetributary.ai</a> to discuss potential partnership.
+              </p>
+            </div>
           </div>
         </div>
       </section>
