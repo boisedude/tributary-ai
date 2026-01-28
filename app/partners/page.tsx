@@ -83,7 +83,7 @@ export default function PartnersPage() {
               <div className="border rounded-lg p-8">
                 <div className="flex items-center justify-center mb-6 h-16">
                   <Image
-                    src="/logos/partners/aws.png"
+                    src="/logos/partners/aws.svg"
                     alt="Amazon Web Services"
                     width={120}
                     height={72}
