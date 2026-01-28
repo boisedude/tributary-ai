@@ -1,0 +1,40 @@
+/* Tributary AI Brand Colors */
+/* CSS Custom Properties */
+
+:root {
+  /* Primary Colors */
+  --tributary-teal: #14B8A6;
+  --tributary-teal-rgb: 20, 184, 166;
+  --tributary-teal-hsl: 174, 80%, 40%;
+
+  /* Neutrals */
+  --oxford-blue: #0F172A;
+  --oxford-blue-rgb: 15, 23, 42;
+  --oxford-blue-hsl: 222, 47%, 11%;
+
+  --slate: #64748B;
+  --slate-rgb: 100, 116, 139;
+  --slate-hsl: 215, 16%, 47%;
+
+  /* Accent */
+  --coral: #F97316;
+  --coral-rgb: 249, 115, 22;
+  --coral-hsl: 25, 95%, 53%;
+}
+
+/* Usage Examples */
+.primary-accent {
+  color: var(--tributary-teal);
+}
+
+.primary-text {
+  color: var(--oxford-blue);
+}
+
+.secondary-text {
+  color: var(--slate);
+}
+
+.warning-accent {
+  color: var(--coral);
+}
