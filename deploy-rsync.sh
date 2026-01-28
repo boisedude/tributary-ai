@@ -17,12 +17,13 @@
 #   ./deploy-rsync.sh --skip-build  # Deploy without rebuilding
 # ============================================
 
-# CONFIGURATION - Update these with your Hostinger SSH details
-SSH_USER="u951885034"              # Your Hostinger SSH username
-SSH_HOST="191.101.13.61"           # SSH host (from hPanel)
-SSH_PORT="65002"                   # SSH port (usually 65002 for Hostinger)
-REMOTE_DIR="/home/${SSH_USER}/public_html"  # Remote directory
-LOCAL_DIR="./out"                  # Local build directory
+# CONFIGURATION - Hostinger SSH details
+SSH_USER="u951885034"
+SSH_HOST="191.101.13.61"
+SSH_PORT="65002"
+SSH_KEY="$HOME/.ssh/hostinger_rsa"
+REMOTE_DIR="/home/${SSH_USER}/domains/thetributary.ai/public_html"
+LOCAL_DIR="./out"
 
 # Parse arguments
 DRY_RUN=""
@@ -76,7 +77,7 @@ echo ""
 
 rsync -avz --progress --delete \
     $DRY_RUN \
-    -e "ssh -p ${SSH_PORT}" \
+    -e "ssh -p ${SSH_PORT} -i ${SSH_KEY}" \
     "${LOCAL_DIR}/" \
     "${SSH_USER}@${SSH_HOST}:${REMOTE_DIR}/"
 
