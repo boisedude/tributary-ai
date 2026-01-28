@@ -27,6 +27,7 @@ export const ROUTES = {
   CONTACT: "/contact",
   PARTNERS: "/partners",
   CAREERS: "/careers",
+  BRAND: "/brand",
   PRIVACY: "/privacy",
   TERMS: "/terms",
 } as const;
@@ -130,6 +131,7 @@ export const FOOTER_NAV_ITEMS: NavItem[] = [
   { href: ROUTES.ABOUT, label: "Our Founder" },
   { href: ROUTES.PARTNERS, label: "Partners" },
   { href: ROUTES.CAREERS, label: "Careers" },
+  { href: ROUTES.BRAND, label: "Brand Assets" },
   { href: ROUTES.BLOG, label: "Blog" },
   { href: ROUTES.CONTACT, label: "Contact" },
   { href: ROUTES.PRIVACY, label: "Privacy Policy" },
