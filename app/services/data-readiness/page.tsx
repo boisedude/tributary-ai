@@ -12,7 +12,7 @@ import {
   Search,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
-import { BreadcrumbListSchema } from "@/components/structured-data/schemas";
+import { BreadcrumbListSchema, DataReadinessServiceSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
   title: "Data Readiness Services | Clean Data for AI | Tributary AI",
@@ -102,6 +102,7 @@ export default function DataReadinessPage() {
           { name: "Data Readiness", url: "https://www.thetributary.ai/services/data-readiness" },
         ]}
       />
+      <DataReadinessServiceSchema />
       {/* Hero Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

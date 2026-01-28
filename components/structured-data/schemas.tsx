@@ -309,3 +309,58 @@ export function ManagedServicesSchema() {
     />
   );
 }
+
+export function DataReadinessServiceSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Data Readiness Services",
+    description:
+      "Get your data AI-ready. Data quality assessment, consolidation, governance, and integration services for companies preparing for AI implementation.",
+    provider: {
+      "@type": "LocalBusiness",
+      name: "Tributary AI",
+      url: "https://www.thetributary.ai",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "United States",
+    },
+    serviceType: "Data Consulting",
+  };
+
+  return (
+    <Script
+      id="data-readiness-service-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+export function BlogListingSchema() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Tributary AI Blog",
+    description:
+      "Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces. Practical guidance for mid-market companies adopting AI.",
+    url: "https://www.thetributary.ai/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "Tributary AI",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.thetributary.ai/logo.png",
+      },
+    },
+  };
+
+  return (
+    <Script
+      id="blog-listing-schema"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | Tributary AI",
   description:
     "Terms of Service for Tributary AI. Review the terms governing use of our website and services.",
   keywords: ["terms of service", "consulting agreement", "service terms"],
+  openGraph: {
+    title: "Terms of Service | Tributary AI",
+    description: "Terms of Service for Tributary AI. Review the terms governing use of our website and services.",
+    type: "website",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.thetributary.ai/terms/",
+  },
 };
 
 export default function TermsPage() {

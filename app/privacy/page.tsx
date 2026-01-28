@@ -2,10 +2,19 @@ import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | Tributary AI",
   description:
     "Privacy Policy for Tributary AI. Learn how we collect, use, and protect your information.",
   keywords: ["privacy policy", "data protection", "AI consulting privacy"],
+  openGraph: {
+    title: "Privacy Policy | Tributary AI",
+    description: "Privacy Policy for Tributary AI. Learn how we collect, use, and protect your information.",
+    type: "website",
+    images: ["/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://www.thetributary.ai/privacy/",
+  },
 };
 
 export default function PrivacyPage() {
