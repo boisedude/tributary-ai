@@ -14,7 +14,19 @@ The website is now clearly positioned as an AI consulting firm helping mid-marke
 - **Core Service:** The Assessment (2-week diagnostic, $25K-$35K)
 - **Credibility:** 30 years enterprise technology experience (Microsoft, Citrix, Micron, Simplot)
 
-### Recent Changes (January 19, 2026)
+### Recent Changes (January 28, 2026)
+- **Brand assets page** - New /brand page with downloadable logos, icons, social sizes, color palettes
+- **Contact page redesign** - Compact calendar, intent-specific Q&A, quiz CTA for hesitant visitors
+- **Footer redesign** - Organized into Services/Company/Contact columns, legal in bottom bar
+- **Quiz enhancements** - Added 3 new questions (data lineage, MLOps, cross-functional collaboration)
+- **New blog post** - "5 Dimensions of AI Readiness" with custom hero image
+- **Service page images** - All 4 service pages now have hero images
+- **Assessment page** - Updated to 5-pillar image, added statistics callouts
+- **SEO improvements** - Added canonical URLs, schemas, OpenGraph images to all pages
+- **Security** - Upgraded Next.js 16.1.6 (fixed 3 vulnerabilities)
+- **Technical debt** - Removed unused dependencies, fixed lint errors, updated documentation
+
+### Earlier Changes (January 19, 2026)
 - **Fixed contact page** - Updated from old SaaS GTM messaging to AI consulting focus
 - **Updated FAQs** - Now cover The Assessment, pricing, and process
 - **UX improvements** - Hover effects, scroll animations, mobile nav enhancements
@@ -38,10 +50,11 @@ The website is now clearly positioned as an AI consulting firm helping mid-marke
 | UX Enhancements | Visual effects, animations, parallax | ✅ Complete |
 
 ### Site Statistics
-- **Total Pages:** 44
-- **Blog Posts:** 30
-- **New Components:** 6
-- **Lines of Code Added:** 9,317
+- **Total Pages:** 57 (including blog posts)
+- **Blog Posts:** 36
+- **Brand Assets:** 20+ downloadable files
+- **Quiz Questions:** 18
+- **Framework:** Next.js 16.1.6
 
 ---
 
