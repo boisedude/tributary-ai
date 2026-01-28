@@ -90,42 +90,72 @@ Check the `out/` directory contains:
 
 ## Hostinger Deployment
 
-### Method 1: Automated FTP Deploy Script (Recommended)
+### Method 1: Rsync over SSH (Recommended - Fastest)
 
-The project includes an automated deployment script that handles everything.
+Rsync is 10-50x faster than FTP for incremental deploys. It only transfers changed bytes, not entire files.
+
+#### Prerequisites
+
+1. SSH must be enabled in Hostinger hPanel (Websites → Dashboard → SSH Access)
+2. SSH public key must be added to hPanel
+3. SSH key file at `~/.ssh/hostinger_rsa`
 
 #### One-Command Deployment
 
 ```bash
-npm run deploy
+./deploy-rsync.sh
 ```
 
 This will:
 1. Build the static site (`npm run build`)
-2. Upload all files via FTP to Hostinger
+2. Deploy via rsync over SSH (only changed files)
 
-#### Manual FTP Script
+#### Options
 
 ```bash
-# Build first
-npm run build
+./deploy-rsync.sh              # Build and deploy
+./deploy-rsync.sh --skip-build # Deploy only (if already built)
+./deploy-rsync.sh --dry        # Preview what would change (no actual upload)
+```
 
-# Then deploy
-node deploy-ftp.js
+#### SSH Configuration
+
+- **Host:** `191.101.13.61`
+- **Port:** `65002`
+- **User:** `u951885034`
+- **Key:** `~/.ssh/hostinger_rsa`
+- **Remote Directory:** `/home/u951885034/domains/thetributary.ai/public_html`
+
+#### Test SSH Connection
+
+```bash
+ssh -p 65002 -i ~/.ssh/hostinger_rsa u951885034@191.101.13.61
+```
+
+---
+
+### Method 2: FTP Deploy Script (Fallback)
+
+Use if SSH is not available. Slower but reliable.
+
+#### Deployment
+
+```bash
+node deploy-ftp.js          # Smart upload (changed files only)
+node deploy-ftp.js --full   # Force full upload
 ```
 
 #### FTP Configuration
 
-The deployment script (`deploy-ftp.js`) is pre-configured:
 - **Host:** `ftp.thetributary.ai`
 - **User:** `u951885034.tribFTPuser`
 - **Remote Directory:** `/` (FTP root = web root)
 
-**IMPORTANT:** The FTP account automatically starts in `public_html`, so upload to `/` NOT `/public_html/`. Uploading to `/public_html/` would create a nested folder.
+**IMPORTANT:** The FTP account automatically starts in `public_html`, so upload to `/` NOT `/public_html/`.
 
 ---
 
-### Method 2: Manual FTP Upload
+### Method 3: Manual FTP Upload
 
 #### FTP Credentials
 
@@ -468,7 +498,39 @@ If something goes wrong:
 
 ---
 
+## Credentials Location
+
+All deployment credentials are stored in `.env.local` (gitignored):
+
+```
+.env.local
+├── HOSTINGER_API_KEY    # For domain/DNS management (not file deployment)
+├── FTP_HOST             # FTP server hostname
+├── FTP_USER             # FTP username
+├── FTP_PASS             # FTP password
+├── SSH_USER             # SSH username
+├── SSH_HOST             # SSH server IP
+├── SSH_PORT             # SSH port (65002)
+└── SSH_KEY_PATH         # Path to SSH private key
+```
+
+SSH key files:
+- Private key: `~/.ssh/hostinger_rsa`
+- Public key: `~/.ssh/hostinger_rsa.pub` (added to Hostinger hPanel)
+
+---
+
 ## Version History
+
+**v1.4.0** - January 28, 2026
+- Added rsync deployment (10-50x faster than FTP)
+- Added SSH key authentication for Hostinger
+- Updated FTP script with smart change detection
+- Added AI Readiness Assessment research report
+- Added "5 Dimensions of AI Readiness" blog post
+- Enhanced quiz with 3 new questions (data lineage, MLOps, cross-functional collaboration)
+- Updated assessment page with research statistics
+- Consolidated credentials in .env.local
 
 **v1.3.0** - January 27, 2026
 - Configured Microsoft 365 email for both domains
@@ -509,4 +571,4 @@ If something goes wrong:
 
 ---
 
-**Last Updated:** January 27, 2026
+**Last Updated:** January 28, 2026
