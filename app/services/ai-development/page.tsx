@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -119,6 +120,17 @@ export default function AIDevelopmentPage() {
             <p className="mt-6 text-xl text-muted-foreground">
               Custom AI-powered applications. Internal tools, customer-facing products. From prototype to production.
             </p>
+          </div>
+          {/* Hero Image */}
+          <div className="mx-auto max-w-4xl mt-12">
+            <Image
+              src="/images/ai-development-hero.webp"
+              alt="AI development process: Discovery, Prototype, Build, Launch"
+              width={1200}
+              height={675}
+              className="rounded-lg"
+              priority
+            />
           </div>
         </div>
       </section>
