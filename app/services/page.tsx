@@ -7,6 +7,7 @@ import {
   Code,
   Headphones,
   ClipboardCheck,
+  Database,
 } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 import { BreadcrumbListSchema, FAQSchema } from "@/components/structured-data/schemas";
@@ -44,12 +45,16 @@ const serviceFAQs = [
     answer: "AI Application Development provides custom software from prototype to production, including internal tools and customer-facing products that give you a competitive edge.",
   },
   {
+    question: "What if our data is a mess and not ready for AI?",
+    answer: "Data Readiness services help you consolidate, clean, and govern your data—creating the foundation that makes AI actually work. Most AI failures trace back to data quality issues.",
+  },
+  {
     question: "What service covers ongoing tech leadership or IT support?",
     answer: "Managed Services offers fractional CTO/CIO advisory, IT management, and cloud administration on a monthly retainer with no long-term contracts required.",
   },
   {
     question: "Where should we start if we're not sure what we need?",
-    answer: "The Assessment is a two-week diagnostic that evaluates People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
+    answer: "The Assessment is a two-week diagnostic that evaluates Data, People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
   },
 ];
 
@@ -64,6 +69,16 @@ const services = [
     pricing: "$25K - $35K",
     timeline: "2 weeks",
     highlight: true,
+  },
+  {
+    title: "Data Readiness",
+    subtitle: "Foundation",
+    description:
+      "Get your data AI-ready. Data quality assessment, consolidation, governance, and integration. The foundation that makes AI actually work.",
+    href: ROUTES.DATA_READINESS,
+    icon: Database,
+    pricing: "Project-based",
+    timeline: "4-12 weeks",
   },
   {
     title: "AI Automation & Deployment",
@@ -144,6 +159,12 @@ export default function ServicesPage() {
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-6">Which Service Is Right for You?</h2>
             <div className="grid gap-4">
+              <div className="border rounded-lg p-6">
+                <p className="font-semibold mb-2">&ldquo;Our data is fragmented and unreliable.&rdquo;</p>
+                <p className="text-muted-foreground">
+                  <strong className="text-foreground">Data Readiness</strong> — Clean, consolidate, and govern your data before AI.
+                </p>
+              </div>
               <div className="border rounded-lg p-6">
                 <p className="font-semibold mb-2">&ldquo;We need to automate specific processes.&rdquo;</p>
                 <p className="text-muted-foreground">

@@ -3,6 +3,8 @@ import { Hero } from "@/components/sections/hero";
 import { ShiftSection } from "@/components/sections/shift-section";
 import { ApproachSection } from "@/components/sections/approach-section";
 import { CredentialsSection } from "@/components/sections/credentials-section";
+import { ThoughtLeadershipSection } from "@/components/sections/thought-leadership-section";
+import { ResourcesSection } from "@/components/sections/resources-section";
 import { CTASection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
@@ -36,6 +38,8 @@ export default function Home() {
       <ShiftSection />
       <ApproachSection />
       <CredentialsSection />
+      <ThoughtLeadershipSection />
+      <ResourcesSection />
       <CTASection />
     </>
   );

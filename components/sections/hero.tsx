@@ -30,15 +30,15 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <Button asChild size="lg" className="group">
-              <Link href="/assessment">
-                Start with The Assessment
+            <Button asChild size="lg" className="group bg-accent hover:bg-accent/90">
+              <Link href="/quiz">
+                Get Your AI Readiness Score
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href="/contact">
-                Book a Conversation
+              <Link href="/assessment">
+                Explore The Assessment
               </Link>
             </Button>
           </div>

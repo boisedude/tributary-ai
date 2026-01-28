@@ -37,15 +37,15 @@ export function ShiftSection() {
                 <CardContent className="p-6">
                   <p className="font-medium mb-2">They add AI to existing complexity</p>
                   <p className="text-sm text-muted-foreground">
-                    Companies layer AI onto their existing stack, existing processes, existing silos. They automate what they have rather than questioning whether they should have it.
+                    Companies layer AI onto fragmented data, disconnected systems, and undocumented processes. They automate chaos instead of fixing it first.
                   </p>
                 </CardContent>
               </Card>
               <Card className="border-accent/30">
                 <CardContent className="p-6">
-                  <p className="font-medium mb-2">The alternative: simplify first</p>
+                  <p className="font-medium mb-2">The alternative: consolidate, then accelerate</p>
                   <p className="text-sm text-muted-foreground">
-                    Which systems can be eliminated? Which processes exist only because humans couldn&apos;t handle the volume? What&apos;s complexity vs. institutional knowledge?
+                    Clean your data. Establish a single source of truth. Integrate systems before adding AI. The companies that win build AI on a solid foundation.
                   </p>
                 </CardContent>
               </Card>

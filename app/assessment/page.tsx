@@ -8,6 +8,7 @@ import {
   Cog,
   Code,
   Headphones,
+  Database,
 } from "lucide-react";
 import { ServiceSchema } from "@/components/structured-data/schemas";
 import { ROUTES } from "@/lib/constants";
@@ -15,7 +16,7 @@ import { ROUTES } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "AI Readiness Assessment | Technology Diagnostic | Tributary AI",
   description:
-    "Two-week AI readiness diagnostic for mid-market companies. Evaluate People, Process, Technology, and Politics. $25K-$35K. Satisfaction guaranteed.",
+    "Two-week AI readiness diagnostic for mid-market companies. Evaluate Data, People, Process, Technology, and Politics. $25K-$35K. Satisfaction guaranteed.",
   keywords: [
     "AI assessment",
     "AI readiness assessment",
@@ -28,13 +29,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Readiness Assessment | Tributary AI",
     description:
-      "Two-week diagnostic that shows you where you stand and what to change. Evaluates People, Process, Technology, and Politics.",
+      "Two-week diagnostic that shows you where you stand and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Readiness Assessment | Tributary AI",
-    description: "Two-week diagnostic evaluating your organization's AI readiness across People, Process, Technology, and Politics.",
+    description: "Two-week diagnostic evaluating your organization's AI readiness across Data, People, Process, Technology, and Politics.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -43,6 +44,15 @@ export const metadata: Metadata = {
 };
 
 const dimensions = [
+  {
+    title: "Data",
+    items: [
+      "Data quality and trustworthiness",
+      "System integration and fragmentation",
+      "Single source of truth",
+      "Data governance and ownership",
+    ],
+  },
   {
     title: "People",
     items: [
@@ -65,8 +75,8 @@ const dimensions = [
     title: "Technology",
     items: [
       "Stack complexity",
-      "Data accessibility",
       "Automation readiness",
+      "Cloud and infrastructure",
       "Spend trajectory",
     ],
   },
@@ -84,7 +94,7 @@ const dimensions = [
 const deliverables = [
   {
     title: "Findings Document",
-    description: "Detailed assessment across all four dimensions",
+    description: "Detailed assessment across all five dimensions",
   },
   {
     title: "Leadership Presentation",
@@ -135,14 +145,14 @@ export default function AssessmentPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold mb-8">
-              Four Dimensions
+              Five Dimensions
             </h2>
 
             {/* Assessment Process Diagram */}
             <div className="mb-12 overflow-hidden rounded-lg">
               <Image
                 src="/images/assessment-process.webp"
-                alt="Assessment framework: People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
+                alt="Assessment framework: Data, People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
                 width={1200}
                 height={600}
                 className="w-full h-auto"
@@ -245,6 +255,23 @@ export default function AssessmentPage() {
             </p>
             <div className="grid gap-4">
               <Link
+                href={ROUTES.DATA_READINESS}
+                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+              >
+                <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
+                  <Database className="h-5 w-5" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-semibold group-hover:text-accent transition-colors">
+                    Data Readiness
+                  </h3>
+                  <p className="text-sm text-muted-foreground mt-1">
+                    Get your data AI-ready. Consolidation, quality, governance—the foundation that makes AI work.
+                  </p>
+                </div>
+                <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all shrink-0 mt-1" />
+              </Link>
+              <Link
                 href={ROUTES.AI_AUTOMATION}
                 className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
               >
@@ -308,14 +335,19 @@ export default function AssessmentPage() {
               Ready to Get Clarity?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Let&apos;s have a conversation about your situation and whether The Assessment is the right starting point.
+              Not sure if you&apos;re ready? Take our free quiz to see where you stand.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button asChild size="lg" className="group bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Link href="/quiz">
+                  Get Your AI Readiness Score
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
                   <Calendar className="mr-2 h-5 w-5" />
-                  Book a Call
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Book a Strategy Call
                 </Link>
               </Button>
             </div>
