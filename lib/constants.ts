@@ -51,7 +51,7 @@ export const EMAILS = {
  * External URLs and links.
  */
 export const EXTERNAL_LINKS = {
-  CALENDLY: "https://calendly.com/tributary-ai/30min",
+  CALENDAR: "https://cal.com/thetributary",
   LINKEDIN: "https://www.linkedin.com/company/tributaryai",
   TWITTER: "https://twitter.com/tributaryai",
   PODCAST_URL: "https://www.agentic-saas-talks.com/",

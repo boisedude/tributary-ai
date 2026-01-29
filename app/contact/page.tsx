@@ -91,20 +91,19 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative w-full overflow-hidden rounded-lg border bg-muted/30" style={{ height: "420px" }}>
+                  <div className="relative w-full overflow-hidden rounded-lg" style={{ height: "600px" }}>
                     <iframe
-                      src="https://outlook.office.com/book/TributaryTime@davecooper.com/?ismsaljsauthenabled"
+                      src="https://cal.com/thetributary?embed=true&layout=month_view&hideBranding=true"
                       width="100%"
                       height="100%"
                       frameBorder="0"
-                      scrolling="yes"
                       title="Schedule a consultation with Tributary AI"
                       className="rounded-lg"
                       style={{ border: 0 }}
                     />
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground text-center">
-                    All times in Pacific. You&apos;ll receive a calendar invite immediately.
+                    Select a meeting type above, then pick a time that works for you.
                   </p>
                 </CardContent>
               </Card>

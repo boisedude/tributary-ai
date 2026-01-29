@@ -358,7 +358,7 @@ ${formatDetailedAnswers(answers)}
               </Link>
             </Button>
             <Button asChild variant="outline" className="flex-1 group">
-              <a href={EXTERNAL_LINKS.CALENDLY} target="_blank" rel="noopener noreferrer">
+              <a href={EXTERNAL_LINKS.CALENDAR} target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-4 w-4" />
                 Book a Call
               </a>
