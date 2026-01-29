@@ -30,6 +30,7 @@ export const ROUTES = {
   BRAND: "/brand",
   PRIVACY: "/privacy",
   TERMS: "/terms",
+  PREFERENCES: "/preferences",
 } as const;
 
 // =============================================================================
@@ -241,3 +242,49 @@ export const CREDENTIALS = [
   "Astronomer",
   "Micron",
 ] as const;
+
+// =============================================================================
+// PREFERENCE CENTER
+// =============================================================================
+
+/**
+ * Email preference categories for newsletter and marketing communications.
+ * Used in preference center UI and API validation.
+ */
+export const PREFERENCE_CATEGORIES = {
+  newsletter_subscribed: {
+    label: "Newsletter",
+    description: "Monthly insights on AI strategy, implementation tips, and industry trends.",
+    default: false,
+  },
+  product_updates_subscribed: {
+    label: "Product Updates",
+    description: "Announcements about new services, tools, and capabilities.",
+    default: false,
+  },
+  webinar_invites_subscribed: {
+    label: "Webinars & Events",
+    description: "Invitations to educational webinars, workshops, and industry events.",
+    default: false,
+  },
+  research_reports_subscribed: {
+    label: "Research & Reports",
+    description: "Industry research, benchmarks, and in-depth analysis reports.",
+    default: false,
+  },
+  sales_contact_allowed: {
+    label: "Sales Communications",
+    description: "Occasional outreach about how we can help your organization.",
+    default: true,
+  },
+} as const;
+
+/**
+ * Preference field keys for type safety
+ */
+export type PreferenceField = keyof typeof PREFERENCE_CATEGORIES | "do_not_contact";
+
+/**
+ * Token expiration time in hours
+ */
+export const PREFERENCE_TOKEN_EXPIRY_HOURS = 48;

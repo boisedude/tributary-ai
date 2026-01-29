@@ -102,6 +102,37 @@ Create these 3 PDF documents and place them in `/public/guides/`:
 
 ---
 
+### 4. Set Up CRM Database (Supabase)
+
+Run the CRM migration to add contacts, companies, invoices, and expenses tables:
+
+```bash
+# In Supabase dashboard SQL editor, run:
+supabase/migrations/20260129100000_create_crm_tables.sql
+```
+
+**Tables created:**
+- `companies` - Client/prospect organizations
+- `contacts` - People (linked to companies and quiz submissions)
+- `interactions` - Call/email/meeting log
+- `invoices` - Invoice tracking (amount, status, dates)
+- `expenses` - Business expense tracking
+
+**Built-in views:**
+- `outstanding_invoices` - Unpaid invoices with days overdue
+- `revenue_by_company` - Revenue summary per client
+- `new_quiz_leads` - Quiz submissions not yet contacted
+
+**Link existing quiz submissions to contacts:**
+```sql
+-- Run this after migration to create contacts from existing quiz submissions
+SELECT link_quiz_to_contact(id) FROM quiz_submissions WHERE user_email IS NOT NULL;
+```
+
+See `docs/CRM-RESEARCH.md` and `docs/BILLING-RESEARCH.md` for full architecture documentation.
+
+---
+
 ## Blog Post Library (30 Posts)
 
 ### By Category

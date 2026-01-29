@@ -5,7 +5,8 @@ import Image from "next/image";
 import { Linkedin, Mail, Radio } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
-import { FOOTER_NAV_GROUPS, COMPANY, EMAILS, EXTERNAL_LINKS, ASSETS } from "@/lib/constants";
+import { FOOTER_NAV_GROUPS, COMPANY, EMAILS, EXTERNAL_LINKS, ASSETS, ROUTES } from "@/lib/constants";
+import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 
 /**
  * Site footer component with company info, navigation links, and social links.
@@ -101,29 +102,40 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Contact Column */}
+          {/* Newsletter Column */}
           <div>
-            <h3 className="mb-3 text-sm font-semibold">Contact</h3>
-            <div className="text-sm text-muted-foreground space-y-2">
-              <p>
-                <a
-                  href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
-                  className="hover:text-accent transition-colors"
-                >
-                  {COMPANY.PHONE}
-                </a>
-              </p>
-              <p>
-                <a
-                  href={`mailto:${EMAILS.SALES}`}
-                  className="hover:text-accent transition-colors"
-                >
-                  {EMAILS.SALES}
-                </a>
-              </p>
-              <p className="text-xs">Eagle, Idaho</p>
-              <p className="text-xs">Serving clients nationally</p>
-            </div>
+            <h3 className="mb-3 text-sm font-semibold">Newsletter</h3>
+            <p className="text-sm text-muted-foreground mb-3">
+              AI insights for business leaders.
+            </p>
+            <NewsletterSignup variant="compact" />
+            <p className="mt-2 text-xs text-muted-foreground">
+              <Link
+                href={ROUTES.PREFERENCES}
+                className="hover:text-accent transition-colors underline-offset-2 hover:underline"
+              >
+                Manage preferences
+              </Link>
+            </p>
+          </div>
+        </div>
+
+        {/* Contact Info Row */}
+        <div className="mt-8 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
+            <a
+              href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
+              className="hover:text-accent transition-colors"
+            >
+              {COMPANY.PHONE}
+            </a>
+            <a
+              href={`mailto:${EMAILS.SALES}`}
+              className="hover:text-accent transition-colors"
+            >
+              {EMAILS.SALES}
+            </a>
+            <span className="text-muted-foreground/70">Eagle, Idaho</span>
           </div>
         </div>
 
@@ -140,6 +152,12 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href={ROUTES.PREFERENCES}
+              className="hover:text-accent transition-colors"
+            >
+              Email Preferences
+            </Link>
           </div>
         </div>
       </div>
