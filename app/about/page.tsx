@@ -174,7 +174,7 @@ export default function AboutPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
-                <span><strong>Cisco certified trainer</strong>—taught networking fundamentals to enterprise teams</span>
+                <span><strong>Microsoft, Citrix, and Cisco certified instructor</strong>—taught enterprise technology to thousands of IT professionals</span>
               </li>
             </ul>
           </div>
@@ -185,24 +185,38 @@ export default function AboutPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="border rounded-lg p-8 text-center bg-background">
-              <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
-                <Gamepad2 className="h-6 w-6" />
+            <div className="border rounded-lg p-8 bg-background">
+              <div className="flex flex-col sm:flex-row items-center gap-6">
+                <div className="shrink-0">
+                  <Image
+                    src="/images/bently-arcade.png"
+                    alt="Bently the dog - Legendary AI opponent"
+                    width={120}
+                    height={120}
+                    className="rounded-lg"
+                  />
+                </div>
+                <div className="text-center sm:text-left">
+                  <div className="inline-flex items-center gap-2 mb-2">
+                    <Gamepad2 className="h-5 w-5 text-accent" />
+                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Legendary Difficulty</span>
+                  </div>
+                  <h2 className="text-2xl font-bold mb-2">Think You&apos;re Smart?</h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Bet you can&apos;t beat Michael&apos;s dog Bently at Checkers or Connect 4.
+                  </p>
+                  <Button asChild variant="outline" className="group">
+                    <a
+                      href="https://www.mcooper.com/arcade/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Challenge Bently
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  </Button>
+                </div>
               </div>
-              <h2 className="text-2xl font-bold mb-4">Think You&apos;re Smart?</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Bet you can&apos;t beat Michael&apos;s dog Bently at Checkers or Connect 4.
-              </p>
-              <Button asChild variant="outline" className="group">
-                <a
-                  href="https://www.mcooper.com/arcade/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Challenge Bently
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
             </div>
           </div>
         </div>
