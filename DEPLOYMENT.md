@@ -25,8 +25,8 @@
 - [x] robots.txt configured (`/public/robots.txt`)
 - [x] Sitemap auto-generated (`/app/sitemap.ts`)
 - [x] Structured data schemas (Organization, LocalBusiness, BlogPosting, FAQ)
-- [ ] Google Search Console verification (update code in `/app/layout.tsx` line 87)
-- [ ] Google Business Profile claimed
+- [x] Google Search Console verification
+- [x] Google Business Profile claimed
 
 ### Optional Items
 - [x] Google Analytics tracking ID (G-3TLS4354D6)
