@@ -134,15 +134,13 @@ ssh -p 65002 -i ~/.ssh/hostinger_rsa u951885034@191.101.13.61
 
 ---
 
-### Method 2: FTP Deploy Script (Fallback)
+### Method 2: FTP Deploy (BACKUP ONLY)
 
-Use if SSH is not available. Slower but reliable.
-
-#### Deployment
+⚠️ **Only use FTP if SSH is unavailable.** FTP is slower and less secure.
 
 ```bash
-node deploy-ftp.js          # Smart upload (changed files only)
-node deploy-ftp.js --full   # Force full upload
+npm run deploy:ftp          # Build + smart upload (changed files only)
+node deploy-ftp.js --full   # Force full upload (no build)
 ```
 
 #### FTP Configuration
@@ -151,57 +149,7 @@ node deploy-ftp.js --full   # Force full upload
 - **User:** `u951885034.tribFTPuser`
 - **Remote Directory:** `/` (FTP root = web root)
 
-**IMPORTANT:** The FTP account automatically starts in `public_html`, so upload to `/` NOT `/public_html/`.
-
----
-
-### Method 3: Manual FTP Upload
-
-#### FTP Credentials
-
-- **FTP Hostname:** `ftp.thetributary.ai`
-- **FTP Username:** `u951885034.tribFTPuser`
-- **Port:** 21
-
-#### Connect via FTP Client
-
-**Recommended FTP Clients:**
-- FileZilla (Windows/Mac/Linux)
-- Cyberduck (Mac)
-- WinSCP (Windows)
-
-**FileZilla Example:**
-1. Open FileZilla
-2. Enter Host: `ftp.thetributary.ai`
-3. Enter Username: `u951885034.tribFTPuser`
-4. Enter Password: [your FTP password]
-5. Port: 21
-6. Click "Quickconnect"
-
-#### Upload Files
-
-**IMPORTANT:** Upload to `/` (root), NOT `/public_html/`
-
-The FTP account automatically lands in the web root. If you see folders like `app/`, `components/`, `package.json` at `/`, that's from a previous Git deployment - upload your files alongside them.
-
-1. On local side (left panel), navigate to:
-   ```
-   /mnt/c/Projects/Tributary.ai/tributary-site/out/
-   ```
-
-2. On remote side, stay at `/` (root)
-
-3. Select ALL files and folders in the `out/` directory
-
-4. Drag to the remote server root
-
-5. Wait for upload to complete (may take 5-15 minutes)
-
-#### File Permissions
-
-Permissions are set automatically:
-- **Directories:** 755 (rwxr-xr-x)
-- **Files:** 644 (rw-r--r--)
+**Note:** The FTP account starts in `public_html`, so upload to `/` NOT `/public_html/`.
 
 ### Method 3: Hostinger File Manager
 
@@ -390,8 +338,7 @@ Target scores:
 
 1. **Make changes locally** in the project files
 2. **Test locally:** `npm run dev`
-3. **Build:** `npm run build`
-4. **Upload only changed files** via FTP
+3. **Deploy:** `npm run deploy` (builds and syncs changed files via rsync)
 
 ### Quick Updates
 
@@ -454,9 +401,8 @@ For small text changes:
 
 If something goes wrong:
 
-1. **Keep backup:** Before deploying, backup existing public_html
-2. **FTP Method:** Keep previous `out/` directory renamed to `out-backup/`
-3. **Restore:** Simply re-upload the previous version
+1. **Keep backup:** Before deploying, backup existing `public_html` or keep previous `out/` locally
+2. **Restore:** Re-run `npm run deploy` with the previous version of `out/`
 
 ---
 
@@ -505,14 +451,13 @@ All deployment credentials are stored in `.env.local` (gitignored):
 
 ```
 .env.local
-├── HOSTINGER_API_KEY    # For domain/DNS management (not file deployment)
-├── FTP_HOST             # FTP server hostname
-├── FTP_USER             # FTP username
-├── FTP_PASS             # FTP password
-├── SSH_USER             # SSH username
+├── HOSTINGER_API_KEY    # For domain/DNS management (optional)
+├── SSH_USER             # SSH username (PRIMARY)
 ├── SSH_HOST             # SSH server IP
 ├── SSH_PORT             # SSH port (65002)
-└── SSH_KEY_PATH         # Path to SSH private key
+├── SSH_KEY_PATH         # Path to SSH private key
+├── SSH_REMOTE_DIR       # Remote deployment directory
+└── FTP_* (commented)    # FTP credentials (BACKUP ONLY)
 ```
 
 SSH key files:

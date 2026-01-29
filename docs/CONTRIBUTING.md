@@ -430,7 +430,7 @@ npm run lint
 
 ## Deployment
 
-The site deploys to Hostinger via FTP. After changes:
+The site deploys to Hostinger via SSH/rsync. After changes:
 
 1. Ensure build passes: `npm run build`
 2. Deploy: `npm run deploy`

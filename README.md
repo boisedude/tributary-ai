@@ -177,22 +177,21 @@ npm run build
 
 This generates an `out/` directory with static files.
 
-### Upload to Hostinger
+### Deploy to Hostinger
 
-1. **Connect via FTP:**
-   - Host: Your Hostinger FTP hostname
-   - Username: Your FTP username
-   - Password: Your FTP password
+**Primary method (SSH/rsync):**
+```bash
+npm run deploy
+```
 
-2. **Upload files:**
-   - Navigate to your domain's `public_html` directory
-   - Upload all contents from the `out/` directory
-   - Ensure file permissions are correct (644 for files, 755 for directories)
+This runs `deploy-rsync.sh` which builds and syncs only changed files via SSH.
 
-3. **Configure domain:**
-   - Ensure www.thetributary.ai points to the correct directory
-   - Update DNS if needed
-   - Wait for DNS propagation (up to 24-48 hours)
+**Backup method (FTP):**
+```bash
+npm run deploy:ftp
+```
+
+Only use FTP if SSH is unavailable. See `DEPLOYMENT.md` for full setup details.
 
 ### Post-Deployment Checklist
 

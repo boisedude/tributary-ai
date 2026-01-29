@@ -1,15 +1,19 @@
 /**
  * Tributary.ai FTP Deployment Script
  *
+ * ⚠️  BACKUP ONLY - Use SSH/rsync for primary deployment:
+ *     npm run deploy        (uses ./deploy-rsync.sh)
+ *
+ * This FTP script is kept as a fallback if SSH is unavailable.
+ *
  * Features:
  *   - Only uploads changed files (compares by size)
  *   - Shows progress and statistics
  *   - Much faster for incremental deploys
  *
  * Usage:
- *   1. npm install basic-ftp
- *   2. npm run build
- *   3. node deploy-ftp.js
+ *   npm run deploy:ftp      (build + deploy via FTP)
+ *   node deploy-ftp.js      (deploy only, assumes build exists)
  *
  * Options:
  *   --full    Force full upload (ignore change detection)

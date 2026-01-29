@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "deploy": "npm run build && node deploy-ftp.js"
+    "deploy": "./deploy-rsync.sh",
+    "deploy:ftp": "npm run build && node deploy-ftp.js"
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.1.15",
