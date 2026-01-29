@@ -166,7 +166,21 @@ export default function AboutPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
-                <span><strong>$40M ARR</strong> partnership built from zero at Confluent</span>
+                <span><strong>Enterprise Architect</strong> at JR Simplot and Micron</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">•</span>
+                <span>
+                  <strong>Helped build tech startups</strong> at{" "}
+                  <a href="https://www.confluent.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Confluent</a>,{" "}
+                  <a href="https://www.astronomer.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Astronomer</a>,{" "}
+                  <a href="https://www.omnistrate.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Omnistrate</a> &{" "}
+                  <a href="https://www.ikigailabs.io" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">IkigaiLabs</a>
+                </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-accent font-bold">•</span>
+                <span><strong>Led transformative consulting projects</strong> at Starbucks, Nike, Boeing, Boise Cascade, College of Idaho, Idaho State Tax Commission, and Primary Health Medical Group</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
