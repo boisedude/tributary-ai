@@ -45,7 +45,7 @@ tributary-site/
 │   ├── blog/                    # Blog system
 │   │   ├── page.tsx            # Blog listing
 │   │   └── [slug]/             # Individual posts
-│   ├── contact/                 # Contact page with Calendly
+│   ├── contact/                 # Contact page with Cal.com booking
 │   └── services/                # Services pages
 │       ├── page.tsx            # Services overview
 │       ├── ai-readiness/       # Service detail pages
@@ -142,7 +142,7 @@ Edit `data/services.ts` to modify service information. Changes will reflect acro
 - ✅ Homepage with hero, services overview, and CTA
 - ✅ 4 Service detail pages (AI Readiness, Agentic Systems, Implementation, Cloud Marketplace)
 - ✅ About page with founder story and credentials
-- ✅ Contact page with Calendly integration
+- ✅ Contact page with Cal.com booking integration
 - ✅ Blog with MDX support and 2 starter posts
 - ✅ Dynamic routing for blog posts
 - ✅ Responsive navigation with mobile menu
@@ -200,7 +200,7 @@ This generates an `out/` directory with static files.
 - [ ] Verify mobile responsiveness
 - [ ] Check dark/light theme toggle
 - [ ] Test blog post links
-- [ ] Verify contact form/Calendly embed
+- [ ] Verify contact form/Cal.com embed
 - [ ] Check social sharing (OG images)
 - [ ] Test navigation on all pages
 - [ ] Verify Google Analytics (if configured)
@@ -216,27 +216,26 @@ If you add dynamic features later (API routes, database), create a `.env.local` 
 ```env
 # Example for future use
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga-id
-NEXT_PUBLIC_CALENDLY_URL=your-calendly-url
+CAL_API_KEY=your-cal-api-key
 ```
 
-### Update Calendly Link
+### Cal.com Booking
 
-Edit `app/contact/page.tsx` and replace the placeholder:
+The contact page uses Cal.com for scheduling. The embed is configured in `app/contact/page.tsx`:
 
 ```typescript
-// Find this line:
-src="https://calendly.com/your-calendly-link"
-
-// Replace with:
-src="https://calendly.com/your-actual-link"
+// Cal.com embed URL
+src="https://cal.com/thetributary?embed=true&layout=month_view&hideBranding=true"
 ```
+
+Public booking page: https://cal.com/thetributary
 
 ## 📋 TODO / Future Enhancements
 
 ### Immediate (Before Launch)
 - [ ] Add Tributary AI logo (`/public/logo.png`)
 - [ ] Add OpenGraph image (`/public/og-image.png`, 1200x630px)
-- [ ] Update Calendly URL in contact page
+- [x] Cal.com booking configured
 - [ ] Review all content for accuracy
 - [ ] Test on mobile devices
 - [ ] Add favicon
@@ -245,7 +244,7 @@ src="https://calendly.com/your-actual-link"
 - [ ] Add Google Analytics
 - [ ] Create more blog posts
 - [ ] Add service page images/illustrations
-- [ ] Configure contact form (optional - currently using Calendly)
+- [ ] Configure contact form (optional - currently using Cal.com)
 - [ ] Add newsletter signup (optional)
 
 ### Long-term

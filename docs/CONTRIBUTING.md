@@ -296,7 +296,7 @@ export const FOOTER_NAV_ITEMS: NavItem[] = [
 | `SERVICE_IDS` | Service identifiers for `getServiceById()` |
 | `SERVICE_ROUTES` | Service-specific URLs |
 | `EMAILS` | Contact email addresses |
-| `EXTERNAL_LINKS` | External URLs (Calendly, LinkedIn, etc.) |
+| `EXTERNAL_LINKS` | External URLs (Cal.com, LinkedIn, etc.) |
 | `COMPANY` | Brand name, tagline, location |
 | `SITE_METADATA` | SEO metadata defaults |
 | `NAV_ITEMS` | Main navigation items |

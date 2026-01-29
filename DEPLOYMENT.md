@@ -17,7 +17,7 @@
 - [x] OpenGraph social image (`/public/og-image.png` - 1200x630px)
 - [x] Favicon files (`/public/favicon.png`, `/public/icon-192.png`, `/public/icon-512.png`, `/public/apple-touch-icon.png`)
 - [x] Blog images optimized (`/public/blog/*.webp` - 30 images)
-- [ ] Calendly URL updated in `/app/contact/page.tsx`
+- [x] Cal.com booking configured in `/app/contact/page.tsx`
 - [x] Content review complete
 - [x] All services information verified
 
@@ -361,7 +361,7 @@ Check:
 - Navigation menu works
 - Cards display properly
 - Images load
-- Forms work (Calendly)
+- Forms work (Cal.com booking)
 
 ### 5. Social Sharing Test
 
@@ -439,13 +439,14 @@ For small text changes:
 - Check `out/_next/static/css/` folder exists
 - Verify file permissions on server
 
-### Calendly Not Showing
+### Cal.com Booking Not Showing
 
 **Problem:** iframe blocked or wrong URL
 **Solution:**
-- Update URL in `app/contact/page.tsx`
-- Rebuild
+- Verify Cal.com URL in `app/contact/page.tsx`
+- Rebuild and redeploy
 - Check browser console for iframe errors
+- Booking page: https://cal.com/thetributary
 
 ---
 
@@ -463,7 +464,7 @@ If something goes wrong:
 
 ### Weekly
 - [ ] Check site loads correctly
-- [ ] Test contact form/Calendly
+- [ ] Test contact form/Cal.com booking
 - [ ] Review Google Analytics (if configured)
 
 ### Monthly

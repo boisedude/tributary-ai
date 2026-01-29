@@ -93,7 +93,7 @@ Create these 3 PDF documents and place them in `/public/guides/`:
 
 | Item | Priority | Action |
 |------|----------|--------|
-| Calendly placeholder | 🔴 High | Replace `your-calendly-link` in `/app/contact/page.tsx` with actual Calendly URL |
+| Cal.com booking | ✅ Done | Cal.com embed configured at https://cal.com/thetributary |
 | Logo in navigation | 🔴 High | Add logo image to navigation (currently text only) |
 | Favicon | 🟡 Medium | Add favicon.ico to `/public/` |
 
