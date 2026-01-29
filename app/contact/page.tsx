@@ -234,6 +234,20 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Brand Assets Link */}
+      <section className="py-8 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">
+              Need our logo or brand materials?{" "}
+              <Link href={ROUTES.BRAND} className="text-accent hover:underline">
+                Download brand assets
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
     </article>
   );
 }

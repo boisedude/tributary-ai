@@ -166,7 +166,11 @@ export default function AboutPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
-                <span><strong>Enterprise Architect</strong> at JR Simplot and Micron</span>
+                <span>
+                  <strong>Enterprise Architect</strong> at{" "}
+                  <a href="https://www.simplot.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">JR Simplot</a> and{" "}
+                  <a href="https://www.micron.com" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Micron</a>
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
@@ -184,7 +188,7 @@ export default function AboutPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
-                <span><strong>Published author</strong>—McGraw-Hill certification guides on Active Directory, Exchange, and DNS</span>
+                <span><strong>Published author</strong>—McGraw-Hill guides on Active Directory, Exchange, and DNS</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>

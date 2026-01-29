@@ -120,25 +120,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Contact Info Row */}
-        <div className="mt-8 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <div className="flex flex-wrap justify-center sm:justify-start gap-x-6 gap-y-2">
-            <a
-              href={`tel:${COMPANY.PHONE.replace(/[^0-9]/g, '')}`}
-              className="hover:text-accent transition-colors"
-            >
-              {COMPANY.PHONE}
-            </a>
-            <a
-              href={`mailto:${EMAILS.SALES}`}
-              className="hover:text-accent transition-colors"
-            >
-              {EMAILS.SALES}
-            </a>
-            <span className="text-muted-foreground/70">Eagle, Idaho</span>
-          </div>
-        </div>
-
         {/* Bottom Bar */}
         <div className="mt-8 pt-6 border-t flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>&copy; {COMPANY.COPYRIGHT_YEAR} {COMPANY.LEGAL_NAME}</p>
