@@ -120,13 +120,13 @@ export default function ManagedServicesPage() {
             </p>
           </div>
           {/* Hero Image */}
-          <div className="mx-auto max-w-4xl mt-12">
+          <div className="mx-auto max-w-md mt-12">
             <Image
               src="/images/managed-services-hero.webp"
               alt="Managed services: your business protected by cloud, security, support, analytics, and strategic advisory"
-              width={1200}
-              height={675}
-              className="rounded-lg"
+              width={742}
+              height={593}
+              className="rounded-lg w-full h-auto"
               priority
             />
           </div>
