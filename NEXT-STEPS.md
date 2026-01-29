@@ -14,10 +14,16 @@ The website is now clearly positioned as an AI consulting firm helping mid-marke
 - **Core Service:** The Assessment (2-week diagnostic, $25K-$35K)
 - **Credibility:** 30 years enterprise technology experience (Microsoft, Citrix, Micron, Simplot)
 
-### Recent Changes (January 28, 2026)
+### Recent Changes (January 29, 2026)
+- **Newsletter signup** - Email signup form in footer (low-friction, email-only)
+- **Preference center** - GDPR/CAN-SPAM compliant email preference management (/preferences)
+- **CRM database** - Companies, contacts, invoices, engagements, relationships tables
+- **Audit logging** - All preference changes tracked with timestamps for compliance
+
+### Earlier Changes (January 28, 2026)
 - **Brand assets page** - New /brand page with downloadable logos, icons, social sizes, color palettes
 - **Contact page redesign** - Compact calendar, intent-specific Q&A, quiz CTA for hesitant visitors
-- **Footer redesign** - Organized into Services/Company/Contact columns, legal in bottom bar
+- **Footer redesign** - Organized into Services/Company/Contact/Newsletter columns, legal in bottom bar
 - **Quiz enhancements** - Added 3 new questions (data lineage, MLOps, cross-functional collaboration)
 - **New blog post** - "5 Dimensions of AI Readiness" with custom hero image
 - **Service page images** - All 4 service pages now have hero images
@@ -130,6 +136,42 @@ SELECT link_quiz_to_contact(id) FROM quiz_submissions WHERE user_email IS NOT NU
 ```
 
 See `docs/CRM-RESEARCH.md` and `docs/BILLING-RESEARCH.md` for full architecture documentation.
+
+---
+
+### 5. Newsletter & Preference Center ✅ Complete
+
+**Newsletter Signup (Footer)**
+- Email-only form for low friction
+- Auto-creates contact in Supabase
+- Generates preference management token
+
+**Preference Center (/preferences)**
+- Token-based access (from email links)
+- Email lookup fallback (sends verification email)
+- Toggle preferences for 5 categories:
+  - Newsletter
+  - Product Updates
+  - Webinars & Events
+  - Research Reports
+  - Sales Communications
+- "Do Not Contact" master opt-out
+- GDPR compliant audit logging
+
+**Database Tables:**
+- `preference_tokens` - Secure access tokens (48-hour expiry)
+- `preference_changes` - Audit log of all changes
+
+**Files:**
+- `lib/preferences.ts` - Token validation, preference management
+- `lib/newsletter.ts` - Subscription handling
+- `components/newsletter/newsletter-signup.tsx` - Footer form
+- `app/preferences/page.tsx` - Preference center UI
+
+**Testing:**
+```bash
+node scripts/test-preferences.mjs
+```
 
 ---
 
@@ -343,13 +385,15 @@ components/
 - [ ] Add client testimonials section
 - [ ] Create case studies page
 - [ ] Set up Google Analytics
-- [ ] Add newsletter signup
+- [x] Add newsletter signup ✅ (Jan 29, 2026)
+- [x] Add email preference center ✅ (Jan 29, 2026)
 
 ### Medium-term
 - [ ] Create video content/demos
 - [ ] Add ROI calculator tool
 - [ ] Implement chat widget
 - [ ] Add client logos section
+- [ ] Integrate transactional email service (Resend/SendGrid)
 
 ### Long-term
 - [ ] Podcast integration
@@ -368,4 +412,4 @@ components/
 
 ---
 
-*Document updated: November 28, 2025*
+*Document updated: January 29, 2026*
