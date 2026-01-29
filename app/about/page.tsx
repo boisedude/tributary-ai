@@ -2,23 +2,25 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Gamepad2 } from "lucide-react";
+import { ArrowRight, Gamepad2, Users, Target, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About | Tributary AI",
+  title: "About Tributary AI | AI Consulting for Mid-Market Companies",
   description:
-    "Michael Cooper. 30 years in enterprise technology. Now helping companies navigate AI.",
+    "Tributary AI helps mid-market companies navigate AI with 30 years of enterprise transformation experience. Boutique consulting that simplifies, not complicates.",
   keywords: [
-    "Michael Cooper",
     "Tributary AI",
     "AI consulting",
+    "Michael Cooper",
     "technology consulting",
-    "Boise Idaho",
+    "mid-market AI",
+    "Eagle Idaho",
+    "AI strategy",
   ],
   openGraph: {
-    title: "About | Tributary AI",
+    title: "About Tributary AI | AI Consulting for Mid-Market Companies",
     description:
-      "Michael Cooper. 30 years in enterprise technology. Now helping companies navigate AI.",
+      "Helping mid-market companies navigate AI with 30 years of enterprise transformation experience.",
     type: "website",
   },
   alternates: {
@@ -26,41 +28,102 @@ export const metadata: Metadata = {
   },
 };
 
-const endorsements = [
+const differentiators = [
   {
-    quote: "Michael understands enterprise technology at a level most consultants never reach. He built partnerships that generated over a billion dollars in revenue.",
-    name: "[Name]",
-    title: "Senior Director",
-    company: "Microsoft",
+    icon: Users,
+    title: "Boutique, Not Factory",
+    description:
+      "No junior consultants learning on your dime. You work directly with 30 years of enterprise transformation experience.",
   },
   {
-    quote: "One of the sharpest technical minds I've worked with. Michael sees the architecture problem others miss and knows how to fix it.",
-    name: "[Name]",
-    title: "VP of Engineering",
-    company: "Citrix",
+    icon: Target,
+    title: "Outcome-Focused",
+    description:
+      "We don't bill to maximize hours. We bill to deliver results. If you're not satisfied, you don't pay.",
   },
   {
-    quote: "Michael helped us build a $40M partnership from scratch. He thinks like a business owner, not just a technologist.",
-    name: "[Name]",
-    title: "Chief Revenue Officer",
-    company: "Confluent",
-  },
-  {
-    quote: "Michael helped us see through the complexity and build a simplification roadmap that actually made sense to our leadership team.",
-    name: "[Name]",
-    title: "CIO",
-    company: "Micron",
+    icon: Wrench,
+    title: "Builder Mentality",
+    description:
+      "We don't just advise—we implement. Strategy without execution is just expensive conversation.",
   },
 ];
 
 export default function AboutPage() {
   return (
     <article>
-      {/* Hero Section */}
+      {/* Company Hero */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            {/* Photo + Name */}
+            <p className="text-sm font-medium tracking-wide text-accent uppercase mb-4">
+              AI Consulting
+            </p>
+            <h1 className="text-4xl font-bold sm:text-5xl">
+              Practical AI Strategy for Growing Companies
+            </h1>
+            <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
+              Tributary AI helps mid-market companies ($10M–$500M) navigate the AI transition—by simplifying operations, not adding complexity.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Based in Eagle, Idaho. Serving clients nationally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Believe */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold mb-6">Our Belief</h2>
+            <div className="bg-background border rounded-lg p-8 mb-8">
+              <p className="text-2xl font-semibold text-center">
+                &ldquo;AI should reduce your technology spend—not increase it.&rdquo;
+              </p>
+            </div>
+            <p className="text-lg leading-relaxed">
+              Most AI projects fail because companies layer AI onto existing complexity. They automate chaos instead of fixing it.
+            </p>
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              We take a different approach: simplify first, then accelerate. Clean your data. Establish a single source of truth. Build AI on a solid foundation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What Makes Us Different */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-2xl font-bold mb-8 text-center">Why Tributary</h2>
+            <div className="grid gap-6 sm:grid-cols-3">
+              {differentiators.map((item, index) => (
+                <div key={index} className="border rounded-lg p-6 text-center">
+                  <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
+                    <item.icon className="h-6 w-6" />
+                  </div>
+                  <h3 className="font-semibold mb-2">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-8 text-center text-muted-foreground">
+              We keep our team small intentionally. When you work with Tributary, you work directly with the founder.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the Founder */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-sm font-medium tracking-wide text-accent uppercase mb-6">
+              The Founder
+            </p>
             <div className="flex flex-col sm:flex-row gap-8 items-start">
               <div className="shrink-0">
                 <Image
@@ -73,13 +136,13 @@ export default function AboutPage() {
                 />
               </div>
               <div>
-                <h1 className="text-4xl font-bold">Michael Cooper</h1>
-                <p className="mt-2 text-muted-foreground">Eagle, Idaho</p>
+                <h2 className="text-3xl font-bold">Michael Cooper</h2>
+                <p className="mt-1 text-muted-foreground">Eagle, Idaho</p>
                 <p className="mt-6 text-lg leading-relaxed">
-                  30 years in enterprise technology. Microsoft, Citrix, Confluent. Built partnerships, led teams, helped companies navigate platform transitions.
+                  30 years navigating enterprise technology transitions at Microsoft, Citrix, Confluent, and Astronomer. Built cloud partnerships, led sales organizations, helped companies navigate every major platform shift from on-prem to cloud, waterfall to agile, traditional to SaaS.
                 </p>
-                <p className="mt-4 text-lg leading-relaxed">
-                  Now I help mid-market companies figure out what AI can actually do for them.
+                <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                  Now I help mid-market companies figure out what AI can actually do for them—and what it can&apos;t. No hype. No science projects. Just practical strategy that moves the business forward.
                 </p>
               </div>
             </div>
@@ -88,7 +151,7 @@ export default function AboutPage() {
       </section>
 
       {/* Track Record */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-8">Track Record</h2>
@@ -118,56 +181,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Endorsements */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="text-2xl font-bold mb-8">What People Say</h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              {endorsements.map((endorsement, index) => (
-                <div key={index} className="border rounded-lg p-6">
-                  <p className="text-muted-foreground italic leading-relaxed">
-                    &ldquo;{endorsement.quote}&rdquo;
-                  </p>
-                  <div className="mt-4">
-                    <p className="font-semibold">{endorsement.name}</p>
-                    <p className="text-sm text-muted-foreground">
-                      {endorsement.title}, {endorsement.company}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="mt-6 text-sm text-muted-foreground italic">
-              Placeholder quotes—real endorsements coming soon.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
+      {/* Bently Challenge */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Philosophy</h2>
-            <p className="text-xl leading-relaxed">
-              AI is the moment where business begins its next great evolution. Not a tool to bolt onto existing processes—a fundamental shift in how companies operate.
-            </p>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              I&apos;ve seen what works and what doesn&apos;t. The technology is rarely the problem. The problem is organizational drag, fragmented systems, and roadmaps built for a world that no longer exists.
-            </p>
-            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
-              I help companies see clearly, decide confidently, and move faster.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Challenge */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl">
-            <div className="border rounded-lg p-8 text-center">
+            <div className="border rounded-lg p-8 text-center bg-background">
               <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
                 <Gamepad2 className="h-6 w-6" />
               </div>
@@ -191,18 +209,28 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl">
-            <p className="text-lg mb-6">
-              If you&apos;re trying to figure out what AI means for your business, let&apos;s talk.
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to See What AI Can Do For You?
+            </h2>
+            <p className="text-lg opacity-90 mb-8">
+              Start with a conversation. No pitch, no pressure—just an honest assessment of where AI can help.
             </p>
-            <Button asChild size="lg" className="group">
-              <Link href="/contact">
-                Book a Conversation
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" variant="secondary" className="group">
+                <Link href="/contact">
+                  Book a Strategy Call
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 hover:bg-primary-foreground/10">
+                <Link href="/quiz">
+                  Take the AI Readiness Quiz
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
