@@ -345,7 +345,7 @@ export default function DataReadinessPage() {
               </Button>
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Book a Call
+                  Book a Strategy Call
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>

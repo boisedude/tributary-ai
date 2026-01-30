@@ -14,7 +14,7 @@ import { ServiceSchema } from "@/components/structured-data/schemas";
 import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Assessment | Technology Diagnostic | Tributary AI",
+  title: "AI Readiness Assessment | Two-Week Diagnostic",
   description:
     "Two-week AI readiness diagnostic for mid-market companies. Evaluate Data, People, Process, Technology, and Politics. $25K-$35K. Satisfaction guaranteed.",
   keywords: [
@@ -27,10 +27,11 @@ export const metadata: Metadata = {
     "mid-market consulting",
   ],
   openGraph: {
-    title: "AI Readiness Assessment | Tributary AI",
+    title: "AI Readiness Assessment",
     description:
       "Two-week diagnostic that shows you where you stand and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     type: "website",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",

@@ -6,9 +6,9 @@ import { Mail, Phone, Linkedin, Calendar, ArrowRight, CheckCircle, User } from "
 import { COMPANY, ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Schedule a Conversation | Tributary AI",
+  title: "Schedule a Strategy Call",
   description:
-    "Schedule a 30-minute strategy conversation with Tributary AI. AI consulting and technology strategy for mid-market companies. Based in Boise, Idaho, serving clients nationally.",
+    "Schedule a 30-minute strategy conversation with Tributary AI. AI consulting and technology strategy for mid-market companies.",
   keywords: [
     "AI consulting contact",
     "technology consulting",
@@ -18,10 +18,11 @@ export const metadata: Metadata = {
     "contact Tributary AI",
   ],
   openGraph: {
-    title: "Contact Tributary AI - Schedule a Conversation",
+    title: "Contact Tributary AI",
     description:
       "Schedule a conversation about AI strategy, technology simplification, and The Assessment.",
     type: "website",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.thetributary.ai/contact/",

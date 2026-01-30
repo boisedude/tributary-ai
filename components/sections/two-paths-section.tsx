@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 /**
- * Two Paths section explaining Path A (add complexity) vs Path B (simplify).
- * Based on MESSAGING_FRAMEWORK.md "Two Paths" section.
+ * Two Paths section explaining Weak Foundation vs Solid Foundation approaches.
+ * Based on MESSAGING_FRAMEWORK.md foundation-first positioning.
  */
 export function TwoPathsSection() {
   return (
@@ -23,16 +23,16 @@ export function TwoPathsSection() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-bold sm:text-4xl">
-              Two paths forward
+              Two approaches to AI
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              AI will reduce your technology spend. But not in Month 3—in Year 3. The path you choose determines whether you get there.
+              AI will reduce your technology spend. But not in Month 3—in Year 3. Your foundation determines whether you get there.
             </p>
           </motion.div>
 
           {/* Two Paths Cards */}
           <div className="grid gap-8 md:grid-cols-2 mb-12">
-            {/* Path A */}
+            {/* Weak Foundation */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -55,7 +55,7 @@ export function TwoPathsSection() {
                       <Layers className="h-6 w-6 text-destructive" />
                     </div>
                     <div>
-                      <p className="text-sm text-destructive font-medium">Path A</p>
+                      <p className="text-sm text-destructive font-medium">Weak Foundation</p>
                       <h3 className="text-xl font-bold">Add AI to Existing Complexity</h3>
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export function TwoPathsSection() {
               </Card>
             </motion.div>
 
-            {/* Path B */}
+            {/* Solid Foundation */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -100,8 +100,8 @@ export function TwoPathsSection() {
                       <Minimize2 className="h-6 w-6 text-accent" />
                     </div>
                     <div>
-                      <p className="text-sm text-accent font-medium">Path B</p>
-                      <h3 className="text-xl font-bold">Use AI to Simplify</h3>
+                      <p className="text-sm text-accent font-medium">Solid Foundation</p>
+                      <h3 className="text-xl font-bold">Simplify First, Then Accelerate</h3>
                     </div>
                   </div>
                   <p className="text-muted-foreground mb-4">
@@ -115,7 +115,7 @@ export function TwoPathsSection() {
                   </p>
                   <div className="mt-6 pt-6 border-t">
                     <p className="text-sm text-muted-foreground">
-                      <span className="text-accent font-semibold">We help you take Path B.</span>
+                      <span className="text-accent font-semibold">We help you build this foundation.</span>
                     </p>
                   </div>
                 </CardContent>

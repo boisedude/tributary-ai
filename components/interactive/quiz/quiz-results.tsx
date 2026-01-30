@@ -360,7 +360,7 @@ ${formatDetailedAnswers(answers)}
             <Button asChild variant="outline" className="flex-1 group">
               <a href={EXTERNAL_LINKS.CALENDAR} target="_blank" rel="noopener noreferrer">
                 <Calendar className="mr-2 h-4 w-4" />
-                Book a Call
+                Book a Strategy Call
               </a>
             </Button>
           </div>

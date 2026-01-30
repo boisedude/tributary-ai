@@ -13,7 +13,7 @@ import { ROUTES } from "@/lib/constants";
 import { BreadcrumbListSchema, FAQSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "AI Consulting & Technology Services | Tributary AI",
+  title: "AI Consulting & Technology Services",
   description:
     "AI consulting and managed IT services for mid-market companies. Assessment, automation, custom development, and fractional CTO support.",
   keywords: [
@@ -25,10 +25,11 @@ export const metadata: Metadata = {
     "technology consulting",
   ],
   openGraph: {
-    title: "AI Consulting & Technology Services | Tributary AI",
+    title: "AI Consulting & Technology Services",
     description:
       "AI consulting and managed IT services for mid-market companies.",
     type: "website",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.thetributary.ai/services/",
@@ -266,11 +267,16 @@ export default function ServicesPage() {
             <p className="mt-4 text-lg text-white/90">
               Tell us what you&apos;re trying to accomplish. We&apos;ll help you figure out the right starting point—whether that&apos;s The Assessment or jumping straight to implementation.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Button asChild size="lg" className="group bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Link href="/quiz">
+                  Get Your AI Readiness Score
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
               <Button asChild size="lg" variant="secondary" className="group">
                 <Link href="/contact">
-                  Book a Call
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  Book a Strategy Call
                 </Link>
               </Button>
             </div>

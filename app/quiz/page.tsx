@@ -6,7 +6,7 @@ import { ArrowRight, Clock, Target, Lightbulb } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Quiz | Discover Your Foundation | Tributary AI",
+  title: "AI Readiness Quiz | Free 5-Minute Assessment",
   description:
     "Take our free 5-minute quiz to discover if your organization is ready for AI. Assess Data, Technology, People, Process, Governance, and Politics—the 6 dimensions that determine AI success.",
   keywords: [
@@ -21,10 +21,11 @@ export const metadata: Metadata = {
     "business AI assessment",
   ],
   openGraph: {
-    title: "AI Readiness Quiz | Tributary AI",
+    title: "AI Readiness Quiz",
     description:
       "5-minute quiz to discover if your organization is ready for AI. Get personalized recommendations across 6 dimensions including Data Readiness and AI Governance.",
     type: "website",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     description:
       "5-minute quiz to discover if your organization is ready for AI.",
     images: ["/og-image.png"],
+    creator: "@tributaryai",
   },
   alternates: {
     canonical: "https://www.thetributary.ai/quiz/",

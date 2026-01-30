@@ -494,7 +494,7 @@ export default function BrandPage() {
                 implement AI. Through assessments, data readiness, automation,
                 and custom development, we address the organizational
                 foundations that determine AI success—including the political
-                and cultural factors most consultants ignore.
+                and cultural factors that often derail transformation efforts.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 <strong className="text-foreground">One-liner:</strong>

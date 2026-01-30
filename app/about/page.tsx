@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Gamepad2, Users, Target, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Tributary AI | AI Consulting for Mid-Market Companies",
+  title: "About Us | AI Consulting for Mid-Market",
   description:
     "Tributary AI helps mid-market companies navigate AI with 30 years of enterprise transformation experience. Boutique consulting that simplifies, not complicates.",
   keywords: [
@@ -18,10 +18,11 @@ export const metadata: Metadata = {
     "AI strategy",
   ],
   openGraph: {
-    title: "About Tributary AI | AI Consulting for Mid-Market Companies",
+    title: "About Tributary AI",
     description:
       "Helping mid-market companies navigate AI with 30 years of enterprise transformation experience.",
     type: "website",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.thetributary.ai/about/",
@@ -265,7 +266,7 @@ export default function AboutPage() {
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-primary-foreground/30 hover:bg-primary-foreground/10">
                 <Link href="/quiz">
-                  Take the AI Readiness Quiz
+                  Get Your AI Readiness Score
                 </Link>
               </Button>
             </div>

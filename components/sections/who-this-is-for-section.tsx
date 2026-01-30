@@ -149,7 +149,7 @@ export function WhoThisIsForSection() {
             </p>
             <Button asChild size="lg" className="group">
               <Link href={ROUTES.QUIZ}>
-                Take the AI Readiness Quiz
+                Get Your AI Readiness Score
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
