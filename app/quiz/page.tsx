@@ -6,7 +6,7 @@ import { ArrowRight, Clock, Target, Lightbulb } from "lucide-react";
 import { ROUTES } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Quiz | Are You on Path A or Path B? | Tributary AI",
+  title: "AI Readiness Quiz | Discover Your Foundation | Tributary AI",
   description:
     "Take our free 5-minute quiz to discover if your organization is ready for AI. Assess Data, Technology, People, Process, Governance, and Politics—the 6 dimensions that determine AI success.",
   keywords: [
@@ -47,7 +47,7 @@ const benefits = [
   {
     icon: Target,
     title: "18 Questions",
-    description: "Covering 6 dimensions including Data Lineage & MLOps",
+    description: "Covering Data, People, Process, Technology, Governance, and Politics",
   },
   {
     icon: Lightbulb,
@@ -65,12 +65,10 @@ export default function QuizPage() {
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-accent font-medium mb-4">Free Assessment</p>
             <h1 className="text-4xl font-bold sm:text-5xl">
-              Are You on Path A or Path B?
+              Most AI Projects Fail. Here&apos;s Why.
             </h1>
             <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
-              Most companies rush to add AI to existing chaos (Path A).
-              The smart ones simplify first, then accelerate (Path B).
-              <span className="font-medium text-foreground"> Which path are you on?</span>
+              Companies that layer AI onto existing chaos struggle. Those that build on a solid foundation succeed. Take 5 minutes to explore your organization&apos;s readiness—and start a conversation about what needs to change.
             </p>
 
             {/* Benefits */}
@@ -116,7 +114,7 @@ export default function QuizPage() {
             <div className="grid gap-6 md:grid-cols-2">
               <div className="p-6 bg-background rounded-lg border">
                 <h3 className="font-semibold text-destructive mb-3">
-                  Path A: Adding AI to Chaos
+                  Weak Foundation
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>Scattered, inconsistent data no one trusts</li>
@@ -131,7 +129,7 @@ export default function QuizPage() {
               </div>
               <div className="p-6 bg-background rounded-lg border border-accent/30">
                 <h3 className="font-semibold text-accent mb-3">
-                  Path B: Simplify, Then Accelerate
+                  Solid Foundation
                 </h3>
                 <ul className="space-y-2 text-sm text-muted-foreground">
                   <li>Clean, well-governed data ready for AI</li>
@@ -154,12 +152,10 @@ export default function QuizPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl font-bold sm:text-3xl">
-              Want a Deeper Assessment?
+              Need to Strengthen Your Foundation?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              Our two-week AI Readiness Assessment provides a comprehensive evaluation
-              of your organization across all six dimensions, with a detailed roadmap
-              and executive presentation.
+              If your foundation isn&apos;t solid, we help you fix it. Our two-week Assessment shows exactly what needs to change—and gives you a roadmap to get there.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">
