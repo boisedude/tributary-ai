@@ -44,7 +44,7 @@ export function Footer() {
                 href={EXTERNAL_LINKS.LINKEDIN}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
@@ -53,14 +53,14 @@ export function Footer() {
                 href={EXTERNAL_LINKS.PODCAST_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
                 aria-label="Podcast"
               >
                 <Radio className="h-4 w-4" />
               </a>
               <a
                 href={`mailto:${EMAILS.SALES}`}
-                className="inline-flex items-center justify-center w-9 h-9 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-md bg-muted text-muted-foreground transition-colors hover:text-accent hover:bg-muted/80"
                 aria-label="Email"
               >
                 <Mail className="h-4 w-4" />
