@@ -46,7 +46,7 @@ export function Hero() {
           {/* Simple Credentials */}
           <div className="mt-16 pt-8 border-t">
             <p className="text-sm text-muted-foreground">
-              30 years navigating platform transitions at Microsoft, Citrix, Confluent, Astronomer, and Micron.
+              30 years of enterprise transformation experience.
             </p>
           </div>
         </div>

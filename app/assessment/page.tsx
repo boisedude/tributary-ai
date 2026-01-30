@@ -161,7 +161,7 @@ export default function AssessmentPage() {
             </h2>
 
             {/* Assessment Process Diagram */}
-            <div className="mb-12 overflow-hidden rounded-lg">
+            <div className="mb-12 overflow-hidden rounded-lg max-w-[75%] mx-auto">
               <Image
                 src="/images/assessment-process.webp"
                 alt="Assessment framework: Data, People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
@@ -221,7 +221,7 @@ export default function AssessmentPage() {
             </h2>
 
             {/* Deliverables Preview Image */}
-            <div className="mb-12 overflow-hidden rounded-lg">
+            <div className="mb-12 overflow-hidden rounded-lg max-w-[90%] mx-auto">
               <Image
                 src="/images/assessment-deliverables.webp"
                 alt="Assessment deliverables: AI Readiness Assessment Report and Executive Summary presentation"

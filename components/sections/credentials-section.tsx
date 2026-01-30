@@ -20,24 +20,8 @@ export function CredentialsSection() {
             We&apos;ve navigated every major platform transition—from on-prem to cloud, from waterfall to agile, from traditional software to SaaS. Now we help companies navigate the AI shift.
           </p>
 
-          {/* Key Numbers */}
-          <div className="mt-12 grid grid-cols-3 gap-8 text-center">
-            <div>
-              <p className="text-3xl font-bold">$1.1B</p>
-              <p className="text-sm text-muted-foreground mt-1">Revenue at Microsoft</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">$40M</p>
-              <p className="text-sm text-muted-foreground mt-1">Partnership ARR at Confluent</p>
-            </div>
-            <div>
-              <p className="text-3xl font-bold">2x</p>
-              <p className="text-sm text-muted-foreground mt-1">First-party Azure integrations</p>
-            </div>
-          </div>
-
           {/* Founder */}
-          <div className="mt-16 flex flex-col sm:flex-row gap-6 items-start">
+          <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start">
             <div className="w-24 h-24 rounded-full overflow-hidden shrink-0">
               <Image
                 src="/images/michael-cooper-about.jpg"
@@ -51,17 +35,9 @@ export function CredentialsSection() {
               <p className="font-semibold">Michael Cooper</p>
               <p className="text-sm text-accent">Founder, Tributary AI</p>
               <p className="mt-3 text-muted-foreground text-sm leading-relaxed">
-                Built cloud partnerships, led sales organizations, and helped companies navigate platform transitions at Microsoft, Citrix, Confluent, and Astronomer. Three-time Microsoft Executive Briefing Center Speaker of the Year.
+                Nearly 30 years navigating enterprise technology transitions at Microsoft, Citrix, Simplot, and Micron. Global leadership roles spanning Sales, Marketing, IT, Partner ecosystems, and Product—a cross-functional view of how technology, business models, and organizational incentives collide during periods of change.
               </p>
             </div>
-          </div>
-
-          {/* Companies */}
-          <div className="mt-12 pt-8 border-t">
-            <p className="text-sm text-muted-foreground mb-3">Companies we&apos;ve worked with:</p>
-            <p className="text-sm">
-              Microsoft, Citrix, Confluent, Astronomer, Micron, Simplot, Starbucks, Boeing, Nike, Albertsons
-            </p>
           </div>
 
           {/* CTA */}

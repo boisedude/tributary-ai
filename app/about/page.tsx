@@ -63,9 +63,12 @@ export default function AboutPage() {
               Practical AI Strategy for Growing Companies
             </h1>
             <p className="mt-6 text-xl text-muted-foreground leading-relaxed">
-              Tributary AI helps mid-market companies ($10M–$500M) navigate the AI transition—by simplifying operations, not adding complexity.
+              We&apos;re living through a generational shift in how business gets done. AI isn&apos;t just another technology upgrade—it&apos;s a fundamental change in how companies operate, compete, and create value.
             </p>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+              Tributary AI helps mid-market companies ($10M–$500M) navigate this transition. We&apos;re excited by this moment—and we want to help companies embrace it the right way. Not by chasing hype, but by building on solid foundations. Not by adding complexity, but by simplifying operations so AI can actually deliver.
+            </p>
+            <p className="mt-6 text-muted-foreground">
               Based in Eagle, Idaho. Serving clients nationally.
             </p>
           </div>
@@ -76,18 +79,18 @@ export default function AboutPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <h2 className="text-2xl font-bold mb-6">Our Belief</h2>
-            <div className="bg-background border rounded-lg p-8 mb-8">
-              <p className="text-2xl font-semibold text-center">
-                &ldquo;AI should reduce your technology spend—not increase it.&rdquo;
-              </p>
-            </div>
+            <h2 className="text-2xl font-bold mb-6">Our Approach</h2>
             <p className="text-lg leading-relaxed">
               Most AI projects fail because companies layer AI onto existing complexity. They automate chaos instead of fixing it.
             </p>
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               We take a different approach: simplify first, then accelerate. Clean your data. Establish a single source of truth. Build AI on a solid foundation.
             </p>
+            <blockquote className="mt-8 pl-6 border-l-4 border-accent">
+              <p className="text-2xl font-medium italic">
+                AI should reduce your technology spend—not increase it.
+              </p>
+            </blockquote>
           </div>
         </div>
       </section>
@@ -139,10 +142,16 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold">Michael Cooper</h2>
                 <p className="mt-1 text-muted-foreground">Eagle, Idaho</p>
                 <p className="mt-6 text-lg leading-relaxed">
-                  30 years navigating enterprise technology transitions at Microsoft, Citrix, Confluent, and Astronomer. Built cloud partnerships, led sales organizations, helped companies navigate every major platform shift from on-prem to cloud, waterfall to agile, traditional to SaaS.
+                  Michael Cooper has spent nearly 30 years navigating enterprise technology transitions across companies including Microsoft, Citrix, Simplot, and Micron.
                 </p>
                 <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                  Now I help mid-market companies figure out what AI can actually do for them—and what it can&apos;t. No hype. No science projects. Just practical strategy that moves the business forward.
+                  He has helped organizations execute major platform and operating-model shifts—from on-premises infrastructure to cloud, from waterfall delivery to agile, and from traditional licensed software to SaaS and usage-based models.
+                </p>
+                <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                  Michael has held global leadership roles spanning Sales, Marketing, IT, Partner ecosystems, and Product, giving him a rare cross-functional view of how technology, business models, and organizational incentives collide during periods of change.
+                </p>
+                <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
+                  Today, Michael applies these lessons to modern SaaS and AI-era transformations, where execution and operating models are often the true bottlenecks.
                 </p>
               </div>
             </div>
