@@ -6,7 +6,12 @@
 - **Production URL:** https://www.thetributary.ai
 - **Current Status:** ✅ **READY FOR LAUNCH**
 
-> **January 2026:** Website is fully built and ready. AI consulting firm helping mid-market companies simplify operations and reduce tech spend. Core offering: The Assessment (2-week diagnostic).
+> **January 2026:** Website is fully built and ready. AI consulting firm helping mid-market companies build solid foundations for AI transformation. Core offering: The Assessment (2-week diagnostic, $25K-$35K).
+
+### Key Messaging
+- **Headline:** "Most AI Projects Fail. Here's Why."
+- **Philosophy:** Foundation-first approach (simplify before adding AI)
+- **Differentiators:** Satisfaction guarantee, transparent pricing, politics dimension assessment
 
 ## 🎨 Brand Identity
 
@@ -245,8 +250,12 @@ Public booking page: https://cal.com/thetributary
 - [x] Google Business Profile claimed
 
 ### Future Enhancements
-- [ ] Add newsletter signup
+- [x] Add newsletter signup ✅
+- [x] Add email preference center ✅
+- [ ] Add vertical/industry specialization (manufacturing, tech, startups)
+- [ ] Add urgency messaging ("120-day AI adoption window")
 - [ ] Add client testimonials (when available)
+- [ ] Add case studies page
 
 ### Long-term
 - [ ] Add case studies page (when clients available)
@@ -296,7 +305,7 @@ See `app/globals.css` for custom classes:
 
 ## 📄 License
 
-© 2025 Tributary AI Systems. All rights reserved.
+© 2026 Tributary AI Systems. All rights reserved.
 
 ---
 

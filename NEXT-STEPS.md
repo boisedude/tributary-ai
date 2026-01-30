@@ -14,7 +14,18 @@ The website is now clearly positioned as an AI consulting firm helping mid-marke
 - **Core Service:** The Assessment (2-week diagnostic, $25K-$35K)
 - **Credibility:** 30 years enterprise technology experience (Microsoft, Citrix, Micron, Simplot)
 
-### Recent Changes (January 29, 2026)
+### Recent Changes (January 30, 2026)
+- **Messaging reframe** - Updated About page with "opportunity" framing for AI transformation
+- **Quiz page reframe** - New headline "Most AI Projects Fail. Here's Why." with discovery-focused language
+- **Foundation messaging** - Replaced "Path A/B" terminology with "Weak Foundation/Solid Foundation" throughout
+- **SEO fixes** - Fixed duplicate title tags, added og:image to all pages, shortened titles to <60 chars
+- **CTA standardization** - All quiz CTAs now "Get Your AI Readiness Score", all contact CTAs now "Book a Strategy Call"
+- **Services CTAs** - Added quiz CTA to all service pages (was missing from 4 pages)
+- **Accessibility** - Increased touch targets to 44px minimum (buttons, inputs, icons)
+- **Founder bio update** - Cross-functional leadership focus (Sales, Marketing, IT, Partner, Product)
+- **Assessment images** - Resized to 75% and 90% for better visual balance
+
+### Changes (January 29, 2026)
 - **Newsletter signup** - Email signup form in footer (low-friction, email-only)
 - **Preference center** - GDPR/CAN-SPAM compliant email preference management (/preferences)
 - **CRM database** - Companies, contacts, invoices, engagements, relationships tables
@@ -382,9 +393,11 @@ components/
 ## Future Enhancements
 
 ### Short-term
+- [ ] Add vertical/industry specialization messaging (manufacturing, tech, startups)
+- [ ] Add urgency messaging around AI adoption window ("120-day window")
 - [ ] Add client testimonials section
 - [ ] Create case studies page
-- [ ] Set up Google Analytics
+- [x] Set up Google Analytics ✅
 - [x] Add newsletter signup ✅ (Jan 29, 2026)
 - [x] Add email preference center ✅ (Jan 29, 2026)
 
@@ -412,4 +425,4 @@ components/
 
 ---
 
-*Document updated: January 29, 2026*
+*Document updated: January 30, 2026*
