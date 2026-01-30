@@ -198,9 +198,6 @@ export default function AssessmentPage() {
             <div className="p-8 border rounded-lg border-amber-500/30 bg-amber-500/5">
               <h2 className="text-2xl font-bold mb-4">Why Politics?</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                This is the dimension other assessments ignore—and it&apos;s why their clients fail. Political problems can veto technical success.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 You can have excellent data, modern technology, skilled people, and documented processes. If your executives aren&apos;t aligned, if your departments won&apos;t collaborate, if your organization is still nursing wounds from past failures—none of the technical excellence matters.
               </p>
               <div className="flex items-center gap-4 pt-4 border-t border-amber-500/20">
