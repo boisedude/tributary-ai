@@ -11,7 +11,7 @@ import { CTASection } from "@/components/sections/cta-section";
 export const metadata: Metadata = {
   title: "Tributary AI | Technology Consulting for the AI Era",
   description:
-    "AI changes everything—that's the opportunity. We help companies navigate the next evolution of business by simplifying operations, not adding complexity. 30 years of transformation experience.",
+    "AI isn't the hard part—making it work inside your business can be. We help organizations simplify how they operate so AI creates value instead of noise. 30 years of transformation experience.",
   keywords: [
     "AI consulting",
     "technology consulting",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:
-      "AI changes everything—that's the opportunity. We help companies navigate the next evolution of business by simplifying operations, not adding complexity.",
+      "AI isn't the hard part—making it work inside your business can be. We help organizations simplify how they operate so AI creates value instead of noise.",
     type: "website",
   },
 };

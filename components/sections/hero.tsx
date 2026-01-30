@@ -18,14 +18,14 @@ export function Hero() {
 
           {/* Main Headline */}
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl leading-[1.1]">
-            AI changes everything.
+            AI isn&apos;t the hard part.
             <br />
-            <span className="text-accent">That&apos;s the opportunity.</span>
+            <span className="text-accent">Making it work inside your business can be.</span>
           </h1>
 
           {/* Subheadline */}
           <p className="mt-8 text-xl text-muted-foreground leading-relaxed max-w-2xl">
-            We help companies navigate the next evolution of business—not by adding more tools, but by simplifying how you operate.
+            We help organizations simplify how they operate so AI creates value instead of noise.
           </p>
 
           {/* CTA Buttons */}
