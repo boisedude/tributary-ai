@@ -68,9 +68,6 @@ export default function AboutPage() {
             <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
               Tributary AI helps mid-market companies ($10M–$500M) navigate this transition. We&apos;re excited by this moment—and we want to help companies embrace it the right way. Not by chasing hype, but by building on solid foundations. Not by adding complexity, but by simplifying operations so AI can actually deliver.
             </p>
-            <p className="mt-6 text-muted-foreground">
-              Based in Eagle, Idaho. Serving clients nationally.
-            </p>
           </div>
         </div>
       </section>
