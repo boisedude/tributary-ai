@@ -45,6 +45,18 @@ next-env.d.ts
 
 # Test artifacts
 audit-screenshots/
+ux-audit-screenshots/
 ux-test-screenshots/
 verification-screenshots/
 sarah-chen-review/
+
+# IDE
+.idea/
+*.code-workspace
+
+# OS files
+Thumbs.db
+
+# Misc
+*.log
+art/

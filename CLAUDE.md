@@ -20,13 +20,29 @@ Tailwind CSS v4 | shadcn/ui | Framer Motion 12 | MDX | Supabase
 
 ```
 app/              # Pages & routes (App Router)
+  about/          # About page
+  admin/          # Admin dashboard
+  assessment/     # Assessment service page
+  blog/           # Blog listing and [slug] pages
+  brand/          # Brand assets page
+  careers/        # Careers page
+  contact/        # Contact page with Cal.com embed
+  partners/       # Partners page
+  preferences/    # Email preference center
+  privacy/        # Privacy policy
+  quiz/           # AI readiness quiz
+  security/       # Security practices page
+  services/       # Services overview + subpages
+  terms/          # Terms of service
 components/
   ui/             # shadcn/ui primitives (button, card, input, toast, etc.)
   sections/       # Homepage sections (hero, cta, approach, etc.)
   layout/         # Navigation, Footer
   blog/           # Blog components
-  quiz/           # AI readiness quiz (18 questions, 6 dimensions)
-  admin/          # Admin dashboard
+  interactive/quiz/ # Quiz components (role-selector, results, benchmarks, etc.)
+  admin/          # Admin dashboard components
+  newsletter/     # Newsletter signup
+  faq-accordion.tsx # Reusable FAQ accordion component
 content/blog/     # MDX blog posts (36 posts with frontmatter)
 lib/
   constants.ts    # ALL routes, emails, company info, assets - USE THIS
@@ -35,9 +51,17 @@ lib/
   utils.ts        # cn() classnames helper
   preferences.ts  # Email preference management
   newsletter.ts   # Newsletter subscriptions
+  quiz/           # Quiz logic and scoring
 public/           # Static assets (logos, images, blog images)
+  blog/           # Blog post images
+  brand/          # Brand assets for download
+  images/         # General images
+  logos/          # Logo variations
 scripts/          # Build scripts (image optimization, migrations)
 supabase/         # Database schema & migrations
+docs/             # Project documentation
+  archive/        # Historical docs
+  research/       # Research notes
 ```
 
 ## Essential Constants (lib/constants.ts)
@@ -158,6 +182,9 @@ npm run lint     # ESLint
 5. **Trailing slashes** - All internal links must use trailing slashes
 6. **Cal.com embed** - Configured in `app/contact/page.tsx`
 7. **Dark mode logos** - Use `ASSETS.LOGO_HEADER_DARK` for dark theme
+8. **Security page** - `/security` route, explains data handling practices
+9. **FAQ component** - Use `FAQAccordion` for consistent FAQ styling
+10. **Quiz components path** - Located in `components/interactive/quiz/`, not `components/quiz/`
 
 ## Environment Variables
 
@@ -194,6 +221,8 @@ NEXT_PUBLIC_GA_ID               # Optional: Google Analytics
 1. Create `app/[route]/page.tsx`
 2. Add route to `ROUTES` in `lib/constants.ts`
 3. Add to navigation if needed in `NAV_ITEMS`
+4. Add to `FOOTER_NAV_GROUPS` for footer links
+5. Add to `app/sitemap.ts` if public page
 
 ### Add a blog post
 1. Create `content/blog/post-slug.mdx`
@@ -208,6 +237,31 @@ NEXT_PUBLIC_GA_ID               # Optional: Google Analytics
 ### Add a new UI component
 1. Use shadcn/ui: `npx shadcn@latest add [component]`
 2. Components go to `components/ui/`
+
+### Add FAQ section to a page
+1. Import `FAQAccordion` from `@/components/faq-accordion`
+2. Pass array of `{ question: string, answer: string }` objects
+3. Component handles accessibility and animations
+
+## Key Components
+
+### FAQAccordion
+Reusable accordion for FAQ sections. Used on Services page.
+```typescript
+import { FAQAccordion } from "@/components/faq-accordion"
+<FAQAccordion faqs={[{ question: "...", answer: "..." }]} />
+```
+
+### Quiz Components
+Located in `components/interactive/quiz/`:
+- `quiz-role-selector.tsx` - Initial role selection
+- `quiz-question.tsx` - Question display
+- `quiz-results.tsx` - Results display with scoring
+- `quiz-benchmarks.tsx` - Industry comparison
+- `quiz-pdf-download.tsx` - PDF export
+- `quiz-share.tsx` - Social sharing
+- `quiz-resume-prompt.tsx` - Resume saved progress
+- `quiz-company-comparison.tsx` - Compare results
 
 ---
 
