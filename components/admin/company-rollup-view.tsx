@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -121,16 +122,18 @@ export function CompanyRollupView({ rollup, onBack }: CompanyRollupViewProps) {
           <Card>
             <CardContent className="pt-6">
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-lg ${
+                <div className={cn(
+                  "p-3 rounded-lg",
                   rollup.averageScore >= 65 ? "bg-emerald-500/10" :
                   rollup.averageScore >= 50 ? "bg-amber-500/10" :
                   "bg-red-500/10"
-                }`}>
-                  <TrendingUp className={`h-6 w-6 ${
+                )}>
+                  <TrendingUp className={cn(
+                    "h-6 w-6",
                     rollup.averageScore >= 65 ? "text-emerald-500" :
                     rollup.averageScore >= 50 ? "text-amber-500" :
                     "text-red-500"
-                  }`} />
+                  )} />
                 </div>
                 <div>
                   <p className="text-2xl font-bold">{rollup.averageScore}%</p>
@@ -149,7 +152,10 @@ export function CompanyRollupView({ rollup, onBack }: CompanyRollupViewProps) {
           <Card>
             <CardContent className="pt-6">
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-lg ${vsAverage >= 0 ? "bg-emerald-500/10" : "bg-amber-500/10"}`}>
+                <div className={cn(
+                  "p-3 rounded-lg",
+                  vsAverage >= 0 ? "bg-emerald-500/10" : "bg-amber-500/10"
+                )}>
                   {vsAverage >= 0 ? (
                     <TrendingUp className="h-6 w-6 text-emerald-500" />
                   ) : (
@@ -217,8 +223,8 @@ export function CompanyRollupView({ rollup, onBack }: CompanyRollupViewProps) {
                     <div key={dim} className="space-y-2">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
-                          <div className={`p-1.5 rounded ${info.bgColor}`}>
-                            <Icon className={`h-4 w-4 ${info.color}`} />
+                          <div className={cn("p-1.5 rounded", info.bgColor)}>
+                            <Icon className={cn("h-4 w-4", info.color)} />
                           </div>
                           <span className="font-medium">{info.title}</span>
                           {isStrength && (
@@ -228,19 +234,21 @@ export function CompanyRollupView({ rollup, onBack }: CompanyRollupViewProps) {
                             <AlertTriangle className="h-4 w-4 text-amber-500" />
                           )}
                         </div>
-                        <span className={`font-bold ${
+                        <span className={cn(
+                          "font-bold",
                           avg >= 65 ? "text-emerald-600 dark:text-emerald-400" :
                           avg >= 50 ? "text-amber-600 dark:text-amber-400" :
                           "text-red-600 dark:text-red-400"
-                        }`}>
+                        )}>
                           {avg}%
                         </span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
                         <div
-                          className={`h-full rounded-full ${
+                          className={cn(
+                            "h-full rounded-full",
                             avg >= 65 ? "bg-emerald-500" : avg >= 50 ? "bg-amber-500" : "bg-red-500"
-                          }`}
+                          )}
                           style={{ width: `${avg}%` }}
                         />
                       </div>
@@ -272,7 +280,7 @@ export function CompanyRollupView({ rollup, onBack }: CompanyRollupViewProps) {
                     .sort((a, b) => b[1] - a[1])
                     .map(([band, count]) => (
                       <div key={band} className="flex items-center justify-between p-2 rounded hover:bg-muted/50">
-                        <span className={`text-sm px-2 py-1 rounded-full ${bandColors[band]}`}>
+                        <span className={cn("text-sm px-2 py-1 rounded-full", bandColors[band])}>
                           {bandLabels[band] || band}
                         </span>
                         <span className="font-medium">

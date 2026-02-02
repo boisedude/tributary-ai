@@ -3,9 +3,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calendar, Building2, Users, Scale } from "lucide-react";
+import { EMAILS, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Partners & Alliances | Tributary AI",
+  title: "Partners & Alliances",
   description:
     "Strategic partnerships with AWS and Microsoft. Implementation partners for execution. Scaling Tributary's advisory capacity to mid-market.",
   keywords: ["AWS partner", "Microsoft partner", "implementation partners", "technology partners"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/partners/",
+    canonical: `${SITE_URL}/partners/`,
   },
 };
 
@@ -205,7 +206,7 @@ export default function PartnersPage() {
                 <li>Communication that keeps customers informed without overwhelming them</li>
               </ul>
               <p className="text-muted-foreground">
-                Contact us at <a href="mailto:partner@thetributary.ai" className="text-accent hover:underline">partner@thetributary.ai</a> to discuss potential partnership.
+                Contact us at <a href={`mailto:${EMAILS.PARTNER}`} className="text-accent hover:underline">{EMAILS.PARTNER}</a> to discuss potential partnership.
               </p>
             </div>
           </div>

@@ -13,6 +13,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import remarkGfm from "remark-gfm"
 import "highlight.js/styles/github-dark.css"
 import { BlogPostSchema } from "@/components/structured-data/schemas"
+import { SITE_URL } from "@/lib/constants"
 
 export async function generateStaticParams() {
   const posts = getAllPosts()
@@ -36,6 +37,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: post.excerpt,
     keywords: post.tags?.join(", "),
     authors: [{ name: post.author || "Tributary AI" }],
+    alternates: {
+      canonical: `${SITE_URL}/blog/${post.slug}/`,
+    },
     openGraph: {
       type: 'article',
       title: post.title,
@@ -87,7 +91,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
         datePublished={post.date}
         author={post.author || "Tributary AI"}
         image={post.image}
-        url={`https://www.thetributary.ai/blog/${post.slug}`}
+        url={`${SITE_URL}/blog/${post.slug}`}
       />
       <div className="mx-auto max-w-3xl">
         <Breadcrumb

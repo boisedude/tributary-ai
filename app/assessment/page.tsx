@@ -11,7 +11,7 @@ import {
   Database,
 } from "lucide-react";
 import { ServiceSchema } from "@/components/structured-data/schemas";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "AI Readiness Assessment | Two-Week Diagnostic",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/assessment/",
+    canonical: `${SITE_URL}/assessment/`,
   },
 };
 

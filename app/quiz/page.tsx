@@ -3,12 +3,12 @@ import Link from "next/link";
 import { AIReadinessQuiz } from "@/components/interactive/ai-readiness-quiz";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Target, Lightbulb } from "lucide-react";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "AI Readiness Quiz | Free 5-Minute Assessment",
   description:
-    "Take our free 5-minute quiz to discover if your organization is ready for AI. Assess Data, Technology, People, Process, Governance, and Politics—the 6 dimensions that determine AI success.",
+    "Free 5-minute quiz to assess your organization's AI readiness across 6 dimensions: Data, People, Process, Technology, Governance, and Politics.",
   keywords: [
     "AI readiness assessment",
     "AI readiness quiz",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     creator: "@tributaryai",
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/quiz/",
+    canonical: `${SITE_URL}/quiz/`,
   },
 };
 

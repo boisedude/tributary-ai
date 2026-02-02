@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Users, TrendingUp, TrendingDown, Minus, Building2, Medal } from "lucide-react";
+import { cn } from "@/lib/utils";
 import type { CompanyComparison } from "@/lib/supabase";
 import type { Dimension } from "@/lib/quiz";
 import { DIMENSION_INFO, DIMENSIONS } from "@/lib/quiz";
@@ -58,11 +59,12 @@ export function QuizCompanyComparison({
           </div>
           <div className="flex items-baseline justify-between">
             <span className="text-lg font-bold">{averageScore}%</span>
-            <div className={`flex items-center gap-1 text-sm font-medium ${
+            <div className={cn(
+              "flex items-center gap-1 text-sm font-medium",
               diff > 0 ? "text-emerald-600 dark:text-emerald-400" :
               diff === 0 ? "text-muted-foreground" :
               "text-amber-600 dark:text-amber-400"
-            }`}>
+            )}>
               {diff > 0 ? (
                 <TrendingUp className="h-3.5 w-3.5" />
               ) : diff === 0 ? (
@@ -103,7 +105,7 @@ export function QuizCompanyComparison({
                 key={dim}
                 className="flex items-center gap-2 text-sm"
               >
-                <span className={`${info.color} font-medium`}>{info.title}:</span>
+                <span className={cn(info.color, "font-medium")}>{info.title}:</span>
                 <DiffIndicator diff={dimDiff} />
               </div>
             );

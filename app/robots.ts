@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
@@ -21,6 +22,6 @@ export default function robots(): MetadataRoute.Robots {
         crawlDelay: 10,
       },
     ],
-    sitemap: "https://www.thetributary.ai/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

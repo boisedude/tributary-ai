@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   ArrowRight,
   Database,
@@ -11,11 +12,11 @@ import {
   AlertTriangle,
   Search,
 } from "lucide-react";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 import { BreadcrumbListSchema, DataReadinessServiceSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Data Readiness Services | Clean Data for AI | Tributary AI",
+  title: "Data Readiness Services | Clean Data for AI",
   description:
     "Get your data AI-ready. Data quality assessment, consolidation, governance, and integration services for mid-market companies preparing for AI implementation.",
   keywords: [
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/services/data-readiness/",
+    canonical: `${SITE_URL}/services/data-readiness/`,
   },
 };
 
@@ -97,14 +98,23 @@ export default function DataReadinessPage() {
     <article className="bg-gradient-subtle">
       <BreadcrumbListSchema
         items={[
-          { name: "Home", url: "https://www.thetributary.ai" },
-          { name: "Services", url: "https://www.thetributary.ai/services" },
-          { name: "Data Readiness", url: "https://www.thetributary.ai/services/data-readiness" },
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          { name: "Data Readiness", url: `${SITE_URL}/services/data-readiness` },
         ]}
       />
       <DataReadinessServiceSchema />
+      {/* Breadcrumb Navigation */}
+      <div className="container mx-auto px-4 pt-8">
+        <Breadcrumb
+          items={[
+            { label: "Services", href: ROUTES.SERVICES },
+            { label: "Data Readiness" },
+          ]}
+        />
+      </div>
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20 pt-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">

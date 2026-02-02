@@ -1,312 +1,96 @@
 # Tributary AI Systems Website
 
-**Official website for Tributary AI Systems** - Expert consulting in AI readiness, cloud marketplace GTM, and agentic systems strategy.
+Marketing website for Tributary AI Systems - AI consulting firm helping mid-market companies build solid foundations for AI transformation.
 
-## 🌐 Live Site
-- **Production URL:** https://www.thetributary.ai
-- **Current Status:** ✅ **READY FOR LAUNCH**
+**Live Site:** https://www.thetributary.ai
 
-> **January 2026:** Website is fully built and ready. AI consulting firm helping mid-market companies build solid foundations for AI transformation. Core offering: The Assessment (2-week diagnostic, $25K-$35K).
+## For AI Agents
 
-### Key Messaging
-- **Headline:** "Most AI Projects Fail. Here's Why."
-- **Philosophy:** Foundation-first approach (simplify before adding AI)
-- **Differentiators:** Satisfaction guarantee, transparent pricing, politics dimension assessment
+See [CLAUDE.md](./CLAUDE.md) for comprehensive project context, patterns, constants, and conventions.
 
-## 🎨 Brand Identity
+## Tech Stack
 
-### Tagline
-"Where Business Experience Meets Intelligent Innovation"
-
-### Positioning
-Preparing businesses for the agentic era through strategic technology transformation and AI readiness consulting.
-
-### Color Palette
-- **Primary:** Oxford Blue (#0F172A) - Deep expertise, authority
-- **Accent:** Teal (#14B8A6) - Innovation, modern technology
-- **Secondary:** Coral (#F97316) - Warmth, human-centered approach
-
-## 🚀 Tech Stack
-
-- **Framework:** Next.js 16.1.6 (App Router)
+- **Framework:** Next.js 16.1.6 (App Router, static export)
 - **Language:** TypeScript 5
-- **Styling:** Tailwind CSS v4
-- **Components:** shadcn/ui (Radix UI primitives)
-- **Icons:** Lucide React
+- **Styling:** Tailwind CSS v4 (CSS variables, OKLch colors)
+- **Components:** shadcn/ui (Radix primitives)
 - **Animations:** Framer Motion 12
-- **Theme:** next-themes (dark/light mode)
 - **Blog:** MDX with next-mdx-remote
-- **Syntax Highlighting:** rehype-highlight (GitHub Dark theme)
-- **Build Output:** Static export for Hostinger deployment
+- **Database:** Supabase (quiz submissions, contacts, preferences)
+- **Deployment:** Hostinger via SSH/rsync
 
-## 📁 Project Structure
-
-```
-tributary-site/
-├── app/                          # Next.js App Router pages
-│   ├── layout.tsx               # Root layout with nav/footer
-│   ├── page.tsx                 # Homepage
-│   ├── about/                   # About page
-│   ├── blog/                    # Blog system
-│   │   ├── page.tsx            # Blog listing
-│   │   └── [slug]/             # Individual posts
-│   ├── contact/                 # Contact page with Cal.com booking
-│   └── services/                # Services pages
-│       ├── page.tsx            # Services overview
-│       ├── ai-readiness/       # Service detail pages
-│       ├── agentic-systems/
-│       ├── implementation/
-│       └── cloud-marketplace/
-│
-├── components/
-│   ├── layout/                  # Navigation & Footer
-│   ├── sections/                # Homepage sections
-│   ├── blog/                    # Blog components
-│   ├── ui/                      # shadcn/ui components
-│   └── theme-provider.tsx
-│
-├── content/
-│   └── blog/                    # MDX blog posts
-│
-├── data/
-│   └── services.ts              # Service data structure
-│
-├── lib/
-│   ├── blog.ts                  # Blog utilities
-│   └── utils.ts                 # Helper functions
-│
-├── public/                      # Static assets
-│   ├── logo.png                # [TO ADD]
-│   └── og-image.png            # [TO ADD]
-│
-└── next.config.ts              # Next.js config (static export)
-```
-
-## 🛠️ Development
-
-### Prerequisites
-- Node.js 18+
-- npm or yarn
-
-### Installation
+## Quick Start
 
 ```bash
-# Navigate to project directory
-cd /mnt/c/Projects/Tributary.ai/tributary-site
-
-# Install dependencies
 npm install
-
-# Run development server
-npm run dev
+npm run dev      # Dev server at localhost:3000
+npm run build    # Static export to ./out/
+npm run deploy   # Deploy via rsync (see DEPLOYMENT.md)
 ```
 
-Visit http://localhost:3000 to view the site.
+## Project Structure
 
-### Available Scripts
-
-```bash
-npm run dev      # Start development server (Turbopack)
-npm run build    # Build for production (static export)
-npm run start    # Start production server (if needed)
-npm run lint     # Run ESLint
+```
+app/              # Pages & routes (App Router)
+components/       # UI components
+  ui/             # shadcn/ui primitives
+  sections/       # Homepage sections
+  layout/         # Navigation, Footer
+  quiz/           # AI readiness quiz
+content/blog/     # MDX blog posts (36 posts)
+lib/              # Utilities & constants
+  constants.ts    # Routes, emails, company info, assets
+  supabase.ts     # Database client
+  utils.ts        # cn() helper
+public/           # Static assets
 ```
 
-## 📝 Content Management
+## Key Files
 
-### Adding Blog Posts
+| File | Purpose |
+|------|---------|
+| `lib/constants.ts` | All routes, emails, external links, assets |
+| `lib/supabase.ts` | Database types and client |
+| `app/layout.tsx` | Root layout, metadata, fonts |
+| `app/globals.css` | Tailwind config, CSS variables, custom utilities |
 
-1. Create a new `.mdx` file in `content/blog/`
-2. Add frontmatter:
+## Content Management
 
+### Blog Posts
+Create `.mdx` files in `content/blog/` with frontmatter:
 ```yaml
 ---
-title: "Your Post Title"
-date: "2025-01-27"
-excerpt: "Brief description for listings"
-author: "Tributary AI Systems"
-tags: ["AI", "Business Strategy"]
-image: "/blog/post-image.png"
-readingTime: "8 min read"
+title: "Post Title"
+date: "2026-01-30"
+excerpt: "Brief description"
+author: "Michael Cooper"
+tags: ["AI", "Strategy"]
+image: "/blog/post-image.webp"
 ---
 ```
 
-3. Write your content using Markdown/MDX
-4. Build the site - the post will be automatically generated
+### Service Data
+Edit `data/services.ts` for service information.
 
-### Updating Services
-
-Edit `data/services.ts` to modify service information. Changes will reflect across:
-- Homepage services overview
-- Services listing page
-- Individual service detail pages
-
-## 🎯 Key Features
-
-### Pages & Routes
-- ✅ Homepage with hero, services overview, and CTA
-- ✅ 4 Service detail pages (AI Readiness, Agentic Systems, Implementation, Cloud Marketplace)
-- ✅ About page with founder story and credentials
-- ✅ Contact page with Cal.com booking integration
-- ✅ Blog with MDX support and 2 starter posts
-- ✅ Dynamic routing for blog posts
-- ✅ Responsive navigation with mobile menu
-- ✅ Footer with links and contact info
-
-### Design Features
-- ✨ Dark/light theme toggle
-- ✨ Smooth scroll animations (Framer Motion)
-- ✨ Card glow effects (teal & coral)
-- ✨ Gradient backgrounds
-- ✨ Responsive grid layouts
-- ✨ Mobile-first design
-- ✨ Accessible components (ARIA labels)
-
-### SEO Optimization
-- 📊 Metadata API for all pages
-- 📊 OpenGraph tags for social sharing
-- 📊 Twitter Card metadata
-- 📊 Structured data (JSON-LD)
-- 📊 Semantic HTML
-- 📊 Sitemap generation
-- 📊 Robots.txt configuration
-
-## 🚢 Deployment to Hostinger
-
-### Build for Production
-
-```bash
-# Create static export
-npm run build
-```
-
-This generates an `out/` directory with static files.
-
-### Deploy to Hostinger
-
-**Primary method (SSH/rsync):**
-```bash
-npm run deploy
-```
-
-This runs `deploy-rsync.sh` which builds and syncs only changed files via SSH.
-
-**Backup method (FTP):**
-```bash
-npm run deploy:ftp
-```
-
-Only use FTP if SSH is unavailable. See `DEPLOYMENT.md` for full setup details.
-
-### Post-Deployment Checklist
-
-- [ ] Test all pages load correctly
-- [ ] Verify mobile responsiveness
-- [ ] Check dark/light theme toggle
-- [ ] Test blog post links
-- [ ] Verify contact form/Cal.com embed
-- [ ] Check social sharing (OG images)
-- [ ] Test navigation on all pages
-- [ ] Verify Google Analytics (if configured)
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Currently, no environment variables are required. The site is fully static.
-
-If you add dynamic features later (API routes, database), create a `.env.local` file:
+## Environment Variables
 
 ```env
-# Example for future use
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=your-ga-id
-CAL_API_KEY=your-cal-api-key
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+NEXT_PUBLIC_GA_ID=G-3TLS4354D6  # Optional
 ```
 
-### Cal.com Booking
+## Deployment
 
-The contact page uses Cal.com for scheduling. The embed is configured in `app/contact/page.tsx`:
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for full deployment instructions.
 
-```typescript
-// Cal.com embed URL
-src="https://cal.com/thetributary?embed=true&layout=month_view&hideBranding=true"
-```
+Quick deploy: `npm run deploy` (builds and syncs via rsync)
 
-Public booking page: https://cal.com/thetributary
-
-## 📋 TODO / Future Enhancements
-
-### Launch Checklist (All Complete ✅)
-- [x] Tributary AI logo configured
-- [x] OpenGraph image (`/public/og-image.png`)
-- [x] Cal.com booking configured
-- [x] Content review complete
-- [x] Mobile responsive
-- [x] Favicon configured
-- [x] Google Analytics (G-3TLS4354D6)
-- [x] 36 blog posts published
-- [x] Service page images
-- [x] Google Search Console verified
-- [x] Google Business Profile claimed
-
-### Future Enhancements
-- [x] Add newsletter signup ✅
-- [x] Add email preference center ✅
-- [ ] Add vertical/industry specialization (manufacturing, tech, startups)
-- [ ] Add urgency messaging ("120-day AI adoption window")
-- [ ] Add client testimonials (when available)
-- [ ] Add case studies page
-
-### Long-term
-- [ ] Add case studies page (when clients available)
-- [ ] Add testimonials section
-- [ ] Integrate Agentic SaaS Talks podcast feed
-- [ ] Add team section (when hiring)
-- [ ] Create resources/downloads section
-- [ ] Add client logos/partners section
-
-## 🎨 Design System
-
-### Typography
-- **Font:** Inter (Google Fonts)
-- **Headings:** Bold, tracking-tight
-- **Body:** Regular, comfortable line-height
-
-### Spacing
-- Uses Tailwind's spacing scale (4px base unit)
-- Consistent padding/margin across components
-
-### Components
-All UI components use shadcn/ui with Tributary brand colors:
-- Button (6 variants, 6 sizes)
-- Card (with header, content, footer)
-- Navigation Menu
-- Tabs
-- Tooltip
-- Hover Card
-- Badge
-- Input/Textarea
-
-### Custom Utilities
-See `app/globals.css` for custom classes:
-- `.bg-gradient-tributary` - Brand gradient
-- `.bg-gradient-subtle` - Light background gradient
-- `.card-glow-teal` - Teal glow effect on hover
-- `.card-glow-coral` - Coral glow effect on hover
-- `.text-gradient` - Teal to Coral text gradient
-- `.animate-fade-up` - Fade up animation
-- `.animate-fade-in` - Fade in animation
-
-## 📞 Contact & Support
+## Contact
 
 - **Email:** michael@thetributary.ai
-- **LinkedIn:** https://www.linkedin.com/company/tributaryai
-- **Location:** Boise, Idaho (serving clients nationally)
-
-## 📄 License
-
-© 2026 Tributary AI Systems. All rights reserved.
+- **Site:** https://www.thetributary.ai
 
 ---
 
-**Built with ❤️ using Next.js, Tailwind CSS, and shadcn/ui**
+(c) 2026 Tributary AI Systems

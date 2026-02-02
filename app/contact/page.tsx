@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, Linkedin, Calendar, ArrowRight, CheckCircle, User } from "lucide-react";
-import { COMPANY, ROUTES } from "@/lib/constants";
+import { COMPANY, EMAILS, ROUTES, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Schedule a Strategy Call",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/contact/",
+    canonical: `${SITE_URL}/contact/`,
   },
 };
 
@@ -167,10 +167,10 @@ export default function ContactPage() {
                   <div className="flex items-center gap-2">
                     <Mail className="h-4 w-4 text-accent" />
                     <a
-                      href="mailto:michael@thetributary.ai"
+                      href={`mailto:${EMAILS.MICHAEL}`}
                       className="text-accent hover:underline"
                     >
-                      michael@thetributary.ai
+                      {EMAILS.MICHAEL}
                     </a>
                   </div>
                   <div className="flex items-center gap-2">
@@ -226,7 +226,7 @@ export default function ContactPage() {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="secondary">
-                <a href="mailto:sales@thetributary.ai">
+                <a href={`mailto:${EMAILS.SALES}`}>
                   <Mail className="mr-2 h-4 w-4" />
                   Email Us First
                 </a>

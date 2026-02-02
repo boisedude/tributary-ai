@@ -1,18 +1,18 @@
 import Script from "next/script";
+import { SITE_URL, COMPANY, EMAILS, EXTERNAL_LINKS } from "@/lib/constants";
 
 export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Tributary AI",
-    alternateName: "Tributary",
-    url: "https://www.thetributary.ai",
-    logo: "https://www.thetributary.ai/logo.png",
-    description:
-      "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
+    name: COMPANY.DISPLAY_NAME,
+    alternateName: COMPANY.NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: COMPANY.DESCRIPTION,
     founder: {
       "@type": "Person",
-      name: "Michael Cooper",
+      name: COMPANY.FOUNDER_NAME,
       jobTitle: "Founder",
     },
     address: {
@@ -23,10 +23,10 @@ export function OrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "sales@thetributary.ai",
+      email: EMAILS.SALES,
       contactType: "sales",
     },
-    sameAs: ["https://www.linkedin.com/company/tributaryai"],
+    sameAs: [EXTERNAL_LINKS.LINKEDIN],
   };
 
   return (
@@ -42,9 +42,9 @@ export function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.thetributary.ai/#localbusiness",
-    name: "Tributary AI",
-    image: "https://www.thetributary.ai/logo.png",
+    "@id": `${SITE_URL}/#localbusiness`,
+    name: COMPANY.DISPLAY_NAME,
+    image: `${SITE_URL}/logo.png`,
     description:
       "Technology consulting firm helping mid-market companies simplify operations, cut complexity, and move faster with AI.",
     address: {
@@ -59,9 +59,9 @@ export function LocalBusinessSchema() {
       latitude: 43.615,
       longitude: -116.2023,
     },
-    url: "https://www.thetributary.ai",
-    email: "sales@thetributary.ai",
-    telephone: "(208) 330-5534",
+    url: SITE_URL,
+    email: EMAILS.SALES,
+    telephone: COMPANY.PHONE,
     priceRange: "$$$$",
     areaServed: {
       "@type": "Country",
@@ -114,13 +114,13 @@ export function BlogPostSchema({
     },
     publisher: {
       "@type": "Organization",
-      name: "Tributary AI",
+      name: COMPANY.DISPLAY_NAME,
       logo: {
         "@type": "ImageObject",
-        url: "https://www.thetributary.ai/logo.png",
+        url: `${SITE_URL}/logo.png`,
       },
     },
-    image: image ? `https://www.thetributary.ai${image}` : undefined,
+    image: image ? `${SITE_URL}${image}` : undefined,
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": url,
@@ -207,8 +207,8 @@ export function ServiceSchema() {
       "A two-week diagnostic evaluating People, Process, Technology, and Politics to identify AI transformation opportunities",
     provider: {
       "@type": "LocalBusiness",
-      name: "Tributary AI",
-      url: "https://www.thetributary.ai",
+      name: COMPANY.DISPLAY_NAME,
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Country",
@@ -235,8 +235,8 @@ export function AIAutomationServiceSchema() {
       "Implementing AI into existing workflows. RPA, process automation, AI agent deployment for mid-market companies.",
     provider: {
       "@type": "LocalBusiness",
-      name: "Tributary AI",
-      url: "https://www.thetributary.ai",
+      name: COMPANY.DISPLAY_NAME,
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Country",
@@ -263,8 +263,8 @@ export function AIDevelopmentServiceSchema() {
       "Custom AI-powered applications. Internal tools, customer-facing products. From prototype to production.",
     provider: {
       "@type": "LocalBusiness",
-      name: "Tributary AI",
-      url: "https://www.thetributary.ai",
+      name: COMPANY.DISPLAY_NAME,
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Country",
@@ -291,8 +291,8 @@ export function ManagedServicesSchema() {
       "Ongoing IT management, cloud administration, and fractional CTO/CIO advisory. AI-powered operations at a fraction of traditional MSP costs.",
     provider: {
       "@type": "LocalBusiness",
-      name: "Tributary AI",
-      url: "https://www.thetributary.ai",
+      name: COMPANY.DISPLAY_NAME,
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Country",
@@ -319,8 +319,8 @@ export function DataReadinessServiceSchema() {
       "Get your data AI-ready. Data quality assessment, consolidation, governance, and integration services for companies preparing for AI implementation.",
     provider: {
       "@type": "LocalBusiness",
-      name: "Tributary AI",
-      url: "https://www.thetributary.ai",
+      name: COMPANY.DISPLAY_NAME,
+      url: SITE_URL,
     },
     areaServed: {
       "@type": "Country",
@@ -342,16 +342,16 @@ export function BlogListingSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Tributary AI Blog",
+    name: `${COMPANY.DISPLAY_NAME} Blog`,
     description:
       "Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces. Practical guidance for mid-market companies adopting AI.",
-    url: "https://www.thetributary.ai/blog",
+    url: `${SITE_URL}/blog`,
     publisher: {
       "@type": "Organization",
-      name: "Tributary AI",
+      name: COMPANY.DISPLAY_NAME,
       logo: {
         "@type": "ImageObject",
-        url: "https://www.thetributary.ai/logo.png",
+        url: `${SITE_URL}/logo.png`,
       },
     },
   };

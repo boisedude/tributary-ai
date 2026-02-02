@@ -8,6 +8,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { NAV_ITEMS, ASSETS, COMPANY, ROUTES } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 
 const SERVICE_ITEMS = [
   { href: ROUTES.ASSESSMENT, label: "The Assessment", description: "Two-week diagnostic" },
@@ -33,6 +34,32 @@ export function Navigation() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Handle hover open for desktop
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setServicesOpen(true);
+  };
+
+  // Handle hover close with delay for desktop
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 150); // 150ms delay to prevent accidental closes
+  };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     // Use timeout to avoid cascading renders
@@ -88,31 +115,44 @@ export function Navigation() {
                 if (item.href === ROUTES.SERVICES) {
                   // Render Services dropdown
                   return (
-                    <div key={item.href} className="relative" ref={servicesRef}>
+                    <div
+                      key={item.href}
+                      className="relative"
+                      ref={servicesRef}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
                       <button
                         onClick={() => setServicesOpen(!servicesOpen)}
-                        className={`relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-accent hover:bg-accent/5 flex items-center gap-1 ${
-                          isServicesActive
-                            ? "text-accent"
-                            : "text-muted-foreground"
-                        }`}
+                        aria-expanded={servicesOpen}
+                        aria-haspopup="true"
+                        className={cn(
+                          "relative min-h-[44px] px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-accent hover:bg-accent/5 flex items-center gap-1",
+                          isServicesActive ? "text-accent" : "text-muted-foreground"
+                        )}
                       >
                         Services
-                        <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                        <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", servicesOpen && "rotate-180")} />
                         {isServicesActive && (
                           <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
                         )}
                       </button>
                       {servicesOpen && (
-                        <div className="absolute top-full left-0 mt-1 w-64 bg-background border rounded-lg shadow-lg py-2 z-50">
+                        <div
+                          className="absolute top-full left-0 mt-1 w-64 bg-background border rounded-lg shadow-lg py-2 z-50"
+                          role="menu"
+                          aria-label="Services submenu"
+                        >
                           {SERVICE_ITEMS.map((service) => (
                             <Link
                               key={service.href}
                               href={service.href}
+                              role="menuitem"
                               onClick={() => setServicesOpen(false)}
-                              className={`block px-4 py-3 hover:bg-accent/5 transition-colors ${
-                                isActive(service.href) ? "text-accent" : ""
-                              }`}
+                              className={cn(
+                                "block min-h-[44px] px-4 py-3 hover:bg-accent/5 transition-colors",
+                                isActive(service.href) && "text-accent"
+                              )}
                             >
                               <span className="font-medium">{service.label}</span>
                               <span className="block text-xs text-muted-foreground mt-0.5">
@@ -131,11 +171,10 @@ export function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`relative px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-accent hover:bg-accent/5 ${
-                    isActive(item.href)
-                      ? "text-accent"
-                      : "text-muted-foreground"
-                  }`}
+                  className={cn(
+                    "relative min-h-[44px] flex items-center px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 hover:text-accent hover:bg-accent/5",
+                    isActive(item.href) ? "text-accent" : "text-muted-foreground"
+                  )}
                 >
                   {item.label}
                   {isActive(item.href) && (
@@ -193,27 +232,28 @@ export function Navigation() {
                       <div key={item.href}>
                         <button
                           onClick={() => setServicesOpen(!servicesOpen)}
-                          className={`w-full px-4 py-3 min-h-[44px] flex items-center justify-between text-sm font-medium transition-colors hover:text-accent ${
-                            isServicesActive
-                              ? "text-accent bg-accent/10"
-                              : "text-muted-foreground"
-                          }`}
+                          aria-expanded={servicesOpen}
+                          aria-haspopup="true"
+                          className={cn(
+                            "w-full px-4 py-3 min-h-[44px] flex items-center justify-between text-sm font-medium transition-colors hover:text-accent",
+                            isServicesActive ? "text-accent bg-accent/10" : "text-muted-foreground"
+                          )}
                         >
                           Services
-                          <ChevronDown className={`h-4 w-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                          <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", servicesOpen && "rotate-180")} />
                         </button>
                         {servicesOpen && (
-                          <div className="bg-muted/30 py-1">
+                          <div className="bg-muted/30 py-1" role="menu" aria-label="Services submenu">
                             {SERVICE_ITEMS.map((service) => (
                               <Link
                                 key={service.href}
                                 href={service.href}
+                                role="menuitem"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className={`block px-8 py-3 min-h-[44px] text-sm transition-colors hover:text-accent ${
-                                  isActive(service.href)
-                                    ? "text-accent"
-                                    : "text-muted-foreground"
-                                }`}
+                                className={cn(
+                                  "block px-8 py-3 min-h-[44px] text-sm transition-colors hover:text-accent",
+                                  isActive(service.href) ? "text-accent" : "text-muted-foreground"
+                                )}
                               >
                                 {service.label}
                               </Link>
@@ -230,11 +270,10 @@ export function Navigation() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className={`px-4 py-3 min-h-[44px] flex items-center text-sm font-medium transition-colors hover:text-accent ${
-                      isActive(item.href)
-                        ? "text-accent bg-accent/10"
-                        : "text-muted-foreground"
-                    }`}
+                    className={cn(
+                      "px-4 py-3 min-h-[44px] flex items-center text-sm font-medium transition-colors hover:text-accent",
+                      isActive(item.href) ? "text-accent bg-accent/10" : "text-muted-foreground"
+                    )}
                   >
                     {item.label}
                   </Link>

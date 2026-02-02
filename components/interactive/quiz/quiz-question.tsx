@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft, BookOpen, HelpCircle, ChevronDown, ChevronUp } from "lucide-react";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 import type { UserRole } from "@/lib/quiz";
 import { DIMENSION_INFO, QUESTIONS, getQuestionText, getOptionText } from "@/lib/quiz";
 
@@ -56,7 +57,11 @@ export function QuizQuestion({
         </div>
 
         {dimensionInfo && DimensionIcon && (
-          <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium ${dimensionInfo.bgColor} ${dimensionInfo.color} w-fit mb-2`}>
+          <div className={cn(
+            "inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium w-fit mb-2",
+            dimensionInfo.bgColor,
+            dimensionInfo.color
+          )}>
             <DimensionIcon className="h-4 w-4" />
             {dimensionInfo.title}
             <span className="text-xs opacity-70">({Math.round(dimensionInfo.weight * 100)}% weight)</span>
@@ -128,11 +133,12 @@ export function QuizQuestion({
                 <button
                   key={index}
                   onClick={() => onAnswer(question.id, option.score)}
-                  className={`w-full text-left p-4 rounded-lg border transition-all ${
+                  className={cn(
+                    "w-full text-left p-4 rounded-lg border transition-all",
                     isSelected
                       ? "border-accent bg-accent/5 ring-2 ring-accent/20"
                       : "border-border hover:border-accent/50 hover:bg-muted/50"
-                  }`}
+                  )}
                   aria-pressed={isSelected}
                 >
                   <span className="text-sm">{getOptionText(option, userRole)}</span>

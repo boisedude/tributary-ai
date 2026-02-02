@@ -1,10 +1,11 @@
 import { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
+import { SITE_URL } from "@/lib/constants";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.thetributary.ai";
+  const baseUrl = SITE_URL;
 
   // Get all blog posts
   const posts = getAllPosts();
@@ -100,6 +101,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/security/`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy/`,

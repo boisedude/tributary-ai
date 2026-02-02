@@ -9,8 +9,9 @@ import {
   ClipboardCheck,
   Database,
 } from "lucide-react";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 import { BreadcrumbListSchema, FAQSchema } from "@/components/structured-data/schemas";
+import { FAQAccordion } from "@/components/faq-accordion";
 
 export const metadata: Metadata = {
   title: "AI Consulting & Technology Services",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/services/",
+    canonical: `${SITE_URL}/services/`,
   },
 };
 
@@ -56,6 +57,38 @@ const serviceFAQs = [
   {
     question: "Where should we start if we're not sure what we need?",
     answer: "The Assessment is a two-week diagnostic that evaluates Data, People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
+  },
+  {
+    question: "Who will actually work on my project?",
+    answer: "When you work with Tributary, you work directly with Michael Cooper—a senior consultant with 30 years of enterprise experience. There's no bait-and-switch with junior staff. For larger engagements, we bring in vetted specialists from our network, but Michael remains your primary point of contact and is involved in all strategic decisions.",
+  },
+  {
+    question: "How much time will my team need to commit?",
+    answer: "We design engagements to minimize disruption to your operations. For The Assessment, expect 4-6 hours total from key stakeholders over two weeks—mostly interviews and a leadership presentation. Implementation projects vary, but we handle the heavy lifting. Your team's involvement is typically 2-4 hours per week for feedback and approvals, not full-time dedication.",
+  },
+  {
+    question: "What's the typical timeline from assessment to seeing results?",
+    answer: "The Assessment takes 2 weeks and delivers immediate clarity on your AI readiness. From there, timelines depend on your starting point. Quick wins (process automation, reporting dashboards) can deliver value in 4-8 weeks. Larger initiatives like data consolidation or custom AI applications typically run 3-6 months. We'll give you a realistic timeline based on your specific situation—not an optimistic sales pitch.",
+  },
+  {
+    question: "What if the Assessment reveals we're not ready for AI?",
+    answer: "That's actually a valuable outcome—it means we've saved you from wasting money on premature AI projects. The Assessment includes a prioritized roadmap showing exactly what to fix first, whether that's data quality, process documentation, or organizational alignment. Many clients spend 3-6 months on foundational work before pursuing AI, and that's the smart path. We can help with that foundation, or you can handle it internally with our roadmap as your guide.",
+  },
+  {
+    question: "What does your satisfaction guarantee actually mean?",
+    answer: "For The Assessment: if you don't find the findings valuable and actionable, you don't pay. It's that simple. You decide if you're satisfied—not us. For implementation projects, we define success criteria upfront and tie our work to measurable outcomes. We'd rather have a difficult conversation early than deliver something that doesn't meet your needs.",
+  },
+  {
+    question: "How do you handle data security and confidentiality?",
+    answer: "Your data stays yours. We sign NDAs before any engagement, use encrypted connections for all data transfers, and never share client information with third parties. We access only the data necessary for the engagement and can work within your security requirements—including on-premises work if needed. For regulated industries, we're familiar with HIPAA, SOC 2, and similar compliance frameworks.",
+  },
+  {
+    question: "Can we start small and expand later?",
+    answer: "Absolutely—that's our recommended approach. The Assessment is designed as a low-risk entry point. From there, you can tackle one high-impact project, prove value, and expand. There are no long-term contracts required. Many clients start with a single automation project, see results, and then engage us for broader initiatives. You control the pace.",
+  },
+  {
+    question: "Is Tributary a good fit for a company our size?",
+    answer: "We specialize in mid-market companies—typically $10M to $500M in revenue. You're large enough to benefit from AI but may not have the internal expertise or budget for Big Four consultants. That's our sweet spot. We've deliberately structured our services and pricing for organizations where every dollar needs to show ROI, not enterprises with unlimited budgets.",
   },
 ];
 
@@ -118,8 +151,8 @@ export default function ServicesPage() {
     <article className="bg-gradient-subtle">
       <BreadcrumbListSchema
         items={[
-          { name: "Home", url: "https://www.thetributary.ai" },
-          { name: "Services", url: "https://www.thetributary.ai/services" },
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
         ]}
       />
       <FAQSchema faqs={serviceFAQs} />
@@ -253,6 +286,16 @@ export default function ServicesPage() {
                 We practice what we preach. Heavy use of AI tooling—coding assistants, automation frameworks, AI-powered analysis—means we can deliver enterprise-quality work with a smaller team in less time. You get the same outcomes at a fraction of what traditional consultancies charge.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="pb-20">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
+            <FAQAccordion faqs={serviceFAQs} />
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Gamepad2, Users, Target, Wrench } from "lucide-react";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Us | AI Consulting for Mid-Market",
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/about/",
+    canonical: `${SITE_URL}/about/`,
   },
 };
 

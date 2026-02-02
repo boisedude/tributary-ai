@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import type { AdminStats } from "@/lib/supabase";
 import { DIMENSION_INFO, DIMENSIONS } from "@/lib/quiz";
+import { BAND_COLORS } from "@/lib/constants";
 
 interface AdminStatsOverviewProps {
   stats: AdminStats;
@@ -52,15 +53,6 @@ export function AdminStatsOverview({ stats }: AdminStatsOverviewProps) {
       bgColor: "bg-amber-500/10",
     },
   ];
-
-  // Band colors
-  const bandColors: Record<string, string> = {
-    "path-b-aligned": "bg-emerald-500",
-    "foundation-ready": "bg-green-500",
-    "crossroads": "bg-amber-500",
-    "high-complexity": "bg-orange-500",
-    "not-ready": "bg-red-500",
-  };
 
   const bandLabels: Record<string, string> = {
     "path-b-aligned": "Path B Aligned",
@@ -131,7 +123,7 @@ export function AdminStatsOverview({ stats }: AdminStatsOverviewProps) {
                         </div>
                         <div className="h-2 bg-muted rounded-full overflow-hidden">
                           <div
-                            className={`h-full rounded-full ${bandColors[band] || "bg-gray-500"}`}
+                            className={`h-full rounded-full ${BAND_COLORS[band as keyof typeof BAND_COLORS]?.bg || "bg-gray-500"}`}
                             style={{ width: `${percentage}%` }}
                           />
                         </div>

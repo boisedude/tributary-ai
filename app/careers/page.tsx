@@ -3,9 +3,10 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, MapPin, Briefcase, Mail } from "lucide-react";
+import { EMAILS, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Careers | Tributary AI",
+  title: "Careers",
   description:
     "Join Tributary. We're building a firm of architects and operators — people who've led transformations, not just advised on them.",
   keywords: ["careers", "AI consulting jobs", "technology careers", "Boise Idaho jobs"],
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/careers/",
+    canonical: `${SITE_URL}/careers/`,
   },
 };
 
@@ -215,7 +216,7 @@ export default function CareersPage() {
 
                     <div className="mt-6 pt-4 border-t">
                       <Button asChild>
-                        <a href={`mailto:careers@thetributary.ai?subject=Application: ${job.title}`}>
+                        <a href={`mailto:${EMAILS.CAREERS}?subject=Application: ${job.title}`}>
                           <Mail className="mr-2 h-4 w-4" />
                           Apply for this position
                         </a>
@@ -240,9 +241,9 @@ export default function CareersPage() {
               We&apos;re always interested in exceptional people. If you have enterprise technology experience and share our philosophy about simplification, reach out.
             </p>
             <Button asChild variant="outline" size="lg">
-              <a href="mailto:careers@thetributary.ai">
+              <a href={`mailto:${EMAILS.CAREERS}`}>
                 <Mail className="mr-2 h-5 w-5" />
-                careers@thetributary.ai
+                {EMAILS.CAREERS}
               </a>
             </Button>
           </div>

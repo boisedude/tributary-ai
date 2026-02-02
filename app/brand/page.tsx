@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbListSchema } from "@/components/structured-data/schemas";
 import { CopyButton } from "@/components/ui/copy-button";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Brand Assets | Tributary AI",
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/brand/",
+    canonical: `${SITE_URL}/brand/`,
   },
 };
 
@@ -319,8 +320,8 @@ export default function BrandPage() {
     <article className="bg-gradient-subtle min-h-screen">
       <BreadcrumbListSchema
         items={[
-          { name: "Home", url: "https://www.thetributary.ai" },
-          { name: "Brand Assets", url: "https://www.thetributary.ai/brand" },
+          { name: "Home", url: SITE_URL },
+          { name: "Brand Assets", url: `${SITE_URL}/brand` },
         ]}
       />
 

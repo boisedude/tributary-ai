@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Card, CardContent } from "@/components/ui/card";
+import { EMAILS, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Tributary AI",
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/terms/",
+    canonical: `${SITE_URL}/terms/`,
   },
 };
 
@@ -154,8 +155,8 @@ export default function TermsPage() {
                   <strong>Tributary AI</strong>
                   <br />
                   Email:{" "}
-                  <a href="mailto:sales@thetributary.ai" className="text-accent">
-                    sales@thetributary.ai
+                  <a href={`mailto:${EMAILS.SALES}`} className="text-accent">
+                    {EMAILS.SALES}
                   </a>
                   <br />
                   Boise, Idaho

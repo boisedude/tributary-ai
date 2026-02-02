@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import { BlogList } from "@/components/blog/blog-list";
 import { BlogListingSchema } from "@/components/structured-data/schemas";
+import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "AI Strategy & Business Transformation Blog",
   description:
-    "Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces. Practical guidance for mid-market companies adopting AI. Latest trends in enterprise AI adoption and implementation.",
+    "Expert insights on AI strategy, agentic systems, and business transformation. Practical guidance for mid-market companies adopting AI.",
   keywords: [
     "AI strategy blog",
     "AI transformation insights",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/blog/",
+    canonical: `${SITE_URL}/blog/`,
   },
 };
 

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   ArrowRight,
   Bot,
@@ -11,11 +12,11 @@ import {
   TrendingDown,
   Users,
 } from "lucide-react";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 import { BreadcrumbListSchema, AIAutomationServiceSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "AI Automation & Process Automation Services | Tributary AI",
+  title: "AI Automation & Process Automation Services",
   description:
     "AI automation and RPA services for mid-market companies. Process automation, AI agent deployment, and workflow optimization.",
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/services/ai-automation/",
+    canonical: `${SITE_URL}/services/ai-automation/`,
   },
 };
 
@@ -93,14 +94,23 @@ export default function AIAutomationPage() {
     <article className="bg-gradient-subtle">
       <BreadcrumbListSchema
         items={[
-          { name: "Home", url: "https://www.thetributary.ai" },
-          { name: "Services", url: "https://www.thetributary.ai/services" },
-          { name: "AI Automation", url: "https://www.thetributary.ai/services/ai-automation" },
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          { name: "AI Automation", url: `${SITE_URL}/services/ai-automation` },
         ]}
       />
       <AIAutomationServiceSchema />
+      {/* Breadcrumb Navigation */}
+      <div className="container mx-auto px-4 pt-8">
+        <Breadcrumb
+          items={[
+            { label: "Services", href: ROUTES.SERVICES },
+            { label: "AI Automation" },
+          ]}
+        />
+      </div>
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20 pt-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">

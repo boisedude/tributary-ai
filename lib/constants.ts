@@ -31,6 +31,7 @@ export const ROUTES = {
   PRIVACY: "/privacy",
   TERMS: "/terms",
   PREFERENCES: "/preferences",
+  SECURITY: "/security",
 } as const;
 
 // =============================================================================
@@ -68,6 +69,8 @@ export const EXTERNAL_LINKS = {
 export const COMPANY = {
   NAME: "Tributary",
   LEGAL_NAME: "MDC IT, dba Tributary AI",
+  DISPLAY_NAME: "Tributary AI",
+  FOUNDER_NAME: "Michael Cooper",
   TAGLINE: "Serving enterprises since 1999",
   TAGLINE_SECONDARY: "AI should reduce your tech spend. Not increase it.",
   DESCRIPTION:
@@ -77,6 +80,11 @@ export const COMPANY = {
   FOUNDED_YEAR: 1999,
   COPYRIGHT_YEAR: new Date().getFullYear(),
 } as const;
+
+/**
+ * Primary site URL for use in structured data, canonical links, etc.
+ */
+export const SITE_URL = "https://www.thetributary.ai";
 
 /**
  * Website metadata for SEO and social sharing.
@@ -162,6 +170,7 @@ export const FOOTER_NAV_GROUPS = {
       { href: ROUTES.CAREERS, label: "Careers" },
       { href: ROUTES.PARTNERS, label: "Partners" },
       { href: ROUTES.BRAND, label: "Brand Assets" },
+      { href: ROUTES.SECURITY, label: "Security" },
       { href: ROUTES.CONTACT, label: "Contact" },
     ],
   },
@@ -288,3 +297,44 @@ export type PreferenceField = keyof typeof PREFERENCE_CATEGORIES | "do_not_conta
  * Token expiration time in hours
  */
 export const PREFERENCE_TOKEN_EXPIRY_HOURS = 48;
+
+// =============================================================================
+// QUIZ BAND COLORS
+// =============================================================================
+
+/**
+ * Color scheme for quiz result bands.
+ * Used across admin components for consistent styling.
+ */
+export const BAND_COLORS = {
+  "path-b-aligned": {
+    bg: "bg-emerald-500",
+    bgLight: "bg-emerald-100 dark:bg-emerald-900/30",
+    text: "text-emerald-800 dark:text-emerald-400",
+    bgSubtle: "bg-emerald-500/10",
+  },
+  "foundation-ready": {
+    bg: "bg-green-500",
+    bgLight: "bg-green-100 dark:bg-green-900/30",
+    text: "text-green-800 dark:text-green-400",
+    bgSubtle: "bg-green-500/10",
+  },
+  "crossroads": {
+    bg: "bg-amber-500",
+    bgLight: "bg-amber-100 dark:bg-amber-900/30",
+    text: "text-amber-800 dark:text-amber-400",
+    bgSubtle: "bg-amber-500/10",
+  },
+  "high-complexity": {
+    bg: "bg-orange-500",
+    bgLight: "bg-orange-100 dark:bg-orange-900/30",
+    text: "text-orange-800 dark:text-orange-400",
+    bgSubtle: "bg-orange-500/10",
+  },
+  "not-ready": {
+    bg: "bg-red-500",
+    bgLight: "bg-red-100 dark:bg-red-900/30",
+    text: "text-red-800 dark:text-red-400",
+    bgSubtle: "bg-red-500/10",
+  },
+} as const;

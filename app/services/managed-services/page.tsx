@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import {
   ArrowRight,
   Cloud,
@@ -11,11 +12,11 @@ import {
   Headphones,
   Brain,
 } from "lucide-react";
-import { ROUTES } from "@/lib/constants";
+import { ROUTES, SITE_URL } from "@/lib/constants";
 import { BreadcrumbListSchema, ManagedServicesSchema } from "@/components/structured-data/schemas";
 
 export const metadata: Metadata = {
-  title: "Managed IT Services & Fractional CTO | Tributary AI",
+  title: "Managed IT Services & Fractional CTO",
   description:
     "Managed IT services, cloud administration, and fractional CTO/CIO advisory for mid-market companies. AI-powered operations, lower costs.",
   keywords: [
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.thetributary.ai/services/managed-services/",
+    canonical: `${SITE_URL}/services/managed-services/`,
   },
 };
 
@@ -99,14 +100,23 @@ export default function ManagedServicesPage() {
     <article className="bg-gradient-subtle">
       <BreadcrumbListSchema
         items={[
-          { name: "Home", url: "https://www.thetributary.ai" },
-          { name: "Services", url: "https://www.thetributary.ai/services" },
-          { name: "Managed Services", url: "https://www.thetributary.ai/services/managed-services" },
+          { name: "Home", url: SITE_URL },
+          { name: "Services", url: `${SITE_URL}/services` },
+          { name: "Managed Services", url: `${SITE_URL}/services/managed-services` },
         ]}
       />
       <ManagedServicesSchema />
+      {/* Breadcrumb Navigation */}
+      <div className="container mx-auto px-4 pt-8">
+        <Breadcrumb
+          items={[
+            { label: "Services", href: ROUTES.SERVICES },
+            { label: "Managed Services" },
+          ]}
+        />
+      </div>
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-20 pt-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-4">

@@ -10,6 +10,7 @@ import {
   LocalBusinessSchema,
 } from "@/components/structured-data/schemas";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { SITE_URL } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,14 +49,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Tributary AI" }],
   creator: "Tributary AI",
   publisher: "Tributary AI",
-  metadataBase: new URL("https://www.thetributary.ai"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
-    canonical: "https://www.thetributary.ai",
+    canonical: SITE_URL,
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.thetributary.ai",
+    url: SITE_URL,
     siteName: "Tributary AI",
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:

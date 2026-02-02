@@ -19,6 +19,7 @@ import {
   BarChart3,
 } from "lucide-react";
 import type { AdminSubmission } from "@/lib/supabase";
+import { BAND_COLORS } from "@/lib/constants";
 
 interface AdminSubmissionsListProps {
   submissions: AdminSubmission[];
@@ -55,14 +56,6 @@ export function AdminSubmissionsList({
     setSearchDomain("");
     setFilterBand("");
     onFilterChange({});
-  };
-
-  const bandColors: Record<string, string> = {
-    "path-b-aligned": "bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400",
-    "foundation-ready": "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400",
-    "crossroads": "bg-amber-100 text-amber-800 dark:bg-amber-900/30 dark:text-amber-400",
-    "high-complexity": "bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400",
-    "not-ready": "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400",
   };
 
   const formatDate = (dateStr: string) => {
@@ -170,7 +163,7 @@ export function AdminSubmissionsList({
                         {Math.round(submission.weighted_percentage)}%
                       </td>
                       <td className="py-3 px-2">
-                        <span className={`text-xs px-2 py-1 rounded-full ${bandColors[submission.band] || "bg-gray-100"}`}>
+                        <span className={`text-xs px-2 py-1 rounded-full ${BAND_COLORS[submission.band as keyof typeof BAND_COLORS] ? `${BAND_COLORS[submission.band as keyof typeof BAND_COLORS].bgLight} ${BAND_COLORS[submission.band as keyof typeof BAND_COLORS].text}` : "bg-gray-100"}`}>
                           {submission.band_name}
                         </span>
                       </td>
@@ -192,7 +185,7 @@ export function AdminSubmissionsList({
                   onClick={() => onSelectSubmission(submission)}
                 >
                   <div className="flex justify-between items-start mb-2">
-                    <span className={`text-xs px-2 py-1 rounded-full ${bandColors[submission.band] || "bg-gray-100"}`}>
+                    <span className={`text-xs px-2 py-1 rounded-full ${BAND_COLORS[submission.band as keyof typeof BAND_COLORS] ? `${BAND_COLORS[submission.band as keyof typeof BAND_COLORS].bgLight} ${BAND_COLORS[submission.band as keyof typeof BAND_COLORS].text}` : "bg-gray-100"}`}>
                       {submission.band_name}
                     </span>
                     <span className="text-lg font-bold">{Math.round(submission.weighted_percentage)}%</span>
