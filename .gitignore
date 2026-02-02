@@ -42,3 +42,9 @@ yarn-error.log*
 next-env.d.ts
 # next-agents-md
 .next-docs/
+
+# Test artifacts
+audit-screenshots/
+ux-test-screenshots/
+verification-screenshots/
+sarah-chen-review/
