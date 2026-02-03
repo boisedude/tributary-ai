@@ -20,11 +20,13 @@ export const metadata: Metadata = {
   keywords: [
     "AI assessment",
     "AI readiness assessment",
+    "data readiness assessment",
     "technology assessment",
     "digital transformation assessment",
     "organizational assessment",
     "IT assessment",
     "mid-market consulting",
+    "AI diagnostic",
   ],
   openGraph: {
     title: "AI Readiness Assessment",

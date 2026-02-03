@@ -19,6 +19,8 @@ export const metadata: Metadata = {
     "AI consulting and managed IT services for mid-market companies. Assessment, automation, custom development, and fractional CTO support.",
   keywords: [
     "AI consulting services",
+    "AI readiness assessment",
+    "data readiness",
     "AI automation",
     "AI development",
     "managed IT services",

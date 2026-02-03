@@ -14,9 +14,13 @@ export const metadata: Metadata = {
     "AI isn't the hard part—making it work inside your business can be. We help organizations simplify how they operate so AI creates value instead of noise. 30 years of transformation experience.",
   keywords: [
     "AI consulting",
+    "AI readiness assessment",
     "technology consulting",
     "digital transformation",
     "AI strategy",
+    "data readiness",
+    "data governance",
+    "process automation",
     "mid-market consulting",
     "simplify operations",
     "reduce tech spend",
@@ -24,6 +28,9 @@ export const metadata: Metadata = {
     "technology simplification",
     "Boise Idaho consulting",
   ],
+  alternates: {
+    canonical: "https://www.thetributary.ai/",
+  },
   openGraph: {
     title: "Tributary AI | Technology Consulting for the AI Era",
     description:
