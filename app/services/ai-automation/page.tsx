@@ -124,7 +124,7 @@ export default function AIAutomationPage() {
             </p>
           </div>
           {/* Hero Image */}
-          <div className="mx-auto max-w-4xl mt-12">
+          <div className="mx-auto max-w-2xl mt-12">
             <Image
               src="/images/ai-automation-hero.webp"
               alt="AI automation: manual tasks flowing through AI to deliver completed outputs and time reclaimed"

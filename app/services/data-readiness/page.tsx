@@ -128,7 +128,7 @@ export default function DataReadinessPage() {
             </p>
           </div>
           {/* Hero Image */}
-          <div className="mx-auto max-w-4xl mt-12">
+          <div className="mx-auto max-w-2xl mt-12">
             <Image
               src="/images/data-readiness-hero.webp"
               alt="Data transformation: scattered data sources consolidated into unified, structured data"

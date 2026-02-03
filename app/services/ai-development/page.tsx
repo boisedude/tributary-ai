@@ -130,7 +130,7 @@ export default function AIDevelopmentPage() {
             </p>
           </div>
           {/* Hero Image */}
-          <div className="mx-auto max-w-4xl mt-12">
+          <div className="mx-auto max-w-2xl mt-12">
             <Image
               src="/images/ai-development-hero.webp"
               alt="AI development process: Discovery, Prototype, Build, Launch"
