@@ -39,7 +39,6 @@ const idealFor = [
   "C-level executives exploring AI strategy",
   "Operations leaders looking at process automation",
   "Tech leads managing platform decisions",
-  "Companies between $10M-$500M in revenue",
 ];
 
 const commonQuestions = [
