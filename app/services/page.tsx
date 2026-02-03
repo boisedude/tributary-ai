@@ -97,7 +97,7 @@ const services = [
     title: "The Assessment",
     subtitle: "Entry Point",
     description:
-      "A two-week diagnostic that shows you exactly where you stand, what's holding you back, and what to change. Evaluates People, Process, Technology, and Politics.",
+      "A two-week diagnostic that shows you exactly where you stand, what's holding you back, and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     href: ROUTES.ASSESSMENT,
     icon: ClipboardCheck,
     pricing: "$25K - $35K",

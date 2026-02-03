@@ -153,7 +153,7 @@ export default function AssessmentPage() {
         </div>
       </section>
 
-      {/* Four Dimensions */}
+      {/* Five Dimensions */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">

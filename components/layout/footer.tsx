@@ -76,7 +76,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="min-h-[44px] flex items-center text-muted-foreground transition-colors hover:text-accent"
+                    className="text-muted-foreground transition-colors hover:text-accent"
                   >
                     {item.label}
                   </Link>
@@ -93,7 +93,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="min-h-[44px] flex items-center text-muted-foreground transition-colors hover:text-accent"
+                    className="text-muted-foreground transition-colors hover:text-accent"
                   >
                     {item.label}
                   </Link>
@@ -112,7 +112,7 @@ export function Footer() {
             <p className="mt-2 text-xs text-muted-foreground">
               <Link
                 href={ROUTES.PREFERENCES}
-                className="min-h-[44px] inline-flex items-center hover:text-accent transition-colors underline-offset-2 hover:underline"
+                className="hover:text-accent transition-colors underline-offset-2 hover:underline"
               >
                 Manage preferences
               </Link>
@@ -128,14 +128,14 @@ export function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="min-h-[44px] flex items-center hover:text-accent transition-colors"
+                className="hover:text-accent transition-colors"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               href={ROUTES.PREFERENCES}
-              className="min-h-[44px] flex items-center hover:text-accent transition-colors"
+              className="hover:text-accent transition-colors"
             >
               Email Preferences
             </Link>

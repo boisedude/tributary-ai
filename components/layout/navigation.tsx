@@ -12,6 +12,7 @@ import { cn } from "@/lib/utils";
 
 const SERVICE_ITEMS = [
   { href: ROUTES.ASSESSMENT, label: "The Assessment", description: "Two-week diagnostic" },
+  { href: ROUTES.DATA_READINESS, label: "Data Readiness", description: "Data quality & governance" },
   { href: ROUTES.AI_AUTOMATION, label: "AI Automation", description: "Process automation & RPA" },
   { href: ROUTES.AI_DEVELOPMENT, label: "AI Development", description: "Custom AI applications" },
   { href: ROUTES.MANAGED_SERVICES, label: "Managed Services", description: "Ongoing IT & fractional CTO" },

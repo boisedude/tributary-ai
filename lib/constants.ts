@@ -169,7 +169,6 @@ export const FOOTER_NAV_GROUPS = {
       { href: ROUTES.BLOG, label: "Blog" },
       { href: ROUTES.CAREERS, label: "Careers" },
       { href: ROUTES.PARTNERS, label: "Partners" },
-      { href: ROUTES.BRAND, label: "Brand Assets" },
       { href: ROUTES.SECURITY, label: "Security" },
       { href: ROUTES.CONTACT, label: "Contact" },
     ],

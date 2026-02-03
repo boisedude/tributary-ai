@@ -229,7 +229,7 @@ export default function AboutPage() {
                   </div>
                   <h2 className="text-2xl font-bold mb-2">Think You&apos;re Smart?</h2>
                   <p className="text-muted-foreground leading-relaxed mb-4">
-                    Bet you can&apos;t beat Michael&apos;s dog Bently at Checkers or Connect 4.
+                    Can you beat Michael&apos;s dog Bently at Checkers or Connect 4?
                   </p>
                   <Button asChild variant="outline" className="group">
                     <a

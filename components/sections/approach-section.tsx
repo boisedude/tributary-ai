@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const dimensions = [
+  { title: "Data", items: "Data quality, system integration, governance, single source of truth" },
   { title: "People", items: "Leadership fluency, decision rights, talent alignment" },
   { title: "Process", items: "Intake gaps, coordination overhead, bottlenecks" },
-  { title: "Technology", items: "Stack complexity, data accessibility, automation readiness" },
+  { title: "Technology", items: "Stack complexity, automation readiness, spend trajectory" },
   { title: "Politics", items: "Executive alignment, change sponsorship, prior trauma" },
 ];
 
@@ -42,9 +43,9 @@ export function ApproachSection() {
             </div>
           </div>
 
-          {/* Four Dimensions */}
+          {/* Five Dimensions */}
           <div className="mt-12">
-            <h3 className="text-lg font-semibold mb-4">Four dimensions we evaluate</h3>
+            <h3 className="text-lg font-semibold mb-4">Five dimensions we evaluate</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               {dimensions.map((d) => (
                 <div key={d.title} className="p-4 border rounded-lg">
