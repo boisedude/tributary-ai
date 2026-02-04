@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Gamepad2, Users, Target, Wrench } from "lucide-react";
+import { ArrowRight, Gamepad2, Users, Target, Wrench, Linkedin, Github } from "lucide-react";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -140,6 +140,26 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold">Michael Cooper</h2>
                 <p className="mt-1 text-muted-foreground">Eagle, Idaho</p>
+                <div className="mt-3 flex gap-3">
+                  <a
+                    href="https://www.linkedin.com/in/michaeldc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a
+                    href="https://github.com/boisedude"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-accent transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-5 w-5" />
+                  </a>
+                </div>
                 <p className="mt-6 text-lg leading-relaxed">
                   Michael Cooper has spent nearly 30 years navigating enterprise technology transitions across companies including Microsoft, Citrix, Simplot, and Micron.
                 </p>
