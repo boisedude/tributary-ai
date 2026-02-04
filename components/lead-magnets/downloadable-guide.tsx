@@ -4,13 +4,13 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { submitToWeb3Forms, Web3FormsError } from "@/lib/web3forms";
+import { subscribeToNewsletter } from "@/lib/newsletter";
 import { ExternalLink, FileText, CheckCircle, Loader2 } from "lucide-react";
 
 interface DownloadableGuideProps {
   title: string;
   description: string;
-  pdfUrl: string; // Kept for backwards compatibility, now supports HTML guides too
+  pdfUrl: string;
 }
 
 export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGuideProps) {
@@ -27,12 +27,13 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
     setIsSubmitting(true);
 
     try {
-      await submitToWeb3Forms({
-        subject: `Guide Access: ${title}`,
-        email: email,
-        from_name: "Tributary AI Resources",
-        message: `User requested access to: ${title}`,
-      });
+      // Save email to Supabase (adds to contacts as newsletter subscriber)
+      const result = await subscribeToNewsletter(email);
+
+      if (!result.success) {
+        setError(result.error || "An error occurred. Please try again.");
+        return;
+      }
 
       setIsSuccess(true);
       // Open guide - HTML in new tab, PDF as download
@@ -46,12 +47,8 @@ export function DownloadableGuide({ title, description, pdfUrl }: DownloadableGu
         link.click();
         document.body.removeChild(link);
       }
-    } catch (err) {
-      const message =
-        err instanceof Web3FormsError
-          ? err.message
-          : "An error occurred. Please try again.";
-      setError(message);
+    } catch {
+      setError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }

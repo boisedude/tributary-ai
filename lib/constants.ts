@@ -227,8 +227,6 @@ export const BLOG_CONFIG = {
  * Form-related constants.
  */
 export const FORM_CONFIG = {
-  /** Web3Forms API endpoint */
-  WEB3FORMS_ENDPOINT: "https://api.web3forms.com/submit",
   /** Form submission success message */
   SUCCESS_MESSAGE: "Thank you! We'll be in touch soon.",
   /** Form submission error message */

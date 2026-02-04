@@ -138,18 +138,6 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>
-                    <strong>Web3Forms:</strong> Processes form submissions including
-                    resource download requests. Subject to{" "}
-                    <a
-                      href="https://web3forms.com/privacy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-accent"
-                    >
-                      Web3Forms Privacy Policy
-                    </a>
-                  </li>
-                  <li>
                     <strong>Microsoft Bookings:</strong> Handles consultation scheduling.
                     Subject to{" "}
                     <a

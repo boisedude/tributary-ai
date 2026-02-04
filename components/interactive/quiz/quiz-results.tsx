@@ -18,8 +18,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import type { QuizResult, Dimension, DimensionScore, UserRole } from "@/lib/quiz";
-import { DIMENSION_INFO, formatDimensionBreakdown, formatDetailedAnswers } from "@/lib/quiz";
-import { submitToWeb3Forms, Web3FormsError } from "@/lib/web3forms";
+import { DIMENSION_INFO } from "@/lib/quiz";
 import { submitQuizResults, getCompanyComparison, type CompanyComparison } from "@/lib/supabase";
 import { QuizBenchmarks } from "./quiz-benchmarks";
 import { QuizCompanyComparison } from "./quiz-company-comparison";
@@ -55,44 +54,18 @@ export function QuizResults({ result, answers, userRole, onReset, embedded = fal
     setIsSubmitting(true);
 
     try {
-      const [web3Result] = await Promise.allSettled([
-        submitToWeb3Forms({
-          subject: `AI Readiness Quiz: ${result.bandName} (${Math.round(result.weightedPercentage)}%)`,
-          email: email,
-          from_name: "Tributary AI Quiz",
-          message: `
-AI Readiness Quiz Results
-========================
-Overall Score: ${result.totalScore}/${result.maxScore} (${Math.round(result.percentage)}%)
-Weighted Score: ${Math.round(result.weightedPercentage)}%
-Result Band: ${result.bandName}
-User Role: ${userRole === "business" ? "Business Leader" : "Technical Leader"}
-${result.vetoTriggered ? `\n⚠️ VETO TRIGGERED: Critical weakness in ${DIMENSION_INFO[result.vetoDimension!].title}\n` : ''}
-
-Dimension Breakdown (weighted):
-${formatDimensionBreakdown(result.dimensionScores)}
-
-Detailed Answers:
-${formatDetailedAnswers(answers)}
-          `.trim(),
-        }),
-        submitQuizResults({
-          user_email: email,
-          user_role: userRole,
-          answers,
-          dimension_scores: result.dimensionScores,
-          overall_score: result.totalScore,
-          weighted_percentage: result.weightedPercentage,
-          band: result.band,
-          band_name: result.bandName,
-          veto_triggered: result.vetoTriggered,
-          veto_dimension: result.vetoDimension,
-        }),
-      ]);
-
-      if (web3Result.status === "rejected") {
-        throw web3Result.reason;
-      }
+      await submitQuizResults({
+        user_email: email,
+        user_role: userRole,
+        answers,
+        dimension_scores: result.dimensionScores,
+        overall_score: result.totalScore,
+        weighted_percentage: result.weightedPercentage,
+        band: result.band,
+        band_name: result.bandName,
+        veto_triggered: result.vetoTriggered,
+        veto_dimension: result.vetoDimension,
+      });
 
       setEmailSubmitted(true);
 
@@ -106,9 +79,8 @@ ${formatDetailedAnswers(answers)}
       } finally {
         setIsLoadingComparison(false);
       }
-    } catch (err) {
-      const message = err instanceof Web3FormsError ? err.message : "An error occurred. Please try again.";
-      setEmailError(message);
+    } catch {
+      setEmailError("An error occurred. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -286,9 +258,9 @@ ${formatDetailedAnswers(answers)}
         >
           {!emailSubmitted ? (
             <>
-              <h3 className="font-semibold mb-2">Get Your Detailed Report</h3>
+              <h3 className="font-semibold mb-2">Save Your Results</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Enter your email to receive a personalized PDF with specific action items for each dimension, industry benchmarks, and a 90-day improvement roadmap.
+                Enter your email to save your results and unlock company benchmarks. You can download a PDF of your results using the button below.
               </p>
               <form onSubmit={handleEmailSubmit} className="space-y-3">
                 <Input
@@ -310,7 +282,7 @@ ${formatDetailedAnswers(answers)}
                   ) : (
                     <>
                       <FileText className="mr-2 h-4 w-4" />
-                      Send My Detailed Report
+                      Save My Results
                     </>
                   )}
                 </Button>
@@ -321,9 +293,9 @@ ${formatDetailedAnswers(answers)}
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 mb-3">
                 <CheckCircle className="h-6 w-6 text-accent" />
               </div>
-              <p className="font-semibold">Report Sent!</p>
+              <p className="font-semibold">Results Saved!</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Check your inbox for your detailed AI readiness breakdown with action items.
+                Your results have been saved. Download a PDF copy using the button below.
               </p>
               {isLoadingComparison && (
                 <p className="text-xs text-muted-foreground mt-2 flex items-center justify-center gap-1">
