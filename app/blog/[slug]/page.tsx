@@ -74,14 +74,20 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     notFound()
   }
 
-  // Get related posts based on shared tags
+  // Get related posts based on shared tags, falling back to most recent
   const allPosts = getAllPosts()
-  const relatedPosts = allPosts
+  let relatedPosts = allPosts
     .filter(p =>
       p.slug !== post.slug &&
       p.tags?.some(tag => post.tags?.includes(tag))
     )
     .slice(0, 2)
+
+  if (relatedPosts.length === 0) {
+    relatedPosts = allPosts
+      .filter(p => p.slug !== post.slug)
+      .slice(0, 2)
+  }
 
   return (
     <article className="container mx-auto px-4 py-20">

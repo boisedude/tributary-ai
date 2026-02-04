@@ -41,6 +41,7 @@ export function Footer() {
                 width={32}
                 height={32}
                 className="h-8 w-8"
+                priority
               />
               <span className="font-semibold">{COMPANY.NAME}</span>
             </Link>
