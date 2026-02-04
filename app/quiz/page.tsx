@@ -157,7 +157,7 @@ export default function QuizPage() {
               Need to Strengthen Your Foundation?
             </h2>
             <p className="mt-4 text-lg text-white/90">
-              If your foundation isn&apos;t solid, we help you fix it. Our two-week Assessment shows exactly what needs to change—and gives you a roadmap to get there.
+              If your foundation isn&apos;t solid, we help you fix it. Our 2-3 week Assessment shows exactly what needs to change—and gives you a roadmap to get there.
             </p>
             <div className="mt-8">
               <Button asChild size="lg" variant="secondary" className="group">

@@ -254,7 +254,7 @@ export default function ManagedServicesPage() {
               <h2 className="text-2xl font-bold mb-4">Engagement Model</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Pricing:</strong> Monthly retainer, tailored to your environment and needs
+                  <strong className="text-foreground">Pricing:</strong> $5K - $10K/month, tailored to your needs
                 </p>
                 <p>
                   <strong className="text-foreground">Commitment:</strong> Month-to-month; no long-term contracts required

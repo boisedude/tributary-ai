@@ -14,9 +14,9 @@ import { ServiceSchema } from "@/components/structured-data/schemas";
 import { ROUTES, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "AI Readiness Assessment | Two-Week Diagnostic",
+  title: "AI Readiness Assessment | 2-3 Week Diagnostic",
   description:
-    "Two-week AI readiness diagnostic for mid-market companies. Evaluate Data, People, Process, Technology, and Politics. $25K-$35K. Satisfaction guaranteed.",
+    "2-3 week AI readiness diagnostic for mid-market companies. Evaluate Data, People, Process, Technology, and Politics. $12K-$25K. Satisfaction guaranteed.",
   keywords: [
     "AI assessment",
     "AI readiness assessment",
@@ -31,14 +31,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Readiness Assessment",
     description:
-      "Two-week diagnostic that shows you where you stand and what to change. Evaluates Data, People, Process, Technology, and Politics.",
+      "2-3 week diagnostic that shows you where you stand and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     type: "website",
     images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Readiness Assessment | Tributary AI",
-    description: "Two-week diagnostic evaluating your organization's AI readiness across Data, People, Process, Technology, and Politics.",
+    description: "2-3 week diagnostic evaluating your organization's AI readiness across Data, People, Process, Technology, and Politics.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -121,7 +121,7 @@ export default function AssessmentPage() {
               The Assessment
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
-              A two-week diagnostic that shows you exactly where you stand, what&apos;s holding you back, and what to change.
+              A 2-3 week diagnostic that shows you exactly where you stand, what&apos;s holding you back, and what to change.
             </p>
           </div>
         </div>
@@ -251,8 +251,11 @@ export default function AssessmentPage() {
           <div className="mx-auto max-w-2xl">
             <div className="border rounded-lg p-8 md:p-12">
               <h2 className="text-3xl font-bold mb-2">Pricing</h2>
-              <p className="text-4xl font-bold text-accent mb-2">$25K - $35K</p>
-              <p className="text-lg text-muted-foreground mb-6">2 weeks</p>
+              <p className="text-4xl font-bold text-accent mb-2">$12K - $25K</p>
+              <p className="text-lg text-muted-foreground mb-2">2-3 weeks</p>
+              <p className="text-sm text-muted-foreground mb-6">
+                Depends on the number of systems, teams, and quality of existing documentation.
+              </p>
               <div className="border-t pt-6">
                 <h3 className="font-semibold mb-2">The Guarantee</h3>
                 <p className="text-muted-foreground">

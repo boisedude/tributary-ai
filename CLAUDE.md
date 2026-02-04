@@ -6,7 +6,7 @@
 
 Static marketing website for Tributary AI Systems (www.thetributary.ai) - an AI consulting firm specializing in technology readiness assessments for mid-market companies.
 
-**Core Offering:** "The Assessment" - 2-week diagnostic ($25K-$35K)
+**Core Offering:** "The Assessment" - 2-3 week diagnostic ($12K-$25K)
 **Target:** Mid-market companies ($10M-$500M revenue)
 
 ## Tech Stack

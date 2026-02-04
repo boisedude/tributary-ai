@@ -33,11 +33,11 @@ export function ApproachSection() {
               <div>
                 <h3 className="text-2xl font-bold">The Assessment</h3>
                 <p className="mt-2 text-muted-foreground">
-                  A two-week diagnostic. Detailed findings. Leadership presentation. Prioritized roadmap.
+                  A 2-3 week diagnostic. Detailed findings. Leadership presentation. Prioritized roadmap.
                 </p>
               </div>
               <div className="text-right shrink-0">
-                <p className="text-2xl font-bold">$25K–$35K</p>
+                <p className="text-2xl font-bold">$12K–$25K</p>
                 <p className="text-sm text-muted-foreground">Satisfaction guarantee</p>
               </div>
             </div>

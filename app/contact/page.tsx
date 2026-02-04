@@ -52,7 +52,7 @@ const commonQuestions = [
   },
   {
     q: "How much time from our team?",
-    a: "The Assessment requires about 5-10 hours from key stakeholders over two weeks. Implementation varies by service.",
+    a: "The Assessment requires about 5-10 hours from key stakeholders over 2-3 weeks. Implementation varies by service.",
   },
   {
     q: "What if we're not ready for AI?",

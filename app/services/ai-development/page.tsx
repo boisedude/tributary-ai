@@ -250,7 +250,7 @@ export default function AIDevelopmentPage() {
               <h2 className="text-2xl font-bold mb-4">Engagement Model</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Pricing:</strong> Project-based or monthly retainer, depending on scope
+                  <strong className="text-foreground">Pricing:</strong> $55K - $165K, scoped after Assessment
                 </p>
                 <p>
                   <strong className="text-foreground">Timeline:</strong> Prototypes in 2-4 weeks; production apps in 2-4 months

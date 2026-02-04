@@ -204,7 +204,7 @@ export function ServiceSchema() {
     "@type": "Service",
     name: "The Assessment - AI Readiness Diagnostic",
     description:
-      "A two-week diagnostic evaluating Data, People, Process, Technology, and Politics to identify AI transformation opportunities",
+      "A 2-3 week diagnostic evaluating Data, People, Process, Technology, and Politics to identify AI transformation opportunities",
     provider: {
       "@type": "LocalBusiness",
       name: COMPANY.DISPLAY_NAME,

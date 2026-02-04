@@ -58,7 +58,7 @@ const serviceFAQs = [
   },
   {
     question: "Where should we start if we're not sure what we need?",
-    answer: "The Assessment is a two-week diagnostic that evaluates Data, People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
+    answer: "The Assessment is a 2-3 week diagnostic that evaluates Data, People, Process, Technology, and Politics to identify your best path forward. Most clients start here.",
   },
   {
     question: "Who will actually work on my project?",
@@ -66,11 +66,11 @@ const serviceFAQs = [
   },
   {
     question: "How much time will my team need to commit?",
-    answer: "We design engagements to minimize disruption to your operations. For The Assessment, expect 4-6 hours total from key stakeholders over two weeks—mostly interviews and a leadership presentation. Implementation projects vary, but we handle the heavy lifting. Your team's involvement is typically 2-4 hours per week for feedback and approvals, not full-time dedication.",
+    answer: "We design engagements to minimize disruption to your operations. For The Assessment, expect 4-6 hours total from key stakeholders over 2-3 weeks—mostly interviews and a leadership presentation. Implementation projects vary, but we handle the heavy lifting. Your team's involvement is typically 2-4 hours per week for feedback and approvals, not full-time dedication.",
   },
   {
     question: "What's the typical timeline from assessment to seeing results?",
-    answer: "The Assessment takes 2 weeks and delivers immediate clarity on your AI readiness. From there, timelines depend on your starting point. Quick wins (process automation, reporting dashboards) can deliver value in 4-8 weeks. Larger initiatives like data consolidation or custom AI applications typically run 3-6 months. We'll give you a realistic timeline based on your specific situation—not an optimistic sales pitch.",
+    answer: "The Assessment takes 2-3 weeks and delivers immediate clarity on your AI readiness. From there, timelines depend on your starting point. Quick wins (process automation, reporting dashboards) can deliver value in 4-8 weeks. Larger initiatives like data consolidation or custom AI applications typically run 3-6 months. We'll give you a realistic timeline based on your specific situation—not an optimistic sales pitch.",
   },
   {
     question: "What if the Assessment reveals we're not ready for AI?",
@@ -99,11 +99,11 @@ const services = [
     title: "The Assessment",
     subtitle: "Entry Point",
     description:
-      "A two-week diagnostic that shows you exactly where you stand, what's holding you back, and what to change. Evaluates Data, People, Process, Technology, and Politics.",
+      "A 2-3 week diagnostic that shows you exactly where you stand, what's holding you back, and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     href: ROUTES.ASSESSMENT,
     icon: ClipboardCheck,
-    pricing: "$25K - $35K",
-    timeline: "2 weeks",
+    pricing: "$12K - $25K",
+    timeline: "2-3 weeks",
     highlight: true,
   },
   {
@@ -113,7 +113,7 @@ const services = [
       "Get your data AI-ready. Data quality assessment, consolidation, governance, and integration. The foundation that makes AI actually work.",
     href: ROUTES.DATA_READINESS,
     icon: Database,
-    pricing: "Project-based",
+    pricing: "$25K - $50K",
     timeline: "4-12 weeks",
   },
   {
@@ -123,8 +123,8 @@ const services = [
       "Implementing AI into existing workflows. RPA, process automation, AI agent deployment. Turn assessment findings into working automation.",
     href: ROUTES.AI_AUTOMATION,
     icon: Cog,
-    pricing: "Project-based",
-    timeline: "Varies by scope",
+    pricing: "$40K - $100K",
+    timeline: "4-12 weeks",
   },
   {
     title: "AI Application Development",
@@ -133,8 +133,8 @@ const services = [
       "Custom AI-powered applications. Internal tools, customer-facing products. From prototype to production.",
     href: ROUTES.AI_DEVELOPMENT,
     icon: Code,
-    pricing: "Project or retainer",
-    timeline: "Varies by scope",
+    pricing: "$55K - $165K",
+    timeline: "8-16 weeks",
   },
   {
     title: "Managed Services",
@@ -143,7 +143,7 @@ const services = [
       "Ongoing IT management, cloud administration, fractional CTO/CIO advisory. AI-powered operations at a fraction of traditional MSP costs.",
     href: ROUTES.MANAGED_SERVICES,
     icon: Headphones,
-    pricing: "Monthly retainer",
+    pricing: "$5K - $10K/month",
     timeline: "Ongoing",
   },
 ];
@@ -179,7 +179,7 @@ export default function ServicesPage() {
             <div className="p-8 bg-muted/30 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">How It Works</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                Most clients start with <strong>The Assessment</strong>—a two-week diagnostic that gives you clarity on where you stand and what to change.
+                Most clients start with <strong>The Assessment</strong>—a 2-3 week diagnostic that gives you clarity on where you stand and what to change.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Already know what you need? We can jump straight to implementation. Either way, let&apos;s talk about your situation.
@@ -222,7 +222,7 @@ export default function ServicesPage() {
               <div className="border rounded-lg p-6">
                 <p className="font-semibold mb-2">&ldquo;We&apos;re not sure what we need yet.&rdquo;</p>
                 <p className="text-muted-foreground">
-                  <strong className="text-foreground">The Assessment</strong> — Two weeks to clarity. We&apos;ll figure it out together.
+                  <strong className="text-foreground">The Assessment</strong> — 2-3 weeks to clarity. We&apos;ll figure it out together.
                 </p>
               </div>
             </div>

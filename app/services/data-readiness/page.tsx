@@ -254,7 +254,7 @@ export default function DataReadinessPage() {
               <h2 className="text-2xl font-bold mb-4">Engagement Model</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Pricing:</strong> Project-based, scoped after Assessment
+                  <strong className="text-foreground">Pricing:</strong> $25K - $50K, scoped after Assessment
                 </p>
                 <p>
                   <strong className="text-foreground">Timeline:</strong> Varies by scope—typically 4-12 weeks for initial consolidation
