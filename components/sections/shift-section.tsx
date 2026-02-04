@@ -19,11 +19,20 @@ export function ShiftSection() {
 
           {/* The Opportunity */}
           <div className="mt-12 space-y-6">
-            <p className="text-lg leading-relaxed">
-              The companies that get this right will pull ahead. And the gap will be hard to close.
+            <p className="text-lg font-medium leading-relaxed">
+              AI is a capability, not a product.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              AI will reduce your technology spend—but not in Month 3. In Year 3. The question isn&apos;t whether to invest. It&apos;s whether you invest in a way that actually bends the cost curve, or in a way that adds another layer of complexity to manage.
+              The challenge isn&apos;t adopting new tools; it&apos;s adapting how technology and business work together. Companies that simply &quot;bolt on&quot; AI features to legacy systems will struggle to see value. The bottleneck isn&apos;t the AI models—it&apos;s 6-month roadmaps and fragmented data structures that weren&apos;t built for this speed.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              That&apos;s why we launched Tributary AI.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              We help you retool the data platforms and infrastructure you already run. We clear the technical and operational debt so small, focused teams can put AI to work on real data to solve real business problems—minus the friction.
+            </p>
+            <p className="text-lg leading-relaxed">
+              When AI is leveraged correctly, IT spend should go down and revenue per employee should go up.
             </p>
           </div>
 
