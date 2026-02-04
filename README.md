@@ -90,6 +90,8 @@ Quick deploy: `npm run deploy` (builds and syncs via rsync)
 
 - **Email:** michael@thetributary.ai
 - **Site:** https://www.thetributary.ai
+- **LinkedIn:** https://www.linkedin.com/in/michaeldc
+- **GitHub:** https://github.com/boisedude
 
 ---
 
