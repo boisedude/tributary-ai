@@ -97,15 +97,15 @@ const dimensions = [
 const deliverables = [
   {
     title: "Findings Document",
-    description: "Detailed assessment with 1-5 maturity scores per dimension and industry benchmarks",
+    description: "20-30 page detailed report with 1-5 maturity scores across all dimensions, gap analysis, industry benchmarks, and specific observations from interviews",
   },
   {
     title: "Leadership Presentation",
-    description: "Executive-ready deck with key findings and strategic implications",
+    description: "45-minute executive briefing with a 15-20 slide deck covering key findings, risk areas, and strategic recommendations your board can act on",
   },
   {
     title: "Prioritized Roadmap",
-    description: "30/60/90-day action plan with quick wins and long-term initiatives",
+    description: "Actionable 30/60/90-day plan identifying 3-5 quick wins, resource requirements, estimated costs, and sequenced initiatives with clear success metrics",
   },
 ];
 

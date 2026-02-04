@@ -317,23 +317,34 @@ export function QuizResults({ result, answers, userRole, onReset, embedded = fal
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="pt-6 border-t space-y-3"
+          className="pt-6 border-t space-y-4"
         >
-          <p className="text-sm text-muted-foreground text-center mb-4">
-            Want expert help addressing your gaps?
+          <div className="text-center">
+            <h3 className="font-semibold mb-2">Ready to Discuss Your Results?</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              {isCritical
+                ? "Your results indicate critical gaps that need addressing before AI can succeed. Let's talk about building the right foundation."
+                : isGoodResult
+                  ? "Your organization shows strong AI readiness. Let's discuss how to capitalize on your position and move quickly."
+                  : "Your results reveal specific areas for improvement. A 30-minute call can help prioritize your next steps."}
+            </p>
+          </div>
+          <Button asChild variant="default" className="w-full group" size="lg">
+            <a href={EXTERNAL_LINKS.CALENDAR} target="_blank" rel="noopener noreferrer">
+              <Calendar className="mr-2 h-5 w-5" />
+              Book a Free Strategy Call
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground text-center">
+            30 minutes. No pressure. We&apos;ll review your results and discuss practical next steps.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Button asChild variant="default" className="flex-1 group">
+          <div className="pt-4 border-t">
+            <Button asChild variant="outline" className="w-full group">
               <Link href={ROUTES.ASSESSMENT}>
-                Learn About The Assessment
+                Learn More About The Assessment
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </Button>
-            <Button asChild variant="outline" className="flex-1 group">
-              <a href={EXTERNAL_LINKS.CALENDAR} target="_blank" rel="noopener noreferrer">
-                <Calendar className="mr-2 h-4 w-4" />
-                Book a Strategy Call
-              </a>
             </Button>
           </div>
         </motion.div>

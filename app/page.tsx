@@ -4,6 +4,7 @@ import { ShiftSection } from "@/components/sections/shift-section";
 import { ApproachSection } from "@/components/sections/approach-section";
 import { CredentialsSection } from "@/components/sections/credentials-section";
 import { WhoThisIsForSection } from "@/components/sections/who-this-is-for-section";
+import { FAQSection } from "@/components/sections/faq-section";
 import { ThoughtLeadershipSection } from "@/components/sections/thought-leadership-section";
 import { CTASection } from "@/components/sections/cta-section";
 
@@ -46,6 +47,7 @@ export default function Home() {
       <ApproachSection />
       <CredentialsSection />
       <WhoThisIsForSection />
+      <FAQSection />
       <ThoughtLeadershipSection />
       <CTASection />
     </>
