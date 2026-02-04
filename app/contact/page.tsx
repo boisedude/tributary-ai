@@ -80,9 +80,9 @@ export default function ContactPage() {
       {/* Main Contact Section */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 lg:grid-cols-5 lg:gap-10">
-            {/* Left Column - Calendar (3 cols) */}
-            <div className="lg:col-span-3">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-10">
+            {/* Left Column - Calendar (3 cols on lg, full on md) */}
+            <div className="md:col-span-2 lg:col-span-3">
               <Card>
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center gap-2 text-lg">
@@ -91,7 +91,7 @@ export default function ContactPage() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="relative w-full overflow-hidden rounded-lg" style={{ height: "600px" }}>
+                  <div className="relative w-full overflow-hidden rounded-lg h-[500px] md:h-[600px]">
                     <iframe
                       src="https://cal.com/thetributary?embed=true&layout=month_view&hideBranding=true"
                       width="100%"
@@ -105,12 +105,19 @@ export default function ContactPage() {
                   <p className="mt-3 text-sm text-muted-foreground text-center">
                     Select a meeting type above, then pick a time that works for you.
                   </p>
+                  <p className="mt-2 text-xs text-muted-foreground text-center">
+                    Can&apos;t see the calendar?{" "}
+                    <a href={`mailto:${EMAILS.MICHAEL}`} className="text-accent hover:underline">
+                      Email us directly
+                    </a>{" "}
+                    or call {COMPANY.PHONE}.
+                  </p>
                 </CardContent>
               </Card>
             </div>
 
             {/* Right Column - Info (2 cols) */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="lg:col-span-2 space-y-4">
               {/* What Happens */}
               <Card>
                 <CardHeader className="pb-3">
@@ -195,7 +202,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold mb-6">Common Questions</h2>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="grid gap-3 sm:grid-cols-2">
               {commonQuestions.map((item, i) => (
                 <div key={i} className="p-4 border rounded-lg">
                   <p className="font-semibold text-sm">{item.q}</p>
@@ -203,40 +210,36 @@ export default function ContactPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Alternative CTA */}
-      <section className="bg-gradient-tributary py-12 text-white">
-        <div className="container mx-auto px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-2xl font-bold">
-              Not Ready to Schedule?
-            </h2>
-            <p className="mt-3 text-white/90">
-              Take our 5-minute quiz to see where you stand, or email us with questions first.
-            </p>
-            <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href={ROUTES.QUIZ}>
-                  Get Your AI Readiness Score
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary">
-                <a href={`mailto:${EMAILS.SALES}`}>
-                  <Mail className="mr-2 h-4 w-4" />
-                  Email Us First
-                </a>
-              </Button>
+            {/* Alternative CTA - moved here after FAQs */}
+            <div className="mt-12 p-6 bg-muted/50 rounded-lg text-center">
+              <h3 className="text-xl font-bold">
+                Not Ready to Schedule?
+              </h3>
+              <p className="mt-2 text-muted-foreground">
+                Take our 5-minute quiz to see where you stand, or email us with questions first.
+              </p>
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                  <Link href={ROUTES.QUIZ}>
+                    Get Your AI Readiness Score
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline">
+                  <a href={`mailto:${EMAILS.SALES}`}>
+                    <Mail className="mr-2 h-4 w-4" />
+                    Email Us First
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Brand Assets Link */}
-      <section className="py-8 bg-muted/30">
+      <section className="py-4 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-sm text-muted-foreground">

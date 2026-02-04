@@ -263,15 +263,20 @@ export function QuizResults({ result, answers, userRole, onReset, embedded = fal
                 Enter your email to save your results and unlock company benchmarks. You can download a PDF of your results using the button below.
               </p>
               <form onSubmit={handleEmailSubmit} className="space-y-3">
-                <Input
-                  type="email"
-                  placeholder="you@company.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                  disabled={isSubmitting}
-                  aria-label="Email address"
-                />
+                <div>
+                  <label htmlFor="quiz-email" className="block text-sm font-medium mb-2">
+                    Email Address
+                  </label>
+                  <Input
+                    id="quiz-email"
+                    type="email"
+                    placeholder="you@company.com"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    disabled={isSubmitting}
+                  />
+                </div>
                 {emailError && <p className="text-sm text-destructive">{emailError}</p>}
                 <Button type="submit" disabled={isSubmitting} className="w-full">
                   {isSubmitting ? (

@@ -114,7 +114,7 @@ export default function AssessmentPage() {
     <article className="bg-gradient-subtle">
       <ServiceSchema />
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
@@ -131,15 +131,15 @@ export default function AssessmentPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="grid gap-4 md:grid-cols-2 mb-8">
-              <div className="p-6 border rounded-lg bg-destructive/5 border-destructive/20">
-                <p className="text-4xl font-bold text-destructive mb-2">95%</p>
-                <p className="text-muted-foreground">of enterprise AI initiatives show no measurable P&L impact</p>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 mb-6">
+              <div className="p-5 border rounded-lg bg-destructive/5 border-destructive/20">
+                <p className="text-3xl sm:text-4xl font-bold text-destructive mb-2">95%</p>
+                <p className="text-sm sm:text-base text-muted-foreground">of enterprise AI initiatives show no measurable P&L impact</p>
                 <p className="text-xs text-muted-foreground/70 mt-2">MIT Research, 2025</p>
               </div>
-              <div className="p-6 border rounded-lg bg-amber-500/5 border-amber-500/20">
-                <p className="text-4xl font-bold text-amber-600 dark:text-amber-400 mb-2">70%</p>
-                <p className="text-muted-foreground">of AI failures are people and process issues, not technology</p>
+              <div className="p-5 border rounded-lg bg-amber-500/5 border-amber-500/20">
+                <p className="text-3xl sm:text-4xl font-bold text-amber-600 dark:text-amber-400 mb-2">70%</p>
+                <p className="text-sm sm:text-base text-muted-foreground">of AI failures are people and process issues, not technology</p>
                 <p className="text-xs text-muted-foreground/70 mt-2">BCG Research</p>
               </div>
             </div>
@@ -164,7 +164,7 @@ export default function AssessmentPage() {
             </h2>
 
             {/* Assessment Process Diagram */}
-            <div className="mb-12 overflow-hidden rounded-lg max-w-[75%] mx-auto">
+            <div className="mb-8 overflow-hidden rounded-lg max-w-[75%] mx-auto">
               <Image
                 src="/images/assessment-process.webp"
                 alt="Assessment framework: Data, People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
@@ -175,20 +175,33 @@ export default function AssessmentPage() {
               />
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
-              {dimensions.map((dimension) => (
-                <div key={dimension.title} className="border rounded-lg p-6">
-                  <h3 className="text-xl font-semibold mb-3">{dimension.title}</h3>
-                  <ul className="space-y-2">
-                    {dimension.items.map((item) => (
-                      <li key={item} className="text-muted-foreground">
-                        <span className="mr-2">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              {dimensions.map((dimension) => {
+                const isPolitics = dimension.title === "Politics";
+                return (
+                  <div
+                    key={dimension.title}
+                    className={`border rounded-lg p-6 ${
+                      isPolitics
+                        ? "border-amber-500/50 bg-amber-500/5 sm:col-span-2 lg:col-span-1"
+                        : ""
+                    }`}
+                  >
+                    <h3 className={`text-xl font-semibold mb-3 ${isPolitics ? "text-amber-600 dark:text-amber-400" : ""}`}>
+                      {dimension.title}
+                      {isPolitics && <span className="ml-2 text-xs font-normal">(Often Overlooked)</span>}
+                    </h3>
+                    <ul className="space-y-2">
+                      {dimension.items.map((item) => (
+                        <li key={item} className="text-muted-foreground">
+                          <span className="mr-2">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -213,7 +226,7 @@ export default function AssessmentPage() {
       </section>
 
       {/* What You Get */}
-      <section className="pb-16 bg-muted/30 py-16">
+      <section className="bg-muted/30 py-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold mb-8">
@@ -231,7 +244,7 @@ export default function AssessmentPage() {
               />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {deliverables.map((deliverable) => (
                 <div key={deliverable.title} className="border rounded-lg p-6 bg-background">
                   <h3 className="font-semibold mb-2">{deliverable.title}</h3>
@@ -249,7 +262,7 @@ export default function AssessmentPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-2xl">
-            <div className="border rounded-lg p-8 md:p-12">
+            <div className="border rounded-lg p-6 md:p-8">
               <h2 className="text-3xl font-bold mb-2">Pricing</h2>
               <p className="text-4xl font-bold text-accent mb-2">$12K - $25K</p>
               <p className="text-lg text-muted-foreground mb-2">2-3 weeks</p>
@@ -268,17 +281,17 @@ export default function AssessmentPage() {
       </section>
 
       {/* What Happens Next */}
-      <section className="pb-16">
+      <section className="pb-12">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold mb-4">What Happens Next?</h2>
             <p className="text-lg text-muted-foreground mb-8">
               After The Assessment, you&apos;ll have a clear roadmap. Many clients choose to continue with implementation—but there&apos;s no obligation. Here are the paths we can help with:
             </p>
-            <div className="grid gap-4">
+            <div className="grid gap-3">
               <Link
                 href={ROUTES.DATA_READINESS}
-                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+                className="group flex items-start gap-4 border rounded-lg p-4 transition-all hover:border-accent hover:shadow-md"
               >
                 <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
                   <Database className="h-5 w-5" />
@@ -295,7 +308,7 @@ export default function AssessmentPage() {
               </Link>
               <Link
                 href={ROUTES.AI_AUTOMATION}
-                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+                className="group flex items-start gap-4 border rounded-lg p-4 transition-all hover:border-accent hover:shadow-md"
               >
                 <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
                   <Cog className="h-5 w-5" />
@@ -312,7 +325,7 @@ export default function AssessmentPage() {
               </Link>
               <Link
                 href={ROUTES.AI_DEVELOPMENT}
-                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+                className="group flex items-start gap-4 border rounded-lg p-4 transition-all hover:border-accent hover:shadow-md"
               >
                 <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
                   <Code className="h-5 w-5" />
@@ -329,7 +342,7 @@ export default function AssessmentPage() {
               </Link>
               <Link
                 href={ROUTES.MANAGED_SERVICES}
-                className="group flex items-start gap-4 border rounded-lg p-6 transition-all hover:border-accent hover:shadow-md"
+                className="group flex items-start gap-4 border rounded-lg p-4 transition-all hover:border-accent hover:shadow-md"
               >
                 <div className="shrink-0 p-3 rounded-lg bg-accent/10 text-accent">
                   <Headphones className="h-5 w-5" />
@@ -350,7 +363,7 @@ export default function AssessmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-tributary py-16 text-white">
+      <section className="bg-gradient-tributary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold sm:text-4xl">

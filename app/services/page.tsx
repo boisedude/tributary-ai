@@ -159,10 +159,10 @@ export default function ServicesPage() {
       />
       <FAQSchema faqs={serviceFAQs} />
       {/* Hero Section */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
+            <h1 className="text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
               AI Consulting & Technology Services
             </h1>
             <p className="mt-6 text-xl text-muted-foreground">
@@ -176,7 +176,7 @@ export default function ServicesPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="p-8 bg-muted/30 rounded-lg">
+            <div className="p-6 bg-muted/30 rounded-lg">
               <h2 className="text-2xl font-bold mb-4">How It Works</h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Most clients start with <strong>The Assessment</strong>—a 2-3 week diagnostic that gives you clarity on where you stand and what to change.
@@ -194,7 +194,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-6">Which Service Is Right for You?</h2>
-            <div className="grid gap-4">
+            <div className="grid gap-3 sm:grid-cols-2">
               <div className="border rounded-lg p-6">
                 <p className="font-semibold mb-2">&ldquo;Our data is fragmented and unreliable.&rdquo;</p>
                 <p className="text-muted-foreground">
@@ -231,18 +231,18 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="pb-20">
+      <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
               {services.map((service) => {
                 const Icon = service.icon;
                 return (
                   <Link
                     key={service.title}
                     href={service.href}
-                    className={`group block border rounded-lg p-8 transition-all hover:border-accent hover:shadow-lg ${
-                      service.highlight ? "md:col-span-2 bg-muted/30" : "bg-background"
+                    className={`group block border rounded-lg p-6 sm:p-8 transition-all hover:border-accent hover:shadow-lg ${
+                      service.highlight ? "sm:col-span-2 bg-muted/30" : "bg-background"
                     }`}
                   >
                     <div className="flex items-start gap-4">
@@ -280,7 +280,7 @@ export default function ServicesPage() {
       <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="border rounded-lg p-8">
+            <div className="border rounded-lg p-6">
               <h2 className="text-2xl font-bold mb-4">
                 Why We Cost Less
               </h2>
@@ -293,7 +293,7 @@ export default function ServicesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="pb-20">
+      <section className="pb-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold mb-8">Frequently Asked Questions</h2>
@@ -303,7 +303,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-tributary py-16 text-white">
+      <section className="bg-gradient-tributary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-3xl font-bold sm:text-4xl">

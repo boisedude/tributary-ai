@@ -17,7 +17,7 @@ export function ThoughtLeadershipSection() {
   const latestPosts = allPosts.slice(0, 3);
 
   return (
-    <section className="py-20">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-5xl">
           {/* Section Header */}

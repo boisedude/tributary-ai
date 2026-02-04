@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ToastProvider } from "@/components/ui/toast";
 import { Navigation } from "@/components/layout/navigation";
-import { Footer } from "@/components/layout/footer";
+import { Footer } from "@/components/layout/Footer";
 import {
   OrganizationSchema,
   LocalBusinessSchema,

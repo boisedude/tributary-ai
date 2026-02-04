@@ -28,7 +28,7 @@ export function ApproachSection() {
           </p>
 
           {/* The Assessment */}
-          <div className="mt-12 p-8 bg-muted/30 rounded-lg">
+          <div className="mt-8 p-8 bg-muted/30 rounded-lg">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
               <div>
                 <h3 className="text-2xl font-bold">The Assessment</h3>
@@ -44,7 +44,7 @@ export function ApproachSection() {
           </div>
 
           {/* Five Dimensions */}
-          <div className="mt-12">
+          <div className="mt-8">
             <h3 className="text-lg font-semibold mb-4">Five dimensions we evaluate</h3>
             <div className="grid gap-4 sm:grid-cols-2">
               {dimensions.map((d) => (
@@ -60,7 +60,7 @@ export function ApproachSection() {
           </div>
 
           {/* CTA */}
-          <div className="mt-12">
+          <div className="mt-8">
             <Button asChild size="lg" className="group">
               <Link href="/assessment">
                 Learn More About The Assessment

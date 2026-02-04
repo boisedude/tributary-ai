@@ -68,10 +68,14 @@ export function NewsletterSignup({ className, variant = "default" }: NewsletterS
   if (variant === "compact") {
     return (
       <form onSubmit={handleSubmit} className={className}>
+        <label htmlFor="newsletter-email-compact" className="sr-only">
+          Email Address
+        </label>
         <div className="flex gap-2">
           <Input
+            id="newsletter-email-compact"
             type="email"
-            placeholder="Enter your email"
+            placeholder="you@company.com"
             value={email}
             onChange={(e) => {
               setEmail(e.target.value);
@@ -81,7 +85,6 @@ export function NewsletterSignup({ className, variant = "default" }: NewsletterS
               }
             }}
             disabled={submitState === "loading"}
-            aria-label="Email address"
             className="flex-1"
           />
           <Button
@@ -110,9 +113,13 @@ export function NewsletterSignup({ className, variant = "default" }: NewsletterS
   return (
     <form onSubmit={handleSubmit} className={className}>
       <div className="space-y-2">
+        <label htmlFor="newsletter-email" className="block text-sm font-medium mb-1">
+          Email Address
+        </label>
         <Input
+          id="newsletter-email"
           type="email"
-          placeholder="Enter your email"
+          placeholder="you@company.com"
           value={email}
           onChange={(e) => {
             setEmail(e.target.value);
@@ -122,7 +129,6 @@ export function NewsletterSignup({ className, variant = "default" }: NewsletterS
             }
           }}
           disabled={submitState === "loading"}
-          aria-label="Email address"
         />
         <Button
           type="submit"

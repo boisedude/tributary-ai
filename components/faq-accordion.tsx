@@ -26,8 +26,9 @@ export function FAQAccordion({ faqs, className }: FAQAccordionProps) {
       {faqs.map((faq, index) => (
         <div key={index} className="overflow-hidden">
           <button
+            type="button"
             onClick={() => toggleFAQ(index)}
-            className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-muted/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
+            className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-muted/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:rounded-md"
             aria-expanded={openIndex === index}
             aria-controls={`faq-answer-${index}`}
           >

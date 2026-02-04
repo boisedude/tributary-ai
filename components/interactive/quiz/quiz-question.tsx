@@ -76,8 +76,10 @@ export function QuizQuestion({
         {question?.explanation && (
           <div className="mt-3">
             <button
+              type="button"
               onClick={() => setShowExplanation(!showExplanation)}
-              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 py-1 text-sm text-muted-foreground hover:text-foreground transition-colors focus:outline-none focus-visible:text-foreground focus-visible:underline"
+              aria-expanded={showExplanation}
             >
               <HelpCircle className="h-4 w-4" />
               Why we ask this
@@ -131,10 +133,11 @@ export function QuizQuestion({
               const isSelected = answers[question.id] === option.score;
               return (
                 <button
+                  type="button"
                   key={index}
                   onClick={() => onAnswer(question.id, option.score)}
                   className={cn(
-                    "w-full text-left p-4 rounded-lg border transition-all",
+                    "w-full text-left p-4 min-h-[48px] rounded-lg border transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2",
                     isSelected
                       ? "border-accent bg-accent/5 ring-2 ring-accent/20"
                       : "border-border hover:border-accent/50 hover:bg-muted/50"

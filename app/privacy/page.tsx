@@ -33,7 +33,8 @@ export default function PrivacyPage() {
               <CardContent className="prose prose-gray dark:prose-invert max-w-none p-8">
                 <h2>Introduction</h2>
                 <p>
-                  Tributary AI (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the
+                  Tributary AI Solutions, a division of Managed Data Communications, Inc.
+                  (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) operates the
                   website at thetributary.ai. This Privacy Policy describes how we
                   collect, use, and share information when you use our website or
                   engage with our consulting services. By using our website, you
@@ -138,15 +139,27 @@ export default function PrivacyPage() {
                 </p>
                 <ul>
                   <li>
-                    <strong>Microsoft Bookings:</strong> Handles consultation scheduling.
+                    <strong>Cal.com:</strong> Handles consultation scheduling.
                     Subject to{" "}
                     <a
-                      href="https://privacy.microsoft.com/en-us/privacystatement"
+                      href="https://cal.com/privacy"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-accent"
                     >
-                      Microsoft&apos;s Privacy Statement
+                      Cal.com&apos;s Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <strong>Supabase:</strong> Stores quiz submissions and contact
+                    information. Subject to{" "}
+                    <a
+                      href="https://supabase.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent"
+                    >
+                      Supabase&apos;s Privacy Policy
                     </a>
                   </li>
                   <li>
@@ -239,14 +252,19 @@ export default function PrivacyPage() {
                   contact us at:
                 </p>
                 <p>
-                  <strong>Tributary AI</strong>
+                  <strong>Tributary AI Solutions</strong>
+                  <br />
+                  A division of Managed Data Communications, Inc.
+                  <br />
+                  4042 W Temple Dr
+                  <br />
+                  Eagle, ID 83616
+                  <br />
                   <br />
                   Email:{" "}
                   <a href={`mailto:${EMAILS.SALES}`} className="text-accent">
                     {EMAILS.SALES}
                   </a>
-                  <br />
-                  Boise, Idaho
                 </p>
               </CardContent>
             </Card>

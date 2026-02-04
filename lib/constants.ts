@@ -68,16 +68,18 @@ export const EXTERNAL_LINKS = {
  */
 export const COMPANY = {
   NAME: "Tributary",
-  LEGAL_NAME: "MDC IT, dba Tributary AI",
+  LEGAL_NAME: "Managed Data Communications, Inc. dba Tributary AI Solutions",
+  LEGAL_NAME_SHORT: "Tributary AI Solutions",
   DISPLAY_NAME: "Tributary AI",
   FOUNDER_NAME: "Michael Cooper",
-  TAGLINE: "Serving enterprises since 1999",
+  TAGLINE: "Established 2005",
   TAGLINE_SECONDARY: "AI should reduce your tech spend. Not increase it.",
   DESCRIPTION:
     "Technology consulting that helps companies use AI to work smarter and spend less—not more. Simplify operations. Reduce costs. Move faster.",
-  LOCATION: "723 W Headwaters Dr, Eagle, Idaho",
+  LOCATION: "Eagle, Idaho",
+  MAILING_ADDRESS: "4042 W Temple Dr, Eagle, ID 83616",
   PHONE: "(208) 330-5534",
-  FOUNDED_YEAR: 1999,
+  FOUNDED_YEAR: 2005,
   COPYRIGHT_YEAR: new Date().getFullYear(),
 } as const;
 
@@ -167,9 +169,6 @@ export const FOOTER_NAV_GROUPS = {
     items: [
       { href: ROUTES.ABOUT, label: "About" },
       { href: ROUTES.BLOG, label: "Blog" },
-      { href: ROUTES.CAREERS, label: "Careers" },
-      { href: ROUTES.PARTNERS, label: "Partners" },
-      { href: ROUTES.SECURITY, label: "Security" },
       { href: ROUTES.CONTACT, label: "Contact" },
     ],
   },

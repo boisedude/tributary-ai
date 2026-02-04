@@ -41,17 +41,19 @@ export default function TermsPage() {
 
                 <h2>Services Description</h2>
                 <p>
-                  Tributary AI provides SaaS go-to-market consulting
-                  services, including:
+                  Tributary AI Solutions provides AI readiness and technology
+                  consulting services for mid-market companies, including:
                 </p>
                 <ul>
-                  <li>Cloud Marketplace GTM strategy and execution</li>
-                  <li>Fractional GTM leadership</li>
-                  <li>Agentic SaaS advisory services</li>
+                  <li>AI Readiness Assessments and technology diagnostics</li>
+                  <li>AI strategy and implementation consulting</li>
+                  <li>Data readiness and infrastructure planning</li>
+                  <li>AI automation and development services</li>
+                  <li>Managed AI services and ongoing support</li>
                 </ul>
                 <p>
                   Specific services, deliverables, timelines, and fees are defined
-                  in separate engagement agreements between Tributary AI
+                  in separate engagement agreements between Tributary AI Solutions
                   and clients.
                 </p>
 
@@ -152,14 +154,19 @@ export default function TermsPage() {
                   For questions about these Terms of Service, please contact us at:
                 </p>
                 <p>
-                  <strong>Tributary AI</strong>
+                  <strong>Tributary AI Solutions</strong>
+                  <br />
+                  A division of Managed Data Communications, Inc.
+                  <br />
+                  4042 W Temple Dr
+                  <br />
+                  Eagle, ID 83616
+                  <br />
                   <br />
                   Email:{" "}
                   <a href={`mailto:${EMAILS.SALES}`} className="text-accent">
                     {EMAILS.SALES}
                   </a>
-                  <br />
-                  Boise, Idaho
                 </p>
               </CardContent>
             </Card>

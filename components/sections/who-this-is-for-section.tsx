@@ -66,7 +66,7 @@ export function WhoThisIsForSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-12"
+            className="text-center mb-8"
           >
             <p className="text-sm font-medium text-accent mb-2">
               Who We Work With

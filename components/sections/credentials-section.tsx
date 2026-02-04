@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
  */
 export function CredentialsSection() {
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="py-16 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           {/* Section Header */}

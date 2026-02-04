@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
  */
 export function Hero() {
   return (
-    <section className="relative py-24 md:py-32 lg:py-40">
+    <section className="relative py-16 md:py-20 lg:py-28">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           {/* Eyebrow */}
@@ -17,9 +17,10 @@ export function Hero() {
           </p>
 
           {/* Main Headline */}
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl leading-[1.1]">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
             AI isn&apos;t the hard part.
-            <br />
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span>
             <span className="text-accent">Making it work inside your business can be.</span>
           </h1>
 

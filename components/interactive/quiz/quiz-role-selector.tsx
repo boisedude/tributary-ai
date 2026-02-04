@@ -22,11 +22,13 @@ export function QuizRoleSelector({ onSelectRole, embedded = false }: QuizRoleSel
 
       <CardContent className="space-y-4">
         <motion.button
+          type="button"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           onClick={() => onSelectRole("business")}
-          className="w-full p-6 rounded-xl border bg-card hover:border-accent hover:shadow-lg transition-all text-left group"
+          aria-label="Select Business Leader role - for CEO, COO, GM, VP Operations, or similar. You'll see questions focused on business outcomes, ROI, and strategic readiness."
+          className="w-full p-6 rounded-xl border bg-card hover:border-accent hover:shadow-lg transition-all text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
         >
           <div className="flex items-start gap-4">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 shrink-0 group-hover:bg-accent/20 transition-colors">
@@ -46,11 +48,13 @@ export function QuizRoleSelector({ onSelectRole, embedded = false }: QuizRoleSel
         </motion.button>
 
         <motion.button
+          type="button"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           onClick={() => onSelectRole("technical")}
-          className="w-full p-6 rounded-xl border bg-card hover:border-accent hover:shadow-lg transition-all text-left group"
+          aria-label="Select Technical Leader role - for CTO, IT Director, VP Engineering, or similar. You'll see questions with more technical depth around infrastructure and implementation."
+          className="w-full p-6 rounded-xl border bg-card hover:border-accent hover:shadow-lg transition-all text-left group focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
         >
           <div className="flex items-start gap-4">
             <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 shrink-0 group-hover:bg-accent/20 transition-colors">

@@ -62,7 +62,7 @@ export default function QuizPage() {
   return (
     <article className="bg-gradient-subtle min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-accent font-medium mb-4">Free Assessment</p>
@@ -73,14 +73,26 @@ export default function QuizPage() {
               Companies that layer AI onto existing chaos struggle. Those that build on a solid foundation succeed. Take 5 minutes to explore your organization&apos;s readiness—and start a conversation about what needs to change.
             </p>
 
+            {/* Quick Stats Bar */}
+            <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground bg-muted/50 rounded-full px-6 py-3">
+              <span className="flex items-center gap-2">
+                <Clock className="h-4 w-4 text-accent" />
+                <strong>~5 minutes</strong>
+              </span>
+              <span className="hidden sm:inline text-muted-foreground/50">•</span>
+              <span><strong>18</strong> questions</span>
+              <span className="hidden sm:inline text-muted-foreground/50">•</span>
+              <span>Progress saved automatically</span>
+            </div>
+
             {/* Benefits */}
-            <div className="grid gap-4 sm:grid-cols-3 mt-10 mb-12">
+            <div className="grid gap-4 sm:grid-cols-3 mt-6 mb-8">
               {benefits.map((benefit) => {
                 const Icon = benefit.icon;
                 return (
                   <div
                     key={benefit.title}
-                    className="flex flex-col items-center p-4"
+                    className="flex flex-col items-center p-3"
                   >
                     <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 mb-3">
                       <Icon className="h-6 w-6 text-accent" />
@@ -107,14 +119,14 @@ export default function QuizPage() {
       </section>
 
       {/* Context Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-6 text-center">
               Why This Quiz Matters
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="p-6 bg-background rounded-lg border">
+              <div className="p-5 bg-background rounded-lg border">
                 <h3 className="font-semibold text-destructive mb-3">
                   Weak Foundation
                 </h3>
@@ -129,7 +141,7 @@ export default function QuizPage() {
                   Result: Expensive AI projects that fail to deliver value
                 </p>
               </div>
-              <div className="p-6 bg-background rounded-lg border border-accent/30">
+              <div className="p-5 bg-background rounded-lg border border-accent/30">
                 <h3 className="font-semibold text-accent mb-3">
                   Solid Foundation
                 </h3>
@@ -150,7 +162,7 @@ export default function QuizPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-tributary py-16 text-white">
+      <section className="bg-gradient-tributary py-12 text-white">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl font-bold sm:text-3xl">

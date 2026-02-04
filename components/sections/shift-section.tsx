@@ -37,7 +37,7 @@ export function ShiftSection() {
           </div>
 
           {/* Why Most Fail */}
-          <div className="mt-16">
+          <div className="mt-10">
             <h3 className="text-xl font-semibold mb-6">
               Why most approaches fail
             </h3>
@@ -62,7 +62,7 @@ export function ShiftSection() {
           </div>
 
           {/* Stats - understated */}
-          <div className="mt-16 pt-8 border-t">
+          <div className="mt-10 pt-8 border-t">
             <p className="text-sm text-muted-foreground mb-4">The data confirms what we see with clients:</p>
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>

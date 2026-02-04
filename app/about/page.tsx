@@ -55,7 +55,7 @@ export default function AboutPage() {
   return (
     <article>
       {/* Company Hero */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm font-medium tracking-wide text-accent uppercase mb-4">
@@ -75,7 +75,7 @@ export default function AboutPage() {
       </section>
 
       {/* What We Believe */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-6">Our Approach</h2>
@@ -99,9 +99,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Tributary</h2>
-            <div className="grid gap-6 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-3">
               {differentiators.map((item, index) => (
-                <div key={index} className="border rounded-lg p-6 text-center">
+                <div key={index} className="border rounded-lg p-5 text-center">
                   <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
                     <item.icon className="h-6 w-6" />
                   </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                 </div>
               ))}
             </div>
-            <p className="mt-8 text-center text-muted-foreground">
+            <p className="mt-6 text-center text-muted-foreground">
               We keep our team small intentionally. When you work with Tributary, you work directly with the founder.
             </p>
           </div>
@@ -120,13 +120,13 @@ export default function AboutPage() {
       </section>
 
       {/* Meet the Founder */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <p className="text-sm font-medium tracking-wide text-accent uppercase mb-6">
               The Founder
             </p>
-            <div className="flex flex-col sm:flex-row gap-8 items-start">
+            <div className="flex flex-col sm:flex-row gap-6 items-start">
               <div className="shrink-0">
                 <Image
                   src="/images/michael-cooper-about.jpg"
@@ -183,7 +183,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
             <h2 className="text-2xl font-bold mb-8">Track Record</h2>
-            <ul className="space-y-4 text-lg">
+            <ul className="space-y-3 text-lg">
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
                 <span><strong>$1.1B quota</strong> leading US Datacenter Sales at Microsoft</span>
@@ -212,7 +212,7 @@ export default function AboutPage() {
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
-                <span><strong>Led transformative consulting projects</strong> at Starbucks, Nike, Boeing, Boise Cascade, College of Idaho, Idaho State Tax Commission, and Primary Health Medical Group</span>
+                <span><strong>Led transformative consulting projects</strong> at Micron, Albertsons, Boise Cascade, Idaho State Police, College of Idaho, Idaho State Tax Commission, and Primary Health Medical Group</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-accent font-bold">•</span>
@@ -231,8 +231,8 @@ export default function AboutPage() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="border rounded-lg p-8 bg-background">
-              <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="border rounded-lg p-6 bg-background">
+              <div className="flex flex-col sm:flex-row items-center gap-4">
                 <div className="shrink-0">
                   <Image
                     src="/images/bently-arcade.png"
@@ -269,7 +269,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-primary text-primary-foreground">
+      <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold mb-4">
