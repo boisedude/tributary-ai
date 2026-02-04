@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { SITE_URL, COMPANY, EMAILS, EXTERNAL_LINKS } from "@/lib/constants";
 
 export function OrganizationSchema() {
@@ -30,8 +29,7 @@ export function OrganizationSchema() {
   };
 
   return (
-    <Script
-      id="organization-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -74,8 +72,7 @@ export function LocalBusinessSchema() {
   };
 
   return (
-    <Script
-      id="local-business-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -128,8 +125,7 @@ export function BlogPostSchema({
   };
 
   return (
-    <Script
-      id="blog-post-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -158,8 +154,7 @@ export function BreadcrumbListSchema({ items }: BreadcrumbListSchemaProps) {
   };
 
   return (
-    <Script
-      id="breadcrumb-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -190,8 +185,7 @@ export function FAQSchema({ faqs }: FAQSchemaProps) {
   };
 
   return (
-    <Script
-      id="faq-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -218,8 +212,7 @@ export function ServiceSchema() {
   };
 
   return (
-    <Script
-      id="service-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -246,8 +239,7 @@ export function AIAutomationServiceSchema() {
   };
 
   return (
-    <Script
-      id="ai-automation-service-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -274,8 +266,7 @@ export function AIDevelopmentServiceSchema() {
   };
 
   return (
-    <Script
-      id="ai-development-service-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -302,8 +293,7 @@ export function ManagedServicesSchema() {
   };
 
   return (
-    <Script
-      id="managed-services-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -330,8 +320,7 @@ export function DataReadinessServiceSchema() {
   };
 
   return (
-    <Script
-      id="data-readiness-service-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
@@ -357,8 +346,7 @@ export function BlogListingSchema() {
   };
 
   return (
-    <Script
-      id="blog-listing-schema"
+    <script
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />

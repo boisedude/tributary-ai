@@ -1,3 +1,13 @@
+# Custom 404 page
+ErrorDocument 404 /404.html
+
+# Redirect non-www to www
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^thetributary\.ai$ [NC]
+    RewriteRule ^(.*)$ https://www.thetributary.ai/$1 [R=301,L]
+</IfModule>
+
 # Redirect old resources page to blog
 RedirectMatch 301 ^/resources/?$ /blog/
 

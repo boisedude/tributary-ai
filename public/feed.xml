@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tributary AI Blog</title>
+    <link>https://www.thetributary.ai/blog/</link>
+    <description>Expert insights on AI strategy, agentic systems, business transformation, and cloud marketplaces.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Feb 2026 23:58:27 GMT</lastBuildDate>
+    <atom:link href="https://www.thetributary.ai/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Why AI Projects Fail: The Data Readiness Gap Nobody Talks About</title>
+      <link>https://www.thetributary.ai/blog/why-ai-projects-fail-data-architecture/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/why-ai-projects-fail-data-architecture/</guid>
+      <description>60% of AI projects will be abandoned by 2026—not because the technology fails, but because the data architecture isn&apos;t ready. Here&apos;s what to fix first.</description>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Data Architecture</category>
+      <category>AI Implementation</category>
+      <category>Data Quality</category>
+      <category>AI Failure</category>
+      <category>Data Readiness</category>
+    </item>
+    <item>
+      <title>The 95% Problem: Why Your AI Pilot Succeeds But Never Scales</title>
+      <link>https://www.thetributary.ai/blog/why-ai-pilots-fail-to-scale/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/why-ai-pilots-fail-to-scale/</guid>
+      <description>95% of AI pilots fail to scale. Learn the three critical gaps causing this and a practical framework for moving from experiment to enterprise value.</description>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Implementation</category>
+      <category>Scaling</category>
+      <category>Business Transformation</category>
+    </item>
+    <item>
+      <title>What &apos;Agentic&apos; Really Means for Your Business</title>
+      <link>https://www.thetributary.ai/blog/what-agentic-really-means-for-your-business/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/what-agentic-really-means-for-your-business/</guid>
+      <description>Cut through the agentic AI hype. What autonomous AI agents actually do, when they&apos;re ready for business, and how to evaluate them.</description>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI</category>
+      <category>Agentic Systems</category>
+      <category>Automation</category>
+      <category>Business Strategy</category>
+    </item>
+    <item>
+      <title>The Intelligence Paradox: Why Mid-Market Growth Is Stalling in 2026</title>
+      <link>https://www.thetributary.ai/blog/the-intelligence-paradox/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/the-intelligence-paradox/</guid>
+      <description>AI is nearly free, yet operational costs keep rising. The hidden bottleneck: human labor gluing disconnected systems together.</description>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Digital Transformation</category>
+      <category>Operations</category>
+      <category>Systems Integration</category>
+      <category>Mid-Market</category>
+      <category>IT Costs</category>
+    </item>
+    <item>
+      <title>Shadow AI in Your Company: The Hidden Security Risk No One&apos;s Talking About</title>
+      <link>https://www.thetributary.ai/blog/shadow-ai-security-compliance-risks/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/shadow-ai-security-compliance-risks/</guid>
+      <description>67% of employees use unauthorized AI tools. Detect shadow AI, assess risks, and build governance that enables innovation safely.</description>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Shadow AI</category>
+      <category>Security</category>
+      <category>Compliance</category>
+      <category>Risk Management</category>
+    </item>
+    <item>
+      <title>Beyond ChatGPT: How Multimodal AI Will Transform Customer Experience in 2025</title>
+      <link>https://www.thetributary.ai/blog/multimodal-ai-customer-experience/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/multimodal-ai-customer-experience/</guid>
+      <description>Beyond text: voice, image, and video AI are transforming customer experience. Early adopters see 35% higher engagement. Here&apos;s how.</description>
+      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Multimodal AI</category>
+      <category>Customer Experience</category>
+      <category>Innovation</category>
+      <category>Competitive Advantage</category>
+    </item>
+    <item>
+      <title>Measuring AI ROI: Beyond Cost Savings to Business Transformation</title>
+      <link>https://www.thetributary.ai/blog/measuring-ai-roi-beyond-cost-savings/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/measuring-ai-roi-beyond-cost-savings/</guid>
+      <description>Traditional ROI misses 60% of AI&apos;s value. The complete framework for measuring cost savings, strategic gains, and transformation.</description>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI ROI</category>
+      <category>Business Metrics</category>
+      <category>AI Implementation</category>
+      <category>Strategy</category>
+    </item>
+    <item>
+      <title>The Intake-to-Action Loop: Automate the Gap Between Intent and Execution</title>
+      <link>https://www.thetributary.ai/blog/intake-to-action-loop/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/intake-to-action-loop/</guid>
+      <description>The intake-to-action gap costs companies 40% in efficiency. Here&apos;s how to automate the distance between customer intent and fulfillment.</description>
+      <pubDate>Tue, 13 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Workflow Automation</category>
+      <category>Business Operations</category>
+      <category>Process Optimization</category>
+      <category>Customer Experience</category>
+      <category>Operational Efficiency</category>
+    </item>
+    <item>
+      <title>Why Boutique AI Consulting Outperforms Big Firms for Mid-Market Companies</title>
+      <link>https://www.thetributary.ai/blog/how-boutique-ai-consulting-outperforms-big-firms/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/how-boutique-ai-consulting-outperforms-big-firms/</guid>
+      <description>3x better ROI from boutique AI consultants vs. big firms. Why enterprise consulting fails mid-market companies—and what works.</description>
+      <pubDate>Tue, 06 Jan 2026 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Consulting</category>
+      <category>Business Strategy</category>
+      <category>Mid-Market</category>
+      <category>ROI</category>
+    </item>
+    <item>
+      <title>Why Your Employees Fear AI (And How to Turn Them Into Advocates)</title>
+      <link>https://www.thetributary.ai/blog/employees-fear-ai-how-to-fix/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/employees-fear-ai-how-to-fix/</guid>
+      <description>70% of AI failures are people problems, not tech. The 4-step change management framework that turns AI skeptics into champions.</description>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Change Management</category>
+      <category>AI Adoption</category>
+      <category>Workforce</category>
+      <category>Leadership</category>
+    </item>
+    <item>
+      <title>Data Quality Hell: How to Prepare for AI Without a Year-Long Data Project</title>
+      <link>https://www.thetributary.ai/blog/data-quality-for-ai-quick-wins/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/data-quality-for-ai-quick-wins/</guid>
+      <description>Skip the 18-month data project. 4 quick wins to make your data AI-ready in 90 days. Practical steps that 59% of leaders miss.</description>
+      <pubDate>Tue, 23 Dec 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Data Quality</category>
+      <category>Data Governance</category>
+      <category>AI Readiness</category>
+      <category>Implementation</category>
+    </item>
+    <item>
+      <title>Cloud Marketplace Strategy for 2025: AWS, Azure, and GCP Compared</title>
+      <link>https://www.thetributary.ai/blog/cloud-marketplace-strategy-2025/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/cloud-marketplace-strategy-2025/</guid>
+      <description>AWS vs. Azure vs. GCP marketplace comparison for 2025. Key differences, pricing models, and which platform fits your strategy.</description>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Cloud Marketplace</category>
+      <category>AWS</category>
+      <category>Azure</category>
+      <category>GCP</category>
+      <category>SaaS Strategy</category>
+    </item>
+    <item>
+      <title>Choosing AI Vendors: When to Go Enterprise vs. Startup</title>
+      <link>https://www.thetributary.ai/blog/choosing-ai-vendors-enterprise-vs-startup/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/choosing-ai-vendors-enterprise-vs-startup/</guid>
+      <description>Enterprise vs. startup AI vendors: which is right for you? Use this decision framework to avoid costly vendor mistakes.</description>
+      <pubDate>Tue, 09 Dec 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Vendors</category>
+      <category>Technology Selection</category>
+      <category>Business Strategy</category>
+      <category>Implementation</category>
+    </item>
+    <item>
+      <title>The Build vs. Buy Trap: A Mid-Market CFO&apos;s Guide to AI Investment</title>
+      <link>https://www.thetributary.ai/blog/build-vs-buy-ai-decision-guide/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/build-vs-buy-ai-decision-guide/</guid>
+      <description>85% of internal AI builds fail. Use this decision framework: when to buy, when to build, and the 5 mistakes that derail AI investments.</description>
+      <pubDate>Tue, 02 Dec 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Investment</category>
+      <category>Build vs Buy</category>
+      <category>CFO Guide</category>
+      <category>Technology Strategy</category>
+    </item>
+    <item>
+      <title>AI Talent Strategy: When to Hire, Train, or Partner</title>
+      <link>https://www.thetributary.ai/blog/ai-talent-strategy-hire-train-partner/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-talent-strategy-hire-train-partner/</guid>
+      <description>Build AI capabilities without hiring data scientists: when to hire, train internally, or partner. Decision framework + cost comparison.</description>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Talent</category>
+      <category>Hiring</category>
+      <category>Training</category>
+      <category>Strategy</category>
+    </item>
+    <item>
+      <title>The AI Strategy Mistake Costing Companies Millions: Starting with Technology</title>
+      <link>https://www.thetributary.ai/blog/ai-strategy-outcomes-not-technology/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-strategy-outcomes-not-technology/</guid>
+      <description>64% of organizations are experimenting but not scaling AI. The fatal flaw? Starting with technology instead of business outcomes.</description>
+      <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Business Outcomes</category>
+      <category>Digital Transformation</category>
+      <category>Leadership</category>
+    </item>
+    <item>
+      <title>From 5.9% to 55% ROI: The Four AI Best Practices That Actually Work</title>
+      <link>https://www.thetributary.ai/blog/ai-roi-best-practices-that-work/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-roi-best-practices-that-work/</guid>
+      <description>Enterprise AI averages 5.9% ROI, but leaders achieve 55%. Discover the four proven practices that separate AI winners from the rest.</description>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI ROI</category>
+      <category>Best Practices</category>
+      <category>Business Value</category>
+      <category>Implementation</category>
+    </item>
+    <item>
+      <title>10 AI Quick Wins You Can Implement in 30 Days</title>
+      <link>https://www.thetributary.ai/blog/ai-quick-wins-30-days/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-quick-wins-30-days/</guid>
+      <description>You don&apos;t need a 6-month roadmap to start benefiting from AI. Here are 10 quick wins any company can implement in 30 days or less.</description>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Quick Wins</category>
+      <category>AI Implementation</category>
+      <category>Productivity</category>
+      <category>Getting Started</category>
+    </item>
+    <item>
+      <title>Running an AI Proof of Concept That Actually Proves Something</title>
+      <link>https://www.thetributary.ai/blog/ai-proof-of-concept-done-right/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-proof-of-concept-done-right/</guid>
+      <description>Most AI proofs of concept prove nothing except that AI works in a lab. Here&apos;s how to design POCs that answer real business questions and lead to production.</description>
+      <pubDate>Tue, 28 Oct 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI POC</category>
+      <category>Pilot Projects</category>
+      <category>Implementation</category>
+      <category>Strategy</category>
+    </item>
+    <item>
+      <title>AI for Professional Services: How Law Firms, Accountants, and Consultants Are Gaining an Edge</title>
+      <link>https://www.thetributary.ai/blog/ai-professional-services-firms/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-professional-services-firms/</guid>
+      <description>AI for law firms, accountants, and consultants: faster delivery, lower costs, without losing the human touch. Practical applications inside.</description>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Professional Services</category>
+      <category>Legal Tech</category>
+      <category>Accounting</category>
+      <category>Consulting</category>
+    </item>
+    <item>
+      <title>The AI Maturity Ladder: A Realistic 18-Month Roadmap for Mid-Market Companies</title>
+      <link>https://www.thetributary.ai/blog/ai-maturity-roadmap-18-months/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-maturity-roadmap-18-months/</guid>
+      <description>18-month AI maturity roadmap: 4 stages from experimentation to integration. Clear milestones, budgets, and success metrics included.</description>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Maturity</category>
+      <category>Roadmap</category>
+      <category>Strategic Planning</category>
+      <category>Digital Transformation</category>
+    </item>
+    <item>
+      <title>AI in Manufacturing: What Mid-Market Producers Need to Know</title>
+      <link>https://www.thetributary.ai/blog/ai-manufacturing-mid-market-guide/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-manufacturing-mid-market-guide/</guid>
+      <description>AI for mid-market manufacturers without smart factory investment. 7 practical applications with 6-month payback periods.</description>
+      <pubDate>Tue, 07 Oct 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Manufacturing</category>
+      <category>Industry AI</category>
+      <category>Operations</category>
+      <category>Automation</category>
+    </item>
+    <item>
+      <title>AI Isn&apos;t One Thing: A Decision Framework for LLMs, RPA, and ML</title>
+      <link>https://www.thetributary.ai/blog/ai-isnt-one-thing-decision-framework/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-isnt-one-thing-decision-framework/</guid>
+      <description>A manufacturer spent $180K on an LLM when $60K RPA would work. Learn the framework for matching AI technologies to actual business problems.</description>
+      <pubDate>Tue, 30 Sep 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>RPA</category>
+      <category>Machine Learning</category>
+      <category>LLMs</category>
+      <category>Decision Framework</category>
+      <category>AI Vendor Selection</category>
+      <category>Process Automation</category>
+    </item>
+    <item>
+      <title>The AI Investment Curve: What Mid-Market Companies Actually Spend</title>
+      <link>https://www.thetributary.ai/blog/ai-investment-curve-what-to-expect/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-investment-curve-what-to-expect/</guid>
+      <description>The AI J-curve explained: why Year 1 costs spike before ROI arrives. Real cost data from Years 1-3 for mid-market companies.</description>
+      <pubDate>Tue, 23 Sep 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>AI ROI</category>
+      <category>AI Budget</category>
+      <category>CFO</category>
+      <category>AI Implementation Costs</category>
+      <category>Mid-Market</category>
+    </item>
+    <item>
+      <title>12 AI Implementation Mistakes We See Companies Make (And How to Avoid Them)</title>
+      <link>https://www.thetributary.ai/blog/ai-implementation-mistakes-avoid/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-implementation-mistakes-avoid/</guid>
+      <description>After helping dozens of companies implement AI, we&apos;ve seen the same mistakes repeatedly. Here&apos;s how to avoid them and save months of wasted effort.</description>
+      <pubDate>Tue, 16 Sep 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Mistakes</category>
+      <category>Best Practices</category>
+      <category>Implementation</category>
+      <category>Lessons Learned</category>
+    </item>
+    <item>
+      <title>AI Implementation Costs: What Mid-Market Companies Should Actually Expect</title>
+      <link>https://www.thetributary.ai/blog/ai-implementation-costs-what-to-expect/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-implementation-costs-what-to-expect/</guid>
+      <description>Real AI costs for mid-market companies: $50K-$500K depending on scope. See the full breakdown including hidden costs vendors don&apos;t mention.</description>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Implementation</category>
+      <category>Budget Planning</category>
+      <category>ROI</category>
+      <category>Business Strategy</category>
+    </item>
+    <item>
+      <title>AI in HR: How to Be Both Ethical and Effective</title>
+      <link>https://www.thetributary.ai/blog/ai-human-resources-ethical-effective/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-human-resources-ethical-effective/</guid>
+      <description>AI in HR without the lawsuits: ethical recruiting, onboarding, and retention automation. Reduce bias risk while cutting time-to-hire 40%.</description>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>HR Tech</category>
+      <category>AI Ethics</category>
+      <category>Recruiting</category>
+      <category>Workforce</category>
+    </item>
+    <item>
+      <title>Building an AI Governance Framework: A Practical Guide for Mid-Market Companies</title>
+      <link>https://www.thetributary.ai/blog/ai-governance-framework-mid-market/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-governance-framework-mid-market/</guid>
+      <description>Skip the enterprise bureaucracy. Build practical AI governance that enables innovation while managing risk. Framework + templates inside.</description>
+      <pubDate>Tue, 26 Aug 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Governance</category>
+      <category>Risk Management</category>
+      <category>Compliance</category>
+      <category>Business Strategy</category>
+    </item>
+    <item>
+      <title>AI for Sales Teams: A Practical Guide Beyond the Hype</title>
+      <link>https://www.thetributary.ai/blog/ai-for-sales-teams-practical-guide/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-for-sales-teams-practical-guide/</guid>
+      <description>AI for sales that actually closes deals: lead scoring, email automation, forecasting. What works, what doesn&apos;t, and implementation tips.</description>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Sales</category>
+      <category>Sales Enablement</category>
+      <category>Productivity</category>
+      <category>Implementation</category>
+    </item>
+    <item>
+      <title>AI Due Diligence: What M&amp;A Teams and Investors Need to Assess</title>
+      <link>https://www.thetributary.ai/blog/ai-due-diligence-ma-investors/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-due-diligence-ma-investors/</guid>
+      <description>AI due diligence checklist for M&amp;A: 15 questions to separate genuine AI capabilities from marketing hype. Don&apos;t overpay for vaporware.</description>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Due Diligence</category>
+      <category>M&amp;A</category>
+      <category>Investment</category>
+      <category>AI Assessment</category>
+    </item>
+    <item>
+      <title>AI and Cybersecurity: How Attackers Use It and How You Can Defend</title>
+      <link>https://www.thetributary.ai/blog/ai-cybersecurity-defense-offense/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-cybersecurity-defense-offense/</guid>
+      <description>AI-powered attacks are rising 300%. Here&apos;s how to use AI for defense: threat detection, response automation, and practical steps.</description>
+      <pubDate>Tue, 05 Aug 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Cybersecurity</category>
+      <category>AI Security</category>
+      <category>Risk Management</category>
+      <category>Defense</category>
+    </item>
+    <item>
+      <title>AI Customer Service: Moving Beyond Basic Chatbots</title>
+      <link>https://www.thetributary.ai/blog/ai-customer-service-beyond-chatbots/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-customer-service-beyond-chatbots/</guid>
+      <description>Beyond frustrating chatbots: AI customer service that actually works. Improve CSAT 23% while cutting support costs 40%.</description>
+      <pubDate>Tue, 29 Jul 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Customer Service</category>
+      <category>AI Chatbots</category>
+      <category>Customer Experience</category>
+      <category>Automation</category>
+    </item>
+    <item>
+      <title>How to Budget for AI in 2025: A CFO&apos;s Planning Guide</title>
+      <link>https://www.thetributary.ai/blog/ai-budget-planning-2025/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/ai-budget-planning-2025/</guid>
+      <description>AI budget template for 2025: allocation frameworks, ROI projections, and CFO-ready justifications. Get your AI investment approved.</description>
+      <pubDate>Tue, 22 Jul 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Budget</category>
+      <category>Financial Planning</category>
+      <category>CFO Guide</category>
+      <category>Investment</category>
+    </item>
+    <item>
+      <title>AI Agents Are Here: 5 Practical Use Cases You Can Implement in 90 Days</title>
+      <link>https://www.thetributary.ai/blog/agentic-ai-use-cases-90-days/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/agentic-ai-use-cases-90-days/</guid>
+      <description>Move past chatbots to AI agents that take action. 5 high-ROI use cases you can implement in 90 days with realistic timelines and expected returns.</description>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>Agentic AI</category>
+      <category>AI Agents</category>
+      <category>Automation</category>
+      <category>Implementation</category>
+    </item>
+    <item>
+      <title>5 Signs Your Business Isn&apos;t Ready for AI</title>
+      <link>https://www.thetributary.ai/blog/5-signs-your-business-isnt-ready-for-ai/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/5-signs-your-business-isnt-ready-for-ai/</guid>
+      <description>5 warning signs your AI initiative will fail before it starts. Spot these gaps early to avoid wasted investment and build real AI readiness.</description>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Strategy</category>
+      <category>Business Readiness</category>
+      <category>Digital Transformation</category>
+      <category>Systems Thinking</category>
+    </item>
+    <item>
+      <title>The 5 Dimensions of AI Readiness: What 95% of Failed AI Projects Get Wrong</title>
+      <link>https://www.thetributary.ai/blog/5-dimensions-ai-readiness-failed-projects/</link>
+      <guid isPermaLink="true">https://www.thetributary.ai/blog/5-dimensions-ai-readiness-failed-projects/</guid>
+      <description>95% of AI fails P&amp;L impact. The 5 dimensions of AI readiness reveal why 70% of failures are people and politics, not technology.</description>
+      <pubDate>Tue, 01 Jul 2025 00:00:00 GMT</pubDate>
+      <author>The Tributary AI Team</author>
+      <category>AI Readiness</category>
+      <category>AI Strategy</category>
+      <category>Digital Transformation</category>
+      <category>AI Implementation</category>
+      <category>Organizational Change</category>
+    </item>
+  </channel>
+</rss>

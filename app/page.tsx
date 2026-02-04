@@ -36,6 +36,14 @@ export const metadata: Metadata = {
     description:
       "AI isn't the hard part—making it work inside your business can be. We help organizations simplify how they operate so AI creates value instead of noise.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tributary AI - Technology Consulting for the AI Era",
+      },
+    ],
   },
 };
 

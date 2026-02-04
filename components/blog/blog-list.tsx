@@ -76,7 +76,7 @@ export function BlogList({ posts }: BlogListProps) {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {visiblePosts.map((post) => (
               <div key={post.slug}>
-                <Link href={`/blog/${post.slug}`} className="group h-full">
+                <Link href={`/blog/${post.slug}/`} className="group h-full">
                   <Card className="h-full overflow-hidden hover:border-accent transition-colors">
                     {post.image && (
                       <div className="aspect-video w-full overflow-hidden">

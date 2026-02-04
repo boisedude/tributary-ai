@@ -33,6 +33,21 @@ export const metadata: Metadata = {
     description:
       "AI automation and RPA services. Process automation and AI agent deployment for mid-market companies.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tributary AI - Technology Consulting for the AI Era",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Automation & Process Automation Services | Tributary AI",
+    description:
+      "AI automation and RPA services. Process automation and AI agent deployment for mid-market companies.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: `${SITE_URL}/services/ai-automation/`,

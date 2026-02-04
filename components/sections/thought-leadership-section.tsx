@@ -105,7 +105,7 @@ export function ThoughtLeadershipSection() {
  */
 function BlogPostCard({ post }: { post: BlogPost }) {
   return (
-    <Link href={`/blog/${post.slug}`} className="group block">
+    <Link href={`/blog/${post.slug}/`} className="group block">
       <Card className="h-full overflow-hidden hover:border-accent transition-colors">
         {post.image && (
           <div className="aspect-video w-full overflow-hidden">

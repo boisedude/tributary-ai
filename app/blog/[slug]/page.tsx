@@ -207,7 +207,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </div>
             <div className="grid gap-6 md:grid-cols-2">
               {relatedPosts.map((relatedPost) => (
-                <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}`} className="group">
+                <Link key={relatedPost.slug} href={`/blog/${relatedPost.slug}/`} className="group">
                   <Card className="h-full overflow-hidden border-2 transition-all hover:border-primary hover:shadow-lg hover:shadow-primary/20">
                     {relatedPost.image && (
                       <div className="aspect-video w-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-teal-500/20">

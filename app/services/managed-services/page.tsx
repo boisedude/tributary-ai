@@ -33,6 +33,21 @@ export const metadata: Metadata = {
     description:
       "Managed IT services and fractional CTO/CIO advisory for mid-market companies.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tributary AI - Technology Consulting for the AI Era",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Managed IT Services & Fractional CTO | Tributary AI",
+    description:
+      "Managed IT services and fractional CTO/CIO advisory for mid-market companies.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: `${SITE_URL}/services/managed-services/`,

@@ -30,6 +30,21 @@ export const metadata: Metadata = {
     description:
       "Custom AI-powered applications for mid-market companies. From prototype to production.",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tributary AI - Technology Consulting for the AI Era",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Custom AI Application Development | Tributary AI",
+    description:
+      "Custom AI-powered applications for mid-market companies. From prototype to production.",
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: `${SITE_URL}/services/ai-development/`,

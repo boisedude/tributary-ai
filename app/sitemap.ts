@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Get all blog posts
   const posts = getAllPosts();
   const blogPosts = posts.map((post) => ({
-    url: `${baseUrl}/blog/${post.slug}`,
+    url: `${baseUrl}/blog/${post.slug}/`,
     lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static pages with their priorities
   const staticPages = [
     {
-      url: baseUrl,
+      url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
       priority: 1.0,

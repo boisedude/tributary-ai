@@ -36,7 +36,14 @@ export const metadata: Metadata = {
     description:
       "2-3 week diagnostic that shows you where you stand and what to change. Evaluates Data, People, Process, Technology, and Politics.",
     type: "website",
-    images: ["/og-image.png"],
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Tributary AI - Technology Consulting for the AI Era",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
