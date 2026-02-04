@@ -257,6 +257,39 @@ export default function AIAutomationPage() {
         </div>
       </section>
 
+      {/* Related Content */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold mb-6">Learn More</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link
+                href="/blog/agentic-ai-use-cases-90-days"
+                className="group p-4 border rounded-lg hover:border-accent transition-colors"
+              >
+                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                  5 Practical AI Agent Use Cases
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Agentic AI implementations you can deploy in 90 days
+                </p>
+              </Link>
+              <Link
+                href="/blog/intake-to-action-loop"
+                className="group p-4 border rounded-lg hover:border-accent transition-colors"
+              >
+                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                  The Intake-to-Action Loop
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Automate the gap between intent and execution
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prerequisite */}
       <section className="pb-16">
         <div className="container mx-auto px-4">

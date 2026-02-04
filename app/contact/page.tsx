@@ -92,13 +92,16 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardContent>
                   <div className="relative w-full overflow-hidden rounded-lg h-[500px] md:h-[600px]">
+                    <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
+                      Loading calendar...
+                    </div>
                     <iframe
                       src="https://cal.com/thetributary?embed=true&layout=month_view&hideBranding=true"
                       width="100%"
                       height="100%"
                       frameBorder="0"
                       title="Schedule a consultation with Tributary AI"
-                      className="rounded-lg"
+                      className="rounded-lg relative z-10"
                       style={{ border: 0 }}
                     />
                   </div>

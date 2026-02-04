@@ -71,7 +71,7 @@ export function NewsletterSignup({ className, variant = "default" }: NewsletterS
         <label htmlFor="newsletter-email-compact" className="sr-only">
           Email Address
         </label>
-        <div className="flex gap-2">
+        <div className="flex flex-col sm:flex-row gap-2">
           <Input
             id="newsletter-email-compact"
             type="email"

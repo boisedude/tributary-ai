@@ -163,6 +163,29 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           />
         </div>
 
+        {/* CTA Section */}
+        <div className="mt-16 p-8 rounded-lg bg-gradient-tributary text-white text-center">
+          <h2 className="text-2xl font-bold">Ready to Put This Into Practice?</h2>
+          <p className="mt-3 text-white/90">
+            Take our free 5-minute quiz to see where your organization stands, or talk to us about your situation.
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+            <Link
+              href="/quiz"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-medium text-accent-foreground hover:bg-accent/90 transition-colors"
+            >
+              Get Your AI Readiness Score
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md border border-white/30 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 transition-colors"
+            >
+              Book a Strategy Call
+            </Link>
+          </div>
+        </div>
+
         {/* Related Posts Section */}
         {relatedPosts.length > 0 && (
           <div className="mt-16 border-t pt-16">

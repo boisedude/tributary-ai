@@ -56,10 +56,10 @@ export function BlogList({ posts }: BlogListProps) {
             <Input
               type="text"
               placeholder="Search posts..."
-              className="pl-10"
               value={searchTerm}
               onChange={(e) => handleSearch(e.target.value)}
               aria-label="Search blog posts"
+              className="pl-10 border border-input"
             />
           </div>
         </div>

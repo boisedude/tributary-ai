@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
  */
 export function ShiftSection() {
   return (
-    <section className="py-20 bg-muted/50">
+    <section className="py-12 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           {/* Section Header */}
@@ -61,21 +61,21 @@ export function ShiftSection() {
             </div>
           </div>
 
-          {/* Stats - understated */}
+          {/* Stats */}
           <div className="mt-10 pt-8 border-t">
-            <p className="text-sm text-muted-foreground mb-4">The data confirms what we see with clients:</p>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div>
-                <p className="text-2xl font-semibold">95%</p>
-                <p className="text-xs text-muted-foreground">GenAI projects stall before production</p>
+            <p className="text-sm text-muted-foreground mb-6">The data confirms what we see with clients:</p>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="p-4 border rounded-lg bg-destructive/5 border-destructive/20 text-center">
+                <p className="text-3xl sm:text-4xl font-bold text-destructive">95%</p>
+                <p className="text-sm text-muted-foreground mt-1">GenAI projects stall before production</p>
               </div>
-              <div>
-                <p className="text-2xl font-semibold">60%</p>
-                <p className="text-xs text-muted-foreground">AI projects will be abandoned by 2026</p>
+              <div className="p-4 border rounded-lg bg-amber-500/5 border-amber-500/20 text-center">
+                <p className="text-3xl sm:text-4xl font-bold text-amber-600 dark:text-amber-400">60%</p>
+                <p className="text-sm text-muted-foreground mt-1">AI projects will be abandoned by 2026</p>
               </div>
-              <div>
-                <p className="text-2xl font-semibold">42%</p>
-                <p className="text-xs text-muted-foreground">Companies scaled back AI in 2025</p>
+              <div className="p-4 border rounded-lg bg-accent/5 border-accent/20 text-center">
+                <p className="text-3xl sm:text-4xl font-bold text-accent">42%</p>
+                <p className="text-sm text-muted-foreground mt-1">Companies scaled back AI in 2025</p>
               </div>
             </div>
             <p className="text-xs text-muted-foreground/60 mt-4 text-center">

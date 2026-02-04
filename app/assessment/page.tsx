@@ -9,6 +9,9 @@ import {
   Code,
   Headphones,
   Database,
+  FileText,
+  Presentation,
+  Map,
 } from "lucide-react";
 import { ServiceSchema } from "@/components/structured-data/schemas";
 import { ROUTES, SITE_URL } from "@/lib/constants";
@@ -96,14 +99,17 @@ const dimensions = [
 
 const deliverables = [
   {
+    icon: FileText,
     title: "Findings Document",
     description: "20-30 page detailed report with 1-5 maturity scores across all dimensions, gap analysis, industry benchmarks, and specific observations from interviews",
   },
   {
+    icon: Presentation,
     title: "Leadership Presentation",
     description: "45-minute executive briefing with a 15-20 slide deck covering key findings, risk areas, and strategic recommendations your board can act on",
   },
   {
+    icon: Map,
     title: "Prioritized Roadmap",
     description: "Actionable 30/60/90-day plan identifying 3-5 quick wins, resource requirements, estimated costs, and sequenced initiatives with clear success metrics",
   },
@@ -166,8 +172,8 @@ export default function AssessmentPage() {
               Five Dimensions
             </h2>
 
-            {/* Assessment Process Diagram */}
-            <div className="mb-8 overflow-hidden rounded-lg max-w-[75%] mx-auto">
+            {/* Assessment Process Diagram - hidden on mobile, shown on tablet+ */}
+            <div className="mb-8 overflow-hidden rounded-lg max-w-[75%] mx-auto hidden sm:block">
               <Image
                 src="/images/assessment-process.webp"
                 alt="Assessment framework: Data, People, Process, Technology, and Politics flowing into AI Readiness & Strategy"
@@ -248,14 +254,20 @@ export default function AssessmentPage() {
             </div>
 
             <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              {deliverables.map((deliverable) => (
-                <div key={deliverable.title} className="border rounded-lg p-6 bg-background">
-                  <h3 className="font-semibold mb-2">{deliverable.title}</h3>
-                  <p className="text-sm text-muted-foreground">
-                    {deliverable.description}
-                  </p>
-                </div>
-              ))}
+              {deliverables.map((deliverable) => {
+                const Icon = deliverable.icon;
+                return (
+                  <div key={deliverable.title} className="border rounded-lg p-6 bg-background">
+                    <div className="inline-flex p-2 rounded-lg bg-accent/10 text-accent mb-3">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{deliverable.title}</h3>
+                    <p className="text-sm text-muted-foreground">
+                      {deliverable.description}
+                    </p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

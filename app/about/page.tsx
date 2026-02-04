@@ -100,17 +100,20 @@ export default function AboutPage() {
           <div className="mx-auto max-w-4xl">
             <h2 className="text-2xl font-bold mb-8 text-center">Why Tributary</h2>
             <div className="grid gap-4 sm:grid-cols-3">
-              {differentiators.map((item, index) => (
-                <div key={index} className="border rounded-lg p-5 text-center">
-                  <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
-                    <item.icon className="h-6 w-6" />
+              {differentiators.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div key={index} className="border rounded-lg p-5">
+                    <div className="inline-flex p-3 rounded-lg bg-accent/10 text-accent mb-4">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <h3 className="font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="font-semibold mb-2">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
             <p className="mt-6 text-center text-muted-foreground">
               We keep our team small intentionally. When you work with Tributary, you work directly with the founder.

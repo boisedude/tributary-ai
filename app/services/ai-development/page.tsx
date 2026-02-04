@@ -269,6 +269,39 @@ export default function AIDevelopmentPage() {
         </div>
       </section>
 
+      {/* Related Content */}
+      <section className="pb-16">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-2xl font-bold mb-6">Learn More</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Link
+                href="/blog/build-vs-buy-ai-decision-guide"
+                className="group p-4 border rounded-lg hover:border-accent transition-colors"
+              >
+                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                  The Build vs. Buy Trap
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  A mid-market guide to AI investment decisions
+                </p>
+              </Link>
+              <Link
+                href="/blog/ai-isnt-one-thing-decision-framework"
+                className="group p-4 border rounded-lg hover:border-accent transition-colors"
+              >
+                <h3 className="font-semibold group-hover:text-accent transition-colors">
+                  AI Isn&apos;t One Thing
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  A decision framework for LLMs, RPA, and ML
+                </p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Prerequisite */}
       <section className="pb-16">
         <div className="container mx-auto px-4">
