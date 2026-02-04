@@ -12,9 +12,6 @@ RedirectMatch 301 ^/is-your-business-ready-for-ai/?$ /blog/5-signs-your-business
 RedirectMatch 301 ^/emerging-ai-trends-shaping-2025-what-businesses-need-to-know/?$ /blog/
 RedirectMatch 301 ^/why-mcps-are-the-secret-weapon-for-scalable-high-impact-ai-applications/?$ /blog/
 
-# Redirect old services page to assessment
-RedirectMatch 301 ^/services/?$ /assessment/
-
 # Redirect PDF requests to HTML versions
 RedirectMatch 301 ^/guides/cloud-marketplace-gtm-playbook\.pdf$ /guides/cloud-marketplace-gtm-playbook.html
 RedirectMatch 301 ^/guides/fractional-gtm-leadership-guide\.pdf$ /guides/fractional-gtm-leadership-guide.html

@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
  */
 export function Hero() {
   return (
-    <section className="relative py-16 md:py-20 lg:py-28">
+    <section className="relative py-16 md:py-20 lg:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           {/* Eyebrow */}
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
 
           {/* Simple Credentials */}
-          <div className="mt-16 pt-8 border-t">
+          <div className="mt-10 pt-6 border-t">
             <p className="text-sm text-muted-foreground">
               30 years of enterprise transformation experience.
             </p>

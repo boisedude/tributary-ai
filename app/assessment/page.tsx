@@ -123,6 +123,9 @@ export default function AssessmentPage() {
             <p className="mt-6 text-xl text-muted-foreground">
               A 2-3 week diagnostic that shows you exactly where you stand, what&apos;s holding you back, and what to change.
             </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">$12K - $25K</span> · 2-3 weeks · Satisfaction guaranteed
+            </p>
           </div>
         </div>
       </section>

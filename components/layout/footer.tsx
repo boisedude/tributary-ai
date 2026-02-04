@@ -9,6 +9,7 @@ import { FOOTER_NAV_GROUPS, COMPANY, EMAILS, EXTERNAL_LINKS, ASSETS, ROUTES } fr
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
 
 const FOOTER_LINKS = [
+  { href: ROUTES.SERVICES, label: "Services" },
   { href: ROUTES.ABOUT, label: "About" },
   { href: ROUTES.BLOG, label: "Blog" },
   { href: ROUTES.CONTACT, label: "Contact" },
@@ -62,7 +63,7 @@ export function Footer() {
           {/* Newsletter + Social */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-muted-foreground hidden sm:inline">Newsletter:</span>
+              <span className="text-sm text-muted-foreground">Newsletter:</span>
               <NewsletterSignup variant="compact" className="w-auto" />
             </div>
             <div className="flex items-center gap-2">

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { AIReadinessQuiz } from "@/components/interactive/ai-readiness-quiz";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Target, Lightbulb } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 import { ROUTES, SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -40,24 +40,6 @@ export const metadata: Metadata = {
   },
 };
 
-const benefits = [
-  {
-    icon: Clock,
-    title: "5 Minutes",
-    description: "Comprehensive yet respectful of your time",
-  },
-  {
-    icon: Target,
-    title: "18 Questions",
-    description: "Covering Data, People, Process, Technology, Governance, and Politics",
-  },
-  {
-    icon: Lightbulb,
-    title: "Weighted Scoring",
-    description: "Data-weighted results with dimension breakdown",
-  },
-];
-
 export default function QuizPage() {
   return (
     <article className="bg-gradient-subtle min-h-screen">
@@ -85,26 +67,10 @@ export default function QuizPage() {
               <span>Progress saved automatically</span>
             </div>
 
-            {/* Benefits */}
-            <div className="grid gap-4 sm:grid-cols-3 mt-6 mb-8">
-              {benefits.map((benefit) => {
-                const Icon = benefit.icon;
-                return (
-                  <div
-                    key={benefit.title}
-                    className="flex flex-col items-center p-3"
-                  >
-                    <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent/10 mb-3">
-                      <Icon className="h-6 w-6 text-accent" />
-                    </div>
-                    <h3 className="font-semibold">{benefit.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {benefit.description}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+            {/* Dimension coverage note */}
+            <p className="mt-6 mb-8 text-sm text-muted-foreground">
+              Covers Data, People, Process, Technology, Governance, and Politics with weighted scoring.
+            </p>
           </div>
         </div>
       </section>

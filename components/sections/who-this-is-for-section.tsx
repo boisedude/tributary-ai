@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ROUTES } from "@/lib/constants";
 import {
@@ -61,13 +58,7 @@ export function WhoThisIsForSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-4xl">
           {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="text-center mb-8"
-          >
+          <div className="text-center mb-8">
             <p className="text-sm font-medium text-accent mb-2">
               Who We Work With
             </p>
@@ -77,19 +68,15 @@ export function WhoThisIsForSection() {
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
               We work best with leaders who are ready to move beyond AI curiosity to AI action.
             </p>
-          </motion.div>
+          </div>
 
           {/* Persona Cards */}
           <div className="grid gap-6 md:grid-cols-3 mb-12">
-            {PERSONAS.map((persona, index) => {
+            {PERSONAS.map((persona) => {
               const Icon = persona.icon;
               return (
-                <motion.div
+                <div
                   key={persona.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="p-6 rounded-xl border bg-card hover:shadow-lg transition-shadow"
                 >
                   <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 mb-4">
@@ -105,24 +92,18 @@ export function WhoThisIsForSection() {
                         key={i}
                         className="flex items-start gap-2 text-sm text-muted-foreground"
                       >
-                        <span className="text-accent mt-1">•</span>
+                        <span className="text-accent mt-1">&bull;</span>
                         <span>{point}</span>
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               );
             })}
           </div>
 
           {/* Company Profile Callout */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="p-6 rounded-xl bg-muted/50 border mb-8"
-          >
+          <div className="p-6 rounded-xl bg-muted/50 border mb-8">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <div className="inline-flex h-12 w-12 items-center justify-center rounded-lg bg-accent/10 shrink-0">
                 <Building2 className="h-6 w-6 text-accent" />
@@ -134,16 +115,10 @@ export function WhoThisIsForSection() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="text-center"
-          >
+          <div className="text-center">
             <p className="text-muted-foreground mb-4">
               Not sure if you&apos;re ready? Take our 5-minute assessment.
             </p>
@@ -153,7 +128,7 @@ export function WhoThisIsForSection() {
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

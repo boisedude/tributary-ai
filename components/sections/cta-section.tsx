@@ -8,13 +8,13 @@ import { ArrowRight } from "lucide-react";
  */
 export function CTASection() {
   return (
-    <section className="bg-primary py-12 text-primary-foreground">
+    <section className="bg-gradient-tributary py-12 text-white">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold sm:text-4xl">
             Ready to move?
           </h2>
-          <p className="mt-4 text-lg opacity-90">
+          <p className="mt-4 text-lg text-white/90">
             Start with a quick self-assessment, or have a direct conversation about where you are.
           </p>
 
