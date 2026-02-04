@@ -5,7 +5,6 @@ import { ApproachSection } from "@/components/sections/approach-section";
 import { CredentialsSection } from "@/components/sections/credentials-section";
 import { WhoThisIsForSection } from "@/components/sections/who-this-is-for-section";
 import { ThoughtLeadershipSection } from "@/components/sections/thought-leadership-section";
-import { ResourcesSection } from "@/components/sections/resources-section";
 import { CTASection } from "@/components/sections/cta-section";
 
 export const metadata: Metadata = {
@@ -48,7 +47,6 @@ export default function Home() {
       <CredentialsSection />
       <WhoThisIsForSection />
       <ThoughtLeadershipSection />
-      <ResourcesSection />
       <CTASection />
     </>
   );
