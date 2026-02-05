@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "https://www.thetributary.ai/",
+    types: {
+      "application/rss+xml": "https://www.thetributary.ai/feed.xml",
+    },
   },
   openGraph: {
     title: "Tributary AI | Technology Consulting for the AI Era",
