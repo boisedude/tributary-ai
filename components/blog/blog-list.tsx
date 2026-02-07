@@ -9,8 +9,7 @@ import Image from "next/image"
 import { Calendar, Clock, Search } from "lucide-react"
 import { useState } from "react"
 import type { BlogPost } from "@/lib/blog"
-
-const POSTS_PER_PAGE = 12;
+import { BLOG_CONFIG } from "@/lib/constants"
 
 /**
  * Props for the BlogList component.
@@ -25,7 +24,7 @@ interface BlogListProps {
  */
 export function BlogList({ posts }: BlogListProps) {
   const [searchTerm, setSearchTerm] = useState("")
-  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE)
+  const [visibleCount, setVisibleCount] = useState<number>(BLOG_CONFIG.POSTS_PER_PAGE)
 
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -39,7 +38,7 @@ export function BlogList({ posts }: BlogListProps) {
   // Reset visible count when search changes
   const handleSearch = (value: string) => {
     setSearchTerm(value)
-    setVisibleCount(POSTS_PER_PAGE)
+    setVisibleCount(BLOG_CONFIG.POSTS_PER_PAGE)
   }
 
   return (
@@ -128,7 +127,7 @@ export function BlogList({ posts }: BlogListProps) {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => setVisibleCount((prev) => prev + POSTS_PER_PAGE)}
+                onClick={() => setVisibleCount((prev) => prev + BLOG_CONFIG.POSTS_PER_PAGE)}
               >
                 Show More ({filteredPosts.length - visibleCount} remaining)
               </Button>

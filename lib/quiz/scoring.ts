@@ -1,5 +1,5 @@
 import type { Dimension, DimensionScore, QuizResult, ResultBand, UserRole, QuizQuestion, QuizOption } from "./types";
-import { DIMENSION_INFO, VETO_THRESHOLD, RESULT_BANDS, DIMENSIONS } from "./config";
+import { DIMENSION_INFO, VETO_THRESHOLD, RESULT_BANDS, DIMENSIONS, MAX_QUESTION_SCORE, BAND_THRESHOLDS } from "./config";
 import { QUESTIONS } from "./questions";
 
 /**
@@ -12,7 +12,7 @@ export function calculateResult(answers: Record<string, number>): QuizResult {
   DIMENSIONS.forEach((dim) => {
     const dimQuestions = QUESTIONS.filter(q => q.dimension === dim);
     const dimScore = dimQuestions.reduce((sum, q) => sum + (answers[q.id] || 0), 0);
-    const maxScore = dimQuestions.length * 4;
+    const maxScore = dimQuestions.length * MAX_QUESTION_SCORE;
     const percentage = maxScore > 0 ? (dimScore / maxScore) * 100 : 0;
     const weight = DIMENSION_INFO[dim].weight;
     const weightedScore = percentage * weight;
@@ -28,7 +28,7 @@ export function calculateResult(answers: Record<string, number>): QuizResult {
 
   // Calculate totals
   const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0);
-  const maxScore = QUESTIONS.length * 4;
+  const maxScore = QUESTIONS.length * MAX_QUESTION_SCORE;
   const percentage = (totalScore / maxScore) * 100;
 
   // Calculate weighted percentage
@@ -58,11 +58,11 @@ export function calculateResult(answers: Record<string, number>): QuizResult {
 
   if (vetoTriggered) {
     band = "not-ready";
-  } else if (weightedPercentage <= 35) {
+  } else if (weightedPercentage <= BAND_THRESHOLDS.HIGH_COMPLEXITY) {
     band = "high-complexity";
-  } else if (weightedPercentage <= 55) {
+  } else if (weightedPercentage <= BAND_THRESHOLDS.CROSSROADS) {
     band = "crossroads";
-  } else if (weightedPercentage <= 75) {
+  } else if (weightedPercentage <= BAND_THRESHOLDS.FOUNDATION_READY) {
     band = "foundation-ready";
   } else {
     band = "path-b-aligned";

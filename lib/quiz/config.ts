@@ -11,6 +11,20 @@ import type { Dimension, DimensionInfo, ResultBand, ResultBandConfig } from "./t
 // Veto threshold - if any dimension average is below this, trigger "Not Ready"
 export const VETO_THRESHOLD = 1.5;
 
+// Maximum score per question (used in scoring calculations)
+export const MAX_QUESTION_SCORE = 4;
+
+// Band thresholds for determining result bands
+export const BAND_THRESHOLDS = {
+  /** Below this = high-complexity */
+  HIGH_COMPLEXITY: 35,
+  /** Below this (but above HIGH_COMPLEXITY) = crossroads */
+  CROSSROADS: 55,
+  /** Below this (but above CROSSROADS) = foundation-ready */
+  FOUNDATION_READY: 75,
+  /** Above FOUNDATION_READY = path-b-aligned */
+} as const;
+
 export const DIMENSION_INFO: Record<Dimension, DimensionInfo> = {
   data: {
     icon: Database,

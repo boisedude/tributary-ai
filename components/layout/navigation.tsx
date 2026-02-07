@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { useState, useEffect, useRef } from "react";
 import { NAV_ITEMS, ASSETS, COMPANY, ROUTES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { useHydrated, useDropdownHover } from "@/lib/hooks";
 
 const SERVICE_ITEMS = [
   { href: ROUTES.SERVICES, label: "All Services", description: "Overview of all offerings" },
@@ -33,41 +34,15 @@ export function Navigation() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Handle hover open for desktop
-  const handleMouseEnter = () => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
-    setServicesOpen(true);
-  };
-
-  // Handle hover close with delay for desktop
-  const handleMouseLeave = () => {
-    closeTimeoutRef.current = setTimeout(() => {
-      setServicesOpen(false);
-    }, 150); // 150ms delay to prevent accidental closes
-  };
-
-  // Cleanup timeout on unmount
-  useEffect(() => {
-    return () => {
-      if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
-      }
-    };
-  }, []);
-
-  useEffect(() => {
-    // Use timeout to avoid cascading renders
-    const timer = setTimeout(() => setMounted(true), 0);
-    return () => clearTimeout(timer);
-  }, []);
+  const mounted = useHydrated();
+  const {
+    isOpen: servicesOpen,
+    setIsOpen: setServicesOpen,
+    handleMouseEnter,
+    handleMouseLeave,
+  } = useDropdownHover();
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -78,7 +53,7 @@ export function Navigation() {
     }
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [setServicesOpen]);
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -233,8 +208,8 @@ export function Navigation() {
                     return (
                       <div key={item.href}>
                         <button
-                          onClick={() => setServicesOpen(!servicesOpen)}
-                          aria-expanded={servicesOpen}
+                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                          aria-expanded={mobileServicesOpen}
                           aria-haspopup="true"
                           className={cn(
                             "w-full px-4 py-3 min-h-[44px] flex items-center justify-between text-sm font-medium transition-colors hover:text-accent",
@@ -242,9 +217,9 @@ export function Navigation() {
                           )}
                         >
                           Services
-                          <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", servicesOpen && "rotate-180")} />
+                          <ChevronDown className={cn("h-4 w-4 transition-transform duration-200", mobileServicesOpen && "rotate-180")} />
                         </button>
-                        {servicesOpen && (
+                        {mobileServicesOpen && (
                           <div className="bg-muted/30 py-1" role="menu" aria-label="Services submenu">
                             {SERVICE_ITEMS.map((service) => (
                               <Link

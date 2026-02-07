@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -48,6 +48,21 @@ export function QuizResults({ result, answers, userRole, onReset, embedded = fal
   const sortedDimensions = Object.entries(result.dimensionScores)
     .sort(([, a], [, b]) => a.percentage - b.percentage) as [Dimension, DimensionScore][];
 
+  /**
+   * Handles email form submission to save quiz results.
+   *
+   * Flow:
+   * 1. Validates email format and prevents default form submission
+   * 2. Submits quiz results to Supabase via submitQuizResults()
+   * 3. On success, sets emailSubmitted=true to show confirmation UI
+   * 4. Fetches company comparison data if user's domain has multiple submissions
+   * 5. Displays company benchmarks if available (requires 2+ submissions from same domain)
+   *
+   * Error handling:
+   * - Network errors are caught and displayed to user via emailError state
+   * - Rate limiting is handled by supabase.ts with client-side throttling
+   * - Company comparison failures are silently ignored (optional feature)
+   */
   const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setEmailError("");

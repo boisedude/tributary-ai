@@ -4,9 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Mail, Radio } from "lucide-react";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import { FOOTER_NAV_GROUPS, COMPANY, EMAILS, EXTERNAL_LINKS, ASSETS, ROUTES } from "@/lib/constants";
 import { NewsletterSignup } from "@/components/newsletter/newsletter-signup";
+import { useHydrated } from "@/lib/hooks";
 
 const FOOTER_LINKS = [
   { href: ROUTES.SERVICES, label: "Services" },
@@ -21,11 +21,7 @@ const FOOTER_LINKS = [
  */
 export function Footer() {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- Intentional hydration pattern
-  }, []);
+  const mounted = useHydrated();
 
   return (
     <footer className="border-t bg-muted/30">
