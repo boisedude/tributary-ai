@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Gamepad2, Users, Target, Wrench, Linkedin, Github } from "lucide-react";
+import { ArrowRight, BookOpen, Gamepad2, Users, Target, Wrench, Linkedin, Github } from "lucide-react";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -244,39 +244,46 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Bently Challenge */}
+      {/* Arcade - AI Evaluation Lab */}
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl">
-            <div className="border rounded-lg p-6 bg-background">
-              <div className="flex flex-col sm:flex-row items-center gap-4">
-                <div className="shrink-0">
-                  <Image
-                    src="/images/bently-arcade.png"
-                    alt="Bently the dog - Legendary AI opponent"
-                    width={120}
-                    height={120}
-                    className="rounded-lg"
-                  />
+            <div className="border rounded-lg overflow-hidden bg-background">
+              <Image
+                src="/images/bently-arcade-chess.webp"
+                alt="Can You Beat My Dog at Chess? - AI Arcade"
+                width={864}
+                height={486}
+                className="w-full"
+              />
+              <div className="p-6">
+                <div className="inline-flex items-center gap-2 mb-2">
+                  <Gamepad2 className="h-5 w-5 text-accent" />
+                  <span className="text-sm font-medium text-accent uppercase tracking-wide">AI Evaluation Lab</span>
                 </div>
-                <div className="text-center sm:text-left">
-                  <div className="inline-flex items-center gap-2 mb-2">
-                    <Gamepad2 className="h-5 w-5 text-accent" />
-                    <span className="text-sm font-medium text-accent uppercase tracking-wide">Legendary Difficulty</span>
-                  </div>
-                  <h2 className="text-2xl font-bold mb-2">Think You&apos;re Smart?</h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Can you beat Michael&apos;s dog Bently at Checkers or Connect 4?
-                  </p>
+                <h2 className="text-2xl font-bold mb-3">Can You Beat My Dog at Chess?</h2>
+                <p className="text-muted-foreground leading-relaxed mb-3">
+                  Ten browser games—every one built from scratch by AI agents, including the game logic and the AI opponent rules that govern gameplay. Difficulty levels are named after the family dogs: Bella (the puppy, easily distracted by virtual squirrels), Coop (solid but overconfident), and Bentley (legendary). Sounds like a hobby project—it&apos;s actually the most honest AI evaluation framework we&apos;ve found.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-5">
+                  The real test isn&apos;t the games—it&apos;s how well agents handle the build. Can they write correct game logic? Can they craft AI rules that produce challenging opponents? Games have clear rules, observable output, and binary outcomes—exactly the properties you want in any AI pilot.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
                   <Button asChild variant="outline" className="group">
                     <a
                       href="https://www.mcooper.com/arcade/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Challenge Bently
+                      Play the Arcade
                       <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </a>
+                  </Button>
+                  <Button asChild variant="ghost" className="group">
+                    <Link href="/blog/can-you-beat-my-dog-at-chess/">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      Read the Story
+                    </Link>
                   </Button>
                 </div>
               </div>

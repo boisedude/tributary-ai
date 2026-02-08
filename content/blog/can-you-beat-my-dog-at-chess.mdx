@@ -1,0 +1,158 @@
+---
+title: "Can You Beat My Dog at Chess? What Games Reveal About AI Agent Performance"
+date: "2026-02-07"
+excerpt: "Ten browser games built entirely by AI agents—game logic, UI, and opponent AI rules included. What started as a fun experiment became the most honest AI evaluation framework we've found."
+author: "Michael Cooper"
+tags: ["Agentic Systems", "AI Strategy", "LLMs", "Implementation"]
+image: "/blog/can-you-beat-my-dog-at-chess.webp"
+---
+
+Bentley the Morkie is a legendary chess opponent. He's also legendary at checkers, Connect Four, Othello, mancala, and five other games—all inside a [browser arcade](https://www.mcooper.com/arcade/) where every game was built entirely by AI agents.
+
+Not just the UI. The game logic. The move validation. The AI opponent rules that govern how each difficulty level plays. An AI agent wrote all of it, from scratch, as a single static artifact. And each game gets built multiple times—by Claude, by Codex, by Gemini—then rebuilt again to compare how different models and different versions handle the same task.
+
+Each game has difficulty levels named after the family dogs. Bella is the puppy—easy mode, easily distracted by virtual squirrels. Coop is the middle tier—a solid player, but subject to overconfidence. Bentley is legendary, and he doesn't mess around.
+
+It sounds like a weekend hobby. It's actually the most useful AI evaluation framework I've built in four months of working with agentic systems. Because the real test isn't the games—it's how well agents handle the build. And the lessons translate directly to the business problems we solve at Tributary every day.
+
+## Why Games Are Better Than Benchmarks
+
+The AI industry has a measurement problem. Benchmarks test what models know. They don't test what agents can build under real-world constraints. Demos show best-case scenarios. Leaderboard scores don't survive contact with production.
+
+"Build a complete, working browser game with multiple AI difficulty levels" is a different kind of test. It works because the task has properties that most business evaluations lack:
+
+**Clear rules.** No ambiguity about what the agent needs to produce. The game has a specification—chess rules, Connect Four win conditions, mancala capture logic. The agent either writes code that implements the rules correctly or it doesn't.
+
+**Observable output.** You can play the finished game and see every decision the agent encoded. When Bentley makes a terrible chess move, you know the agent wrote a flawed evaluation function. When Bella captures your queen on easy mode, the difficulty scaling logic is broken. There's no black box.
+
+**Binary outcomes.** The game works or it doesn't. Pieces move legally or they don't. The AI opponent follows its difficulty rules or it doesn't. No subjective grading. No "it mostly works."
+
+**Immediate feedback.** You load the game in a browser and know within minutes whether the agent built something functional. No waiting weeks to see if the output was correct.
+
+**No hiding behind demos.** The finished game is a static artifact—HTML, CSS, and JavaScript. No backend to prop it up. No team manually fixing edge cases. No one cleaning up the agent's output before shipping. It works or it doesn't.
+
+These aren't just nice properties for a game. They're exactly what you want in any [AI proof of concept](/blog/ai-proof-of-concept-done-right/). Most pilots fail because they lack these qualities. Success criteria are vague. Output is hidden behind layers of human cleanup. Outcomes are subjective. The game-building framework makes all of that impossible.
+
+## What Changes When You Rebuild Often
+
+Each game takes an hour or two to build from scratch. That's the whole point—it's cheap enough to do often. Every time a new model version ships, every time we refine a prompting technique, every time we want to test a different approach, we rebuild. Same task, clean slate, see what comes out.
+
+Between October 2025 and February 2026, rebuilding the same games repeatedly across Claude, Codex, and Gemini revealed something we didn't expect: the improvement in AI coding ability over just three months has been extraordinary. Not incremental. Not "a little better." A step change.
+
+Here's what that looks like in practice:
+
+**October: games that barely worked.** Agents would lose coherence partway through a build. A chess game might have correct move generation but broken castling logic. Difficulty levels were practically identical—Bella played like Bentley because the agent couldn't hold the distinction in mind long enough to implement it. Games shipped with bugs that the agent introduced early and never noticed. You'd get a playable prototype, but it needed significant human cleanup.
+
+**February: games that just work.** The same task, same instructions, produces a complete, functional game with correct rules, distinct difficulty levels, and clean code. Agents hold the entire architecture in mind—move generation, board evaluation, search algorithms, UI rendering, and difficulty scaling—and produce consistent code across the full session. They catch their own bugs mid-build. They think through edge cases like castling through check, en passant, and mancala's capture-and-sow chains before committing to an implementation. Bella actually plays like a distracted puppy. Bentley actually plays like he wants to win.
+
+**The gap is dramatic.** October agents produced starting points that needed a developer to finish. February agents produce shippable artifacts. That's not a marginal improvement—it's a fundamentally different capability level.
+
+And this happened in three months.
+
+The takeaway for business: if you evaluated AI agents in late 2025 and dismissed them as not ready, your assessment is already outdated. The capability curve isn't gradual—it's steep enough that quarterly re-evaluation isn't fast enough. Rebuild and retest monthly, or you'll miss the moment your use case becomes viable. This is why [understanding what agentic really means](/blog/what-agentic-really-means-for-your-business/) matters more than ever.
+
+## Self-Evaluation as an Emerging Capability
+
+The most significant shift wasn't raw build quality. It was agents learning to evaluate their own output.
+
+In the game context, this shows up as the agent testing the game it just built. Not because you asked it to—because it decided that validating its work was part of the task. It would mentally trace through game scenarios, checking whether its code handled edge cases correctly, then go back and fix problems it found.
+
+An agent building Connect Four would:
+1. Write the game logic, UI, and AI opponent rules
+2. Trace through game scenarios to check for rule violations in its own code
+3. Identify that the AI rules for Coop's difficulty were too aggressive—playing like Bentley instead of a mid-tier opponent
+4. Rewrite the evaluation weights to create proper differentiation
+5. Verify the fix by tracing through again
+
+This pattern—build, test, evaluate, fix—wasn't prompted. It emerged. And it changes the human role in the process. Instead of inspecting every line of output, you become an auditor reviewing the agent's own quality checks.
+
+For business applications, self-evaluation means the difference between an AI system that requires constant human oversight and one that flags its own issues. This is directly relevant to [why AI pilots fail to scale](/blog/why-ai-pilots-fail-to-scale/)—the ones that require a human checking every output hit a ceiling fast.
+
+## Context Management Is the Real Constraint
+
+Here's the insight that changed how we advise clients: model intelligence is rarely the bottleneck. Context management is.
+
+Context is an agent's working memory. It's the accumulation of everything the agent has seen, decided, and written during a build. When context degrades, the agent doesn't get dumber—it gets inconsistent. It contradicts its own earlier code. It solves the same problem differently in two places. It forgets constraints it set for itself three functions ago.
+
+Game builds make context degradation visible in a way that business tasks don't. When the agent writes chess rules that correctly handle castling in one section but then writes endgame logic that ignores rook movement tracking, you're watching context failure in real time. The model hasn't changed. Its working memory has degraded. The result is a game where Bentley plays brilliantly in the opening and then falls apart in the endgame—not because the agent couldn't write good endgame logic, but because it lost track of its own architecture.
+
+<section className="my-12 p-8 bg-muted/50 rounded-lg border">
+  <h3 className="text-xl font-bold mb-2">Seeing Context Issues in Your AI Projects?</h3>
+  <p className="text-muted-foreground mb-4">
+    Inconsistent AI results are usually context problems, not model problems. Our Assessment identifies where context management is limiting your AI initiatives.
+  </p>
+  <a href="/assessment/" className="inline-flex items-center text-accent font-medium hover:underline">
+    Learn about The Assessment →
+  </a>
+</section>
+
+**The business parallel is direct.** When your AI system produces inconsistent results—answering the same question differently, or contradicting its own analysis in different sections of a report—the instinct is to blame the model. Switch to a better one. Fine-tune it more. But the real problem is usually how context is managed. How much information are you stuffing into each request? How well are you structuring the agent's working memory?
+
+This is a [data architecture problem](/blog/why-ai-projects-fail-data-architecture/), not a model problem. And it's solvable without upgrading to a more expensive model.
+
+## Model-Specific Behaviors Shape Architecture
+
+Every game in the arcade gets built from scratch by each AI tool—Claude, Gemini, and Codex—using identical instructions. Then each game gets rebuilt when new model versions ship, to track how capabilities change over time. This isn't sampling. It's systematic comparison: same task, different builder, repeated across versions.
+
+The results reveal something that benchmarks can't: different models produce fundamentally different code architectures for the same task.
+
+Given identical instructions to build a chess game with three difficulty levels:
+
+- **One model** would build a clean, modular codebase with separate functions for move generation, board evaluation, search, and difficulty scaling. Each dog's AI rules lived in its own well-named configuration. Elegant and readable, but sometimes slow to execute.
+- **Another** would produce a monolithic but highly optimized implementation. Bella, Coop, and Bentley's behaviors were interleaved throughout the code. Harder to read, but the games ran faster.
+- **A third** would over-engineer the structure, creating abstract difficulty frameworks and pluggable AI strategy patterns—flexibility the task didn't require and that sometimes introduced bugs.
+
+Rebuilding across versions is just as revealing. The same model six weeks later might produce cleaner difficulty differentiation, better edge-case handling, or completely different architectural choices. The games become a changelog of agent capability that no benchmark captures.
+
+None of these approaches was wrong. Each reflected the model's learned patterns about what "good code" looks like. But the practical implication matters: the right model for a build task depends on the nature of the task, not on which model scores highest on a general benchmark.
+
+For business AI, this means [model selection is a design decision](/blog/ai-isnt-one-thing-decision-framework/), not a one-size-fits-all answer. A coding task that benefits from careful modularity needs a different model than a data extraction task that benefits from brute-force speed. Testing the same task across multiple models—not benchmarking them in the abstract—is how you find the right fit.
+
+## Static Artifacts as Honest Endpoints
+
+Every game in the arcade ships as a static artifact. HTML, CSS, and JavaScript. No server. No database. No API calls. The agent's output works in a browser or it doesn't.
+
+This constraint was chosen intentionally because it eliminates excuses. There's no "it works on my machine." There's no backend patching around frontend bugs. There's no developer manually fixing the agent's output before the demo. What the agent built is what you play.
+
+A static artifact is an honest test of what the agent actually produced. And it creates a useful framework for evaluating AI builds in any context:
+
+**Bounded scope.** The agent knows exactly what it needs to produce. Not "improve the system" or "make it better"—build this specific game with these specific rules and these specific difficulty levels. Bella should be easy. Bentley should be brutal. Ship it.
+
+**Rebuildable.** If the output isn't right, you can regenerate it from scratch. No accumulated state. No technical debt from iterative patches. Start clean and have the agent build the artifact again with adjusted instructions.
+
+**Inspectable.** Every line of the output is visible and auditable. You can read the AI opponent rules the agent wrote and understand exactly why Coop plays the way he does. No hidden behavior. No mystery side effects.
+
+The business application: when evaluating AI for your organization, create bounded, rebuildable artifacts as evaluation targets. Don't ask "can AI improve our customer service?" Ask "can AI produce a draft response to these 50 specific customer inquiries that meets our quality standards?" The second question has a clear answer. The first has a presentation.
+
+## What This Means for Your AI Evaluation
+
+If you're evaluating AI capabilities—whether for a new initiative or a project that stalled—here's a framework drawn from four months of building games:
+
+**Define clear success criteria.** Not "the AI should be good at this task" but "the AI must produce output that passes these specific tests." Does the chess game enforce legal moves? Do the three difficulty levels play differently? [Good POC design](/blog/ai-proof-of-concept-done-right/) starts with criteria you can actually measure.
+
+**Make output observable.** You can't improve what you can't see. Structure your AI tasks so you can inspect the agent's work product in detail, not just its final answer. When something goes wrong, you need to know where in the build it broke and why.
+
+**Test with real constraints.** Don't evaluate AI in ideal conditions and expect production results. Test with real complexity, tight timelines, and the actual constraints your team faces. Game builds work as evaluation tools precisely because the constraints are real and unforgiving—chess has a lot of rules, and the agent has to get all of them right.
+
+**Compare across models.** The same build task produces meaningfully different architectures across different models. If you're locked into one provider, you're potentially leaving significant quality gains on the table.
+
+**Rebuild, don't patch.** When an agent's output isn't right, resist the urge to manually fix it. Adjust the prompt, the context, or the model and have the agent rebuild. Manual patches hide the real capability level and create false confidence. You need to know what the agent can actually produce on its own.
+
+The [arcade](https://www.mcooper.com/arcade/) is live. You can play any of the ten games, challenge the dogs at various difficulty levels, and see for yourself what AI agents are capable of building today. For the full personal story behind the dogs and how this all started, there's a [companion post on the personal site](https://www.mcooper.com/blog/can-you-beat-my-dog-at-chess/).
+
+But the real point isn't the games. It's that structured, observable, bounded build tasks reveal more about AI agent capability than any benchmark or demo ever will. And that's exactly the approach we bring to every client engagement.
+
+<section className="my-12 p-8 bg-muted/50 rounded-lg border">
+  <h3 className="text-xl font-bold mb-2">Ready to Evaluate AI for Your Organization?</h3>
+  <p className="text-muted-foreground mb-4">
+    Take our free AI readiness quiz to see where you stand, or book a strategy call to discuss your specific evaluation needs.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-3">
+    <a href="/quiz/" className="inline-flex items-center text-accent font-medium hover:underline">
+      Take the AI Readiness Quiz →
+    </a>
+    <a href="/contact/" className="inline-flex items-center text-accent font-medium hover:underline">
+      Book a Strategy Call →
+    </a>
+  </div>
+</section>
